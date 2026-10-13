@@ -1,10 +1,13 @@
 import { z } from "zod";
+import { rankingWeights } from "../lib/ranking-weights";
 import { JsonObjectSchema } from "./json";
 
 const nonEmptyText = z.string().min(1);
 const webUrl = z.url({ protocol: /^https?$/ });
 const canonicalId = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
-const score = z.number().finite().min(0).max(100);
+const scoreMaximum = 100;
+const score = z.number().finite().min(0).max(scoreMaximum);
+const contributionScore = (weight: number) => score.max(weight * scoreMaximum);
 
 const utcTimestamp = z.iso.datetime({ precision: 3 }).refine(
   (value) => Number.isFinite(Date.parse(value)) && new Date(value).toISOString() === value,
@@ -20,12 +23,12 @@ export const SourceRefSchema = z.strictObject({
 export type SourceRef = z.infer<typeof SourceRefSchema>;
 
 export const ScoreBreakdownSchema = z.strictObject({
-  // 五项是最终 0–100 分中的实际贡献点数；Ranking Task 负责计算，不在此实现算法。
-  topic: score,
-  source: score,
-  freshness: score,
-  popularity: score,
-  novelty: score,
+  // 五项是加权后的实际贡献点数；每项上限由同一份 Ranking 权重换算，评分算法留待后续 Task。
+  topic: contributionScore(rankingWeights.topic),
+  source: contributionScore(rankingWeights.source),
+  freshness: contributionScore(rankingWeights.freshness),
+  popularity: contributionScore(rankingWeights.popularity),
+  novelty: contributionScore(rankingWeights.novelty),
   // 偏好版本说明按哪版 Profile 评分；asOf 固定同一轮评分的计算时点。
   profileVersion: nonEmptyText,
   asOf: utcTimestamp,

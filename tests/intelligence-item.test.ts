@@ -82,4 +82,79 @@ describe("IntelligenceItem runtime contract", () => {
     const scoreBreakdown = { ...validIntelligenceItem.scoreBreakdown, novelty: 5 };
     expect(safeParseIntelligenceItem({ ...validIntelligenceItem, scoreBreakdown }).success).toBe(false);
   });
+
+  it("accepts the maximum weighted contribution from every dimension", () => {
+    const scoreBreakdown = {
+      ...validIntelligenceItem.scoreBreakdown,
+      topic: 35,
+      source: 20,
+      freshness: 20,
+      popularity: 15,
+      novelty: 10,
+    };
+    expect(safeParseIntelligenceItem({
+      ...validIntelligenceItem,
+      personalScore: 100,
+      scoreBreakdown,
+    }).success).toBe(true);
+  });
+
+  it.each([
+    ["topic", 35.01],
+    ["source", 20.01],
+    ["freshness", 20.01],
+    ["popularity", 15.01],
+    ["novelty", 10.01],
+  ] as const)("rejects %s contribution above its weighted maximum", (field, value) => {
+    const scoreBreakdown = {
+      ...validIntelligenceItem.scoreBreakdown,
+      topic: 0,
+      source: 0,
+      freshness: 0,
+      popularity: 0,
+      novelty: 0,
+      [field]: value,
+    };
+    const result = safeParseIntelligenceItem({
+      ...validIntelligenceItem,
+      personalScore: value,
+      scoreBreakdown,
+    });
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      expect(result.issues.some((issue) => issue.field === `scoreBreakdown.${field}`)).toBe(true);
+    }
+  });
+
+  it("rejects an over-weighted dimension even when the breakdown sums to 100", () => {
+    const scoreBreakdown = {
+      ...validIntelligenceItem.scoreBreakdown,
+      topic: 80,
+      source: 10,
+      freshness: 5,
+      popularity: 3,
+      novelty: 2,
+    };
+    expect(safeParseIntelligenceItem({
+      ...validIntelligenceItem,
+      personalScore: 100,
+      scoreBreakdown,
+    }).success).toBe(false);
+  });
+
+  it("accepts a valid lower-scoring weighted breakdown", () => {
+    const scoreBreakdown = {
+      ...validIntelligenceItem.scoreBreakdown,
+      topic: 17.5,
+      source: 10,
+      freshness: 8,
+      popularity: 7.5,
+      novelty: 5,
+    };
+    expect(safeParseIntelligenceItem({
+      ...validIntelligenceItem,
+      personalScore: 48,
+      scoreBreakdown,
+    }).success).toBe(true);
+  });
 });

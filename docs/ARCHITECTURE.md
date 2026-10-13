@@ -98,9 +98,9 @@ interface IntelligenceItem {
 
 所有时间字段采用固定格式 `YYYY-MM-DDTHH:mm:ss.sssZ` 的 ISO 8601 UTC，并拒绝不存在的日期。`publishedAt` 没有可信证据时为 `null`，不得用 Sitemap 的 `lastmod` 伪装成发布日期。`firstSeenAt` 是系统首次成功观察的时间，`collectedAt` 是本次抓取时间；`scoreBreakdown.asOf` 是一次评分固定使用的计算时间。
 
-`popularityScore` 和 `personalScore` 均在 0–100。`scoreBreakdown` 五个数值是最终 0–100 分里的**实际贡献点数**，不是原始指标，也不是权重；五项之和与 `personalScore` 的误差不得超过 `1e-6`。T02 只验证这个契约，不计算 Ranking（排序）。`metadata` 仅接受可安全写入 JSON 的嵌套值，拒绝 `undefined`、函数、`Date`、`Map`、`Set`、非有限数字与循环引用。后续来源 Task 还须按 `contentType` 细化仓库 Stars、论文作者、融资轮次等专属元数据规则；来源没给出的事实保持缺失，不捏造值。
+`popularityScore` 和 `personalScore` 均在 0–100。`scoreBreakdown` 五个数值是最终 0–100 分里**加权后的实际贡献点数**，不是原始指标，也不是权重；其上限由对应 Ranking Weight（排序权重）乘以 100 得出，依次为 topic 35、source 20、freshness 20、popularity 15、novelty 10，且均不得小于 0。五项之和与 `personalScore` 的误差不得超过 `1e-6`。此处只验证评分契约，不计算 Ranking（排序）。`metadata` 仅接受可安全写入 JSON 的嵌套值，拒绝 `undefined`、函数、`Date`、`Map`、`Set`、非有限数字与循环引用。后续来源 Task 还须按 `contentType` 细化仓库 Stars、论文作者、融资轮次等专属元数据规则；来源没给出的事实保持缺失，不捏造值。
 
-`types/json.ts` 定义 JSON 值验证，`pipeline/validation.ts` 提供 `parseIntelligenceItem(data)` 和 `safeParseIntelligenceItem(data)`。后者只返回通过的数据或字段错误列表，使未来 Pipeline 不依赖 Zod 错误对象。`config/profile.ts` 集中管理 Topic（主题）优先级、Company（重点公司）与 `profileVersion`；`config/ranking.ts` 是 35% / 20% / 20% / 15% / 10% 权重的唯一事实来源。关注方向、优先级或权重改变时须更新 Profile Version（偏好版本），使历史分数可追溯。Topic 与 Company 的稳定 ID 使用 `lowercase-kebab-case`，显示名称可变而统计键不变。
+`types/json.ts` 定义 JSON 值验证，`pipeline/validation.ts` 提供 `parseIntelligenceItem(data)` 和 `safeParseIntelligenceItem(data)`。后者只返回通过的数据或字段错误列表，使未来 Pipeline 不依赖 Zod 错误对象。`config/profile.ts` 集中管理 Topic（主题）优先级、Company（重点公司）与 `profileVersion`；`config/ranking.ts` 保留业务配置入口，35% / 20% / 20% / 15% / 10% 的数值只定义在无依赖的 `lib/ranking-weights.ts`，由配置入口和 Schema 共同读取，避免循环依赖。关注方向、优先级或权重改变时须更新 Profile Version（偏好版本），使历史分数可追溯。Topic 与 Company 的稳定 ID 使用 `lowercase-kebab-case`，显示名称可变而统计键不变。
 
 T02 尚未生成任何历史 JSON，也没有 Collector 或 Web 业务消费方，因此当前无迁移数据。未来修改此 Schema 时须评估 Collector、Pipeline、历史 JSON、Web、测试与重算范围，并按兼容性决定是否递增 `schemaVersion`。
 
