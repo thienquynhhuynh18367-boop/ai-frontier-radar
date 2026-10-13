@@ -1,23 +1,18 @@
 import { z } from "zod";
 import { rankingWeights } from "../lib/ranking-weights";
 import { JsonObjectSchema } from "./json";
+import { SourceTypeSchema, UtcTimestampSchema, WebUrlSchema } from "./primitives";
 
 const nonEmptyText = z.string().min(1);
-const webUrl = z.url({ protocol: /^https?$/ });
 const canonicalId = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
 const scoreMaximum = 100;
 const score = z.number().finite().min(0).max(scoreMaximum);
 const contributionScore = (weight: number) => score.max(weight * scoreMaximum);
 
-const utcTimestamp = z.iso.datetime({ precision: 3 }).refine(
-  (value) => Number.isFinite(Date.parse(value)) && new Date(value).toISOString() === value,
-  { message: "Expected a real ISO 8601 UTC timestamp with milliseconds" },
-);
-
 export const SourceRefSchema = z.strictObject({
   source: nonEmptyText,
   externalId: nonEmptyText.nullable(),
-  url: webUrl,
+  url: WebUrlSchema,
 });
 
 export type SourceRef = z.infer<typeof SourceRefSchema>;
@@ -31,7 +26,7 @@ export const ScoreBreakdownSchema = z.strictObject({
   novelty: contributionScore(rankingWeights.novelty),
   // 偏好版本说明按哪版 Profile 评分；asOf 固定同一轮评分的计算时点。
   profileVersion: nonEmptyText,
-  asOf: utcTimestamp,
+  asOf: UtcTimestampSchema,
 });
 
 export type ScoreBreakdown = z.infer<typeof ScoreBreakdownSchema>;
@@ -55,18 +50,18 @@ export const IntelligenceItemSchema = z
     schemaVersion: z.literal(1),
     id: nonEmptyText,
     title: nonEmptyText,
-    url: webUrl,
-    canonicalUrl: webUrl,
+    url: WebUrlSchema,
+    canonicalUrl: WebUrlSchema,
     source: nonEmptyText,
-    sourceType: z.enum(["api", "rss", "sitemap", "html"]),
+    sourceType: SourceTypeSchema,
     // 合并多个发现渠道时保留每个来源的证据链接。
     sourceRefs: z.array(SourceRefSchema).min(1),
     contentType: ContentTypeSchema,
     // 来源没有可信发布时间时保持 null，不能把 Sitemap lastmod 当作发布时间。
-    publishedAt: utcTimestamp.nullable(),
+    publishedAt: UtcTimestampSchema.nullable(),
     // firstSeenAt 是首次发现时间；collectedAt 是当前采集运行的时间。
-    firstSeenAt: utcTimestamp,
-    collectedAt: utcTimestamp,
+    firstSeenAt: UtcTimestampSchema,
+    collectedAt: UtcTimestampSchema,
     topics: z.array(canonicalId),
     companies: z.array(canonicalId),
     popularityScore: score,
