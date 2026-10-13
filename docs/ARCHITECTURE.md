@@ -116,7 +116,9 @@ T03 已在 `types/raw-item.ts` 建立 RawItem（原始采集条目）运行时 S
 
 `nextCursor` 只是 Collector 给出的**建议值**。即使采集成功，也只有未来 Pipeline 完成 Normalize → Validate → Persist 且 Git Commit 成功后才能正式推进 Cursor；失败或部分成功不得自行覆盖旧 Cursor。来源故障只影响该来源的后续 Health Check（健康状态），不向其他 Collector 抛出级联失败。本次没有实现 Cursor 持久化、Health 或任何真实来源。
 
-`types/http.ts` 定义只支持 GET 的 `HttpClient` 与原始文本 `HttpResponse`；JSON、XML、Atom、RSS 或 HTML 由后续具体 Collector 解析。`lib/http-client.ts` 使用 Node.js `fetch` 和 `AbortController`，统一设置 `ai-frontier-radar/0.1` User-Agent，默认每次请求 12 秒超时，调用方最多可设 30 秒。成功的 2xx 返回文本响应；最终非 2xx 与请求失败抛出结构化 `HttpError`。默认至多重试 3 次，间隔为 5 / 10 / 30 秒；仅 Timeout（超时）、HTTP 429 和 500 / 502 / 503 / 504 可重试，网络异常与大多数 4xx 不重试。429 优先使用 `Retry-After` 秒数或 HTTP 日期；若要求等待超过 60 秒，则停止该请求并返回限流错误。等待函数与时间来源可注入，以便测试不发生真实网络访问或长时间等待。`HttpError` 给出 code、脱敏 URL origin、status（若有）、retryable 和尝试次数；`retryable` 表示错误类别可重试，即使本次尝试次数已经耗尽也保持其类别含义。固定错误文字不包含原始异常、Authorization Header 或 URL query。
+`types/http.ts` 定义只支持 GET 的 `HttpClient` 与原始文本 `HttpResponse`；JSON、XML、Atom、RSS 或 HTML 由后续具体 Collector 解析。`lib/http-client.ts` 使用 Node.js `fetch` 和 `AbortController`，统一设置 `ai-frontier-radar/0.1` User-Agent，默认每次请求 12 秒超时，调用方最多可设 30 秒。成功的 2xx 返回文本响应；最终非 2xx 与请求失败抛出结构化 `HttpError`。默认至多重试 3 次，间隔为 5 / 10 / 30 秒；仅 Timeout（超时）、HTTP 429、有明确限流证据的 HTTP 403，以及 500 / 502 / 503 / 504 可重试，其他网络异常和普通 4xx 不重试。等待函数与时间来源可注入，以便测试不发生真实网络访问或长时间等待。
+
+HTTP 429 始终视为 Rate Limited（限流）。HTTP 403 只有在 `x-ratelimit-remaining: 0` 或存在 `Retry-After` 时才视为限流；单独出现的 `x-ratelimit-reset` 不足以证明 403 是限流。对已识别的限流，先采用有效的 `Retry-After` 秒数或 HTTP 日期，再采用 `x-ratelimit-reset` 的 Unix Epoch Seconds 计算等待时间，均不可用时回退到通用重试延迟。选定的等待时间超过 60 秒时立即停止，不让任务长期阻塞。`HttpError` 除 code、脱敏 URL origin、status、retryable 和尝试次数外，只保存安全的 `retryAfterMs`（服务端建议等待时长）与 `rateLimitResetAt`（有效 reset 时间的 UTC 字符串）；不保存完整 Header、Response Body、Authorization、Cookie 或 URL query。`retryable` 表示错误类别可重试，即使本次尝试次数已经耗尽也保持其类别含义。
 
 当前尚无真实 Collector、历史 Raw JSON 或 Web 消费方，因此新增契约不需要迁移或重算；后续来源实现须按此 Schema 验证输出，再由 Pipeline 处理。`IntelligenceItem` 仅复用原有 URL、时间及 sourceType 验证，字段与版本没有变化。
 
@@ -175,7 +177,7 @@ data/
 
 ## 10. Retry、Backfill、Idempotency 与 Health Check
 
-- **Retry（失败重试）：**共享 HttpClient 已实现只重试超时、429、500、502、503、504，最多额外尝试 3 次，延迟 5 / 10 / 30 秒并在 429 时优先遵守不超过 60 秒的 `Retry-After`。不可恢复的 4xx 与其他网络异常直接返回结构化错误。每次请求有 Timeout（请求超时）；来源特有的额度策略仍由后续 Collector Task 处理。
+- **Retry（失败重试）：**共享 HttpClient 只重试超时、429、有明确限流信号的 403，以及 500、502、503、504，最多额外尝试 3 次。限流时按上文优先级计算不超过 60 秒的等待；普通 403、其他不可恢复的 4xx 与网络异常直接返回结构化错误。每次请求有 Timeout（请求超时）；来源特有的额度策略仍由后续 Collector Task 处理。
 - **Backfill（历史补跑）：**优先从已保存 Raw Data 重算指定日期；来源支持历史查询时才执行历史重取。对无法复原的 GitHub Trending 页面或过去 Sitemap 状态，明确标记不可补，不能用今日抓取冒充历史。补跑旧日期默认不改当前 `latest.json`。
 - **Idempotency（幂等性）：**固定 `asOf`、稳定实体 ID、规范排序与 UPSERT（按 ID 覆盖合并）使同一输入重跑无重复条目；无变化时不产生新提交。Cursor、当日数据与 Manifest 的推进受同一成功门槛约束。
 - **Health Check（健康检查）：**每个来源记录 `status`、`lastAttemptAt`、`lastSuccessAt`、`fetchedCount`、`lastError`、`consecutiveFailures`、耗时与结果覆盖；区分成功但无新增、失败、限流与未运行。Pipeline 记录抓取、标准化、去重、发布数量及异常原因。

@@ -6,6 +6,16 @@ const MAX_TIMEOUT_MS = 30_000;
 const RETRY_DELAYS_MS = [5_000, 10_000, 30_000] as const;
 const MAX_RETRY_AFTER_MS = 60_000;
 
+type RateLimitMetadata = {
+  readonly retryAfterMs?: number;
+  readonly rateLimitResetAt?: string;
+};
+
+type RateLimitSignal = {
+  readonly waitMs: number | null;
+  readonly metadata: RateLimitMetadata;
+};
+
 const errorMessages: Record<HttpErrorCode, string> = {
   timeout: "HTTP request timed out",
   network: "HTTP network request failed",
@@ -22,8 +32,17 @@ export class HttpError extends Error {
   readonly status?: number;
   readonly retryable: boolean;
   readonly attempts: number;
+  readonly retryAfterMs?: number;
+  readonly rateLimitResetAt?: string;
 
-  constructor(code: HttpErrorCode, url: string, attempts: number, retryable: boolean, status?: number) {
+  constructor(
+    code: HttpErrorCode,
+    url: string,
+    attempts: number,
+    retryable: boolean,
+    status?: number,
+    rateLimit?: RateLimitMetadata,
+  ) {
     // 不拼接原始异常、请求 Header 或 URL query，避免 Token 出现在日志和错误序列化中。
     super(errorMessages[code]);
     this.code = code;
@@ -31,6 +50,8 @@ export class HttpError extends Error {
     this.status = status;
     this.retryable = retryable;
     this.attempts = attempts;
+    this.retryAfterMs = rateLimit?.retryAfterMs;
+    this.rateLimitResetAt = rateLimit?.rateLimitResetAt;
   }
 }
 
@@ -55,6 +76,32 @@ function retryAfterMs(value: string, now: number): number | null {
   }
   const date = Date.parse(trimmed);
   return Number.isFinite(date) ? Math.max(0, date - now) : null;
+}
+
+function readRateLimitSignal(response: Response, now: number): RateLimitSignal | null {
+  if (response.status !== 403 && response.status !== 429) return null;
+
+  const retryAfter = response.headers.get("retry-after");
+  const remainingZero = response.headers.get("x-ratelimit-remaining")?.trim() === "0";
+  // reset Header 可能出现在普通 403 上，不能单凭它认定限流。
+  if (response.status === 403 && !remainingZero && retryAfter === null) return null;
+
+  const resetHeader = response.headers.get("x-ratelimit-reset")?.trim();
+  const resetAtMs = resetHeader && /^\d+$/.test(resetHeader) ? Number(resetHeader) * 1_000 : null;
+  const resetWaitMs = resetAtMs === null ? null : Math.max(0, resetAtMs - now);
+  const retryAfterWaitMs = retryAfter === null ? null : retryAfterMs(retryAfter, now);
+  // Retry-After 有效时优先；无效或缺失时才采用 Unix Epoch Seconds 的 reset 时间。
+  const waitMs = retryAfterWaitMs ?? resetWaitMs;
+
+  return {
+    waitMs,
+    metadata: {
+      ...(waitMs !== null && Number.isFinite(waitMs) ? { retryAfterMs: waitMs } : {}),
+      ...(resetAtMs !== null && Number.isFinite(resetAtMs) && resetAtMs <= 8.64e15
+        ? { rateLimitResetAt: new Date(resetAtMs).toISOString() }
+        : {}),
+    },
+  };
 }
 
 function statusError(status: number, url: string, attempt: number): HttpError {
@@ -125,20 +172,15 @@ export class FetchHttpClient implements HttpClient {
         };
       }
 
-      const error = statusError(response.status, errorUrl, attempt);
-      if (!error.retryable || attempt > RETRY_DELAYS_MS.length) throw error;
-
-      let delayMs: number = RETRY_DELAYS_MS[attempt - 1];
-      if (response.status === 429) {
-        const retryAfter = response.headers.get("retry-after");
-        const requestedDelay = retryAfter === null ? null : retryAfterMs(retryAfter, this.now());
-        if (requestedDelay !== null) {
-          if (requestedDelay > MAX_RETRY_AFTER_MS) {
-            throw new HttpError("rate_limited", errorUrl, attempt, false, response.status);
-          }
-          delayMs = requestedDelay;
-        }
+      const rateLimit = readRateLimitSignal(response, this.now());
+      const error = rateLimit
+        ? new HttpError("rate_limited", errorUrl, attempt, true, response.status, rateLimit.metadata)
+        : statusError(response.status, errorUrl, attempt);
+      const delayMs = rateLimit?.waitMs ?? RETRY_DELAYS_MS[attempt - 1];
+      if (rateLimit && delayMs > MAX_RETRY_AFTER_MS) {
+        throw new HttpError("rate_limited", errorUrl, attempt, false, response.status, rateLimit.metadata);
       }
+      if (!error.retryable || attempt > RETRY_DELAYS_MS.length) throw error;
       await this.sleep(delayMs);
     }
 
