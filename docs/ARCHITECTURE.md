@@ -105,7 +105,7 @@ T05 将稳定 ID、标题、URL、来源证据、内容类型、发布时间、�
 
 `types/json.ts` 定义 JSON 值验证，`pipeline/validation.ts` 提供 `parseIntelligenceItem(data)` 和 `safeParseIntelligenceItem(data)`。后者只返回通过的数据或字段错误列表，使未来 Pipeline 不依赖 Zod 错误对象。`config/profile.ts` 集中管理 Topic（主题）优先级、Company（重点公司）与 `profileVersion`；`config/ranking.ts` 保留业务配置入口，35% / 20% / 20% / 15% / 10% 的数值只定义在无依赖的 `lib/ranking-weights.ts`，由配置入口和 Schema 共同读取，避免循环依赖。关注方向、优先级或权重改变时须更新 Profile Version（偏好版本），使历史分数可追溯。Topic 与 Company 的稳定 ID 使用 `lowercase-kebab-case`，显示名称可变而统计键不变。
 
-T02 尚未生成任何历史 JSON；T04 Collector 和 T05 Normalizer 也尚未写出历史数据，因此当前无迁移数据。Base Item 的抽取不改变 Collector 输入、最终 JSON 或 Web 契约；新增的 NormalizedItem 只在 Pipeline 内部使用。未来修改这些 Schema 时须评估 Collector、Pipeline、历史 JSON、Web、测试与重算范围，并按兼容性决定是否递增 `schemaVersion`。
+T02–T05 阶段尚未写出历史 JSON；第一阶段已用现有 `schemaVersion: 1` 发布 GitHub 历史与 latest。Base Item 的抽取不改变 Collector 输入和最终条目字段；NormalizedItem 只在 Pipeline 内部使用。未来修改这些 Schema 时须评估 Collector、Pipeline、现有历史 JSON、Web、测试与重算范围，并按兼容性决定是否递增 `schemaVersion`。
 
 `id` 优先从稳定实体键生成：GitHub Repository ID、arXiv 基础 ID、公开岗位 ID；一般网页使用 `sha256("url:" + canonicalUrl)`。跨来源相同 URL 合并为一条，并保留全部 `sourceRefs`。ID 不依赖每日运行时间或排序位置。
 
@@ -117,13 +117,13 @@ T03 已在 `types/raw-item.ts` 建立 RawItem（原始采集条目）运行时 S
 
 `CollectorResult` 包含 `collectorId`、`status`、`items`、`receivedCount`、`acceptedCount`、`nextCursor`、UTC 的 `startedAt` / `finishedAt` 和结构化的 `errors`。`receivedCount` 是来源实际读取或解析出的候选记录数，允许包含无法形成 RawItem 的记录；`acceptedCount` 必须等于 `items.length`，且不得大于 `receivedCount`。`success` 允许空 `items` 但不带错误；`partial` 表示部分请求或分页失败，必须带错误；`failed` 表示整个来源不可用，必须带错误、无有效条目且 `nextCursor` 为 `null`。`CollectorError` 只保存 code、message、可选 URL 和 retryable，不保存原始 Error 对象或堆栈，可安全写入 JSON。
 
-`nextCursor` 只是 Collector 给出的**建议值**。即使采集成功，也只有未来 Pipeline 完成 Normalize → Validate → Persist 且 Git Commit 成功后才能正式推进 Cursor；失败或部分成功不得自行覆盖旧 Cursor。来源故障只影响该来源的后续 Health Check（健康状态），不向其他 Collector 抛出级联失败。当前没有实现 Cursor 持久化或 Health。
+`nextCursor` 只是 Collector 给出的**建议值**。即使采集成功，也只有 Pipeline 完成 Normalize → Validate → Persist 且 Git Commit 成功后才能正式推进 Cursor；失败或部分成功不得自行覆盖旧 Cursor。当前 GitHub Collector 的 Cursor 恒为 `null`，尚无 Cursor 持久化；已实现单源 `sources-status.json` 健康状态，其他来源的 Health 留待接入。
 
 `types/http.ts` 定义只支持 GET 的 `HttpClient` 与原始文本 `HttpResponse`；JSON、XML、Atom、RSS 或 HTML 由后续具体 Collector 解析。`lib/http-client.ts` 使用 Node.js `fetch` 和 `AbortController`，统一设置 `ai-frontier-radar/0.1` User-Agent，默认每次请求 12 秒超时，调用方最多可设 30 秒。成功的 2xx 返回文本响应；最终非 2xx 与请求失败抛出结构化 `HttpError`。默认至多重试 3 次，间隔为 5 / 10 / 30 秒；仅 Timeout（超时）、HTTP 429、有明确限流证据的 HTTP 403，以及 500 / 502 / 503 / 504 可重试，其他网络异常和普通 4xx 不重试。等待函数与时间来源可注入，以便测试不发生真实网络访问或长时间等待。
 
 HTTP 429 始终视为 Rate Limited（限流）。HTTP 403 只有在 `x-ratelimit-remaining: 0` 或存在 `Retry-After` 时才视为限流；单独出现的 `x-ratelimit-reset` 不足以证明 403 是限流。对已识别的限流，先采用有效的 `Retry-After` 秒数或 HTTP 日期，再采用 `x-ratelimit-reset` 的 Unix Epoch Seconds 计算等待时间，均不可用时回退到通用重试延迟。选定的等待时间超过 60 秒时立即停止，不让任务长期阻塞。`HttpError` 除 code、脱敏 URL origin、status、retryable 和尝试次数外，只保存安全的 `retryAfterMs`（服务端建议等待时长）与 `rateLimitResetAt`（有效 reset 时间的 UTC 字符串）；不保存完整 Header、Response Body、Authorization、Cookie 或 URL query。`retryable` 表示错误类别可重试，即使本次尝试次数已经耗尽也保持其类别含义。
 
-T04 已实现首个真实 Collector，T05 实现了对应的 GitHub Normalizer；尚无历史 Raw JSON 或 Web 消费方，因此当前不需要迁移或重算。后续来源仍须按 RawItem Schema 验证输出，再由各自 Normalizer 处理。
+T04 Collector 与 T05 GitHub Normalizer 已接入第一阶段 Pipeline，产生历史 Raw JSON 和 Web 可读的验证后 JSON。当前只发布 GitHub 来源，后续来源仍须按 RawItem Schema 验证输出，再由各自 Normalizer 处理。
 
 ### GitHub Repository Search Collector（仓库搜索采集器）
 
@@ -135,13 +135,13 @@ T04 已实现首个真实 Collector，T05 实现了对应的 GitHub Normalizer�
 
 同一仓库可能命中多个 Query，Collector 仅按 Repository ID 做 **Source-local Consolidation（来源内部合并）**，输出一个 RawItem，并把命中的 Query ID 去重、排序后保存为 `matched_query_ids`。它只是搜索证据，不等于后续 Classification（规则分类）的业务 Topic，也不代替跨来源 Deduplicate（去重）。最终条目按 `externalId` 稳定排序；`receivedCount` 统计成功解析的所有页面的 `items.length`，包含重复、范围外及无效记录；`acceptedCount` 是最终唯一合法 RawItem 数；`total_count` 只表示 GitHub 搜索规模，不作为已读取数。
 
-HTTP、JSON 或顶层结构异常按 Query 隔离并产生安全 CollectorError；单仓库 Schema 错误按页面汇总；`incomplete_results: true` 保留合法条目并标记 `partial`。已明确限流时停止余下 Query，避免继续请求受限的 Search API。至少一个计划 Query 成功解析且有任何错误时返回 `partial`；全部 Query 未能解析有效页面时返回 `failed` 且不输出条目；全部成功但没有符合条件的仓库仍是 `success`。错误不保存 Token、原始响应体、Header 或 URL query。`startedAt` / `finishedAt` 使用可注入 Clock（时钟）记录运行诊断，RawItem 的业务采集基准仍是固定 `context.asOf`。当前没有实现 Raw JSON Writer（原始数据写入器）、完整 Pipeline、Ranking、Trend 或每日工作流。
+HTTP、JSON 或顶层结构异常按 Query 隔离并产生安全 CollectorError；单仓库 Schema 错误按页面汇总；`incomplete_results: true` 保留合法条目并标记 `partial`。已明确限流时停止余下 Query，避免继续请求受限的 Search API。至少一个计划 Query 成功解析且有任何错误时返回 `partial`；全部 Query 未能解析有效页面时返回 `failed` 且不输出条目；全部成功但没有符合条件的仓库仍是 `success`。错误不保存 Token、原始响应体、Header 或 URL query。`startedAt` / `finishedAt` 使用可注入 Clock（时钟）记录运行诊断，RawItem 的业务采集基准仍是固定 `context.asOf`。第一阶段已增加 Raw JSON Writer、GitHub Pipeline 与本地预览；Trend 和每日工作流尚未实现。
 
 ## 5. Normalize、Deduplicate 与 Classification
 
 **Normalize（标准化）**为每种 RawItem 显式映射标题、URL、来源 ID、发布时间、作者或公司等字段。发布时间的证据优先是来源明确的发布时间；仅有首次发现时间时保留 `publishedAt: null`。Title（标题）来自来源字段，若只有 URL slug（路径片段）可生成可识别的临时标题，同时记录其低置信来源，避免当作已核实文章标题。
 
-T05 的 GitHub 路径为 `RawItem → GitHub Normalizer → NormalizedItem → 后续 Deduplicate / Classification / Ranking → IntelligenceItem`。`pipeline/normalize/github.ts` 提供单条严格入口、安全入口和批量入口；安全入口只返回通过的中间条目或字段路径与固定错误说明，批量入口按输入位置隔离坏记录。它重验 RawItem、GitHub 来源字段、numeric Repository ID 与 `externalId` 一致性，并再次拒绝 Private / Archived / Fork Repository（私有 / 归档 / 分叉仓库）。不修改 T04 的搜索和采样策略，也不执行网络请求或数据写入。
+GitHub 路径为 `RawItem → GitHub Normalizer → NormalizedItem → Deduplicate / Classification / Ranking → IntelligenceItem`。`pipeline/normalize/github.ts` 提供单条严格入口、安全入口和批量入口；安全入口只返回通过的中间条目或字段路径与固定错误说明，批量入口按输入位置隔离坏记录。它重验 RawItem、GitHub 来源字段、numeric Repository ID 与 `externalId` 一致性，并再次拒绝 Private / Archived / Fork Repository（私有 / 归档 / 分叉仓库）。T04 的搜索和采样策略未改；Normalizer 本身不发网络请求或写数据。
 
 GitHub 稳定 ID 为 `github-repo:<numeric-id>`，即使仓库改名或转移也不改变身份；`full_name` 是当前标题。`url` 与唯一 `sourceRefs` 保留来源仓库链接，`canonicalUrl` 将安全的 GitHub 仓库根链接规范为 HTTPS、去除 query、fragment 和末尾斜杠，同时保留仓库路径；仓库路径与 `full_name`、`owner.login`、`name` 必须一致。`matched_query_ids` 只转为 metadata 中排序去重的 `matchedQueryIds` 搜索证据，不生成业务 `topics`。
 
@@ -205,7 +205,31 @@ data/
 - **Idempotency（幂等性）：**固定 `asOf`、稳定实体 ID、规范排序与 UPSERT（按 ID 覆盖合并）使同一输入重跑无重复条目；无变化时不产生新提交。Cursor、当日数据与 Manifest 的推进受同一成功门槛约束。
 - **Health Check（健康检查）：**每个来源记录 `status`、`lastAttemptAt`、`lastSuccessAt`、`fetchedCount`、`lastError`、`consecutiveFailures`、耗时与结果覆盖；区分成功但无新增、失败、限流与未运行。Pipeline 记录抓取、标准化、去重、发布数量及异常原因。
 
-## 11. 测试边界与零成本风险
+## 11. 第一阶段已实现的 GitHub Pipeline 与发布契约
+
+`scripts/radar.ts` 通过 `radar:run` 或 `radar:smoke` 调用现有 FetchHttpClient 和 GitHubSearchCollector。窗口默认是最近一个已完成的 Asia/Shanghai 自然日，`--date` 可选择已完成日期，`--as-of` 可固定评分基准时刻；内部均转为 UTC。CLI 的匿名请求间隔至少 9 秒，Token 只在 CLI 从可选环境变量读取并传给 Collector。Smoke 只运行一个 MCP Query、最多取 10 条，**不写入发布 JSON**；查询窗口中无合格项会以非零状态退出。正式运行保留 T04 的八个 Query 和每 Query 一页 50 条的采样策略，不声称穷举 GitHub。
+
+`pipeline/deduplicate/` 只按 GitHub 的稳定数字实体 ID 合并。先以 `collectedAt` 较晚者为最新实体观测，时间相同则用稳定内容序排序；保留最早 `firstSeenAt`、排序去重的 `sourceRefs` 和搜索命中证据。不同 ID 即使标题相同也不合并。统计 input、output、duplicate 与拒绝原因。`pipeline/classification/` 依据仓库名、描述和 GitHub Topics 的集中词典按词边界匹配 Profile 中的 Canonical Topic ID；`matchedQueryIds` 只是搜索证据，不参与分类。公司只按准确的 GitHub Owner 映射，描述中的公司名不能证明官方归属；例如 Anthropic 对应 [`anthropics`](https://github.com/anthropics)，DeepSeek 对应 [`deepseek-ai`](https://github.com/deepseek-ai)。
+
+`pipeline/ranking/` 使用固定 `asOf`，每项先算 0–100，再乘 `lib/ranking-weights.ts` 中的权重并保留实际贡献点数（四位小数）。具体规则：
+
+| 维度 | 0–100 基础值 | 权重及限制 |
+| --- | --- | --- |
+| Topic Match | 命中最高优先级：高 90、中 60、低 25、无匹配 0；第二个及后续主题各加 5，额外最多 10 | 35%；多个主题不会无限叠加；词典证据仍可能误判 |
+| Source Quality | 当前 GitHub 官方 API 元数据 80，其他未实现来源为 0 | 20%；不代表 GitHub 认证该第三方仓库的项目声明 |
+| Freshness | `lastPushedAt` 缺失或晚于 `asOf` 为 0；年龄 ≤1 / 7 / 30 / 90 天为 100 / 75 / 45 / 20；更久为 5 | 20%；`publishedAt` 仍为 `null` |
+| Popularity | `70·log1p(stars)/log1p(10000) + 30·log1p(forks)/log1p(1000)`，夹在 0–100；0 Stars 是真实 0，缺失或非法数值则拒绝评分 | 15%；固定锚点而非每日样本最大值；没有历史 Star Growth 时不编造增量 |
+| Novelty | 首次发现距 `asOf` 在 1 / 7 / 30 天内为 80 / 60 / 30；更久为 10；未来时间为 0 | 10%；首次被本系统看到不等于项目刚发布 |
+
+`personalScore` 为五项贡献之和，输出逐条通过 `IntelligenceItemSchema`。这个分数仅为当前用户偏好的可解释排序，不代表客观行业价值。
+
+`pipeline/run.ts` 在 Collector、Normalize、Deduplicate 和最终 Schema 全部通过后才允许发布。当前只有一个来源，`partial` / `failed` 均阻止发布；成功但 0 条记为 `empty`，也不覆盖已有 latest。若当前条目少于上一份有效 latest 的 50%，记为 `anomaly` 并阻止发布。异常结果通过 `sources-status.json` 记录尝试状态，旧 latest 的 `asOf` 不变。该 50% 门槛是首阶段保守保护，采样索引波动时可能误拦，需要后续真实运行数据校准。
+
+`lib/data-store.ts` 以 `data/` 为事实来源，保存 `data/raw/YYYY-MM-DD/github-search.json`、`data/YYYY-MM-DD/items.json`、`data/latest.json`、`data/manifest.json` 和 `data/sources-status.json`；历史 `items.json` 保留每日完整快照，重复运行同一日覆盖该日同名文件但不产生重复 ID。历史文件提供最早 `firstSeenAt`。`public/data/` 只复制经验证的 latest、manifest 和来源状态。写入先在 `data/.staging-*` 暂存并 JSON 往返检查，再逐文件替换；常规写入异常回滚，旧 latest 不被失败运行替换。Raw URL 必须是无 query 的 HTTPS GitHub 仓库根链接；Raw 只保留 T04 最小字段，仍因公开仓库而公开。`app/page.tsx` 在 Static Export 构建时读取 `public/data/`，无数据时显示空状态，有失败时提示；独立的浏览器端 Freshness Check（时效提示）会在访问时重新判断是否超过 48 小时，核心清洗和评分仍由 Pipeline 完成。构建后新增数据需重新构建；`RADAR_BASE_PATH` 可在未来 GitHub Pages 子路径构建时指定，例如 `/ai-frontier-radar`，当前不部署。
+
+这一阶段未实现跨来源模糊去重、完整 Trends、Star Growth、其他信息源、完整产品页面、GitHub Actions 或部署。`schemaVersion` 保持 1；原 Collector 输入契约不变，新增 JSON 尚无旧版本迁移负担。以后调整分类、评分、出版 Schema 时须评估历史重算和 Web 兼容。
+
+## 12. 测试边界与零成本风险
 
 Unit Test（单元测试）覆盖 URL、Title、Hash、分类、评分分项与趋势窗口；Collector Contract Test（采集器契约测试）覆盖空结果、缺失字段、429、超时和结构变化；Integration Test（集成测试）覆盖 Raw Data → JSON、单源失败、异常阻断、Cursor 与重复运行；UI / E2E Test（界面与端到端测试）覆盖数据过期提示、筛选、收藏导出和静态发布读取。每个实施 Task 均运行相关 test、lint、typecheck、build 并检查 Diff。
 

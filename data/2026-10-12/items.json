@@ -1,0 +1,2416 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-12",
+  "asOf": "2026-10-13T13:24:42.319Z",
+  "source": "github-search",
+  "status": "success",
+  "receivedCount": 356,
+  "acceptedCount": 36,
+  "normalizedCount": 36,
+  "duplicateCount": 0,
+  "rejectedCount": 0,
+  "itemCount": 36,
+  "items": [
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:809673506",
+      "title": "Eigenwise/atomic-agents",
+      "url": "https://github.com/Eigenwise/atomic-agents",
+      "canonicalUrl": "https://github.com/Eigenwise/atomic-agents",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "809673506",
+          "url": "https://github.com/Eigenwise/atomic-agents"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Building AI agents, atomically",
+        "repositoryId": "809673506",
+        "fullName": "Eigenwise/atomic-agents",
+        "owner": "Eigenwise",
+        "stars": 6283,
+        "forks": 555,
+        "openIssues": 7,
+        "language": "Python",
+        "githubTopics": [
+          "ai",
+          "artificial-intelligence",
+          "large-language-model",
+          "large-language-models",
+          "llms",
+          "openai",
+          "openai-api"
+        ],
+        "createdAt": "2024-06-03T08:24:07.000Z",
+        "updatedAt": "2026-10-13T12:23:14.000Z",
+        "lastPushedAt": "2026-10-11T17:13:57.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "large-language-model"
+        ]
+      },
+      "topics": [
+        "agent"
+      ],
+      "companies": [],
+      "popularityScore": 93.9152,
+      "personalScore": 84.5873,
+      "scoreBreakdown": {
+        "topic": 31.5,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 14.0873,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:622163915",
+      "title": "RiccardoBiosas/awesome-MLSecOps",
+      "url": "https://github.com/RiccardoBiosas/awesome-MLSecOps",
+      "canonicalUrl": "https://github.com/RiccardoBiosas/awesome-MLSecOps",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "622163915",
+          "url": "https://github.com/RiccardoBiosas/awesome-MLSecOps"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "A curated list of MLSecOps tools and resources for securing machine learning and AI systems - adversarial ML defense, LLM security, AI red teaming, model scanning, supply-chain protection, and MLOps pipeline security.",
+        "repositoryId": "622163915",
+        "fullName": "RiccardoBiosas/awesome-MLSecOps",
+        "owner": "RiccardoBiosas",
+        "stars": 475,
+        "forks": 121,
+        "openIssues": 23,
+        "language": "Astro",
+        "githubTopics": [
+          "adversarial-machine-learning",
+          "agentic-security",
+          "ai-agents",
+          "ai-governance",
+          "ai-red-teaming",
+          "ai-security",
+          "data-poisoning",
+          "large-language-model",
+          "llm-security",
+          "machine-learning-security",
+          "mcp-security",
+          "mlops",
+          "mlops-security",
+          "mlsecops",
+          "model-poisoning",
+          "owasp",
+          "prompt-injection",
+          "rag-security",
+          "supply-chain-security",
+          "threat-modeling"
+        ],
+        "createdAt": "2023-04-01T10:06:32.000Z",
+        "updatedAt": "2026-10-12T01:43:03.000Z",
+        "lastPushedAt": "2026-10-12T01:42:59.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "large-language-model"
+        ]
+      },
+      "topics": [
+        "agent",
+        "rag",
+        "mcp"
+      ],
+      "companies": [],
+      "popularityScore": 67.7182,
+      "personalScore": 84.1577,
+      "scoreBreakdown": {
+        "topic": 35,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 10.1577,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1174252968",
+      "title": "rohansx/cloakpipe",
+      "url": "https://github.com/rohansx/cloakpipe",
+      "canonicalUrl": "https://github.com/rohansx/cloakpipe",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1174252968",
+          "url": "https://github.com/rohansx/cloakpipe"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "CloakPipe is the verifiable control plane for production AI agents: evaluate a release, certify it, enforce it at runtime, and prove what happened.",
+        "repositoryId": "1174252968",
+        "fullName": "rohansx/cloakpipe",
+        "owner": "rohansx",
+        "stars": 47,
+        "forks": 9,
+        "openIssues": 0,
+        "language": "Rust",
+        "githubTopics": [
+          "agents",
+          "control-plane",
+          "encryption",
+          "enterprise-ai",
+          "governance",
+          "llm",
+          "pii",
+          "policies",
+          "policy",
+          "policy-engine",
+          "policy-restricted",
+          "proxy",
+          "pseudonymization",
+          "rag",
+          "runtime",
+          "runtime-governance",
+          "runtime-permissions"
+        ],
+        "createdAt": "2026-03-06T08:29:00.000Z",
+        "updatedAt": "2026-10-11T19:09:31.000Z",
+        "lastPushedAt": "2026-10-11T19:09:32.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "rag",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 39.42,
+      "personalScore": 79.913,
+      "scoreBreakdown": {
+        "topic": 35,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 5.913,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1209491942",
+      "title": "Dome-Layer/dome-llm-council",
+      "url": "https://github.com/Dome-Layer/dome-llm-council",
+      "canonicalUrl": "https://github.com/Dome-Layer/dome-llm-council",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1209491942",
+          "url": "https://github.com/Dome-Layer/dome-llm-council"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Multi-model AI deliberation: Claude, Gemini, and GPT-4o cross-examine each other, then produce a structured verdict with a confidence score, dissent, and an append-only governance audit log. Built for regulated EU enterprises. Part of the Dome AI governance portfolio.",
+        "repositoryId": "1209491942",
+        "fullName": "Dome-Layer/dome-llm-council",
+        "owner": "Dome-Layer",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 5,
+        "language": "TypeScript",
+        "githubTopics": [
+          "ai-act",
+          "ai-governance",
+          "anthropic",
+          "audit-trail",
+          "deliberation",
+          "dome-layer",
+          "enterprise-ai",
+          "fastapi",
+          "gdpr",
+          "google-gemini",
+          "llm",
+          "multi-agent",
+          "nextjs",
+          "openai",
+          "python",
+          "regulated-industries",
+          "server-sent-events",
+          "sse",
+          "supabase",
+          "typescript"
+        ],
+        "createdAt": "2026-04-13T13:35:16.000Z",
+        "updatedAt": "2026-10-12T13:29:55.000Z",
+        "lastPushedAt": "2026-10-12T13:29:50.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 77.25,
+      "scoreBreakdown": {
+        "topic": 33.25,
+        "source": 16,
+        "freshness": 20,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1361361941",
+      "title": "amanpratap1999/clause-iq-rag",
+      "url": "https://github.com/amanpratap1999/clause-iq-rag",
+      "canonicalUrl": "https://github.com/amanpratap1999/clause-iq-rag",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1361361941",
+          "url": "https://github.com/amanpratap1999/clause-iq-rag"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Enterprise Contract and Policy RAG Assistant with Clause-Level Provenance, Page-Bounded Chunking, and Embedded Qdrant.",
+        "repositoryId": "1361361941",
+        "fullName": "amanpratap1999/clause-iq-rag",
+        "owner": "amanpratap1999",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 0,
+        "language": "Python",
+        "githubTopics": [
+          "document-intelligence",
+          "enterprise-ai",
+          "fastapi",
+          "llm",
+          "python",
+          "qdrant",
+          "rag",
+          "retrieval-augmented-generation",
+          "vector-search"
+        ],
+        "createdAt": "2026-09-08T12:29:50.000Z",
+        "updatedAt": "2026-10-12T15:47:29.000Z",
+        "lastPushedAt": "2026-10-12T15:47:26.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "rag",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 77.25,
+      "scoreBreakdown": {
+        "topic": 33.25,
+        "source": 16,
+        "freshness": 20,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1356938227",
+      "title": "FengLi-AI/InTeam",
+      "url": "https://github.com/FengLi-AI/InTeam",
+      "canonicalUrl": "https://github.com/FengLi-AI/InTeam",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1356938227",
+          "url": "https://github.com/FengLi-AI/InTeam"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "面向中小企业的企业知识问答与办公任务 Agent：支持 RAG 知识问答、预置企划/方案/报价单等多步骤工作流，Agent 自主检索资料并生成材料，关键行动经用户确认。",
+        "repositoryId": "1356938227",
+        "fullName": "FengLi-AI/InTeam",
+        "owner": "FengLi-AI",
+        "stars": 9,
+        "forks": 0,
+        "openIssues": 0,
+        "language": "Python",
+        "githubTopics": [
+          "agent-harness",
+          "agent-loop",
+          "ai",
+          "ai-agent",
+          "dify",
+          "enterprise-ai",
+          "fastapi",
+          "nextjs",
+          "onboarding",
+          "rag"
+        ],
+        "createdAt": "2026-09-04T09:14:57.000Z",
+        "updatedAt": "2026-10-11T16:28:59.000Z",
+        "lastPushedAt": "2026-10-11T16:28:56.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "rag",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 17.4998,
+      "personalScore": 76.625,
+      "scoreBreakdown": {
+        "topic": 35,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 2.625,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1341558993",
+      "title": "SuperChason/ontology-driven-ai-data-management-skills",
+      "url": "https://github.com/SuperChason/ontology-driven-ai-data-management-skills",
+      "canonicalUrl": "https://github.com/SuperChason/ontology-driven-ai-data-management-skills",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1341558993",
+          "url": "https://github.com/SuperChason/ontology-driven-ai-data-management-skills"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "16 cross-platform Agent Skills for enterprise ontology engineering, supporting Codex, Claude Code, and WorkBuddy.",
+        "repositoryId": "1341558993",
+        "fullName": "SuperChason/ontology-driven-ai-data-management-skills",
+        "owner": "SuperChason",
+        "stars": 15,
+        "forks": 3,
+        "openIssues": 0,
+        "language": "Python",
+        "githubTopics": [
+          "agent-skills",
+          "ai-data-governance",
+          "codex",
+          "enterprise-ai",
+          "knowledge-graph",
+          "ontology"
+        ],
+        "createdAt": "2026-08-21T08:08:28.000Z",
+        "updatedAt": "2026-10-12T03:34:04.000Z",
+        "lastPushedAt": "2026-10-12T03:34:41.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 27.0916,
+      "personalScore": 76.3137,
+      "scoreBreakdown": {
+        "topic": 33.25,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 4.0637,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1231467152",
+      "title": "brianbeals/brianbeals.com",
+      "url": "https://github.com/brianbeals/brianbeals.com",
+      "canonicalUrl": "https://github.com/brianbeals/brianbeals.com",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1231467152",
+          "url": "https://github.com/brianbeals/brianbeals.com"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Personal site and writing on enterprise technology, AI, and leadership.",
+        "repositoryId": "1231467152",
+        "fullName": "brianbeals/brianbeals.com",
+        "owner": "brianbeals",
+        "stars": 1,
+        "forks": 0,
+        "openIssues": 0,
+        "language": "TypeScript",
+        "githubTopics": [
+          "enterprise-ai",
+          "nextjs",
+          "personal-website",
+          "react",
+          "typescript",
+          "vercel",
+          "writing"
+        ],
+        "createdAt": "2026-05-07T01:48:07.000Z",
+        "updatedAt": "2026-10-12T14:08:33.000Z",
+        "lastPushedAt": "2026-10-12T14:08:29.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 5.268,
+      "personalScore": 76.2902,
+      "scoreBreakdown": {
+        "topic": 31.5,
+        "source": 16,
+        "freshness": 20,
+        "popularity": 0.7902,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1163447264",
+      "title": "avanishkasar/DemandFlow",
+      "url": "https://github.com/avanishkasar/DemandFlow",
+      "canonicalUrl": "https://github.com/avanishkasar/DemandFlow",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1163447264",
+          "url": "https://github.com/avanishkasar/DemandFlow"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Born from rigorous academic research and currently under peer review, DemandFlow is now actively evolving into a full scale AI forecasting SaaS platform, bridging the gap between theoretical deep learning and live enterprise deployment.",
+        "repositoryId": "1163447264",
+        "fullName": "avanishkasar/DemandFlow",
+        "owner": "avanishkasar",
+        "stars": 0,
+        "forks": 1,
+        "openIssues": 0,
+        "language": "Python",
+        "githubTopics": [
+          "algorithm-design",
+          "applied-ai",
+          "applied-research",
+          "b2b-software",
+          "data-science",
+          "deep-learning",
+          "demand-forecasting",
+          "demand-planning",
+          "enterprise-ai",
+          "machine-learning",
+          "mlops",
+          "predictive",
+          "predictive-analytics",
+          "predictive-modeling",
+          "saas",
+          "scalable-architecture",
+          "time-series-forecasting"
+        ],
+        "createdAt": "2026-02-21T16:43:41.000Z",
+        "updatedAt": "2026-10-12T14:33:17.000Z",
+        "lastPushedAt": "2026-10-12T14:33:15.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 3.0099,
+      "personalScore": 75.9515,
+      "scoreBreakdown": {
+        "topic": 31.5,
+        "source": 16,
+        "freshness": 20,
+        "popularity": 0.4515,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1362248984",
+      "title": "casareanderson/enterprise-ai-security-kit",
+      "url": "https://github.com/casareanderson/enterprise-ai-security-kit",
+      "canonicalUrl": "https://github.com/casareanderson/enterprise-ai-security-kit",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1362248984",
+          "url": "https://github.com/casareanderson/enterprise-ai-security-kit"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Free sample of the Enterprise AI Security Kit: 3 of 12 LinkedIn posts on enterprise AI risk, the five post structures, and every source cited.",
+        "repositoryId": "1362248984",
+        "fullName": "casareanderson/enterprise-ai-security-kit",
+        "owner": "casareanderson",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 0,
+        "language": null,
+        "githubTopics": [
+          "ai-governance",
+          "ai-security",
+          "content-kit",
+          "cybersecurity",
+          "enterprise-ai",
+          "linkedin"
+        ],
+        "createdAt": "2026-09-09T05:38:48.000Z",
+        "updatedAt": "2026-10-12T15:55:05.000Z",
+        "lastPushedAt": "2026-10-12T15:55:01.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 75.5,
+      "scoreBreakdown": {
+        "topic": 31.5,
+        "source": 16,
+        "freshness": 20,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1297760624",
+      "title": "boogy/argus",
+      "url": "https://github.com/boogy/argus",
+      "canonicalUrl": "https://github.com/boogy/argus",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1297760624",
+          "url": "https://github.com/boogy/argus"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Monitor, audit, and secure AI coding agents in enterprises with real-time visibility",
+        "repositoryId": "1297760624",
+        "fullName": "boogy/argus",
+        "owner": "boogy",
+        "stars": 2,
+        "forks": 0,
+        "openIssues": 0,
+        "language": "Rust",
+        "githubTopics": [
+          "ai",
+          "ai-governance",
+          "ai-security",
+          "ai-tools",
+          "enterprise-ai",
+          "monitoring"
+        ],
+        "createdAt": "2026-07-11T20:24:51.000Z",
+        "updatedAt": "2026-10-12T12:59:30.000Z",
+        "lastPushedAt": "2026-10-12T13:02:35.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "ai-coding",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 8.3495,
+      "personalScore": 75.2524,
+      "scoreBreakdown": {
+        "topic": 35,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 1.2524,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1250099000",
+      "title": "kimss-ai/kimss-python-sdk",
+      "url": "https://github.com/kimss-ai/kimss-python-sdk",
+      "canonicalUrl": "https://github.com/kimss-ai/kimss-python-sdk",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1250099000",
+          "url": "https://github.com/kimss-ai/kimss-python-sdk"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Official Kimss Python control-plane SDK (PyPI: kimss). Register agents, report usage, MCP helpers. Inference: OpenAI-compatible base_url at api.kimss.ai.",
+        "repositoryId": "1250099000",
+        "fullName": "kimss-ai/kimss-python-sdk",
+        "owner": "kimss-ai",
+        "stars": 1,
+        "forks": 0,
+        "openIssues": 0,
+        "language": "Python",
+        "githubTopics": [
+          "ai-agents",
+          "ai-gateway",
+          "api-gateway",
+          "enterprise-ai",
+          "governance",
+          "llm-security",
+          "mcp",
+          "openai-compatible",
+          "pypi",
+          "python",
+          "sdk",
+          "zero-trust"
+        ],
+        "createdAt": "2026-05-26T09:55:37.000Z",
+        "updatedAt": "2026-10-12T11:31:01.000Z",
+        "lastPushedAt": "2026-10-12T11:30:57.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "mcp",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 5.268,
+      "personalScore": 74.7902,
+      "scoreBreakdown": {
+        "topic": 35,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0.7902,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1345422356",
+      "title": "kimss-ai/kimss-control-plane",
+      "url": "https://github.com/kimss-ai/kimss-control-plane",
+      "canonicalUrl": "https://github.com/kimss-ai/kimss-control-plane",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1345422356",
+          "url": "https://github.com/kimss-ai/kimss-control-plane"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Public hub for the Kimss Secure Enterprise Agent Control Plane — OpenAPI spec, MCP RBAC, A2A onboarding, Anthropic guide, security badges.",
+        "repositoryId": "1345422356",
+        "fullName": "kimss-ai/kimss-control-plane",
+        "owner": "kimss-ai",
+        "stars": 1,
+        "forks": 0,
+        "openIssues": 0,
+        "language": "Python",
+        "githubTopics": [
+          "ai-agents",
+          "ai-gateway",
+          "api-gateway",
+          "control-plane",
+          "enterprise-ai",
+          "governance",
+          "llm-security",
+          "mcp",
+          "openapi",
+          "spec",
+          "zero-trust"
+        ],
+        "createdAt": "2026-08-24T21:29:49.000Z",
+        "updatedAt": "2026-10-12T11:30:19.000Z",
+        "lastPushedAt": "2026-10-12T11:30:15.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "mcp",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 5.268,
+      "personalScore": 74.7902,
+      "scoreBreakdown": {
+        "topic": 35,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0.7902,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1084703865",
+      "title": "Tonser974/autonome-framework",
+      "url": "https://github.com/Tonser974/autonome-framework",
+      "canonicalUrl": "https://github.com/Tonser974/autonome-framework",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1084703865",
+          "url": "https://github.com/Tonser974/autonome-framework"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "🤖 Orchestrate AI agent workflows in Java/Spring Boot with Autonome—type-safe, production-ready, and easy-to-integrate for enterprise solutions.",
+        "repositoryId": "1084703865",
+        "fullName": "Tonser974/autonome-framework",
+        "owner": "Tonser974",
+        "stars": 5,
+        "forks": 1,
+        "openIssues": 0,
+        "language": "Java",
+        "githubTopics": [
+          "agent-frameworks",
+          "chatbot",
+          "crawler",
+          "devoxx",
+          "devoxx-fr-2025",
+          "enterprise-ai",
+          "jailbreak",
+          "java",
+          "kotlin",
+          "langchain-alternatives",
+          "langfuse",
+          "llm",
+          "localai",
+          "open-source",
+          "orchestration",
+          "orchestration-framework",
+          "scrapoxy",
+          "spring-boot"
+        ],
+        "createdAt": "2025-10-28T03:36:02.000Z",
+        "updatedAt": "2026-10-12T04:26:37.000Z",
+        "lastPushedAt": "2026-10-12T04:26:33.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 16.6274,
+      "personalScore": 74.7441,
+      "scoreBreakdown": {
+        "topic": 33.25,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 2.4941,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1188433564",
+      "title": "saitarrun/LLM-Powered-Knowledge-Retrieval-Platform",
+      "url": "https://github.com/saitarrun/LLM-Powered-Knowledge-Retrieval-Platform",
+      "canonicalUrl": "https://github.com/saitarrun/LLM-Powered-Knowledge-Retrieval-Platform",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1188433564",
+          "url": "https://github.com/saitarrun/LLM-Powered-Knowledge-Retrieval-Platform"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Enterprise RAG platform with multi-agent orchestration, Neo4j knowledge graphs, vector search, analytics, and approval workflows.",
+        "repositoryId": "1188433564",
+        "fullName": "saitarrun/LLM-Powered-Knowledge-Retrieval-Platform",
+        "owner": "saitarrun",
+        "stars": 0,
+        "forks": 1,
+        "openIssues": 14,
+        "language": "Python",
+        "githubTopics": [
+          "ai-agents",
+          "analytics",
+          "document-processing",
+          "enterprise-ai",
+          "fastapi",
+          "knowledge-graph",
+          "langchain",
+          "llm",
+          "multi-agent",
+          "neo4j",
+          "nextjs",
+          "python",
+          "rag",
+          "vector-search"
+        ],
+        "createdAt": "2026-03-22T04:12:19.000Z",
+        "updatedAt": "2026-10-11T22:01:49.000Z",
+        "lastPushedAt": "2026-10-11T22:01:46.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "rag",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 3.0099,
+      "personalScore": 74.4515,
+      "scoreBreakdown": {
+        "topic": 35,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0.4515,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1080794525",
+      "title": "PDewangan/neo4j-agentframework",
+      "url": "https://github.com/PDewangan/neo4j-agentframework",
+      "canonicalUrl": "https://github.com/PDewangan/neo4j-agentframework",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1080794525",
+          "url": "https://github.com/PDewangan/neo4j-agentframework"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "📊 Transform documents into a smart knowledge base using Neo4j and Azure AI for efficient, intelligent searching and answer generation.",
+        "repositoryId": "1080794525",
+        "fullName": "PDewangan/neo4j-agentframework",
+        "owner": "PDewangan",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 0,
+        "language": "Python",
+        "githubTopics": [
+          "ai-agents",
+          "azure-openai",
+          "bitnet",
+          "cypher",
+          "docker",
+          "enterprise-ai",
+          "github-container-registry",
+          "graph-database",
+          "hybrid-search",
+          "knowledge-graph",
+          "llm-inference",
+          "machine-learning",
+          "neo4j",
+          "python",
+          "quantization",
+          "rag",
+          "semantic-search",
+          "zero-build-time"
+        ],
+        "createdAt": "2025-10-21T21:59:34.000Z",
+        "updatedAt": "2026-10-12T04:25:54.000Z",
+        "lastPushedAt": "2026-10-12T04:25:50.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "rag",
+        "enterprise-ai",
+        "ai-search"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 74,
+      "scoreBreakdown": {
+        "topic": 35,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1139072671",
+      "title": "bob798/enterprise-support-agent",
+      "url": "https://github.com/bob798/enterprise-support-agent",
+      "canonicalUrl": "https://github.com/bob798/enterprise-support-agent",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1139072671",
+          "url": "https://github.com/bob798/enterprise-support-agent"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Enterprise AI Delivery Reference: discover, design, build, evaluate, and deploy enterprise AI workflows — method + examples + runnable code + eval results",
+        "repositoryId": "1139072671",
+        "fullName": "bob798/enterprise-support-agent",
+        "owner": "bob798",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 0,
+        "language": "Python",
+        "githubTopics": [
+          "agent-workflow",
+          "ai-engineering",
+          "enterprise-ai",
+          "fde",
+          "llm-agents",
+          "rag"
+        ],
+        "createdAt": "2026-01-21T13:41:58.000Z",
+        "updatedAt": "2026-10-11T17:36:44.000Z",
+        "lastPushedAt": "2026-10-11T17:36:41.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "rag",
+        "enterprise-ai",
+        "fde"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 74,
+      "scoreBreakdown": {
+        "topic": 35,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1198554118",
+      "title": "trenchant-rogaine315/ai-engineer-vault",
+      "url": "https://github.com/trenchant-rogaine315/ai-engineer-vault",
+      "canonicalUrl": "https://github.com/trenchant-rogaine315/ai-engineer-vault",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1198554118",
+          "url": "https://github.com/trenchant-rogaine315/ai-engineer-vault"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Build production-ready AI systems with vendor-neutral patterns for LLMs, retrieval, and agents.",
+        "repositoryId": "1198554118",
+        "fullName": "trenchant-rogaine315/ai-engineer-vault",
+        "owner": "trenchant-rogaine315",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 0,
+        "language": null,
+        "githubTopics": [
+          "ai",
+          "ai-agents",
+          "ai-engineering",
+          "architecture-patterns",
+          "enterprise-ai",
+          "field-manual",
+          "generative-ai",
+          "llm-ops",
+          "machine-learning",
+          "mcp",
+          "open-source",
+          "prompt",
+          "prompt-engineering",
+          "prompts",
+          "python",
+          "rag",
+          "vector-databases"
+        ],
+        "createdAt": "2026-04-01T14:31:33.000Z",
+        "updatedAt": "2026-10-12T04:49:26.000Z",
+        "lastPushedAt": "2026-10-12T04:49:22.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "rag",
+        "mcp",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 74,
+      "scoreBreakdown": {
+        "topic": 35,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1309523070",
+      "title": "kimss-ai/kimss-java-sdk",
+      "url": "https://github.com/kimss-ai/kimss-java-sdk",
+      "canonicalUrl": "https://github.com/kimss-ai/kimss-java-sdk",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1309523070",
+          "url": "https://github.com/kimss-ai/kimss-java-sdk"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Official Kimss Java SDK (Maven: ai.kimss:kimss-java). Mirrored from kimssApi/kimss_java_sdk — do not edit main as SSOT.",
+        "repositoryId": "1309523070",
+        "fullName": "kimss-ai/kimss-java-sdk",
+        "owner": "kimss-ai",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 0,
+        "language": "Java",
+        "githubTopics": [
+          "ai-agents",
+          "ai-gateway",
+          "api-gateway",
+          "enterprise-ai",
+          "governance",
+          "java",
+          "llm-security",
+          "maven",
+          "mcp",
+          "sdk",
+          "zero-trust"
+        ],
+        "createdAt": "2026-07-23T04:41:25.000Z",
+        "updatedAt": "2026-10-12T11:30:59.000Z",
+        "lastPushedAt": "2026-10-12T11:30:55.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "mcp",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 74,
+      "scoreBreakdown": {
+        "topic": 35,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1317349443",
+      "title": "kimss-ai/kimss-python-quickstart",
+      "url": "https://github.com/kimss-ai/kimss-python-quickstart",
+      "canonicalUrl": "https://github.com/kimss-ai/kimss-python-quickstart",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1317349443",
+          "url": "https://github.com/kimss-ai/kimss-python-quickstart"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "5-minute AI gateway quickstart for Python — route OpenAI and Anthropic SDK traffic through identity, audit, policy, and kill-switch controls with a one-line change.",
+        "repositoryId": "1317349443",
+        "fullName": "kimss-ai/kimss-python-quickstart",
+        "owner": "kimss-ai",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 7,
+        "language": "Python",
+        "githubTopics": [
+          "ai-agents",
+          "ai-gateway",
+          "anthropic",
+          "api-gateway",
+          "enterprise-ai",
+          "governance",
+          "llm-security",
+          "mcp",
+          "openai",
+          "python",
+          "quickstart",
+          "tutorial",
+          "zero-trust"
+        ],
+        "createdAt": "2026-07-30T14:19:33.000Z",
+        "updatedAt": "2026-10-12T11:30:58.000Z",
+        "lastPushedAt": "2026-10-12T11:34:09.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "mcp",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 74,
+      "scoreBreakdown": {
+        "topic": 35,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1364447447",
+      "title": "anujbhatt30/Enterprise-Intelligence-Agent",
+      "url": "https://github.com/anujbhatt30/Enterprise-Intelligence-Agent",
+      "canonicalUrl": "https://github.com/anujbhatt30/Enterprise-Intelligence-Agent",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1364447447",
+          "url": "https://github.com/anujbhatt30/Enterprise-Intelligence-Agent"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "AI-powered enterprise agent for RAG, SQL analytics, reasoning, and intelligent business insights.",
+        "repositoryId": "1364447447",
+        "fullName": "anujbhatt30/Enterprise-Intelligence-Agent",
+        "owner": "anujbhatt30",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 0,
+        "language": "HTML",
+        "githubTopics": [
+          "ai-agents",
+          "data-analysis",
+          "enterprise-ai",
+          "genrative-ai",
+          "llm",
+          "machine-learning",
+          "ml",
+          "ollama",
+          "python",
+          "rag",
+          "sql-agent",
+          "streamlit"
+        ],
+        "createdAt": "2026-09-10T15:27:10.000Z",
+        "updatedAt": "2026-10-11T18:43:29.000Z",
+        "lastPushedAt": "2026-10-11T18:43:25.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "rag",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 74,
+      "scoreBreakdown": {
+        "topic": 35,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1235846516",
+      "title": "byte5ai/omadia-ui",
+      "url": "https://github.com/byte5ai/omadia-ui",
+      "canonicalUrl": "https://github.com/byte5ai/omadia-ui",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1235846516",
+          "url": "https://github.com/byte5ai/omadia-ui"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Self-hostable desktop canvas for agentic AI. Agents synthesise live, deterministic UI over a wire protocol, rendered in one material system (Lume). Bring your own LLM, own your data, EU/GDPR-ready.",
+        "repositoryId": "1235846516",
+        "fullName": "byte5ai/omadia-ui",
+        "owner": "byte5ai",
+        "stars": 1,
+        "forks": 1,
+        "openIssues": 9,
+        "language": "JavaScript",
+        "githubTopics": [
+          "agentic-os",
+          "agents",
+          "ai",
+          "ai-agents",
+          "canvas",
+          "design-system",
+          "desktop-app",
+          "electron",
+          "enterprise-ai",
+          "gdpr",
+          "generative-ui",
+          "open-source",
+          "privacy",
+          "react",
+          "self-hosted",
+          "typescript"
+        ],
+        "createdAt": "2026-05-11T17:58:56.000Z",
+        "updatedAt": "2026-10-12T09:51:03.000Z",
+        "lastPushedAt": "2026-10-12T09:50:58.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 8.2778,
+      "personalScore": 73.4917,
+      "scoreBreakdown": {
+        "topic": 33.25,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 1.2417,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1160965423",
+      "title": "badressalemmouffek-coder/frank-bot",
+      "url": "https://github.com/badressalemmouffek-coder/frank-bot",
+      "canonicalUrl": "https://github.com/badressalemmouffek-coder/frank-bot",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1160965423",
+          "url": "https://github.com/badressalemmouffek-coder/frank-bot"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Build a RAG AI chat bot for business docs with local ChromaDB, Claude, and Flask for grounded answers from your own data",
+        "repositoryId": "1160965423",
+        "fullName": "badressalemmouffek-coder/frank-bot",
+        "owner": "badressalemmouffek-coder",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 0,
+        "language": "Python",
+        "githubTopics": [
+          "baileys",
+          "baileys-bot",
+          "bot",
+          "bugbot",
+          "chatbot",
+          "comfyjs",
+          "dialogflow",
+          "enterprise-ai",
+          "flask",
+          "lemmy",
+          "lemmy-bot",
+          "rag",
+          "self-hosted",
+          "slack",
+          "twitch",
+          "virtual-assistant-framework"
+        ],
+        "createdAt": "2026-02-18T15:25:33.000Z",
+        "updatedAt": "2026-10-12T04:52:32.000Z",
+        "lastPushedAt": "2026-10-12T04:52:29.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "rag",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 72.25,
+      "scoreBreakdown": {
+        "topic": 33.25,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1225997236",
+      "title": "plain-sleepydick853/feros",
+      "url": "https://github.com/plain-sleepydick853/feros",
+      "canonicalUrl": "https://github.com/plain-sleepydick853/feros",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1225997236",
+          "url": "https://github.com/plain-sleepydick853/feros"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Build production-ready voice AI agents with an open, self-hostable runtime engineered for sub-second latency and enterprise-grade scale.",
+        "repositoryId": "1225997236",
+        "fullName": "plain-sleepydick853/feros",
+        "owner": "plain-sleepydick853",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 0,
+        "language": null,
+        "githubTopics": [
+          "agent-framework",
+          "blog",
+          "business-card",
+          "conversational-ai",
+          "enterprise-ai",
+          "feross",
+          "github-config",
+          "javascript",
+          "jekyll",
+          "multi-language",
+          "npm",
+          "npm-card",
+          "npx",
+          "python",
+          "speech-recognition",
+          "speech-to-text",
+          "text-to-speech",
+          "vapi-alternative",
+          "voice-orchestration"
+        ],
+        "createdAt": "2026-04-30T21:38:43.000Z",
+        "updatedAt": "2026-10-12T04:53:58.000Z",
+        "lastPushedAt": "2026-10-12T04:53:54.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 72.25,
+      "scoreBreakdown": {
+        "topic": 33.25,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1226232209",
+      "title": "Fast-newengland468/CyberClaw",
+      "url": "https://github.com/Fast-newengland468/CyberClaw",
+      "canonicalUrl": "https://github.com/Fast-newengland468/CyberClaw",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1226232209",
+          "url": "https://github.com/Fast-newengland468/CyberClaw"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Monitor AI agent decisions and logic flows through a transparent framework built on LangGraph for full visibility into autonomous operations.",
+        "repositoryId": "1226232209",
+        "fullName": "Fast-newengland468/CyberClaw",
+        "owner": "Fast-newengland468",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 0,
+        "language": null,
+        "githubTopics": [
+          "agent",
+          "agent-framework",
+          "ai-agent",
+          "ai-safety",
+          "claude-code",
+          "cross-platform",
+          "enterprise-ai",
+          "langchain",
+          "langgraph",
+          "llm",
+          "openclaw",
+          "python",
+          "transparent-ai",
+          "two-phase-invocation"
+        ],
+        "createdAt": "2026-05-01T06:05:00.000Z",
+        "updatedAt": "2026-10-12T04:53:52.000Z",
+        "lastPushedAt": "2026-10-12T04:53:49.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 72.25,
+      "scoreBreakdown": {
+        "topic": 33.25,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1270986444",
+      "title": "9t29zhmwdh-coder/agent-governance-console",
+      "url": "https://github.com/9t29zhmwdh-coder/agent-governance-console",
+      "canonicalUrl": "https://github.com/9t29zhmwdh-coder/agent-governance-console",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1270986444",
+          "url": "https://github.com/9t29zhmwdh-coder/agent-governance-console"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Enterprise governance and audit toolkit for AI agent workflows. Integrates with Azure Monitor, Microsoft Sentinel and Entra ID. Built with Rust and Axum.",
+        "repositoryId": "1270986444",
+        "fullName": "9t29zhmwdh-coder/agent-governance-console",
+        "owner": "9t29zhmwdh-coder",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 0,
+        "language": "Rust",
+        "githubTopics": [
+          "agents",
+          "ai-governance",
+          "azure",
+          "azure-monitor",
+          "enterprise-ai",
+          "governance",
+          "microsoft-sentinel",
+          "observability",
+          "opentelemetry",
+          "responsible-ai",
+          "rust"
+        ],
+        "createdAt": "2026-06-16T08:21:12.000Z",
+        "updatedAt": "2026-10-12T05:53:08.000Z",
+        "lastPushedAt": "2026-10-12T05:55:13.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 72.25,
+      "scoreBreakdown": {
+        "topic": 33.25,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1319208125",
+      "title": "api-evangelist/rogo",
+      "url": "https://github.com/api-evangelist/rogo",
+      "canonicalUrl": "https://github.com/api-evangelist/rogo",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1319208125",
+          "url": "https://github.com/api-evangelist/rogo"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Rogo — independent third-party profile of a public API surface, by API Evangelist. Rogo is a New York-based artificial intelligence company building an AI platform purpose-built for the world's leading financial institutions. Founded by Gabriel Stengel, John Willett, and Tumas Rackaitis, Rogo serves 300+ institutions and 35,000+ bankers and investo",
+        "repositoryId": "1319208125",
+        "fullName": "api-evangelist/rogo",
+        "owner": "api-evangelist",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 0,
+        "language": null,
+        "githubTopics": [
+          "ai-agents",
+          "apis-json",
+          "artificial-intelligence",
+          "company",
+          "enterprise-ai",
+          "financial-services",
+          "fintech",
+          "investment-banking",
+          "private-equity"
+        ],
+        "createdAt": "2026-08-01T10:52:20.000Z",
+        "updatedAt": "2026-10-12T07:38:41.000Z",
+        "lastPushedAt": "2026-10-12T07:38:37.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 72.25,
+      "scoreBreakdown": {
+        "topic": 33.25,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1333816594",
+      "title": "effortson/satuwork",
+      "url": "https://github.com/effortson/satuwork",
+      "canonicalUrl": "https://github.com/effortson/satuwork",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1333816594",
+          "url": "https://github.com/effortson/satuwork"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "AI Bots Enterpise System for SMEs",
+        "repositoryId": "1333816594",
+        "fullName": "effortson/satuwork",
+        "owner": "effortson",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 0,
+        "language": "JavaScript",
+        "githubTopics": [
+          "ai-agents",
+          "enterprise-ai",
+          "multi-agent"
+        ],
+        "createdAt": "2026-08-14T05:12:56.000Z",
+        "updatedAt": "2026-10-12T12:46:10.000Z",
+        "lastPushedAt": "2026-10-12T12:52:55.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 72.25,
+      "scoreBreakdown": {
+        "topic": 33.25,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1379248248",
+      "title": "mlmicocake-beep/metric-releases",
+      "url": "https://github.com/mlmicocake-beep/metric-releases",
+      "canonicalUrl": "https://github.com/mlmicocake-beep/metric-releases",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1379248248",
+          "url": "https://github.com/mlmicocake-beep/metric-releases"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "METRIC 發行與下載：Portal 與 Agent 安裝檔，皆附原廠簽章清單",
+        "repositoryId": "1379248248",
+        "fullName": "mlmicocake-beep/metric-releases",
+        "owner": "mlmicocake-beep",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 0,
+        "language": "HTML",
+        "githubTopics": [
+          "ai-portal",
+          "enterprise-ai",
+          "metric",
+          "releases",
+          "windows"
+        ],
+        "createdAt": "2026-09-21T07:05:33.000Z",
+        "updatedAt": "2026-10-12T09:17:00.000Z",
+        "lastPushedAt": "2026-10-12T09:15:20.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 72.25,
+      "scoreBreakdown": {
+        "topic": 33.25,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1415042869",
+      "title": "annawzhang/enterprise-ai-console",
+      "url": "https://github.com/annawzhang/enterprise-ai-console",
+      "canonicalUrl": "https://github.com/annawzhang/enterprise-ai-console",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1415042869",
+          "url": "https://github.com/annawzhang/enterprise-ai-console"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "企业级 AI 工作台运营总台：权限分级知识库、机器人看板、系统自检、工具嵌入（模拟数据）",
+        "repositoryId": "1415042869",
+        "fullName": "annawzhang/enterprise-ai-console",
+        "owner": "annawzhang",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 0,
+        "language": "JavaScript",
+        "githubTopics": [
+          "ai-agents",
+          "enterprise-ai",
+          "knowledge-base",
+          "product-demo",
+          "rbac"
+        ],
+        "createdAt": "2026-10-12T04:14:17.000Z",
+        "updatedAt": "2026-10-12T04:14:46.000Z",
+        "lastPushedAt": "2026-10-12T04:14:24.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "agent",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 72.25,
+      "scoreBreakdown": {
+        "topic": 33.25,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1415516227",
+      "title": "Anandha-raaman/Enterprise-Document-Intelligence-Advanced-RAG-System",
+      "url": "https://github.com/Anandha-raaman/Enterprise-Document-Intelligence-Advanced-RAG-System",
+      "canonicalUrl": "https://github.com/Anandha-raaman/Enterprise-Document-Intelligence-Advanced-RAG-System",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1415516227",
+          "url": "https://github.com/Anandha-raaman/Enterprise-Document-Intelligence-Advanced-RAG-System"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Enterprise Document Intelligence & Advanced RAG System",
+        "repositoryId": "1415516227",
+        "fullName": "Anandha-raaman/Enterprise-Document-Intelligence-Advanced-RAG-System",
+        "owner": "Anandha-raaman",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 0,
+        "language": "Python",
+        "githubTopics": [
+          "bm25",
+          "chromadb",
+          "citations",
+          "enterprise-ai",
+          "flashrank",
+          "guardrails",
+          "hybrid-search",
+          "ollama",
+          "rag",
+          "reranking"
+        ],
+        "createdAt": "2026-10-12T11:42:05.000Z",
+        "updatedAt": "2026-10-12T13:07:56.000Z",
+        "lastPushedAt": "2026-10-12T13:07:52.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "rag",
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 72.25,
+      "scoreBreakdown": {
+        "topic": 33.25,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1396789271",
+      "title": "emaf205/ai-policy-builder",
+      "url": "https://github.com/emaf205/ai-policy-builder",
+      "canonicalUrl": "https://github.com/emaf205/ai-policy-builder",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1396789271",
+          "url": "https://github.com/emaf205/ai-policy-builder"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Enterprise generative AI governance and compliance policy builder with interactive export.",
+        "repositoryId": "1396789271",
+        "fullName": "emaf205/ai-policy-builder",
+        "owner": "emaf205",
+        "stars": 1,
+        "forks": 0,
+        "openIssues": 0,
+        "language": "HTML",
+        "githubTopics": [
+          "ai-governance",
+          "client-side",
+          "compliance",
+          "enterprise-ai",
+          "policy-generator"
+        ],
+        "createdAt": "2026-09-30T01:19:22.000Z",
+        "updatedAt": "2026-10-11T21:58:32.000Z",
+        "lastPushedAt": "2026-10-11T20:20:12.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 5.268,
+      "personalScore": 71.2902,
+      "scoreBreakdown": {
+        "topic": 31.5,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0.7902,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1415504954",
+      "title": "mceblvn/makefile-http-slop",
+      "url": "https://github.com/mceblvn/makefile-http-slop",
+      "canonicalUrl": "https://github.com/mceblvn/makefile-http-slop",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1415504954",
+          "url": "https://github.com/mceblvn/makefile-http-slop"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "🚀 A paradigm-shifting approach to web infrastructure: an enterprise-grade HTTP server implemented entirely in GNU Make ✨ Zero-configuration yet infinitely configurable, with zero-trust defense-in-depth 🔐, 4-layer file loading 📂 and sub-millisecond latency ⚡ Production-ready ✅",
+        "repositoryId": "1415504954",
+        "fullName": "mceblvn/makefile-http-slop",
+        "owner": "mceblvn",
+        "stars": 1,
+        "forks": 0,
+        "openIssues": 0,
+        "language": "Makefile",
+        "githubTopics": [
+          "ai-powered",
+          "ai-powered-applications",
+          "ai-powered-enhancements",
+          "ai-powered-tools",
+          "ai-slop",
+          "bash",
+          "cursed",
+          "devops",
+          "enterprise-ai",
+          "enterprise-software",
+          "enterprise-solutions",
+          "fifo",
+          "http",
+          "http-server",
+          "make",
+          "makefile",
+          "netcat",
+          "quantum-ready",
+          "slop"
+        ],
+        "createdAt": "2026-10-12T11:33:28.000Z",
+        "updatedAt": "2026-10-12T11:47:28.000Z",
+        "lastPushedAt": "2026-10-12T11:47:39.000Z",
+        "defaultBranch": "master",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 5.268,
+      "personalScore": 71.2902,
+      "scoreBreakdown": {
+        "topic": 31.5,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0.7902,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1310584781",
+      "title": "api-evangelist/boltzbit",
+      "url": "https://github.com/api-evangelist/boltzbit",
+      "canonicalUrl": "https://github.com/api-evangelist/boltzbit",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1310584781",
+          "url": "https://github.com/api-evangelist/boltzbit"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Boltzbit — independent third-party profile of a public API surface, by API Evangelist. Boltzbit builds General Learning Intelligence (GLI) — AI systems that organizations can own, train, and control, learning continuously from proprietary data rather than depending on static, vendor-controlled models.",
+        "repositoryId": "1310584781",
+        "fullName": "api-evangelist/boltzbit",
+        "owner": "api-evangelist",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 0,
+        "language": null,
+        "githubTopics": [
+          "apis-json",
+          "artificial-intelligence",
+          "company",
+          "enterprise-ai",
+          "generative-ai",
+          "large-language-models",
+          "machine-learning",
+          "mlops",
+          "model-fine-tuning"
+        ],
+        "createdAt": "2026-07-24T03:25:15.000Z",
+        "updatedAt": "2026-10-11T22:57:50.000Z",
+        "lastPushedAt": "2026-10-11T22:57:46.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 70.5,
+      "scoreBreakdown": {
+        "topic": 31.5,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:1313100906",
+      "title": "api-evangelist/eigentech",
+      "url": "https://github.com/api-evangelist/eigentech",
+      "canonicalUrl": "https://github.com/api-evangelist/eigentech",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "1313100906",
+          "url": "https://github.com/api-evangelist/eigentech"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "Eigentech — independent third-party profile of a public API surface, by API Evangelist. Eigentech (eigentech.ai) is an artificial intelligence technology company, reported to have been founded around 2016 and headquartered in Hangzhou, China, that applies AI and machine learning to business and industrial domains.",
+        "repositoryId": "1313100906",
+        "fullName": "api-evangelist/eigentech",
+        "owner": "api-evangelist",
+        "stars": 0,
+        "forks": 0,
+        "openIssues": 0,
+        "language": null,
+        "githubTopics": [
+          "apis-json",
+          "artificial-intelligence",
+          "automation",
+          "china",
+          "company",
+          "enterprise-ai",
+          "machine-learning",
+          "qiming-portfolio"
+        ],
+        "createdAt": "2026-07-26T19:29:23.000Z",
+        "updatedAt": "2026-10-11T23:06:39.000Z",
+        "lastPushedAt": "2026-10-11T23:06:35.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "enterprise-ai"
+        ]
+      },
+      "topics": [
+        "enterprise-ai"
+      ],
+      "companies": [],
+      "popularityScore": 0,
+      "personalScore": 70.5,
+      "scoreBreakdown": {
+        "topic": 31.5,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 0,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "github-repo:655749062",
+      "title": "yingpengma/Awesome-Story-Generation",
+      "url": "https://github.com/yingpengma/Awesome-Story-Generation",
+      "canonicalUrl": "https://github.com/yingpengma/Awesome-Story-Generation",
+      "source": "github",
+      "sourceType": "api",
+      "sourceRefs": [
+        {
+          "source": "github",
+          "externalId": "655749062",
+          "url": "https://github.com/yingpengma/Awesome-Story-Generation"
+        }
+      ],
+      "contentType": "repository",
+      "publishedAt": null,
+      "firstSeenAt": "2026-10-13T13:24:42.319Z",
+      "collectedAt": "2026-10-13T13:24:42.319Z",
+      "metadata": {
+        "description": "This repository collects an extensive list of awesome papers about Story Generation / Storytelling, exclusively focusing on the era of Large Language Models (LLMs).",
+        "repositoryId": "655749062",
+        "fullName": "yingpengma/Awesome-Story-Generation",
+        "owner": "yingpengma",
+        "stars": 665,
+        "forks": 35,
+        "openIssues": 0,
+        "language": "Python",
+        "githubTopics": [
+          "language-generation",
+          "large-language-model",
+          "narrative",
+          "natural-language-processing",
+          "nlp",
+          "novel",
+          "open-ended",
+          "story",
+          "story-generation",
+          "storytelling"
+        ],
+        "createdAt": "2023-06-19T14:15:09.000Z",
+        "updatedAt": "2026-10-12T11:30:45.000Z",
+        "lastPushedAt": "2026-10-12T10:33:31.000Z",
+        "defaultBranch": "main",
+        "matchedQueryIds": [
+          "large-language-model"
+        ]
+      },
+      "topics": [],
+      "companies": [],
+      "popularityScore": 64.971,
+      "personalScore": 48.7457,
+      "scoreBreakdown": {
+        "topic": 0,
+        "source": 16,
+        "freshness": 15,
+        "popularity": 9.7457,
+        "novelty": 8,
+        "profileVersion": "2026-10-13",
+        "asOf": "2026-10-13T13:24:42.319Z"
+      }
+    }
+  ]
+}

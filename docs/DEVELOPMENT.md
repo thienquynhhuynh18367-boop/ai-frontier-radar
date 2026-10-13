@@ -1,22 +1,24 @@
 # AI Frontier Radar 开发与协作规范
 
-> T01 已建立并验证 Next.js 工程骨架。T04 已实现 GitHub Repository Search Collector（仓库搜索采集器），T05 已实现 GitHub Normalizer（标准化器）；当前首页仍是 Engineering Placeholder（工程占位页），尚无完整 Pipeline、真实产品页面、数据发布或部署工作流。
+> 第一阶段已接通 GitHub Repository Search Collector → JSON → 本地静态首页预览。完整产品页面、其他来源、Trends、每日工作流和部署仍待后续 Task。
 
 ## 1. Local Development（本地开发）
 
 正式仓库：<https://github.com/thienquynhhuynh18367-boop/ai-frontier-radar>。进入仓库后先阅读 [PRD.md](PRD.md)、[ARCHITECTURE.md](ARCHITECTURE.md) 和根目录 `AGENTS.md`。只使用 **npm**；不要改用 pnpm、yarn 或 bun。本次在 Windows 上以 Node.js 24.16.0、npm 11.13.0 验证。`package.json` 的 Node 要求为 `^24.0.0`，Node 类型包使用对应的 24.x 系列。
 
-在仓库根目录执行 `npm install` 后，使用 `npm run dev` 启动本地开发服务器，默认访问 <http://localhost:3000>。T01 实测开发服务器返回 HTTP 200 和指定的工程占位文字。无需 `.env` 文件或任何 Token。
+在仓库根目录执行 `npm ci` 后，可先运行 `npm run radar:smoke` 进行一个 Query 的真实请求检查；它不发布。`npm run radar:run` 使用最近已完成的上海自然日，成功后写入历史和 `public/data/`。然后使用 `npm run dev` 启动本地开发服务器，访问 <http://localhost:3000>。不需要 `.env` 或 PAT。可用 `--date YYYY-MM-DD --as-of YYYY-MM-DDTHH:mm:ss.sssZ` 固定窗口与计算时刻；仅允许已完成的自然日。若要生成静态页面，采集后执行 `npm run build`；设置 `RADAR_BASE_PATH=/ai-frontier-radar` 可在未来针对 GitHub Pages 子路径构建。详细操作见根目录 README。
 
-以下命令已在 T01 实际验证；`test` 使用一次性执行模式，结束后正常退出：
+常用命令；`test` 使用一次性执行模式，结束后正常退出：
 
 | 目的 | npm 命令 | 当前状态 |
 | --- | --- | --- |
-| 本地启动 | `npm run dev` | 通过；首页 HTTP 200 |
-| Test（测试） | `npm run test` | 通过；Vitest 1 项冒烟测试 |
-| Lint（代码检查） | `npm run lint` | 通过；ESLint CLI |
-| Typecheck（类型检查） | `npm run typecheck` | 通过；`tsc --noEmit`，`strict: true` |
-| Build（构建） | `npm run build` | 通过；`out/` 静态产物 |
+| 本地启动 | `npm run dev` | 首页读取经验证的发布 JSON；无数据时显示空状态 |
+| 采集检查 | `npm run radar:smoke` | 单个 MCP Query；不更新 latest |
+| 正式采集 | `npm run radar:run` | 八个已配置 Query；质量门槛通过后更新历史与 latest |
+| Test（测试） | `npm run test` | Vitest 离线契约与集成测试 |
+| Lint（代码检查） | `npm run lint` | ESLint CLI |
+| Typecheck（类型检查） | `npm run typecheck` | `tsc --noEmit`，`strict: true` |
+| Build（构建） | `npm run build` | `out/` 静态产物；检查只含允许公开的 JSON |
 
 关键版本（以 `package-lock.json` 锁定的实际安装结果为准）：Next.js 16.4.0、React 19.3.0、TypeScript 6.0.3、Tailwind CSS 4.3.3、shadcn/ui CLI 4.21.4、Vitest 5.0.4、ESLint 9.39.5。TypeScript 7 与当前 `eslint-config-next` 的 TypeScript ESLint 依赖不兼容，故使用兼容的稳定 6.0.3。Static Export（静态导出）通过 `next.config.ts` 的 `output: "export"` 实现；GitHub Pages 路径和部署留待部署 Task。
 
@@ -65,7 +67,7 @@
 | UI Test（界面测试） | 页面读取、搜索筛选、收藏、已读、隐藏与导出 |
 | E2E Test（端到端测试） | 自动任务产出数据后静态 Web 可读取，失败时显示过期状态 |
 
-T01 只验证工程配置的 Smoke Test（冒烟测试）；业务测试须在对应业务 Task 中建立，不能用本测试替代。
+现在已有业务单元与离线全链路集成测试；真实 API 验收单独运行，并记录接受数量、状态和限流结果。Fixture 不得写入正式 `data/` 或 `public/data/`。
 
 ## 6. 技术解释与注释
 

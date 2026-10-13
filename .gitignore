@@ -5,3 +5,4 @@ out/
 coverage/
 *.tsbuildinfo
 next-env.d.ts
+data/.staging-*/

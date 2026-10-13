@@ -8,18 +8,21 @@ AI Frontier Radar 是供本人长期使用的 AI 行业前沿信息雷达 Web �
 
 ## 当前技术架构
 
-当前已建立 Next.js App Router（应用路由）、TypeScript（类型检查）、Tailwind CSS（样式）、shadcn/ui（组件配置）和 Vitest（测试）的工程骨架，以及数据契约、HttpClient、GitHub Repository Search Collector（仓库搜索采集器）与 GitHub Normalizer（标准化器）。`next.config.ts` 启用 Static Export（静态导出），构建产物位于 `out/`。首页目前只是工程占位页；尚无完整 Pipeline、真实数据发布或每日工作流。Collector 与 Web 分离；未来静态 Web 只读取通过验证的 JSON。
+Next.js 16 Static Export（静态导出）负责只读预览；Node.js CLI 使用现有 FetchHttpClient 与 GitHub Repository Search Collector 采集公开仓库，经 Normalize、Deduplicate、Classification、Ranking 与发布校验，生成历史 JSON 和 `public/data/`。首页在构建时只读取已验证的公开 JSON。当前只接 GitHub Repository Search，尚无 Trends、其他来源、完整产品页面或每日 GitHub Actions。
 
 ## 当前目录
 
 ```text
 ai-frontier-radar/
-├─ app/                    # App Router 与工程占位页
+├─ app/                    # 静态 GitHub 数据预览
 ├─ collectors/github/      # GitHub Repository Search Collector
 ├─ config/sources/         # 数据源查询与请求规模配置
 ├─ components/ui/button.tsx # shadcn/ui 初始化生成的基础组件
 ├─ lib/                    # HTTP Client 与共享工具
-├─ pipeline/normalize/     # GitHub RawItem → NormalizedItem
+├─ pipeline/               # Normalize、Deduplicate、Classification、Ranking 与发布门槛
+├─ scripts/radar.ts        # 实际采集 CLI
+├─ data/                   # 原始快照、每日历史、latest 与状态；公开仓库中也公开
+├─ public/data/            # 已验证的网站发布 JSON；不含 RawItem
 ├─ types/                  # RawItem、NormalizedItem 等运行时契约
 ├─ tests/                  # 离线契约、Collector 与 Normalize 测试
 ├─ docs/                   # PRD、架构、数据源与开发规范
@@ -34,27 +37,38 @@ ai-frontier-radar/
 └─ package-lock.json       # npm 锁定版本
 ```
 
-完整 Pipeline、数据目录和自动化工作流将在后续明确 Task 中按依赖建立。
+Trends、更多来源、完整页面和自动化工作流留待后续 Task。
 
 ## 本地开发入口
 
-使用 Node.js 24（本次验证版本 24.16.0）和 npm（本次验证版本 11.13.0）。在仓库根目录执行：
+Windows PowerShell 本地步骤。先安装 Node.js 24，在 PowerShell 中进入克隆后的仓库目录，然后执行：
 
-```bash
-npm install
+```powershell
+cd C:\路径\ai-frontier-radar
+npm ci
+npm run radar:smoke
+npm run radar:run
 npm run dev
 ```
 
-开发服务器启动后访问 <http://localhost:3000>。本次已实际验证 `npm run dev` 可启动并返回首页。其他已验证命令：
+`radar:smoke` 只请求一个 Query、默认不发布；其窗口没有合格条目时会以非零状态退出，可继续检查正式运行。`radar:run` 使用八个既定 Query，默认采集**最近一个已完成的上海自然日**；成功后访问 <http://localhost:3000>。无需 PAT；如已有合适的 GitHub Token，可临时通过 PowerShell 环境变量 `GITHUB_TOKEN` 传给 CLI，不要写入文件。匿名 Search 有独立限流，失败时会记录状态并保留旧 `latest.json`。
 
-```bash
+指定已完成的日期和固定计算时点：
+
+```powershell
+npm run radar:run -- --date 2026-10-12 --as-of 2026-10-13T09:00:00.000Z
+```
+
+`--date` 按 Asia/Shanghai 解释；`--as-of` 必须是毫秒精度 UTC，且晚于该日结束。同样的源数据与 asOf 可重算；API 返回的实时观测可能随时间变化。运行后如需静态文件，执行：
+
+```powershell
 npm run test
 npm run lint
 npm run typecheck
 npm run build
 ```
 
-`npm run build` 在 `out/` 生成静态 HTML、JavaScript 和 CSS；目前尚未配置 GitHub Pages 的 `basePath`、`assetPrefix` 或部署工作流。详细规范见 [DEVELOPMENT.md](docs/DEVELOPMENT.md)。
+`npm run build` 将当前已发布 JSON 编入 `out/`，所以每次采集后要重新构建才能更新静态 HTML；首次克隆、尚无 JSON 时也能构建，页面显示“暂无采集数据”。未来若部署到 GitHub Pages 仓库子路径，可在构建前设置 `$env:RADAR_BASE_PATH='/ai-frontier-radar'`；本 Task 不部署。详细规范见 [DEVELOPMENT.md](docs/DEVELOPMENT.md)。
 
 ## 文档入口
 
