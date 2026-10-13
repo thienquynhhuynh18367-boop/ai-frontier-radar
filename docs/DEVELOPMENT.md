@@ -1,22 +1,24 @@
 # AI Frontier Radar 开发与协作规范
 
-> 当前仓库处于 Task 00.5：只有文档与工程约束，尚无 `package.json`、Next.js 骨架、Collector 或产品页面。下述命令约定供 T01 建立脚本时实现，不能把它们描述为当前已可运行。
+> T01 已建立并验证 Next.js 工程骨架。当前首页仅是 Engineering Placeholder（工程占位页）；尚无 Collector、Pipeline、真实产品页面、数据源接入或部署工作流。
 
 ## 1. Local Development（本地开发）
 
-正式仓库：<https://github.com/thienquynhhuynh18367-boop/ai-frontier-radar>。进入仓库后先阅读 [PRD.md](PRD.md)、[ARCHITECTURE.md](ARCHITECTURE.md) 和根目录 `AGENTS.md`。目前可直接阅读和编辑文档；**当前尚不能启动 Web**。T01 建立 Next.js（Web 框架）、TypeScript（类型化 JavaScript）、Tailwind CSS 与 shadcn/ui 骨架后，再在 README 中填写经过实际验证的安装和启动命令。
+正式仓库：<https://github.com/thienquynhhuynh18367-boop/ai-frontier-radar>。进入仓库后先阅读 [PRD.md](PRD.md)、[ARCHITECTURE.md](ARCHITECTURE.md) 和根目录 `AGENTS.md`。只使用 **npm**；不要改用 pnpm、yarn 或 bun。本次在 Windows 上以 Node.js 24.16.0、npm 11.13.0 验证。`package.json` 的 Node 要求为 `^24.0.0`，Node 类型包使用对应的 24.x 系列。
 
-T01 应在 `package.json` 建立以下统一脚本，并在完成时记录实际包管理器与版本：
+在仓库根目录执行 `npm install` 后，使用 `npm run dev` 启动本地开发服务器，默认访问 <http://localhost:3000>。T01 实测开发服务器返回 HTTP 200 和指定的工程占位文字。无需 `.env` 文件或任何 Token。
 
-| 目的 | 计划脚本 | 当前状态 |
+以下命令已在 T01 实际验证；`test` 使用一次性执行模式，结束后正常退出：
+
+| 目的 | npm 命令 | 当前状态 |
 | --- | --- | --- |
-| 本地启动 | `npm run dev` | 不可运行；尚无 `package.json` |
-| Test（测试） | `npm run test` | 不可运行；尚无测试框架与脚本 |
-| Lint（代码检查） | `npm run lint` | 不可运行；尚无配置与脚本 |
-| Typecheck（类型检查） | `npm run typecheck` | 不可运行；尚无 TypeScript 配置与脚本 |
-| Build（构建） | `npm run build` | 不可运行；尚无 Next.js 项目 |
+| 本地启动 | `npm run dev` | 通过；首页 HTTP 200 |
+| Test（测试） | `npm run test` | 通过；Vitest 1 项冒烟测试 |
+| Lint（代码检查） | `npm run lint` | 通过；ESLint CLI |
+| Typecheck（类型检查） | `npm run typecheck` | 通过；`tsc --noEmit`，`strict: true` |
+| Build（构建） | `npm run build` | 通过；`out/` 静态产物 |
 
-若 T01 选择其他包管理器，必须同步更新本表、README 和 CI（持续集成）命令；实际可运行性以 `package.json` 为准，不靠文档猜测。每个后续 Task 尽量运行上述四项；若某项确实尚不存在，报告原因和补齐它的 Task，不能虚报通过。
+关键版本（以 `package-lock.json` 锁定的实际安装结果为准）：Next.js 16.4.0、React 19.3.0、TypeScript 6.0.3、Tailwind CSS 4.3.3、shadcn/ui CLI 4.21.4、Vitest 5.0.4、ESLint 9.39.5。TypeScript 7 与当前 `eslint-config-next` 的 TypeScript ESLint 依赖不兼容，故使用兼容的稳定 6.0.3。Static Export（静态导出）通过 `next.config.ts` 的 `output: "export"` 实现；GitHub Pages 路径和部署留待部署 Task。
 
 ## 2. Task 执行顺序
 
@@ -63,7 +65,7 @@ T01 应在 `package.json` 建立以下统一脚本，并在完成时记录实际
 | UI Test（界面测试） | 页面读取、搜索筛选、收藏、已读、隐藏与导出 |
 | E2E Test（端到端测试） | 自动任务产出数据后静态 Web 可读取，失败时显示过期状态 |
 
-当前 Task 00.5 只进行文档内容检查和 Git Diff 检查；业务测试从 T01 建立项目骨架后开始。
+T01 只验证工程配置的 Smoke Test（冒烟测试）；业务测试须在对应业务 Task 中建立，不能用本测试替代。
 
 ## 6. 技术解释与注释
 

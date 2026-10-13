@@ -8,26 +8,49 @@ AI Frontier Radar 是供本人长期使用的 AI 行业前沿信息雷达 Web �
 
 ## 当前技术架构
 
-**以下是已确定的目标架构，尚未实现。**计划使用 Next.js、TypeScript、Tailwind CSS、shadcn/ui、GitHub Actions、仓库 JSON 数据和浏览器 LocalStorage。Collector（数据采集器）与 Web 分离；GitHub Actions 负责定时处理，静态 Web 只读取通过验证的结果。当前仓库处于 Task 00.5 文档基础阶段，没有产品页面、Collector 或每日工作流。
+当前已建立 Next.js App Router（应用路由）、TypeScript（类型检查）、Tailwind CSS（样式）、shadcn/ui（组件配置）和 Vitest（测试）的工程骨架。`next.config.ts` 启用 Static Export（静态导出），构建产物位于 `out/`。首页目前只是工程占位页，没有真实产品页面、Collector、Pipeline、数据或每日工作流。目标架构中的 Collector 与 Web 分离；未来静态 Web 只读取通过验证的 JSON。
 
 ## 当前目录
 
 ```text
 ai-frontier-radar/
-├─ AGENTS.md                 # Codex 工程约束
-├─ README.md                 # 项目入口
-└─ docs/
-   ├─ PRD.md                # 产品范围与验收
-   ├─ ARCHITECTURE.md       # 目标架构与数据契约
-   ├─ DATA-SOURCES.md       # 已确认来源注册表
-   └─ DEVELOPMENT.md        # 本地开发与任务规范
+├─ app/                    # App Router 与工程占位页
+├─ components/ui/button.tsx # shadcn/ui 初始化生成的基础组件
+├─ lib/utils.ts            # shadcn/ui 基础样式工具
+├─ tests/                  # 工程冒烟测试
+├─ docs/                   # PRD、架构、数据源与开发规范
+├─ AGENTS.md               # Codex 工程约束
+├─ README.md               # 项目入口
+├─ components.json         # shadcn/ui 配置
+├─ next.config.ts          # Static Export 配置
+├─ eslint.config.mjs       # ESLint 配置
+├─ postcss.config.mjs      # Tailwind CSS 构建配置
+├─ tsconfig.json           # TypeScript 严格模式配置
+├─ package.json            # npm 脚本和依赖
+└─ package-lock.json       # npm 锁定版本
 ```
 
-应用代码、数据目录和工作流将在后续明确 Task 中按依赖建立；本阶段不创建空壳功能文件。
+Collector、Pipeline、配置、数据目录和自动化工作流将在后续明确 Task 中按依赖建立。
 
 ## 本地开发入口
 
-当前只有文档，尚无 `package.json`，因此不能运行开发服务器、测试、Lint（代码检查）、Typecheck（类型检查）或 Build（构建）。T01 建立项目骨架并实际验证命令后，会在此补充准确的安装和启动步骤。开发规范与拟定脚本见 [DEVELOPMENT.md](docs/DEVELOPMENT.md)。
+使用 Node.js 24（本次验证版本 24.16.0）和 npm（本次验证版本 11.13.0）。在仓库根目录执行：
+
+```bash
+npm install
+npm run dev
+```
+
+开发服务器启动后访问 <http://localhost:3000>。本次已实际验证 `npm run dev` 可启动并返回首页。其他已验证命令：
+
+```bash
+npm run test
+npm run lint
+npm run typecheck
+npm run build
+```
+
+`npm run build` 在 `out/` 生成静态 HTML、JavaScript 和 CSS；目前尚未配置 GitHub Pages 的 `basePath`、`assetPrefix` 或部署工作流。详细规范见 [DEVELOPMENT.md](docs/DEVELOPMENT.md)。
 
 ## 文档入口
 
