@@ -40,7 +40,7 @@ Pipeline（处理流水线）在运行开始时固定 `asOf` 和 `Asia/Shanghai`
 
 ## 3. IntelligenceItem（统一情报条目）
 
-以下 TypeScript（类型化 JavaScript）是数据契约草案，不是当前仓库中的实现：
+以下 TypeScript（类型化 JavaScript）展示 T02 已实现契约的形状；正式运行时定义位于 `types/intelligence-item.ts`，`IntelligenceItem` 类型由 Zod Schema（运行时结构定义）的 `z.infer` 推导，避免平行维护两份定义：
 
 ```ts
 type ContentType =
@@ -57,6 +57,19 @@ interface SourceRef {
   source: string;
   externalId: string | null;
   url: string;
+}
+
+type JsonPrimitive = string | number | boolean | null;
+type JsonValue = JsonPrimitive | JsonValue[] | { [key: string]: JsonValue };
+
+interface ScoreBreakdown {
+  topic: number;
+  source: number;
+  freshness: number;
+  popularity: number;
+  novelty: number;
+  profileVersion: string;
+  asOf: string;
 }
 
 interface IntelligenceItem {
@@ -76,20 +89,20 @@ interface IntelligenceItem {
   companies: string[];
   popularityScore: number;
   personalScore: number;
-  scoreBreakdown: {
-    topic: number;
-    source: number;
-    freshness: number;
-    popularity: number;
-    novelty: number;
-    profileVersion: string;
-    asOf: string;
-  };
-  metadata: Record<string, unknown>;
+  scoreBreakdown: ScoreBreakdown;
+  metadata: Record<string, JsonValue>;
 }
 ```
 
-`sourceType` 仅表示采集方式；`contentType` 表示条目类别。`publishedAt` 没有可信证据时为 `null`，不得用 Sitemap 的 `lastmod` 伪装成发布日期。`firstSeenAt` 是系统首次成功观察的时间，`collectedAt` 是本次抓取时间。`metadata` 必须按 `contentType` 再做运行时 Schema Validation（结构验证）：仓库可有 Stars、Forks、Topics、Release；论文可有作者、摘要、分类；融资金额、轮次和岗位发布时间若来源未给出则为缺失值。
+`sourceType` 仅表示采集方式；`contentType` 表示条目类别。`schemaVersion: 1` 标记数据结构，独立于偏好配置的 `profileVersion`。`sourceRefs` 至少有一项，保留合并前各来源 ID 与 URL。`url`、`canonicalUrl` 和证据 URL 只检查 HTTP / HTTPS 格式，不做网络请求。
+
+所有时间字段采用固定格式 `YYYY-MM-DDTHH:mm:ss.sssZ` 的 ISO 8601 UTC，并拒绝不存在的日期。`publishedAt` 没有可信证据时为 `null`，不得用 Sitemap 的 `lastmod` 伪装成发布日期。`firstSeenAt` 是系统首次成功观察的时间，`collectedAt` 是本次抓取时间；`scoreBreakdown.asOf` 是一次评分固定使用的计算时间。
+
+`popularityScore` 和 `personalScore` 均在 0–100。`scoreBreakdown` 五个数值是最终 0–100 分里的**实际贡献点数**，不是原始指标，也不是权重；五项之和与 `personalScore` 的误差不得超过 `1e-6`。T02 只验证这个契约，不计算 Ranking（排序）。`metadata` 仅接受可安全写入 JSON 的嵌套值，拒绝 `undefined`、函数、`Date`、`Map`、`Set`、非有限数字与循环引用。后续来源 Task 还须按 `contentType` 细化仓库 Stars、论文作者、融资轮次等专属元数据规则；来源没给出的事实保持缺失，不捏造值。
+
+`types/json.ts` 定义 JSON 值验证，`pipeline/validation.ts` 提供 `parseIntelligenceItem(data)` 和 `safeParseIntelligenceItem(data)`。后者只返回通过的数据或字段错误列表，使未来 Pipeline 不依赖 Zod 错误对象。`config/profile.ts` 集中管理 Topic（主题）优先级、Company（重点公司）与 `profileVersion`；`config/ranking.ts` 是 35% / 20% / 20% / 15% / 10% 权重的唯一事实来源。关注方向、优先级或权重改变时须更新 Profile Version（偏好版本），使历史分数可追溯。Topic 与 Company 的稳定 ID 使用 `lowercase-kebab-case`，显示名称可变而统计键不变。
+
+T02 尚未生成任何历史 JSON，也没有 Collector 或 Web 业务消费方，因此当前无迁移数据。未来修改此 Schema 时须评估 Collector、Pipeline、历史 JSON、Web、测试与重算范围，并按兼容性决定是否递增 `schemaVersion`。
 
 `id` 优先从稳定实体键生成：GitHub Repository ID、arXiv 基础 ID、公开岗位 ID；一般网页使用 `sha256("url:" + canonicalUrl)`。跨来源相同 URL 合并为一条，并保留全部 `sourceRefs`。ID 不依赖每日运行时间或排序位置。
 
