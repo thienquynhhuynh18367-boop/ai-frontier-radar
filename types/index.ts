@@ -1,6 +1,8 @@
 export type { JsonPrimitive, JsonValue } from "./json";
 export type { ContentType, IntelligenceItem, ScoreBreakdown, SourceRef } from "./intelligence-item";
 export { IntelligenceItemSchema } from "./intelligence-item";
+export type { NormalizedItem } from "./normalized-item";
+export { NormalizedItemSchema } from "./normalized-item";
 export type { Collector, CollectorContext, CollectorError, CollectorResult } from "./collector";
 export { CollectorContextSchema, CollectorErrorSchema, CollectorIdSchema, CollectorResultSchema } from "./collector";
 export type { HttpClient, HttpErrorCode, HttpRequestOptions, HttpResponse } from "./http";

@@ -8,7 +8,7 @@ AI Frontier Radar 是供本人长期使用的 AI 行业前沿信息雷达 Web �
 
 ## 当前技术架构
 
-当前已建立 Next.js App Router（应用路由）、TypeScript（类型检查）、Tailwind CSS（样式）、shadcn/ui（组件配置）和 Vitest（测试）的工程骨架，以及数据契约、HttpClient 与首个 GitHub Repository Search Collector（仓库搜索采集器）。`next.config.ts` 启用 Static Export（静态导出），构建产物位于 `out/`。首页目前只是工程占位页；尚无 Pipeline、真实数据发布或每日工作流。Collector 与 Web 分离；未来静态 Web 只读取通过验证的 JSON。
+当前已建立 Next.js App Router（应用路由）、TypeScript（类型检查）、Tailwind CSS（样式）、shadcn/ui（组件配置）和 Vitest（测试）的工程骨架，以及数据契约、HttpClient、GitHub Repository Search Collector（仓库搜索采集器）与 GitHub Normalizer（标准化器）。`next.config.ts` 启用 Static Export（静态导出），构建产物位于 `out/`。首页目前只是工程占位页；尚无完整 Pipeline、真实数据发布或每日工作流。Collector 与 Web 分离；未来静态 Web 只读取通过验证的 JSON。
 
 ## 当前目录
 
@@ -19,8 +19,9 @@ ai-frontier-radar/
 ├─ config/sources/         # 数据源查询与请求规模配置
 ├─ components/ui/button.tsx # shadcn/ui 初始化生成的基础组件
 ├─ lib/                    # HTTP Client 与共享工具
-├─ types/                  # RawItem、Collector 等运行时契约
-├─ tests/                  # 离线契约与 Collector 测试
+├─ pipeline/normalize/     # GitHub RawItem → NormalizedItem
+├─ types/                  # RawItem、NormalizedItem 等运行时契约
+├─ tests/                  # 离线契约、Collector 与 Normalize 测试
 ├─ docs/                   # PRD、架构、数据源与开发规范
 ├─ AGENTS.md               # Codex 工程约束
 ├─ README.md               # 项目入口
@@ -33,7 +34,7 @@ ai-frontier-radar/
 └─ package-lock.json       # npm 锁定版本
 ```
 
-Pipeline、数据目录和自动化工作流将在后续明确 Task 中按依赖建立。
+完整 Pipeline、数据目录和自动化工作流将在后续明确 Task 中按依赖建立。
 
 ## 本地开发入口
 

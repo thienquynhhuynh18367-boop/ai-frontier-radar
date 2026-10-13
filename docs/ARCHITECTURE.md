@@ -11,7 +11,8 @@ flowchart LR
   A["公开 API / RSS / Sitemap / HTML"] --> B["Collector（分源采集）"]
   B --> C["Raw Data（最小原始快照）"]
   C --> D["Normalize（标准化）"]
-  D --> E["Deduplicate（去重）"]
+  D --> N["NormalizedItem（中间条目）"]
+  N --> E["Deduplicate（去重）"]
   E --> F["Filter + Classification（过滤与分类）"]
   F --> G["Popularity + Personal Ranking（评分）"]
   G --> H["Observations + Trend Statistics（观测与趋势）"]
@@ -27,7 +28,7 @@ Collector 与 Web 解耦：前者只在自动任务中产生 RawItem；后者只
 
 1. **Collector（数据采集器）：**每个外部来源独立，按 Official API（官方接口）→ RSS / Atom（订阅源）→ Sitemap（站点地图）→ HTML Scraping（网页解析）的顺序选择接入方式。只抓原始字段并报告成功、空结果或失败。
 2. **Raw Data（原始数据）：**保存重算所需的最小来源字段、来源 ID、URL 和时间；不得向 Web 输出未标准化对象。
-3. **Normalize（标准化）：**把来源字段映射到统一 Schema（数据结构规范），验证 URL、时间、内容类型和元数据，隔离不合格记录。
+3. **Normalize（标准化）：**把来源字段映射到可验证的 NormalizedItem（中间条目），验证身份、URL、时间、内容类型和元数据，隔离不合格记录；不提前填写业务分类或评分。
 4. **Deduplicate（去重）：**合并同一仓库、论文、岗位或网页文章的多来源证据，保持稳定 ID。
 5. **Filter / Classification（过滤与规则分类）：**按时间和噪音规则过滤；通过版本化词典、来源规则和明确证据设置 Topic（主题）、公司与内容类型。
 6. **Popularity Ranking（热度排序）：**在同类内容内部归一化 Stars、Points、Comments 等，避免直接比较不同量纲。
@@ -40,7 +41,7 @@ Pipeline（处理流水线）在运行开始时固定 `asOf` 和 `Asia/Shanghai`
 
 ## 3. IntelligenceItem（统一情报条目）
 
-以下 TypeScript（类型化 JavaScript）展示 T02 已实现契约的形状；正式运行时定义位于 `types/intelligence-item.ts`，`IntelligenceItem` 类型由 Zod Schema（运行时结构定义）的 `z.infer` 推导，避免平行维护两份定义：
+以下 TypeScript（类型化 JavaScript）展示最终条目的形状；正式运行时定义位于 `types/intelligence-item.ts`，`IntelligenceItem` 类型由 Zod Schema（运行时结构定义）的 `z.infer` 推导，避免平行维护两份定义：
 
 ```ts
 type ContentType =
@@ -96,13 +97,15 @@ interface IntelligenceItem {
 
 `sourceType` 仅表示采集方式；`contentType` 表示条目类别。`schemaVersion: 1` 标记数据结构，独立于偏好配置的 `profileVersion`。`sourceRefs` 至少有一项，保留合并前各来源 ID 与 URL。`url`、`canonicalUrl` 和证据 URL 只检查 HTTP / HTTPS 格式，不做网络请求。
 
+T05 将稳定 ID、标题、URL、来源证据、内容类型、发布时间、首次发现时间、采集时间和 JSON-safe metadata 抽到无业务计算依赖的 `types/base-item.ts`。`types/normalized-item.ts` 直接复用 `BaseItemSchema`；最终 `IntelligenceItemSchema` 在同一基础结构上增加 `topics`、`companies`、Popularity / Personal Score（热度分 / 个人相关度分）及 `scoreBreakdown`。依赖方向为 Base Item → Normalized Item / Intelligence Item，GitHub Normalizer 依赖 RawItem、Normalized Item 与 GitHub 来源 Schema，不存在循环依赖。最终条目的字段、校验边界与 `schemaVersion: 1` 保持不变。
+
 所有时间字段采用固定格式 `YYYY-MM-DDTHH:mm:ss.sssZ` 的 ISO 8601 UTC，并拒绝不存在的日期。`publishedAt` 没有可信证据时为 `null`，不得用 Sitemap 的 `lastmod` 伪装成发布日期。`firstSeenAt` 是系统首次成功观察的时间，`collectedAt` 是本次抓取时间；`scoreBreakdown.asOf` 是一次评分固定使用的计算时间。
 
 `popularityScore` 和 `personalScore` 均在 0–100。`scoreBreakdown` 五个数值是最终 0–100 分里**加权后的实际贡献点数**，不是原始指标，也不是权重；其上限由对应 Ranking Weight（排序权重）乘以 100 得出，依次为 topic 35、source 20、freshness 20、popularity 15、novelty 10，且均不得小于 0。五项之和与 `personalScore` 的误差不得超过 `1e-6`。此处只验证评分契约，不计算 Ranking（排序）。`metadata` 仅接受可安全写入 JSON 的嵌套值，拒绝 `undefined`、函数、`Date`、`Map`、`Set`、非有限数字与循环引用。后续来源 Task 还须按 `contentType` 细化仓库 Stars、论文作者、融资轮次等专属元数据规则；来源没给出的事实保持缺失，不捏造值。
 
 `types/json.ts` 定义 JSON 值验证，`pipeline/validation.ts` 提供 `parseIntelligenceItem(data)` 和 `safeParseIntelligenceItem(data)`。后者只返回通过的数据或字段错误列表，使未来 Pipeline 不依赖 Zod 错误对象。`config/profile.ts` 集中管理 Topic（主题）优先级、Company（重点公司）与 `profileVersion`；`config/ranking.ts` 保留业务配置入口，35% / 20% / 20% / 15% / 10% 的数值只定义在无依赖的 `lib/ranking-weights.ts`，由配置入口和 Schema 共同读取，避免循环依赖。关注方向、优先级或权重改变时须更新 Profile Version（偏好版本），使历史分数可追溯。Topic 与 Company 的稳定 ID 使用 `lowercase-kebab-case`，显示名称可变而统计键不变。
 
-T02 尚未生成任何历史 JSON；T04 的 Collector 也尚未写出历史数据，因此当前无迁移数据。未来修改此 Schema 时须评估 Collector、Pipeline、历史 JSON、Web、测试与重算范围，并按兼容性决定是否递增 `schemaVersion`。
+T02 尚未生成任何历史 JSON；T04 Collector 和 T05 Normalizer 也尚未写出历史数据，因此当前无迁移数据。Base Item 的抽取不改变 Collector 输入、最终 JSON 或 Web 契约；新增的 NormalizedItem 只在 Pipeline 内部使用。未来修改这些 Schema 时须评估 Collector、Pipeline、历史 JSON、Web、测试与重算范围，并按兼容性决定是否递增 `schemaVersion`。
 
 `id` 优先从稳定实体键生成：GitHub Repository ID、arXiv 基础 ID、公开岗位 ID；一般网页使用 `sha256("url:" + canonicalUrl)`。跨来源相同 URL 合并为一条，并保留全部 `sourceRefs`。ID 不依赖每日运行时间或排序位置。
 
@@ -120,7 +123,7 @@ T03 已在 `types/raw-item.ts` 建立 RawItem（原始采集条目）运行时 S
 
 HTTP 429 始终视为 Rate Limited（限流）。HTTP 403 只有在 `x-ratelimit-remaining: 0` 或存在 `Retry-After` 时才视为限流；单独出现的 `x-ratelimit-reset` 不足以证明 403 是限流。对已识别的限流，先采用有效的 `Retry-After` 秒数或 HTTP 日期，再采用 `x-ratelimit-reset` 的 Unix Epoch Seconds 计算等待时间，均不可用时回退到通用重试延迟。选定的等待时间超过 60 秒时立即停止，不让任务长期阻塞。`HttpError` 除 code、脱敏 URL origin、status、retryable 和尝试次数外，只保存安全的 `retryAfterMs`（服务端建议等待时长）与 `rateLimitResetAt`（有效 reset 时间的 UTC 字符串）；不保存完整 Header、Response Body、Authorization、Cookie 或 URL query。`retryable` 表示错误类别可重试，即使本次尝试次数已经耗尽也保持其类别含义。
 
-T04 已实现首个真实 Collector，但尚无历史 Raw JSON 或 Web 消费方，因此当前不需要迁移或重算；后续来源仍须按此 Schema 验证输出，再由 Pipeline 处理。`IntelligenceItem` 仅复用原有 URL、时间及 sourceType 验证，字段与版本没有变化。
+T04 已实现首个真实 Collector，T05 实现了对应的 GitHub Normalizer；尚无历史 Raw JSON 或 Web 消费方，因此当前不需要迁移或重算。后续来源仍须按 RawItem Schema 验证输出，再由各自 Normalizer 处理。
 
 ### GitHub Repository Search Collector（仓库搜索采集器）
 
@@ -132,11 +135,19 @@ T04 已实现首个真实 Collector，但尚无历史 Raw JSON 或 Web 消费方
 
 同一仓库可能命中多个 Query，Collector 仅按 Repository ID 做 **Source-local Consolidation（来源内部合并）**，输出一个 RawItem，并把命中的 Query ID 去重、排序后保存为 `matched_query_ids`。它只是搜索证据，不等于后续 Classification（规则分类）的业务 Topic，也不代替跨来源 Deduplicate（去重）。最终条目按 `externalId` 稳定排序；`receivedCount` 统计成功解析的所有页面的 `items.length`，包含重复、范围外及无效记录；`acceptedCount` 是最终唯一合法 RawItem 数；`total_count` 只表示 GitHub 搜索规模，不作为已读取数。
 
-HTTP、JSON 或顶层结构异常按 Query 隔离并产生安全 CollectorError；单仓库 Schema 错误按页面汇总；`incomplete_results: true` 保留合法条目并标记 `partial`。已明确限流时停止余下 Query，避免继续请求受限的 Search API。至少一个计划 Query 成功解析且有任何错误时返回 `partial`；全部 Query 未能解析有效页面时返回 `failed` 且不输出条目；全部成功但没有符合条件的仓库仍是 `success`。错误不保存 Token、原始响应体、Header 或 URL query。`startedAt` / `finishedAt` 使用可注入 Clock（时钟）记录运行诊断，RawItem 的业务采集基准仍是固定 `context.asOf`。当前没有实现 Raw JSON Writer（原始数据写入器）、Normalize、Ranking、Trend 或每日工作流。
+HTTP、JSON 或顶层结构异常按 Query 隔离并产生安全 CollectorError；单仓库 Schema 错误按页面汇总；`incomplete_results: true` 保留合法条目并标记 `partial`。已明确限流时停止余下 Query，避免继续请求受限的 Search API。至少一个计划 Query 成功解析且有任何错误时返回 `partial`；全部 Query 未能解析有效页面时返回 `failed` 且不输出条目；全部成功但没有符合条件的仓库仍是 `success`。错误不保存 Token、原始响应体、Header 或 URL query。`startedAt` / `finishedAt` 使用可注入 Clock（时钟）记录运行诊断，RawItem 的业务采集基准仍是固定 `context.asOf`。当前没有实现 Raw JSON Writer（原始数据写入器）、完整 Pipeline、Ranking、Trend 或每日工作流。
 
 ## 5. Normalize、Deduplicate 与 Classification
 
 **Normalize（标准化）**为每种 RawItem 显式映射标题、URL、来源 ID、发布时间、作者或公司等字段。发布时间的证据优先是来源明确的发布时间；仅有首次发现时间时保留 `publishedAt: null`。Title（标题）来自来源字段，若只有 URL slug（路径片段）可生成可识别的临时标题，同时记录其低置信来源，避免当作已核实文章标题。
+
+T05 的 GitHub 路径为 `RawItem → GitHub Normalizer → NormalizedItem → 后续 Deduplicate / Classification / Ranking → IntelligenceItem`。`pipeline/normalize/github.ts` 提供单条严格入口、安全入口和批量入口；安全入口只返回通过的中间条目或字段路径与固定错误说明，批量入口按输入位置隔离坏记录。它重验 RawItem、GitHub 来源字段、numeric Repository ID 与 `externalId` 一致性，并再次拒绝 Private / Archived / Fork Repository（私有 / 归档 / 分叉仓库）。不修改 T04 的搜索和采样策略，也不执行网络请求或数据写入。
+
+GitHub 稳定 ID 为 `github-repo:<numeric-id>`，即使仓库改名或转移也不改变身份；`full_name` 是当前标题。`url` 与唯一 `sourceRefs` 保留来源仓库链接，`canonicalUrl` 将安全的 GitHub 仓库根链接规范为 HTTPS、去除 query、fragment 和末尾斜杠，同时保留仓库路径；仓库路径与 `full_name`、`owner.login`、`name` 必须一致。`matched_query_ids` 只转为 metadata 中排序去重的 `matchedQueryIds` 搜索证据，不生成业务 `topics`。
+
+`publishedAt: null`：GitHub 的 `created_at` 是仓库创建时间，`updated_at` 是对象更新时间，`pushed_at` 是最近代码推送时间，均不等于可核实的正式发布时间。它们分别进入 metadata 的 `createdAt`、`updatedAt`、`lastPushedAt`，统一转为毫秒精度 UTC；`pushed_at: null` 保持 `lastPushedAt: null`。metadata 还保留 description、字符串形式的 repositoryId、fullName、owner、数值型 stars / forks / openIssues、language、排序去重的 githubTopics、defaultBranch 与 matchedQueryIds；不包含无用 API 字段、私有仓库信息或 Token。
+
+初见时 `firstSeenAt = RawItem.collectedAt`；未来历史状态可向单条或批量入口传入原始首次发现时间，且不能晚于本次 `collectedAt`。`collectedAt` 始终是本次 RawItem 的采集时刻，不由创建、更新、推送时间替代。相同 RawItem 和历史时间得到相同 NormalizedItem；不同日期的 Stars、Push 和采集时间可变化而 ID 不变。当前只提供历史时间注入接口，没有实现历史查询、跨来源去重、业务分类或评分。
 
 **Deduplicate（去重）**按下列优先级匹配：
 
