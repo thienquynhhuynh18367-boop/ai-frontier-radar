@@ -1,2 +1,42 @@
-# ai-frontier-radar
-Personal zero-cost AI frontier information radar
+# AI Frontier Radar
+
+AI Frontier Radar 是供本人长期使用的 AI 行业前沿信息雷达 Web 产品，目标是从公开信息中筛出值得关注的内容，并用历史数据展示可核验的趋势。
+
+## 核心价值
+
+围绕 AI 技术、Agent、RAG、MCP、AI Coding、产品、创业公司、融资、开源项目、论文和职业市场，建立“采集 → 标准化 → 去重 → 分类 → 排序 → 趋势统计 → Web 展示”的确定性数据链路，让每天的前沿输入更聚焦、可追溯、可沉淀。
+
+## 当前技术架构
+
+**以下是已确定的目标架构，尚未实现。**计划使用 Next.js、TypeScript、Tailwind CSS、shadcn/ui、GitHub Actions、仓库 JSON 数据和浏览器 LocalStorage。Collector（数据采集器）与 Web 分离；GitHub Actions 负责定时处理，静态 Web 只读取通过验证的结果。当前仓库处于 Task 00.5 文档基础阶段，没有产品页面、Collector 或每日工作流。
+
+## 当前目录
+
+```text
+ai-frontier-radar/
+├─ AGENTS.md                 # Codex 工程约束
+├─ README.md                 # 项目入口
+└─ docs/
+   ├─ PRD.md                # 产品范围与验收
+   ├─ ARCHITECTURE.md       # 目标架构与数据契约
+   ├─ DATA-SOURCES.md       # 已确认来源注册表
+   └─ DEVELOPMENT.md        # 本地开发与任务规范
+```
+
+应用代码、数据目录和工作流将在后续明确 Task 中按依赖建立；本阶段不创建空壳功能文件。
+
+## 本地开发入口
+
+当前只有文档，尚无 `package.json`，因此不能运行开发服务器、测试、Lint（代码检查）、Typecheck（类型检查）或 Build（构建）。T01 建立项目骨架并实际验证命令后，会在此补充准确的安装和启动步骤。开发规范与拟定脚本见 [DEVELOPMENT.md](docs/DEVELOPMENT.md)。
+
+## 文档入口
+
+- [PRD.md](docs/PRD.md)：最终产品范围、来源原则、页面与验收。
+- [ARCHITECTURE.md](docs/ARCHITECTURE.md)：系统架构、Data Flow（数据流）、Schema（数据结构规范）、稳定性设计。
+- [DATA-SOURCES.md](docs/DATA-SOURCES.md)：Data Source Registry（数据源注册表）及接入状态。
+- [DEVELOPMENT.md](docs/DEVELOPMENT.md)：开发、测试、Git、Bug 与 Task 规则。
+- [AGENTS.md](AGENTS.md)：Codex 工程硬约束。
+
+## Zero Cost Constraint（零现金成本约束）
+
+**Monthly Cash Operating Cost = ¥0。**当前不接付费 API、模型、数据库或收费部署；新增依赖前核查收费、信用卡、自动超额计费和免费额度。公开 GitHub 仓库中的文件默认公开，Raw Data（原始数据）只保存必要字段，且不进入网站静态发布产物。
