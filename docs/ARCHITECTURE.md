@@ -234,3 +234,17 @@ data/
 Unit Test（单元测试）覆盖 URL、Title、Hash、分类、评分分项与趋势窗口；Collector Contract Test（采集器契约测试）覆盖空结果、缺失字段、429、超时和结构变化；Integration Test（集成测试）覆盖 Raw Data → JSON、单源失败、异常阻断、Cursor 与重复运行；UI / E2E Test（界面与端到端测试）覆盖数据过期提示、筛选、收藏导出和静态发布读取。每个实施 Task 均运行相关 test、lint、typecheck、build 并检查 Diff。
 
 优先使用 GitHub Public Repository、标准 GitHub Actions Runner 和 GitHub Pages 默认域名。依赖引入前复核收费、信用卡、自动超额计费、免费额度和替换难度。公开仓库标准 Runner 当前免费；GitHub Pages 有站点和流量限制，免费政策可能变化。见 [Actions 计费](https://docs.github.com/en/billing/concepts/product-billing/github-actions) 与 [Pages 限制](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits)。
+
+## 13. 第二阶段 Web 产品与 Data Quality（数据质量）
+
+本阶段保留第一阶段 Collector → Pipeline → 历史 JSON 的链路，新增纯静态 Web 路由：`/`（Today）、`/explore/`、`/topics/`、`/github/`、`/products/`、`/startups/`、`/funding/`、`/research/`、`/career/`、`/trends/`、`/saved/`、`/health/` 和 `/detail/?id=...`。`next.config.ts` 继续使用 `output: "export"`，并启用 `trailingSlash` 生成每个路由的 `index.html`；`RADAR_BASE_PATH` 在构建时传给导航路径，确保 GitHub Pages 仓库子路径可用。详情按稳定 IntelligenceItem ID 在已加载的 latest 中查找，无动态服务端路由、API Route 或 Server Action。
+
+`lib/preview-data.ts` 在构建时读取 `public/data/latest.json`、`manifest.json` 和 `sources-status.json`。Latest 与 Manifest 的日期、asOf 和数量不一致时拒绝展示条目；缺失与损坏显示明确状态。页面只消费已发布 IntelligenceItem，`data/raw/` 不进入网站静态产物。`lib/web-data.ts` 的 Client-side Search / Filter（浏览器搜索与筛选）只对 latest 中的标题、描述、Owner、GitHub Topics、Canonical Topic 和公司 ID 工作；组合筛选支持类型、来源、分数范围和时间，时间相对已发布 `asOf`，仓库以 `lastPushedAt` 为依据。浏览器不重新评分、分类或清洗。Explore 明确说明尚无全量历史索引，也不声称覆盖全部 GitHub。
+
+Today 展示实际扫描候选、最终仓库、推荐与单日主题计数；Topics 直接读取 Profile 的正式 Topic ID 和优先级；GitHub Radar 展示仓库元数据与评分解释。Products、Startup、Funding、Research 和 Career 使用统一空状态，标记“未接入”并说明未来数据字段，不能用 GitHub 仓库冒充对应内容。Health 将已接入的 GitHub Search 与未接入来源分开；最近尝试、最近成功、接收数、入选数、有效发布数与错误码来自已有状态 JSON。全站顶部及页面状态按浏览器当前时间检测 48 小时过期，业务日期使用 Asia/Shanghai，来源时间保留 UTC 原值。
+
+Saved 使用 LocalStorage（浏览器本地存储）键 `ai-frontier-radar.saved.v1`，格式为 `version: 1` 与以稳定 IntelligenceItem ID 为键的 `entries`。每条状态仅保留收藏、已读、隐藏、更新时间及最小标题/URL/来源/类型快照；条目离开 latest 后仍能显示来源链接，但旧评分和描述不当作当前事实。JSON 导入使用 Zod 严格校验、1 MB 与 10,000 条限制，合并时相同 ID 以导入记录为准；导出包含所有本地标记。数据只在当前浏览器，清理存储后无法云端恢复。`IntelligenceItemSchema`、CollectorResult、历史与发布 JSON 版本本次均未修改，因此无需历史迁移。
+
+Trends 使用 `manifest.dates` 定位仓库内每日已验证的 `data/YYYY-MM-DD/items.json`，在静态构建时计算；只有当前窗口和前一等长窗口合计连续 14 / 60 / 180 个业务日齐备，才展示 7 / 30 / 90 天主题条目次及增长率。前一窗口为 0 时不伪造百分比。单日主题与来源构成明确标作已观测事实；没有跨日 Stars 观测时不算 Star Growth，也不展示 Rising/Cooling 结论。缺失或损坏的历史日不会填 0。未来若历史体积变大，可先生成经过验证的聚合 JSON，再由页面读取；当前没有额外发布原始历史。
+
+数据质量审查见 [DATA-QUALITY.md](DATA-QUALITY.md)。Collector 新增可选 `onPageDiagnostic` 观察回调，输出每组每页候选、字段无效、私有、归档、Fork、缺 Push、时间窗前后、入选及重叠的**计数**，不改变 CollectorResult 或持久化 Schema；回调异常不影响采集。`radar:diagnose` 沿用同样配置和低频请求，只打印安全统计、不发布。受控结果证明部分高频查询的第一页被日期粒度与精确上海窗口边界消耗；在未取得完整对照证据前，采样排序、分页上限与 50% 异常门槛保持不变。

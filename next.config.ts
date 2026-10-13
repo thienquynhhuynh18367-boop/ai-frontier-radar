@@ -7,7 +7,9 @@ if (basePath && (!/^\/[a-zA-Z0-9-]+$/.test(basePath))) {
 
 const nextConfig: NextConfig = {
   output: "export",
+  trailingSlash: true,
   agentRules: false,
+  env: { NEXT_PUBLIC_RADAR_BASE_PATH: basePath ?? "" },
   ...(basePath ? { basePath } : {}),
 };
 

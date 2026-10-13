@@ -1,62 +1,65 @@
+import { ArrowUpRight, GitFork, Layers3, ScanSearch, TrendingUp } from "lucide-react";
+import { PageHeader, DataBanner, ScopeNote } from "../components/page-frame";
+import { ItemList } from "../components/item-list";
+import { EmptyState, TopicTag } from "../components/radar-ui";
+import { TopRepositories } from "../components/top-repositories";
 import { loadPreview } from "../lib/preview-data";
-import { FreshnessStatus } from "./freshness-status";
+import { sitePath } from "../lib/site-path";
+import { formatCount, formatShanghai, topicCounts } from "../lib/web-data";
+import { profile } from "../config/profile";
 
 export default async function Home() {
-  // Static Export 在 build 时读取经过验证的 public/data；不依赖运行时 API。
   const preview = await loadPreview(process.cwd(), new Date().toISOString());
-  return (
-    <main className="mx-auto max-w-5xl px-5 py-10 sm:px-8">
-      <header className="mb-8 border-b pb-6">
-        <p className="text-sm font-semibold tracking-wide text-slate-500">GitHub Search · 数据预览</p>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight">AI Frontier Radar</h1>
-        <p className="mt-3 text-slate-600">{preview.message}</p>
-        {preview.latest && <FreshnessStatus asOf={preview.latest.asOf} staleAtBuild={preview.stale} />}
-        {preview.latest && (
-          <p className="mt-3 text-sm text-slate-500">
-            最近有效更新：<time dateTime={preview.latest.asOf}>{preview.latest.asOf}</time>
-            {" · "}仓库 {preview.latest.itemCount} 个
-            {" · "}来源 GitHub Search
-          </p>
-        )}
-      </header>
-      {preview.latest && preview.latest.items.length > 0 ? (
-        <ol className="space-y-4">
-          {preview.latest.items.map((item) => {
-            const description = item.metadata.description;
-            const stars = item.metadata.stars;
-            const forks = item.metadata.forks;
-            const parts = item.scoreBreakdown;
-            return (
-              <li key={item.id} className="rounded-xl border border-slate-200 p-5 shadow-sm">
-                <div className="flex flex-wrap items-start justify-between gap-3">
-                  <h2 className="text-lg font-semibold">
-                    <a href={item.url} target="_blank" rel="noopener noreferrer"
-                      className="text-blue-700 underline-offset-4 hover:underline">{item.title}</a>
-                  </h2>
-                  <span className="rounded-lg bg-blue-50 px-3 py-1 font-semibold text-blue-800">
-                    Personal Score {item.personalScore.toFixed(1)}
-                  </span>
-                </div>
-                <p className="mt-2 text-sm text-slate-600">
-                  {typeof description === "string" && description.trim() ? description : "暂无仓库描述"}
-                </p>
-                <div className="mt-3 flex flex-wrap gap-3 text-sm text-slate-500">
-                  <span>Stars {typeof stars === "number" ? stars.toLocaleString() : "未知"}</span>
-                  <span>Forks {typeof forks === "number" ? forks.toLocaleString() : "未知"}</span>
-                  {item.topics.map((topic) => (
-                    <span key={topic} className="rounded bg-slate-100 px-2 py-0.5 text-slate-700">{topic}</span>
-                  ))}
-                </div>
-                <p className="mt-3 text-xs leading-relaxed text-slate-500">
-                  评分贡献：主题 {parts.topic} · 来源 {parts.source} · 时效 {parts.freshness}
-                  {" · "}热度 {parts.popularity} · 新颖度 {parts.novelty}。
-                  分数用于当前偏好排序，不代表项目的客观行业价值。
-                </p>
-              </li>
-            );
-          })}
-        </ol>
-      ) : <p className="rounded-xl border border-dashed p-6 text-slate-600">暂无可展示的仓库。</p>}
-    </main>
-  );
+  const latest = preview.latest;
+  const items = latest?.items ?? [];
+  const topicRanking = [...topicCounts(items)].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  return <>
+    <PageHeader eyebrow="DAILY INTELLIGENCE / TODAY" title="今日概览"
+      description="用最近一批通过验证的数据，快速找到与你的关注方向相关的 AI 仓库。"
+      action={{ href: "/explore", label: "探索全部条目" }} />
+    <DataBanner preview={preview} />
+    {!latest ? <EmptyState title="还没有可用的雷达数据" description={preview.message} /> : <>
+      <div className="mb-6 grid grid-cols-3 gap-2 sm:gap-3">
+        {[
+          { label: "本次扫描候选", value: formatCount(latest.receivedCount), icon: ScanSearch, note: "GitHub Search 返回项" },
+          { label: "入选仓库", value: formatCount(latest.itemCount), icon: GitFork, note: "经过时间过滤与验证" },
+          { label: "已识别主题", value: formatCount(topicRanking.length), icon: Layers3, note: "可一条命中多个主题" },
+        ].map(({ label, value, icon: Icon, note }) => <div key={label} className="panel flex items-start justify-between p-3 sm:p-4">
+          <div><p className="text-[10px] font-medium leading-4 text-[#687184] sm:text-[11px]">{label}</p><p className="mt-1 text-lg font-semibold tabular-nums tracking-tight text-[#34384a] sm:text-2xl">{value}</p>
+            <p className="mt-1 hidden text-[10px] text-[#a1a5b2] sm:block">{note}</p></div>
+          <span className="hidden size-8 items-center justify-center rounded-lg bg-[#f3f1fd] text-[#7969cd] sm:flex"><Icon size={16} /></span>
+        </div>)}
+      </div>
+      <div className="grid items-start gap-6 xl:grid-cols-[minmax(0,1fr)_290px]">
+        <section aria-labelledby="recommended-heading" className="min-w-0">
+          <div className="mb-4 flex items-end justify-between gap-3"><div>
+            <p className="eyebrow mb-1">CURATED BY YOUR PROFILE</p>
+            <h2 id="recommended-heading" className="text-lg font-semibold tracking-tight text-[#303448]">优先关注</h2>
+          </div><span className="text-[11px] text-[#687184]">按 Personal Score 排序</span></div>
+          <ItemList items={items} pageSize={10} maxItems={10} compact emptyText="当前入选条目已被隐藏。可在我的收藏中恢复。" />
+          <ScopeNote>Personal Score 是当前 Profile 的个人偏好排序，不表示行业权威排名；本页只覆盖已采样仓库。</ScopeNote>
+        </section>
+        <aside className="space-y-4">
+          <section className="panel p-5"><div className="mb-4 flex items-center justify-between">
+            <h2 className="text-sm font-semibold text-[#363a4e]">主题分布</h2><TrendingUp size={16} className="text-[#9e92dd]" /></div>
+            {topicRanking.length ? <div className="space-y-3">{topicRanking.slice(0, 7).map(([id, count]) => {
+              const topic = profile.topics.find((entry) => entry.id === id);
+              return <div key={id} className="flex items-center gap-2 text-xs">
+                <span className="min-w-0 flex-1 truncate text-[#666c7f]">{topic?.label ?? id}</span>
+                <div className="h-1.5 w-20 overflow-hidden rounded-full bg-[#eeeaf8]"><div className="h-full rounded-full bg-[#9a8be1]" style={{ width: `${count / items.length * 100}%` }} /></div>
+                <strong className="w-5 text-right tabular-nums text-[#514789]">{count}</strong>
+              </div>;
+            })}</div> : <p className="text-xs text-[#9095a4]">当前没有可信主题匹配。</p>}
+            <a href={sitePath("/topics")} className="mt-5 inline-flex items-center gap-1 text-xs font-semibold text-[#6b59c8] hover:underline">查看全部主题 <ArrowUpRight size={12} /></a>
+          </section>
+          <TopRepositories items={items} />
+          <section className="rounded-xl border border-[#e8e4fa] bg-[#f9f7ff] p-5">
+            <p className="eyebrow mb-2">LATEST OBSERVATION</p>
+            <p className="text-xs leading-6 text-[#6d688d]">业务日期 {latest.date}（Asia/Shanghai）。本次采集时间 {formatShanghai(latest.asOf)}。</p>
+            <div className="mt-3 flex flex-wrap gap-1.5">{topicRanking.slice(0, 3).map(([id]) => <TopicTag key={id} label={id} />)}</div>
+          </section>
+        </aside>
+      </div>
+    </>}
+  </>;
 }

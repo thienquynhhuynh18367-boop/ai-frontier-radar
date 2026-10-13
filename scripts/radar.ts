@@ -1,4 +1,4 @@
-import { GitHubSearchCollector } from "../collectors/github";
+import { GitHubSearchCollector, type GitHubPageDiagnostic } from "../collectors/github/search";
 import { githubSearchQueries } from "../config/sources/github-search";
 import { readFirstSeenHistory, readLatest, publishCollection, recordFailure } from "../lib/data-store";
 import { FetchHttpClient } from "../lib/http-client";
@@ -38,6 +38,7 @@ function dayWindow(day: string): { start: string; end: string } {
 
 async function main(): Promise<void> {
   const smoke = process.argv.includes("--smoke");
+  const diagnose = process.argv.includes("--diagnose");
   const asOf = argument("--as-of") ?? new Date().toISOString();
   UtcTimestampSchema.parse(asOf);
   const shanghaiDay = new Date(Date.parse(asOf) + 8 * 60 * 60 * 1_000).toISOString().slice(0, 10);
@@ -46,17 +47,29 @@ async function main(): Promise<void> {
   const window = dayWindow(day);
   if (Date.parse(asOf) < Date.parse(window.end)) throw new Error("Window must be completed by --as-of");
   const root = process.cwd();
-  const previous = await readLatest(root);
-  const history = await readFirstSeenHistory(root, asOf);
+  const previous = diagnose ? null : await readLatest(root);
+  const history = diagnose ? new Map<string, string>() : await readFirstSeenHistory(root, asOf);
+  const queryDiagnostics: GitHubPageDiagnostic[] = [];
   const collector = new GitHubSearchCollector({
     token: process.env.GITHUB_TOKEN || undefined,
     ...(smoke ? { queries: [githubSearchQueries.find((query) => query.id === "mcp")!], perPage: 10 } : {}),
+    ...(diagnose ? { onPageDiagnostic: (entry: GitHubPageDiagnostic) => queryDiagnostics.push(entry) } : {}),
   });
   const started = Date.now();
   const result = await collector.collect({
     asOf, windowStart: window.start, windowEnd: window.end, cursor: null,
     http: pacedHttpClient(new FetchHttpClient()),
   });
+  if (diagnose) {
+    process.stdout.write(JSON.stringify({
+      mode: "diagnose", date: day, collectorStatus: result.status,
+      receivedCount: result.receivedCount, acceptedCount: result.acceptedCount,
+      queryDiagnostics, errorCodes: result.errors.map((error) => error.code),
+      durationMs: Date.now() - started, published: false,
+    }) + "\n");
+    if (result.status !== "success") process.exitCode = 1;
+    return;
+  }
   const processed = processGitHubCollection(result, day, asOf, history, smoke ? 0 : previous?.itemCount ?? 0);
   if (processed.status !== "success") {
     if (!smoke) await recordFailure(root, previous, processed.status, asOf, result, processed.errorCodes);

@@ -24,6 +24,15 @@ export type GitHubSearchCollectorOptions = {
   readonly perPage?: number;
   readonly maxPagesPerQuery?: number;
   readonly now?: () => string;
+  readonly onPageDiagnostic?: (diagnostic: GitHubPageDiagnostic) => void;
+};
+
+// 只报告数量与查询 ID，不记录响应正文、URL 或认证信息。
+export type GitHubPageDiagnostic = {
+  queryId: string; page: number; totalCount: number; received: number;
+  invalid: number; private: number; archived: number; fork: number;
+  missingPushedAt: number; beforeWindow: number; afterWindow: number;
+  accepted: number; overlap: number;
 };
 
 type Match = { repository: GitHubRepository; queryIds: Set<string> };
@@ -106,6 +115,7 @@ export class GitHubSearchCollector implements Collector {
   private readonly perPage: number;
   private readonly maxPagesPerQuery: number;
   private readonly now: () => string;
+  private readonly onPageDiagnostic?: (diagnostic: GitHubPageDiagnostic) => void;
 
   constructor(options: GitHubSearchCollectorOptions = {}) {
     this.token = options.token;
@@ -113,6 +123,7 @@ export class GitHubSearchCollector implements Collector {
     this.perPage = options.perPage ?? githubSearchRequestConfig.perPage;
     this.maxPagesPerQuery = options.maxPagesPerQuery ?? githubSearchRequestConfig.maxPagesPerQuery;
     this.now = options.now ?? (() => new Date().toISOString());
+    this.onPageDiagnostic = options.onPageDiagnostic;
 
     if (!Number.isInteger(this.perPage) || this.perPage < 1 || this.perPage > 100) {
       throw new Error("perPage must be an integer from 1 to 100");
@@ -195,29 +206,41 @@ export class GitHubSearchCollector implements Collector {
           });
         }
 
-        let invalidCount = 0;
+        const diagnostic: GitHubPageDiagnostic = {
+          queryId: query.id, page, totalCount: parsed.data.total_count, received: items.length,
+          invalid: 0, private: 0, archived: 0, fork: 0, missingPushedAt: 0,
+          beforeWindow: 0, afterWindow: 0, accepted: 0, overlap: 0,
+        };
         for (const item of items) {
           const result = GitHubRepositorySchema.safeParse(item);
           if (!result.success) {
-            invalidCount += 1;
+            diagnostic.invalid += 1;
             continue;
           }
           const repo = result.data;
           // 带 Token 时仍必须再次排除私有、归档、Fork 与时间窗外条目。
-          if (repo.private || repo.archived || repo.fork || repo.pushed_at === null) continue;
+          if (repo.private) { diagnostic.private += 1; continue; }
+          if (repo.archived) { diagnostic.archived += 1; continue; }
+          if (repo.fork) { diagnostic.fork += 1; continue; }
+          if (repo.pushed_at === null) { diagnostic.missingPushedAt += 1; continue; }
           const pushedAt = Date.parse(repo.pushed_at);
-          if (pushedAt < Date.parse(context.windowStart) || pushedAt >= Date.parse(context.windowEnd)) continue;
+          if (pushedAt < Date.parse(context.windowStart)) { diagnostic.beforeWindow += 1; continue; }
+          if (pushedAt >= Date.parse(context.windowEnd)) { diagnostic.afterWindow += 1; continue; }
+
+          diagnostic.accepted += 1;
 
           // 这里只合并同一来源的查询重叠；跨来源 Deduplicate 留给后续 Pipeline。
           const key = String(repo.id);
           const existing = matches.get(key);
-          if (existing) existing.queryIds.add(query.id);
+          if (existing) { diagnostic.overlap += 1; existing.queryIds.add(query.id); }
           else matches.set(key, { repository: repo, queryIds: new Set([query.id]) });
         }
-        if (invalidCount > 0) {
+        // 诊断观察者不能改变 Collector 的成功、失败与发布结果。
+        try { this.onPageDiagnostic?.(diagnostic); } catch { /* 诊断失败不影响采集。 */ }
+        if (diagnostic.invalid > 0) {
           errors.push({
             code: "github-repository-invalid",
-            message: `GitHub Search query ${query.id} page ${page} contained ${invalidCount} invalid repository items`,
+            message: `GitHub Search query ${query.id} page ${page} contained ${diagnostic.invalid} invalid repository items`,
             retryable: false,
           });
         }

@@ -131,6 +131,46 @@ describe("GitHubSearchCollector requests", () => {
 });
 
 describe("GitHubSearchCollector mapping and filtering", () => {
+  it("reports safe per-query rejection counts without changing the accepted contract", async () => {
+    const diagnostics: unknown[] = [];
+    const rows = [repo(1), { ...repo(2), private: true }, { ...repo(3), archived: true },
+      { ...repo(4), fork: true }, { ...repo(5), pushed_at: null },
+      repo(6, "2026-10-11T23:00:00Z"), repo(7, "2026-10-13T00:00:00Z"),
+      invalidGitHubRepository];
+    const { collector, context } = setup(() => ok(rows, false, 100),
+      { onPageDiagnostic: (entry) => diagnostics.push(entry) });
+    const result = await collector.collect(context);
+    expect(result.acceptedCount).toBe(1);
+    expect(diagnostics).toEqual([{
+      queryId: "mcp", page: 1, totalCount: 100, received: 8, invalid: 1,
+      private: 1, archived: 1, fork: 1, missingPushedAt: 1,
+      beforeWindow: 1, afterWindow: 1, accepted: 1, overlap: 0,
+    }]);
+    expect(JSON.stringify(diagnostics)).not.toContain("sample/repo");
+  });
+
+  it("keeps a date-query first page outside the exact Shanghai window out of publication", async () => {
+    const diagnostics: { afterWindow: number; accepted: number }[] = [];
+    const rows = Array.from({ length: 50 }, (_, index) => repo(index + 1, "2026-10-12T16:00:00Z"));
+    const { collector, context } = setup(() => ok(rows, false, 1000), {
+      onPageDiagnostic: (entry) => diagnostics.push(entry),
+    }, {
+      windowStart: "2026-10-11T16:00:00.000Z", windowEnd: "2026-10-12T16:00:00.000Z",
+    });
+    const result = await collector.collect(context);
+    expect(result.status).toBe("success");
+    expect(result.receivedCount).toBe(50);
+    expect(result.acceptedCount).toBe(0);
+    expect(diagnostics).toMatchObject([{ afterWindow: 50, accepted: 0 }]);
+  });
+
+  it("does not let a failing diagnostic observer alter collection status", async () => {
+    const { collector, context } = setup(() => ok([githubRepository]), {
+      onPageDiagnostic: () => { throw new Error("diagnostic observer failure"); },
+    });
+    expect((await collector.collect(context)).status).toBe("success");
+  });
+
   it("maps only source-native minimal fields and preserves nullable description and language", async () => {
     const { collector, context } = setup(() => ok([{ ...githubRepository, description: null, language: null }]));
     const result = await collector.collect(context);

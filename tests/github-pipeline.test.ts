@@ -188,6 +188,8 @@ describe("Collector to validated JSON and static preview", () => {
     expect(await readFile(join(root, "data", "latest.json"), "utf8")).toBe(old);
     expect((await loadPreview(root, "2026-10-13T10:00:00.000Z")).message).toContain("未达到发布门槛");
     expect(processGitHubCollection(collected, day, asOf, new Map(), 10).status).toBe("anomaly");
+    expect(processGitHubCollection(collected, day, asOf, new Map(), 2).status).toBe("success");
+    expect(processGitHubCollection(collected, day, asOf, new Map(), 3).status).toBe("anomaly");
     expect(processGitHubCollection({ ...collected, collectorId: "another-source" },
       day, asOf, new Map()).status).toBe("schema_failed");
   });

@@ -12,7 +12,8 @@
     "typecheck": "tsc --noEmit",
     "build": "next build",
     "radar:run": "tsx scripts/radar.ts",
-    "radar:smoke": "tsx scripts/radar.ts --smoke"
+    "radar:smoke": "tsx scripts/radar.ts --smoke",
+    "radar:diagnose": "tsx scripts/radar.ts --diagnose"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
