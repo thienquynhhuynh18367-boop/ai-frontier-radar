@@ -102,7 +102,7 @@ interface IntelligenceItem {
 
 `types/json.ts` 定义 JSON 值验证，`pipeline/validation.ts` 提供 `parseIntelligenceItem(data)` 和 `safeParseIntelligenceItem(data)`。后者只返回通过的数据或字段错误列表，使未来 Pipeline 不依赖 Zod 错误对象。`config/profile.ts` 集中管理 Topic（主题）优先级、Company（重点公司）与 `profileVersion`；`config/ranking.ts` 保留业务配置入口，35% / 20% / 20% / 15% / 10% 的数值只定义在无依赖的 `lib/ranking-weights.ts`，由配置入口和 Schema 共同读取，避免循环依赖。关注方向、优先级或权重改变时须更新 Profile Version（偏好版本），使历史分数可追溯。Topic 与 Company 的稳定 ID 使用 `lowercase-kebab-case`，显示名称可变而统计键不变。
 
-T02 尚未生成任何历史 JSON，也没有 Collector 或 Web 业务消费方，因此当前无迁移数据。未来修改此 Schema 时须评估 Collector、Pipeline、历史 JSON、Web、测试与重算范围，并按兼容性决定是否递增 `schemaVersion`。
+T02 尚未生成任何历史 JSON；T04 的 Collector 也尚未写出历史数据，因此当前无迁移数据。未来修改此 Schema 时须评估 Collector、Pipeline、历史 JSON、Web、测试与重算范围，并按兼容性决定是否递增 `schemaVersion`。
 
 `id` 优先从稳定实体键生成：GitHub Repository ID、arXiv 基础 ID、公开岗位 ID；一般网页使用 `sha256("url:" + canonicalUrl)`。跨来源相同 URL 合并为一条，并保留全部 `sourceRefs`。ID 不依赖每日运行时间或排序位置。
 
@@ -114,13 +114,25 @@ T03 已在 `types/raw-item.ts` 建立 RawItem（原始采集条目）运行时 S
 
 `CollectorResult` 包含 `collectorId`、`status`、`items`、`receivedCount`、`acceptedCount`、`nextCursor`、UTC 的 `startedAt` / `finishedAt` 和结构化的 `errors`。`receivedCount` 是来源实际读取或解析出的候选记录数，允许包含无法形成 RawItem 的记录；`acceptedCount` 必须等于 `items.length`，且不得大于 `receivedCount`。`success` 允许空 `items` 但不带错误；`partial` 表示部分请求或分页失败，必须带错误；`failed` 表示整个来源不可用，必须带错误、无有效条目且 `nextCursor` 为 `null`。`CollectorError` 只保存 code、message、可选 URL 和 retryable，不保存原始 Error 对象或堆栈，可安全写入 JSON。
 
-`nextCursor` 只是 Collector 给出的**建议值**。即使采集成功，也只有未来 Pipeline 完成 Normalize → Validate → Persist 且 Git Commit 成功后才能正式推进 Cursor；失败或部分成功不得自行覆盖旧 Cursor。来源故障只影响该来源的后续 Health Check（健康状态），不向其他 Collector 抛出级联失败。本次没有实现 Cursor 持久化、Health 或任何真实来源。
+`nextCursor` 只是 Collector 给出的**建议值**。即使采集成功，也只有未来 Pipeline 完成 Normalize → Validate → Persist 且 Git Commit 成功后才能正式推进 Cursor；失败或部分成功不得自行覆盖旧 Cursor。来源故障只影响该来源的后续 Health Check（健康状态），不向其他 Collector 抛出级联失败。当前没有实现 Cursor 持久化或 Health。
 
 `types/http.ts` 定义只支持 GET 的 `HttpClient` 与原始文本 `HttpResponse`；JSON、XML、Atom、RSS 或 HTML 由后续具体 Collector 解析。`lib/http-client.ts` 使用 Node.js `fetch` 和 `AbortController`，统一设置 `ai-frontier-radar/0.1` User-Agent，默认每次请求 12 秒超时，调用方最多可设 30 秒。成功的 2xx 返回文本响应；最终非 2xx 与请求失败抛出结构化 `HttpError`。默认至多重试 3 次，间隔为 5 / 10 / 30 秒；仅 Timeout（超时）、HTTP 429、有明确限流证据的 HTTP 403，以及 500 / 502 / 503 / 504 可重试，其他网络异常和普通 4xx 不重试。等待函数与时间来源可注入，以便测试不发生真实网络访问或长时间等待。
 
 HTTP 429 始终视为 Rate Limited（限流）。HTTP 403 只有在 `x-ratelimit-remaining: 0` 或存在 `Retry-After` 时才视为限流；单独出现的 `x-ratelimit-reset` 不足以证明 403 是限流。对已识别的限流，先采用有效的 `Retry-After` 秒数或 HTTP 日期，再采用 `x-ratelimit-reset` 的 Unix Epoch Seconds 计算等待时间，均不可用时回退到通用重试延迟。选定的等待时间超过 60 秒时立即停止，不让任务长期阻塞。`HttpError` 除 code、脱敏 URL origin、status、retryable 和尝试次数外，只保存安全的 `retryAfterMs`（服务端建议等待时长）与 `rateLimitResetAt`（有效 reset 时间的 UTC 字符串）；不保存完整 Header、Response Body、Authorization、Cookie 或 URL query。`retryable` 表示错误类别可重试，即使本次尝试次数已经耗尽也保持其类别含义。
 
-当前尚无真实 Collector、历史 Raw JSON 或 Web 消费方，因此新增契约不需要迁移或重算；后续来源实现须按此 Schema 验证输出，再由 Pipeline 处理。`IntelligenceItem` 仅复用原有 URL、时间及 sourceType 验证，字段与版本没有变化。
+T04 已实现首个真实 Collector，但尚无历史 Raw JSON 或 Web 消费方，因此当前不需要迁移或重算；后续来源仍须按此 Schema 验证输出，再由 Pipeline 处理。`IntelligenceItem` 仅复用原有 URL、时间及 sourceType 验证，字段与版本没有变化。
+
+### GitHub Repository Search Collector（仓库搜索采集器）
+
+`collectors/github/search.ts` 使用 GitHub REST API 的 `GET /search/repositories`，只通过注入的 `HttpClient` 请求；Token 是外部可选参数，Collector 不读取环境变量。固定发送 `Accept: application/vnd.github+json` 和 `X-GitHub-Api-Version: 2026-03-10`；有 Token 时仅在 Authorization Header 中发送。`config/sources/github-search.ts` 集中登记 `ai-agent`、`agent`、`rag`、`mcp`、`ai-coding`、`llm`、`large-language-model`、`enterprise-ai` 八个 `topic:` Query（查询），每次动态增加 `is:public archived:false fork:false pushed:` 限定词。超宽的 `machine-learning` 查询暂不加入当前采集策略，不影响 PRD 的产品范围。
+
+请求固定 `sort=updated`、`order=desc`，默认 `perPage=50`、`maxPagesPerQuery=1`。这是 **Signal Sampling（信号采样）**：每个 Query 主动只看第一页，即使 `total_count` 超过 50，只要计划页面完整且没有异常，结果仍可为 `success`；不承诺穷举所有匹配仓库。配置可调整页数，单次 Collect 内用 `page` 控制翻页，短页提前结束；跨运行的范围只由时间窗口决定，`nextCursor` 始终为 `null`。GitHub Search 的 `pushed:` 日期只减少候选量，最终用原始 `pushed_at` 精确验证 `[windowStart, windowEnd)`，避免相邻窗口边界重复。
+
+响应先验证 `total_count`、`incomplete_results` 和 `items: unknown[]`，再逐条验证 GitHub Repository（仓库）；额外的 API 字段被忽略，一个坏仓库不使整页作废。合法公开、未归档、非 Fork 且 `pushed_at` 位于窗口内的记录映射为 Source-native RawItem（来源字段命名的原始条目），`externalId` 用稳定的 GitHub numeric Repository ID，`collectedAt` 用 `context.asOf`。`description`、`language` 和 `pushed_at` 可为 `null`，其中 `pushed_at: null` 因无法证实时间归属而排除。即使携带 Token，也再次排除 `private: true`，防止私有仓库元数据进入公开仓库。
+
+同一仓库可能命中多个 Query，Collector 仅按 Repository ID 做 **Source-local Consolidation（来源内部合并）**，输出一个 RawItem，并把命中的 Query ID 去重、排序后保存为 `matched_query_ids`。它只是搜索证据，不等于后续 Classification（规则分类）的业务 Topic，也不代替跨来源 Deduplicate（去重）。最终条目按 `externalId` 稳定排序；`receivedCount` 统计成功解析的所有页面的 `items.length`，包含重复、范围外及无效记录；`acceptedCount` 是最终唯一合法 RawItem 数；`total_count` 只表示 GitHub 搜索规模，不作为已读取数。
+
+HTTP、JSON 或顶层结构异常按 Query 隔离并产生安全 CollectorError；单仓库 Schema 错误按页面汇总；`incomplete_results: true` 保留合法条目并标记 `partial`。已明确限流时停止余下 Query，避免继续请求受限的 Search API。至少一个计划 Query 成功解析且有任何错误时返回 `partial`；全部 Query 未能解析有效页面时返回 `failed` 且不输出条目；全部成功但没有符合条件的仓库仍是 `success`。错误不保存 Token、原始响应体、Header 或 URL query。`startedAt` / `finishedAt` 使用可注入 Clock（时钟）记录运行诊断，RawItem 的业务采集基准仍是固定 `context.asOf`。当前没有实现 Raw JSON Writer（原始数据写入器）、Normalize、Ranking、Trend 或每日工作流。
 
 ## 5. Normalize、Deduplicate 与 Classification
 

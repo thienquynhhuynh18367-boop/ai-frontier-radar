@@ -1,6 +1,6 @@
 # AI Frontier Radar 开发与协作规范
 
-> T01 已建立并验证 Next.js 工程骨架。当前首页仅是 Engineering Placeholder（工程占位页）；尚无 Collector、Pipeline、真实产品页面、数据源接入或部署工作流。
+> T01 已建立并验证 Next.js 工程骨架。T04 已实现 GitHub Repository Search Collector（仓库搜索采集器）；当前首页仍是 Engineering Placeholder（工程占位页），尚无 Pipeline、真实产品页面、数据发布或部署工作流。
 
 ## 1. Local Development（本地开发）
 

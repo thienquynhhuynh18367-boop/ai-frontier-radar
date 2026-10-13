@@ -1,6 +1,6 @@
 # AI Frontier Radar Data Source Registry（数据源注册表）
 
-> 本表只登记正式 PRD 明确点名的公开来源。Task 00.5 仅查阅来源文档，没有实现 Collector（数据采集器）、调用采集 API 或抓取产品数据。数值限制和使用条件可能变化，接入前须再次核对。`当前状态` 的“已登记”不代表已经采集到数据。
+> 本表只登记正式 PRD 明确点名的公开来源。数值限制和使用条件可能变化，接入前须再次核对。`当前状态` 区分已实现的 Collector（采集器）与尚未完成的 Pipeline（处理流水线）和每日自动运行。
 
 ## 接入顺序与登记标准
 
@@ -8,7 +8,7 @@
 
 | 来源名称 | 数据类型 | 接入方式 | 是否官方 | 是否免费 | Token | Rate Limit（频率限制） | 稳定性 | Fallback（降级机制） | 当前状态 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [GitHub REST API](https://docs.github.com/en/rest/search/search) | Repository（仓库）、Topics、Stars、Forks、更新与选定仓库的 Release | 官方 REST API（接口）；Repository Search + 必要的仓库查询 | 是 | 公开数据可免费读取；使用公开仓库标准 Actions Runner | Action 中使用内置 `GITHUB_TOKEN`；匿名查询也可用但额度更低 | `GITHUB_TOKEN` 常规 REST 主额度为每仓库 1,000 请求/小时；Search 有独立限制，运行时以响应头为准。([限流文档](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api)) | 高；搜索结果仍受额度、分页和索引影响 | 限流时停止该来源并显示 Health；保留最近成功数据，不伪造新结果 | PRD 已确认；未接入 |
+| [GitHub REST API](https://docs.github.com/en/rest/search/search) | Repository（仓库）、Topics、Stars、Forks、更新与选定仓库的 Release | 官方 REST API（接口）；Repository Search + 必要的仓库查询 | 是 | 公开数据可免费读取；使用公开仓库标准 Actions Runner | Collector 可匿名运行，也可接收外部传入 Token；后续 Action 才接 `GITHUB_TOKEN` | `GITHUB_TOKEN` 常规 REST 主额度为每仓库 1,000 请求/小时；Search 有独立限制，运行时以响应头为准。([限流文档](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api)) | 高；搜索结果仍受额度、分页和索引影响 | 限流时该 Collector 返回结构化错误；未来 Pipeline 保留最近成功数据并显示 Health | Repository Search Collector 已实现；Trending、Release、Normalize、Pipeline、每日 GitHub Actions 均未实现 |
 | [GitHub Trending](https://github.com/trending) | 当日 Trending Repository（热门仓库） | 官方网站 HTML；没有承诺稳定的公开 Trending API | 网站是 GitHub 官方；解析接口不是官方 API | 公开网页可访问，接入前复核抓取条件 | 不需要 | 无公开固定额度；低频、礼貌请求 | 中低；HTML 结构可能变化 | 独立失败并显示缺失；GitHub Search 仍可工作，但不得冒充 Trending | PRD 已确认；未接入 |
 | [Hacker News Search by Algolia](https://hn.algolia.com/api) | AI / LLM / Agent 等 Story（帖子），Points、Comments、发布时间 | Algolia HN Search API（搜索接口） | Algolia 提供的 HN 搜索服务；不是 Hacker News Firebase 官方 API | 公开搜索接口可访问；长期条件接入前复核 | 公开查询不需要 | 文档未承诺固定免费额度；控制关键词、分页和请求量 | 中高；受第三方索引可用性影响 | 标记 HN 来源失败；不将零结果直接解释为没有新闻 | PRD 已确认；未接入 |
 | [arXiv API](https://info.arxiv.org/help/api/user-manual.html) / RSS | cs.AI、cs.CL、cs.LG 论文元数据与摘要 | 官方 Atom API 或 RSS | 是 | 公开元数据免费 | 不需要 | 连续请求建议至少间隔 3 秒。([arXiv 官方手册](https://github.com/arXiv/arxiv-docs/blob/develop/source/help/api/user-manual.md)) | 高；发布时间和索引更新存在节奏 | API 不可用时使用适当 RSS；只保存元数据，不下载 PDF | PRD 已确认；未接入 |
