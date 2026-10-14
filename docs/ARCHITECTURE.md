@@ -248,3 +248,19 @@ Saved 使用 LocalStorage（浏览器本地存储）键 `ai-frontier-radar.saved
 Trends 使用 `manifest.dates` 定位仓库内每日已验证的 `data/YYYY-MM-DD/items.json`，在静态构建时计算；只有当前窗口和前一等长窗口合计连续 14 / 60 / 180 个业务日齐备，才展示 7 / 30 / 90 天主题条目次及增长率。前一窗口为 0 时不伪造百分比。单日主题与来源构成明确标作已观测事实；没有跨日 Stars 观测时不算 Star Growth，也不展示 Rising/Cooling 结论。缺失或损坏的历史日不会填 0。未来若历史体积变大，可先生成经过验证的聚合 JSON，再由页面读取；当前没有额外发布原始历史。
 
 数据质量审查见 [DATA-QUALITY.md](DATA-QUALITY.md)。Collector 新增可选 `onPageDiagnostic` 观察回调，输出每组每页候选、字段无效、私有、归档、Fork、缺 Push、时间窗前后、入选及重叠的**计数**，不改变 CollectorResult 或持久化 Schema；回调异常不影响采集。`radar:diagnose` 沿用同样配置和低频请求，只打印安全统计、不发布。受控结果证明部分高频查询的第一页被日期粒度与精确上海窗口边界消耗；在未取得完整对照证据前，采样排序、分页上限与 50% 异常门槛保持不变。
+
+## 14. 第三阶段多源实现与兼容方案
+
+**Collector（采集器）** 现有 GitHub Search 加入 Hacker News Algolia Search、arXiv 官方 Atom API、OpenAI 官方 Sitemap、Anthropic 官方 Sitemap 和 Anthropic 官网链接的 Greenhouse Job Board API。Collector 仍只返回 RawItem；各来源独立捕获错误。HN 每个关键词默认 1 页 30 条，arXiv 单次最多 100 条并按提交时间排序，官方 Sitemap 只读取固定栏目且限制 XML 大小，岗位板每轮 1 次公开 GET。不下载 PDF，不抓取网页或岗位全文。XML 解析关闭实体处理、拒绝 DTD 和超大输入。Sitemap `lastmod` 仅是更新证据，`publishedAt` 保持 `null`；URL slug 仅作为临时显示文本，并标记 `titleEvidence=url-slug`，不能视为文章原标题。Greenhouse `updated_at` 只作为岗位更新信号，不能冒充首次发布时间。
+
+**Normalize（标准化）** 延续 BaseItem v1。GitHub `github-repo:<numeric-id>` 与 arXiv `arxiv-paper:<id>` 按来源稳定 ID；HN 讨论 ID 在 SourceRef 中永久保留，带原文 URL 的网页文章以规范 URL 的 SHA-256 前缀形成 `web:<fingerprint>`。同一原文被 HN 和官方站点发现时合并 SourceRefs，优先采用官方站点的来源与类型，并保留 HN Points、Comments、讨论链接。不同仓库 ID、论文 ID 或仅标题相似的内容绝不合并。HTML/RSS 文本不进入 Raw；单条不合法记录隔离并计入拒绝数。
+
+HN 原文 URL 若只有已知追踪参数，则移除参数后保留；含其他 query 的链接可能带凭据或决定文章身份，当前仅保留 HN 讨论 URL，不删除参数后冒险合并不同文章。这会牺牲少量外链覆盖，Health 与数据文件不把讨论 URL 冒充原文。
+
+**Ranking（评分）** 五维权重及分项上限仍来自 `lib/ranking-weights.ts`。Topic 使用 Profile 优先级和可信文本证据；Source Quality 的标准化值为 GitHub API 80、HN 社区索引 65、arXiv 官方元数据 75、OpenAI/Anthropic 官方站点 90、Anthropic 公开奖聘板 85。这只评价可追溯出处，不认证第三方项目主张。Freshness 对仓库用 `lastPushedAt`，对 HN/arXiv 用真实 `publishedAt`，对岗位用 `updatedAt`；缺失和未来时间为 0。Popularity 对 GitHub 使用 Stars/Forks 固定对数锚点；HN 使用 `70·log1p(points)/log1p(1000)+30·log1p(comments)/log1p(300)`，夹在 0–100；arXiv、Sitemap 和岗位没有同量纲指标，记 0。Novelty 延用首次被本系统发现时间规则。五项乘权重、保存实际贡献点数，固定 `asOf` 可重算。分数是个人偏好排序，不是客观行业价值。
+
+**Publication Schema（发布契约）** 新批次写 `schemaVersion: 2`，包含 `sources[]`，每个来源记录状态、最近尝试、最近成功、接收/接受/发布/沿用数、连续失败数、错误码及逐查询统计。`data/YYYY-MM-DD/items.json`、`data/latest.json`、`public/data/latest.json` 为完整多源快照；`sources-status.json` 也升级为 v2 的来源数组。`manifest.json` 保持 v1 格式以兼容现有静态页面。`LatestSchema` 和 `SourceStatusSchema` 均可读 v1 GitHub 文件与 v2 多源文件；仓库中已提交的 2026-10-12 GitHub 历史不用迁移或删除。`IntelligenceItem` 与 LocalStorage 收藏键/ID 不变，已收藏 GitHub 仓库不会重置。回滚时可恢复前一稳定 Commit 的代码与 latest/manifest/status 三份发布指针；已有 v2 每日历史保留，不重写旧日期。
+
+**Partial Failure（部分来源失败）** 各来源独立尝试。失败、Schema 错误或异常骤降时，只沿用该来源最近有效条目，保持原 `collectedAt` 与 `firstSeenAt`，并在 SourceRun 中记录旧的 `lastSuccessAt`、`carriedCount` 和错误。某一来源部分成功时合并当轮新条目与该来源旧条目；最终 Deduplicate 后重算分数，`asOf` 是当轮评分时点，不能读作旧条目当日采集时间。若全源没有新条目、全部失败或整批校验失败，旧 `latest.json` 保持不变，只更新 Health。发布仍先暂存、结构与计数校验，再替换正式路径；Raw 只写 `data/raw/`，且是公开仓库内的最小字段，不进入 `public/` 与 `out/`。
+
+**Trend Statistics（趋势统计）** 读取真实每日快照，7/30/90 天都要求当前与前一等长窗口连续无缺日。两窗口每天必须有相同来源集合，且各来源为 `success` 或 `empty`；遇到 `partial`、失败或沿用旧数据时不计算增长率。统计 Topic Mention Count、内容类型计数、Source Diversity 和同一 GitHub 仓库至少两次真实 Stars 观测的差值；第一天与缺少配对观测时明确数据不足。Topic 状态使用公开阈值：当前少于 2 次为 Noise，前窗 0 且当前至少 2 次为 Emerging；当前至少 5 次且至少两个来源、增长 ≥30% 为 Rising；当前至少 5 次且下降 ≤−30% 为 Cooling；其他为 Stable。状态只反映采样内计数，不是行业观点。

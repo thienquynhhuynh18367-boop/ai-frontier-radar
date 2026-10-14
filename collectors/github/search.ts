@@ -39,8 +39,8 @@ type Match = { repository: GitHubRepository; queryIds: Set<string> };
 
 function searchUrl(query: GitHubSearchQuery, context: CollectorContext, perPage: number, page: number): string {
   const url = new URL(ENDPOINT);
-  // pushed 日期只缩小 API 搜索范围；毫秒级半开窗口在本地再验证。
-  const pushed = `pushed:${context.windowStart.slice(0, 10)}..${context.windowEnd.slice(0, 10)}`;
+  // GitHub 支持 UTC 时间戳范围，可显著降低日期粒度的窗口外候选；本地半开窗口仍是最终判定。
+  const pushed = `pushed:${context.windowStart}..${context.windowEnd}`;
   url.search = new URLSearchParams({
     q: `${query.query} is:public archived:false fork:false ${pushed}`,
     sort: githubSearchRequestConfig.sort,

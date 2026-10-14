@@ -21,17 +21,24 @@ export function TrendsPanel({ windows, latestTopics, sourceCounts, latestDate }:
       </div>
     </div>
     {current.ready ? <section role="tabpanel" className="panel p-5 sm:p-6">
-      <p className="mb-5 text-[12px] leading-6 text-[#868b9b]">最近 {days} 个完整业务日与前 {days} 日相比。数量是每日已发布快照中的主题条目次，同一仓库跨日可重复出现。</p>
+      <p className="mb-5 text-[12px] leading-6 text-[#868b9b]">最近 {days} 个完整业务日与前 {days} 日相比。仅在来源覆盖一致且无失败沿用时计算。数量是每日快照中的主题条目次，同一实体跨日可重复出现。</p>
       <div className="space-y-3">{current.topics.map((topic) => <div key={topic.id} className="grid grid-cols-[minmax(0,1fr)_56px_56px_70px] items-center gap-3 border-b border-[#f1f2f6] py-2 text-xs last:border-0">
         <strong className="truncate font-medium text-[#494d60]">{profile.topics.find((entry) => entry.id === topic.id)?.label ?? topic.id}</strong>
         <span className="text-right tabular-nums text-[#5f557d]">{topic.current}</span>
         <span className="text-right tabular-nums text-[#687184]">{topic.previous}</span>
-        <span className="text-right font-semibold tabular-nums text-[#6e5dc8]">{topic.growthRate === null ? "无基线" : `${topic.growthRate >= 0 ? "+" : ""}${(topic.growthRate * 100).toFixed(1)}%`}</span>
+        <span className="text-right font-semibold tabular-nums text-[#6e5dc8]" title={`状态：${topic.state}`}>{topic.growthRate === null ? "无基线" : `${topic.growthRate >= 0 ? "+" : ""}${(topic.growthRate * 100).toFixed(1)}%`}</span>
       </div>)}</div>
+      <div className="mt-5 grid gap-3 border-t border-[#f1f2f6] pt-4 sm:grid-cols-2">
+        <div><h3 className="text-xs font-semibold">内容类型观测</h3>{Object.entries(current.contentTypes ?? {}).map(([type, count]) =>
+          <p key={type} className="mt-1 text-[11px] text-[#697285]">{type}：当前 {count} / 前窗 {current.previousContentTypes?.[type] ?? 0}</p>)}</div>
+        <div><h3 className="text-xs font-semibold">来源多样性与 Stars</h3>
+          <p className="mt-1 text-[11px] text-[#697285]">当前 {current.sourceDiversity?.current ?? 0} 种来源；前窗 {current.sourceDiversity?.previous ?? 0} 种。</p>
+          <p className="mt-1 text-[11px] text-[#697285]">Stars 观测增量：当前 {current.starDelta ? `${current.starDelta.delta}（${current.starDelta.observedRepos} 个仓库）` : "不足"} / 前窗 {current.previousStarDelta ? `${current.previousStarDelta.delta}（${current.previousStarDelta.observedRepos} 个仓库）` : "不足"}</p></div>
+      </div>
     </section> : <section role="tabpanel" className="panel flex min-h-[230px] flex-col items-center justify-center p-6 text-center">
       <span className="mb-3 flex size-11 items-center justify-center rounded-xl bg-[#f3f1fd] text-[#8271d2]"><CircleDashed size={20} /></span>
       <h3 className="text-base font-semibold text-[#393d50]">历史观测不足</h3>
-      <p className="mt-2 max-w-lg text-[12px] leading-6 text-[#8a8fa0]">可靠的 {days} 天增长率需要连续 {days * 2} 个已发布业务日，目前有 {current.observedDays} 天有效快照。不会从单日数据推断 Rising、Cooling 或 Star Growth。</p>
+      <p className="mt-2 max-w-lg text-[12px] leading-6 text-[#8a8fa0]">{current.reason === "source_coverage" ? "连续历史存在，但来源覆盖变化或有失败沿用，不能把来源故障解释为行业变化。" : `可靠的 ${days} 天增长率需要连续 ${days * 2} 个业务日，目前有 ${current.observedDays} 天有效快照。`}不会从单日数据推断增长或 Star 增量。</p>
     </section>}
     <div className="mt-6 grid gap-5 lg:grid-cols-2">
       <section className="panel p-5"><div className="mb-4 flex items-center gap-2"><Activity size={16} className="text-[#8878d7]" /><h3 className="text-sm font-semibold text-[#3c4054]">已观测的单日主题</h3></div>

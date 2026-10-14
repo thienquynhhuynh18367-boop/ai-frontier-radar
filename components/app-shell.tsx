@@ -7,6 +7,7 @@ import { Activity, ArrowUpRight, BriefcaseBusiness, Building2, Compass, FlaskCon
 import { sitePath } from "../lib/site-path";
 import { isDataStale } from "../lib/freshness";
 import type { SourceStatus } from "../types/publication";
+import { overallHealth } from "../lib/source-health";
 
 const groups = [
   { label: "工作台", links: [
@@ -58,8 +59,8 @@ export function AppShell({ children, health, asOf, staleAtBuild }: {
   }, [asOf]);
   const current = routeName(pathname);
   const statusLabel = !asOf ? "暂无数据" : stale ? "数据已过期"
-    : !health ? "状态待确认" : health.status === "empty" ? "本次无入选"
-      : health.status !== "success" ? "采集需关注" : "数据已发布";
+    : !health ? "状态待确认" : overallHealth(health) === "empty" ? "本次无入选"
+      : overallHealth(health) !== "success" ? "采集需关注" : "数据已发布";
   return <div className="min-h-screen bg-[#f6f7fb] text-[#202436]">
     {open && <button type="button" aria-label="关闭导航遮罩" onClick={() => setOpen(false)}
       className="fixed inset-0 z-40 bg-slate-950/35 lg:hidden" />}
@@ -87,7 +88,7 @@ export function AppShell({ children, health, asOf, staleAtBuild }: {
       </nav>
       <div className="m-3 rounded-xl border border-[#e9e6f6] bg-[#f8f6ff] px-3.5 py-3">
         <div className="mb-1 flex items-center gap-2 text-[11px] font-semibold text-[#6c5cc6]"><Sparkles size={13} /> 当前数据范围</div>
-        <p className="text-xs leading-5 text-[#74778a]">仅覆盖 GitHub Search 已发布采样；其他来源等待接入。</p>
+        <p className="text-xs leading-5 text-[#74778a]">覆盖 GitHub、HN、arXiv、官方页面与公开岗位采样；各来源健康度见状态页。</p>
       </div>
     </aside>
     <div className="lg:pl-[252px]">
@@ -100,7 +101,7 @@ export function AppShell({ children, health, asOf, staleAtBuild }: {
         </div>
         <div className="flex items-center gap-2 sm:gap-4">
           <a href={sitePath("/health")} className="inline-flex items-center gap-2 rounded-full border border-[#e8eaf1] px-3 py-1.5 text-[11px] font-medium text-[#6e7487] hover:border-[#b9b0eb] focus-visible:outline-2 focus-visible:outline-[#7564d3]">
-            <span className={`size-1.5 rounded-full ${asOf && health?.status === "success" && !stale ? "bg-emerald-500" : "bg-amber-500"}`} />{statusLabel}
+            <span className={`size-1.5 rounded-full ${asOf && overallHealth(health) === "success" && !stale ? "bg-emerald-500" : "bg-amber-500"}`} />{statusLabel}
           </a>
           <a href={sitePath("/explore")} className="hidden items-center gap-1.5 rounded-lg bg-[#6f5fd2] px-3 py-2 text-xs font-semibold text-white hover:bg-[#5c4bc1] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7564d3] sm:inline-flex">
             探索数据 <ArrowUpRight size={14} />

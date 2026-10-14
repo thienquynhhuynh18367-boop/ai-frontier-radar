@@ -18,6 +18,8 @@ export function classifyItem(item: NormalizedItem): ClassifiedItem {
   const company = typeof owner === "string"
     ? officialGitHubOwners[owner.toLowerCase() as keyof typeof officialGitHubOwners]
     : undefined;
-  const companies = company && profile.companies.some(({ id }) => id === company) ? [company] : [];
+  const official = item.source === "anthropic-jobs" ? "anthropic"
+    : (item.source === "openai" || item.source === "anthropic") ? item.source : undefined;
+  const companies = (official ?? company) && profile.companies.some(({ id }) => id === (official ?? company)) ? [official ?? company!] : [];
   return { ...item, topics, companies };
 }

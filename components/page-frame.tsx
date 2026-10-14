@@ -3,6 +3,7 @@ import type { Preview } from "../lib/preview-data";
 import { formatShanghai } from "../lib/web-data";
 import { sitePath } from "../lib/site-path";
 import { FreshnessStatus } from "../app/freshness-status";
+import { overallHealth } from "../lib/source-health";
 
 export function PageHeader({ eyebrow, title, description, action }: {
   eyebrow: string; title: string; description: string;
@@ -21,12 +22,12 @@ export function PageHeader({ eyebrow, title, description, action }: {
 export function DataBanner({ preview }: { preview: Preview }) {
   if (!preview.latest) return <div role="status" className="mb-6 flex items-start gap-3 rounded-xl border border-[#f3dcc5] bg-[#fffaf4] px-4 py-3 text-[12px] leading-5 text-[#8c613b]">
     <AlertCircle size={16} className="mt-0.5 shrink-0" /><span>{preview.message}</span></div>;
-  const issue = preview.stale || !preview.health || preview.health.status !== "success";
+  const issue = preview.stale || overallHealth(preview.health) !== "success";
   return <div role="status" className={`mb-6 flex flex-wrap items-center gap-x-5 gap-y-2 rounded-xl border px-4 py-3 text-[12px] ${issue ? "border-[#f0ddc5] bg-[#fffbf5] text-[#85633f]" : "border-[#e5e8f2] bg-white text-[#74798c]"}`}>
     {issue ? <AlertCircle size={15} className="shrink-0" /> : <Database size={15} className="shrink-0 text-[#7869cc]" />}
     <span>{preview.message}</span>
     <span>有效数据：<time dateTime={preview.latest.asOf}>{formatShanghai(preview.latest.asOf)}</time></span>
-    <span>范围：GitHub Search 已发布采样</span>
+    <span>范围：已验证来源的公开采样</span>
     <FreshnessStatus asOf={preview.latest.asOf} staleAtBuild={preview.stale} />
     <a href={sitePath("/health")} className="ml-auto inline-flex items-center gap-1 font-semibold text-[#7060c7] hover:underline">查看来源状态 <ArrowUpRight size={12} /></a>
   </div>;

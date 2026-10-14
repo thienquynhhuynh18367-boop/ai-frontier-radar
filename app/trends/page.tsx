@@ -17,6 +17,6 @@ export default async function TrendsPage() {
     <TrendsPanel windows={([7, 30, 90] as const).map((days) => computeTrendWindow(snapshots, days))}
       latestTopics={[...topicCounts(latestItems)].sort((a, b) => b[1] - a[1])}
       sourceCounts={[...sources].sort((a, b) => b[1] - a[1])} latestDate={preview.latest?.date ?? null} />
-    <div className="mt-5"><ScopeNote>增长率只比较完整且连续的等长窗口；当前没有跨日期 Stars 观测，故不计算 Star Growth。</ScopeNote></div>
+    <div className="mt-5"><ScopeNote>增长率要求等长连续窗口及一致来源覆盖；Stars 增量只用同一仓库至少两次真实观测计算，不推断未观测日期。</ScopeNote></div>
   </>;
 }

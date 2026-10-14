@@ -86,7 +86,7 @@ describe("GitHubSearchCollector requests", () => {
     const url = new URL(request.url);
     expect(`${url.origin}${url.pathname}`).toBe("https://api.github.com/search/repositories");
     expect(request.url).toContain("q=topic%3Amcp+");
-    expect(url.searchParams.get("q")).toBe("topic:mcp is:public archived:false fork:false pushed:2026-10-12..2026-10-13");
+    expect(url.searchParams.get("q")).toBe("topic:mcp is:public archived:false fork:false pushed:2026-10-12T00:00:00.000Z..2026-10-13T00:00:00.000Z");
     expect(url.searchParams.get("sort")).toBe("updated");
     expect(url.searchParams.get("order")).toBe("desc");
     expect(url.searchParams.get("per_page")).toBe("50");
@@ -117,7 +117,7 @@ describe("GitHubSearchCollector requests", () => {
     const result = await collector.collect(context);
     expect(requests.map(({ url }) => new URL(url).searchParams.get("page"))).toEqual(["1", "2"]);
     expect(requests.map(({ url }) => new URL(url).searchParams.get("per_page"))).toEqual(["2", "2"]);
-    expect(new URL(requests[0].url).searchParams.get("q")).toContain("pushed:2026-10-11..2026-10-14");
+    expect(new URL(requests[0].url).searchParams.get("q")).toContain("pushed:2026-10-11T12:00:00.000Z..2026-10-14T12:00:00.000Z");
     expect(result.receivedCount).toBe(3);
     expect(result.acceptedCount).toBe(3);
   });

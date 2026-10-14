@@ -1,20 +1,20 @@
 # AI Frontier Radar 开发与协作规范
 
-> GitHub Repository Search Collector → JSON → 静态 Web 的链路已接通。全部约定页面、浏览器搜索筛选和本地收藏已建立；其他真实来源、完整长期趋势、每日工作流和部署仍待后续 Task。
+> GitHub、HN、arXiv、两个官方 Sitemap 与公开招聘板 → JSON → 静态 Web 的链路已接通。趋势算法已实现，增长率仍需累计连续真实历史；每日工作流和部署尚未实施。
 
 ## 1. Local Development（本地开发）
 
 正式仓库：<https://github.com/thienquynhhuynh18367-boop/ai-frontier-radar>。进入仓库后先阅读 [PRD.md](PRD.md)、[ARCHITECTURE.md](ARCHITECTURE.md) 和根目录 `AGENTS.md`。只使用 **npm**；不要改用 pnpm、yarn 或 bun。本次在 Windows 上以 Node.js 24.16.0、npm 11.13.0 验证。`package.json` 的 Node 要求为 `^24.0.0`，Node 类型包使用对应的 24.x 系列。
 
-在仓库根目录执行 `npm ci` 后，可先运行 `npm run radar:smoke` 进行一个 Query 的真实请求检查；它不发布。`npm run radar:run` 使用最近已完成的上海自然日，成功后写入历史和 `public/data/`。然后使用 `npm run dev` 启动本地开发服务器，访问 <http://localhost:3000>。不需要 `.env` 或 PAT。可用 `--date YYYY-MM-DD --as-of YYYY-MM-DDTHH:mm:ss.sssZ` 固定窗口与计算时刻；仅允许已完成的自然日。`radar:diagnose` 在同样的低频请求节奏下输出逐查询安全计数，不更新发布数据；使用前考虑 GitHub Search 独立限流。若要生成静态页面，采集后执行 `npm run build`；设置 `RADAR_BASE_PATH=/ai-frontier-radar` 可在未来针对 GitHub Pages 子路径构建。详细操作见根目录 README。
+在仓库根目录执行 `npm ci` 后，可先运行 `npm run radar:smoke` 进行受控真实请求检查；它不发布。`npm run radar:run` 使用最近已完成的上海自然日，成功后写入历史和 `public/data/`。然后使用 `npm run dev` 启动本地开发服务器，访问 <http://localhost:3000>。不需要 `.env` 或 PAT。可用 `--date YYYY-MM-DD --as-of YYYY-MM-DDTHH:mm:ss.sssZ` 固定窗口与计算时刻；仅允许已完成的自然日。`radar:diagnose` 仍只诊断 GitHub Query，不发布；来源运行统计见 `sources-status.json`。若要生成静态页面，采集后执行 `npm run build`；设置 `RADAR_BASE_PATH=/ai-frontier-radar` 可在未来针对 GitHub Pages 子路径构建。详细操作见根目录 README。
 
 常用命令；`test` 使用一次性执行模式，结束后正常退出：
 
 | 目的 | npm 命令 | 当前状态 |
 | --- | --- | --- |
 | 本地启动 | `npm run dev` | 全部页面读取经验证的发布 JSON；无数据时显示对应空状态 |
-| 采集检查 | `npm run radar:smoke` | 单个 MCP Query；不更新 latest |
-| 正式采集 | `npm run radar:run` | 八个已配置 Query；质量门槛通过后更新历史与 latest |
+| 采集检查 | `npm run radar:smoke` | 六个来源的受控小范围请求；不更新 latest |
+| 正式采集 | `npm run radar:run` | 六个来源独立采集；通过质量门槛后更新历史与 latest |
 | 数据诊断 | `npm run radar:diagnose -- --date YYYY-MM-DD` | 八组 Query 的逐页候选、拒绝与重叠计数；不发布 |
 | Test（测试） | `npm run test` | Vitest 离线契约与集成测试 |
 | Lint（代码检查） | `npm run lint` | ESLint CLI |
@@ -23,7 +23,7 @@
 
 关键版本（以 `package-lock.json` 锁定的实际安装结果为准）：Next.js 16.4.0、React 19.3.0、TypeScript 6.0.3、Tailwind CSS 4.3.3、shadcn/ui CLI 4.21.4、Vitest 5.0.4、ESLint 9.39.5。TypeScript 7 与当前 `eslint-config-next` 的 TypeScript ESLint 依赖不兼容，故使用兼容的稳定 6.0.3。Static Export（静态导出）通过 `next.config.ts` 的 `output: "export"` 与 `trailingSlash: true` 实现；`RADAR_BASE_PATH` 注入页面导航路径，实际部署留待部署 Task。
 
-Web 不从浏览器请求 Raw Data。构建时 `loadPreview` 校验 latest 与 manifest 一致性；缺失或损坏时页面显示状态而不是示例卡片。交互筛选仅针对当前 latest，不能冒充全量 GitHub 搜索。Trends 需要连续两个完整等长窗口才计算增长；当前可显示单日真实计数。Saved 使用浏览器 LocalStorage，导入先严格校验、再按 ID 合并；清理浏览器数据前自行导出备份。
+Web 不从浏览器请求 Raw Data。构建时 `loadPreview` 校验 latest 与 manifest 一致性；缺失或损坏时页面显示状态而不是示例卡片。交互筛选仅针对当前 latest，不能冒充全部来源的全量索引。Trends 还要求两个窗口的来源覆盖一致且无失败沿用；当前历史不足时只显示单日真实计数。Saved 使用浏览器 LocalStorage，导入先严格校验、再按 ID 合并；清理浏览器数据前自行导出备份。
 
 ## 2. Task 执行顺序
 
@@ -71,6 +71,8 @@ Web 不从浏览器请求 Raw Data。构建时 `loadPreview` 校验 latest 与 m
 | E2E Test（端到端测试） | 自动任务产出数据后静态 Web 可读取，失败时显示过期状态 |
 
 现在已有业务单元与离线全链路集成测试；真实 API 验收单独运行，并记录接受数量、状态和限流结果。Fixture 不得写入正式 `data/` 或 `public/data/`。
+
+第三阶段新增 `fast-xml-parser` 5.11.2（MIT，npm 包解压约 1.3 MB），只解析 arXiv Atom 与固定官方 Sitemap。`lib/safe-xml.ts` 对响应设 2 MB 上限、拒绝 DTD/ENTITY 并关闭实体处理。生产依赖使用 `npm audit --omit=dev` 检查。对外部 XML 格式变更按来源单独失败处理，不尝试解析网页全文。
 
 ## 6. 技术解释与注释
 

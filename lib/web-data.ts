@@ -29,7 +29,9 @@ export function metadataStrings(item: IntelligenceItem, key: string): string[] {
 }
 
 export function itemActivityAt(item: IntelligenceItem): string | null {
-  return item.contentType === "repository" ? metadataText(item, "lastPushedAt") : item.publishedAt;
+  return item.contentType === "repository" ? metadataText(item, "lastPushedAt")
+    : item.contentType === "job" ? metadataText(item, "updatedAt")
+      : item.publishedAt ?? (item.sourceType === "sitemap" ? metadataText(item, "lastmod") : null);
 }
 
 export function filterItems(items: readonly IntelligenceItem[], filters: ItemFilters, asOf: string): IntelligenceItem[] {
@@ -48,6 +50,8 @@ export function filterItems(items: readonly IntelligenceItem[], filters: ItemFil
     if (!needle) return true;
     const haystack = [item.title, metadataText(item, "description") ?? "",
       metadataText(item, "owner") ?? "", ...metadataStrings(item, "githubTopics"),
+      metadataText(item, "author") ?? "", ...metadataStrings(item, "authors"),
+      ...metadataStrings(item, "categories"), item.source, item.contentType,
       ...item.topics, ...item.companies].join(" ").toLocaleLowerCase();
     return haystack.includes(needle);
   });
@@ -58,6 +62,18 @@ export function filterItems(items: readonly IntelligenceItem[], filters: ItemFil
     if (filters.sort === "name") return a.title.localeCompare(b.title) || a.id.localeCompare(b.id);
     return b.personalScore - a.personalScore || a.id.localeCompare(b.id);
   });
+}
+
+export function diverseTopItems(items: readonly IntelligenceItem[], limit = 10): IntelligenceItem[] {
+  const sorted = [...items].sort((a, b) => b.personalScore - a.personalScore || a.id.localeCompare(b.id));
+  const selected: IntelligenceItem[] = [];
+  const used = new Set<string>();
+  for (const source of [...new Set(sorted.map((item) => item.source))]) {
+    const candidate = sorted.find((item) => item.source === source && !used.has(item.id));
+    if (candidate && selected.length < limit) { selected.push(candidate); used.add(candidate.id); }
+  }
+  for (const item of sorted) if (selected.length < limit && !used.has(item.id)) { selected.push(item); used.add(item.id); }
+  return selected.sort((a, b) => b.personalScore - a.personalScore || a.id.localeCompare(b.id));
 }
 
 export function topicCounts(items: readonly IntelligenceItem[]): Map<string, number> {

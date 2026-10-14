@@ -31,10 +31,10 @@ export function ExploreClient({ items, asOf, githubOnly = false }: {
   return <>
     <section aria-label="搜索和筛选" className="panel mb-5 p-4 sm:p-5">
       <div className="mb-4 flex items-center gap-2 text-[12px] font-semibold text-[#5c6075]"><SlidersHorizontal size={15} className="text-[#7a6bd1]" /> 搜索与筛选</div>
-      <label className="relative block"><span className="sr-only">搜索标题、描述、Owner 和标签</span>
+      <label className="relative block"><span className="sr-only">搜索标题、描述、作者、来源和标签</span>
         <Search size={16} className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[#6e7588]" />
         <input type="search" value={filters.query} onChange={(event) => update("query", event.target.value)}
-          placeholder="搜索仓库名、描述、Owner 或 GitHub Topics…" className={`${control} pl-9`} />
+          placeholder="搜索标题、描述、作者或主题…" className={`${control} pl-9`} />
       </label>
       <div className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
         <label className="text-[11px] font-medium text-[#687184]">主题
@@ -49,7 +49,8 @@ export function ExploreClient({ items, asOf, githubOnly = false }: {
         </label>}
         {!githubOnly && <label className="text-[11px] font-medium text-[#687184]">来源
           <select value={filters.source} onChange={(event) => update("source", event.target.value)} className={`mt-1 ${control}`}>
-            <option value="all">全部已接入来源</option><option value="github">GitHub Search</option>
+            <option value="all">全部已接入来源</option>{[...new Set(items.map((item) => item.source))].sort().map((source) =>
+              <option key={source} value={source}>{source}</option>)}
           </select>
         </label>}
         <label className="text-[11px] font-medium text-[#687184]">活动时间
@@ -71,7 +72,7 @@ export function ExploreClient({ items, asOf, githubOnly = false }: {
           <select value={filters.sort} onChange={(event) => update("sort", event.target.value as ItemFilters["sort"])} className={`mt-1 ${control}`}>
             <option value="score">Personal Score：高到低</option><option value="score-asc">Personal Score：低到高</option>
             <option value="pushed">最近活动：新到旧</option><option value="stars">Stars：多到少</option>
-            <option value="name">仓库名称：A 到 Z</option>
+            <option value="name">标题：A 到 Z</option>
           </select>
         </label>
       </div>
@@ -85,7 +86,7 @@ export function ExploreClient({ items, asOf, githubOnly = false }: {
     </section>
     <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
       <h2 className="text-sm font-semibold text-[#414559]">结果 <span className="ml-1 tabular-nums text-[#6c5cc6]">{filtered.length}</span></h2>
-      <p className="text-[11px] text-[#687184]">当前发布数据共 {options.length} 条；搜索不覆盖 GitHub 全站或未发布历史</p>
+      <p className="text-[11px] text-[#687184]">当前发布数据共 {options.length} 条；搜索只覆盖已发布采样</p>
     </div>
     <ItemList items={filtered} showHidden emptyText="可调整关键词、主题、时间或分数；当前只检索已加载的公开 JSON。" />
   </>;

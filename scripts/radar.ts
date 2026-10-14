@@ -1,8 +1,13 @@
 import { GitHubSearchCollector, type GitHubPageDiagnostic } from "../collectors/github/search";
+import { HackerNewsCollector } from "../collectors/hacker-news/search";
+import { ArxivCollector } from "../collectors/arxiv/search";
+import { OfficialSitemapCollector } from "../collectors/official/sitemap";
+import { AnthropicJobsCollector } from "../collectors/anthropic-jobs/search";
 import { githubSearchQueries } from "../config/sources/github-search";
-import { readFirstSeenHistory, readLatest, publishCollection, recordFailure } from "../lib/data-store";
+import { readFirstSeenByItemId, readLatest, publishMultiSource, recordMultiFailure } from "../lib/data-store";
 import { FetchHttpClient } from "../lib/http-client";
-import { processGitHubCollection } from "../pipeline/run";
+import { processMultiSource, type SourceBatch } from "../pipeline/multi-source";
+import { CollectorResultSchema, type Collector, type CollectorResult } from "../types/collector";
 import { UtcTimestampSchema } from "../types/primitives";
 import type { HttpClient } from "../types/http";
 
@@ -48,47 +53,68 @@ async function main(): Promise<void> {
   if (Date.parse(asOf) < Date.parse(window.end)) throw new Error("Window must be completed by --as-of");
   const root = process.cwd();
   const previous = diagnose ? null : await readLatest(root);
-  const history = diagnose ? new Map<string, string>() : await readFirstSeenHistory(root, asOf);
   const queryDiagnostics: GitHubPageDiagnostic[] = [];
   const collector = new GitHubSearchCollector({
     token: process.env.GITHUB_TOKEN || undefined,
     ...(smoke ? { queries: [githubSearchQueries.find((query) => query.id === "mcp")!], perPage: 10 } : {}),
-    ...(diagnose ? { onPageDiagnostic: (entry: GitHubPageDiagnostic) => queryDiagnostics.push(entry) } : {}),
+    onPageDiagnostic: (entry: GitHubPageDiagnostic) => queryDiagnostics.push(entry),
   });
   const started = Date.now();
+  if (!diagnose) {
+    const collectors: (Collector & { queryStats?: SourceBatch["queryStats"] })[] = [
+      collector,
+      new HackerNewsCollector(smoke ? { queries: ["MCP"], perPage: 10 } : {}),
+      new ArxivCollector({ maxResults: smoke ? 10 : 100 }),
+      new OfficialSitemapCollector("openai", smoke ? { maxSections: 1 } : {}),
+      new OfficialSitemapCollector("anthropic"),
+      new AnthropicJobsCollector(),
+    ];
+    const batches: SourceBatch[] = [];
+    const rawResults = new Map<string, CollectorResult>();
+    for (const source of collectors) {
+      let result: CollectorResult;
+      try {
+        result = await source.collect({ asOf, windowStart: window.start, windowEnd: window.end, cursor: null,
+          http: source.id === "github-search" ? pacedHttpClient(new FetchHttpClient()) : new FetchHttpClient() });
+      } catch {
+        result = CollectorResultSchema.parse({ collectorId: source.id, status: "failed", items: [],
+          receivedCount: 0, acceptedCount: 0, nextCursor: null, startedAt: asOf, finishedAt: asOf,
+          errors: [{ code: `${source.id}-unexpected-failure`, message: `${source.id} failed`, retryable: false }] });
+      }
+      rawResults.set(source.id, result);
+      batches.push({ id: source.id as SourceBatch["id"], result,
+        queryStats: source.id === "github-search" ? queryDiagnostics.map((entry) => ({ id: `${entry.queryId}:page-${entry.page}`,
+          received: entry.received, accepted: entry.accepted,
+          rejected: entry.received - entry.accepted, requests: 1 })) : source.queryStats ?? [] });
+    }
+    const seen = smoke ? new Map<string, string>() : await readFirstSeenByItemId(root, asOf);
+    const processed = processMultiSource(batches, day, asOf, smoke ? null : previous, seen);
+    if ("latest" in processed) {
+      if (!smoke) await publishMultiSource(root, processed.latest, rawResults);
+      process.stdout.write(JSON.stringify({ mode: smoke ? "smoke" : "run", status: processed.status,
+        date: day, receivedCount: processed.latest.receivedCount, acceptedCount: processed.latest.acceptedCount,
+        itemCount: processed.latest.itemCount, sources: processed.latest.sources,
+        durationMs: Date.now() - started, published: !smoke }) + "\n");
+      return;
+    }
+    if (!smoke) await recordMultiFailure(root, processed.sources);
+    process.stdout.write(JSON.stringify({ mode: smoke ? "smoke" : "run", status: processed.status,
+      date: day, sources: processed.sources, errorCodes: processed.errorCodes,
+      durationMs: Date.now() - started, published: false }) + "\n");
+    process.exitCode = 1;
+    return;
+  }
   const result = await collector.collect({
     asOf, windowStart: window.start, windowEnd: window.end, cursor: null,
     http: pacedHttpClient(new FetchHttpClient()),
   });
-  if (diagnose) {
-    process.stdout.write(JSON.stringify({
-      mode: "diagnose", date: day, collectorStatus: result.status,
-      receivedCount: result.receivedCount, acceptedCount: result.acceptedCount,
-      queryDiagnostics, errorCodes: result.errors.map((error) => error.code),
-      durationMs: Date.now() - started, published: false,
-    }) + "\n");
-    if (result.status !== "success") process.exitCode = 1;
-    return;
-  }
-  const processed = processGitHubCollection(result, day, asOf, history, smoke ? 0 : previous?.itemCount ?? 0);
-  if (processed.status !== "success") {
-    if (!smoke) await recordFailure(root, previous, processed.status, asOf, result, processed.errorCodes);
-    process.stdout.write(JSON.stringify({
-      mode: smoke ? "smoke" : "run", status: processed.status, date: day,
-      receivedCount: result.receivedCount, acceptedCount: result.acceptedCount,
-      itemCount: 0, durationMs: Date.now() - started, errorCodes: processed.errorCodes,
-      published: false,
-    }) + "\n");
-    process.exitCode = 1;
-    return;
-  }
-  if (!smoke) await publishCollection(root, processed.latest, result);
   process.stdout.write(JSON.stringify({
-    mode: smoke ? "smoke" : "run", status: "success", date: day,
+    mode: "diagnose", date: day, collectorStatus: result.status,
     receivedCount: result.receivedCount, acceptedCount: result.acceptedCount,
-    itemCount: processed.latest.itemCount, duplicateCount: processed.latest.duplicateCount,
-    durationMs: Date.now() - started, published: !smoke,
+    queryDiagnostics, errorCodes: result.errors.map((error) => error.code),
+    durationMs: Date.now() - started, published: false,
   }) + "\n");
+  if (result.status !== "success") process.exitCode = 1;
 }
 
 main().catch(() => {

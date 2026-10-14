@@ -21,13 +21,14 @@ export function deduplicateItems(inputs: readonly unknown[]): DeduplicationResul
       rejected.push({ index, reason: "invalid_normalized_item" });
       continue;
     }
-    // GitHub 的数字实体 ID 是合并依据；标题相似绝不能合并不同实体。
+    // 仓库/论文按来源稳定 ID，网页文章按规范 URL 指纹；标题相似绝不合并。
     const group = groups.get(parsed.data.id) ?? [];
     group.push(parsed.data);
     groups.set(parsed.data.id, group);
   }
   const items = [...groups.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([, group]) => {
     const ordered = [...group].sort((a, b) =>
+      Number(["openai", "anthropic"].includes(b.source)) - Number(["openai", "anthropic"].includes(a.source)) ||
       b.collectedAt.localeCompare(a.collectedAt) || stableKey(a).localeCompare(stableKey(b)));
     const latest = ordered[0];
     const refs = [...new Map(ordered.flatMap((item) => item.sourceRefs)
@@ -37,11 +38,16 @@ export function deduplicateItems(inputs: readonly unknown[]): DeduplicationResul
       const value = item.metadata.matchedQueryIds;
       return Array.isArray(value) ? value.filter((part): part is string => typeof part === "string") : [];
     }))].sort();
+    const hn = ordered.find((item) => item.source === "hacker-news");
     return NormalizedItemSchema.parse({
       ...latest,
       firstSeenAt: ordered.map((item) => item.firstSeenAt).sort()[0],
       sourceRefs: refs,
-      metadata: { ...latest.metadata, matchedQueryIds },
+      metadata: { ...latest.metadata, matchedQueryIds,
+        ...(hn && latest.source !== "hacker-news" ? {
+          points: hn.metadata.points ?? null, comments: hn.metadata.comments ?? null,
+          discussionUrl: hn.metadata.discussionUrl ?? null,
+        } : {}) },
     });
   });
   return {

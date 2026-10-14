@@ -37,8 +37,8 @@ export function TopicExplorer({ items }: { items: readonly IntelligenceItem[] })
         <p className="eyebrow mb-1">TOPIC ITEMS</p>
         <h2 className="text-lg font-semibold text-[#35394d]">{selectedTopic ? `${selectedTopic.label} · ${matching.length} 条` : "选择一个主题查看条目"}</h2>
       </div>{selectedTopic && <button type="button" onClick={() => setSelected(null)} className="focus-ring text-xs font-semibold text-[#7161c8] hover:underline">清除选择</button>}</div>
-      {selectedTopic ? <ItemList items={matching} emptyText="此主题在当前已发布采样中没有可信匹配；不代表 GitHub 全站没有相关仓库。" />
-        : <div className="panel px-5 py-8 text-center text-[13px] text-[#697285]">点击上方主题，即可查看对应的已发布仓库。</div>}
+      {selectedTopic ? <ItemList items={matching} emptyText="此主题在当前已发布采样中没有可信匹配；不代表公开来源中没有相关信息。" />
+        : <div className="panel px-5 py-8 text-center text-[13px] text-[#697285]">点击上方主题，即可查看对应的已发布条目。</div>}
     </section>
   </>;
 }

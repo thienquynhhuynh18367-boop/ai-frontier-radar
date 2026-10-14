@@ -7,7 +7,7 @@ import { useSaved } from "./saved-provider";
 
 export function TopRepositories({ items }: { items: readonly IntelligenceItem[] }) {
   const { state } = useSaved();
-  const top = items.filter((item) => !state.entries[item.id]?.hidden)
+  const top = items.filter((item) => item.contentType === "repository" && !state.entries[item.id]?.hidden)
     .sort((a, b) => (metadataNumber(b, "stars") ?? -1) - (metadataNumber(a, "stars") ?? -1)
       || a.id.localeCompare(b.id)).slice(0, 3);
   return <section className="panel p-5"><h2 className="mb-1 text-sm font-semibold text-[#363a4e]">重点 GitHub 仓库</h2>

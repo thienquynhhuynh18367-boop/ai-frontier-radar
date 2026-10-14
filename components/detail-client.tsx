@@ -27,9 +27,12 @@ export function DetailClient({ items }: { items: readonly IntelligenceItem[] }) 
       actionHref={prior ? "/saved" : "/explore"} actionLabel={prior ? "查看我的收藏" : "返回探索"} />;
   }
   const description = metadataText(item, "description");
+  const isRepository = item.contentType === "repository";
   const rows = [
-    ["最近 Push", metadataText(item, "lastPushedAt")],
-    ["仓库创建", metadataText(item, "createdAt")],
+    ...(isRepository ? [["最近 Push", metadataText(item, "lastPushedAt")], ["仓库创建", metadataText(item, "createdAt")]] as const : []),
+    ...(item.contentType === "paper" ? [["论文更新", metadataText(item, "updatedAt")]] as const : []),
+    ...(item.sourceType === "sitemap" ? [["站点地图更新时间", metadataText(item, "lastmod")]] as const : []),
+    ...(item.contentType === "job" ? [["岗位更新时间", metadataText(item, "updatedAt")]] as const : []),
     ["本系统首次发现", item.firstSeenAt],
     ["本次采集", item.collectedAt],
     ["原始发布时间", item.publishedAt],
@@ -41,26 +44,30 @@ export function DetailClient({ items }: { items: readonly IntelligenceItem[] }) 
       <article className="panel min-w-0 p-5 sm:p-7">
         <div className="mb-4 flex flex-wrap items-center gap-2 text-[11px] font-semibold text-[#9185cb]"><GitFork size={14} />{item.contentType === "repository" ? "GitHub Repository" : item.contentType}
           <span className="font-normal text-[#6e7588]">· {item.source} · {item.sourceType}</span></div>
+        {item.collectedAt < item.scoreBreakdown.asOf && <p className="mb-4 rounded-lg border border-[#f4e4cf] bg-[#fffbf5] p-3 text-xs text-[#8b6944]">此条沿用上次有效观测，最后采集于 {formatShanghai(item.collectedAt)}；当前评分按 {formatShanghai(item.scoreBreakdown.asOf)} 重算。</p>}
         <div className="flex flex-wrap items-start justify-between gap-4"><h1 className="max-w-3xl break-words text-2xl font-semibold leading-tight tracking-tight text-[#2e3245] sm:text-3xl">{item.title}</h1>
           <ScoreBadge value={item.personalScore} /></div>
-        <p className="mt-4 break-words text-[13px] leading-7 text-[#696f82]">{description ?? "该仓库未提供描述。"}</p>
+        <p className="mt-4 break-words text-[13px] leading-7 text-[#696f82]">{description ?? (item.sourceType === "sitemap" ? "官方 Sitemap 未提供文章摘要；当前标题由 URL slug 显示。" : "来源未提供描述。")}</p>
         <div className="mt-5 flex flex-wrap gap-1.5">{item.topics.length ? item.topics.map((topic) => <TopicTag key={topic} label={profile.topics.find((entry) => entry.id === topic)?.label ?? topic} />)
           : <span className="text-xs text-[#6e7588]">暂无可信主题匹配</span>}</div>
         <div className="mt-5 flex flex-wrap items-center gap-3 border-y border-[#f0f1f5] py-4 text-xs text-[#72788a]">
-          <span className="inline-flex items-center gap-1.5"><Star size={14} />{formatCount(metadataNumber(item, "stars"))} Stars</span>
+          {isRepository && <><span className="inline-flex items-center gap-1.5"><Star size={14} />{formatCount(metadataNumber(item, "stars"))} Stars</span>
           <span className="inline-flex items-center gap-1.5"><GitFork size={14} />{formatCount(metadataNumber(item, "forks"))} Forks</span>
-          {metadataText(item, "language") && <span>语言：{metadataText(item, "language")}</span>}
+          {metadataText(item, "language") && <span>语言：{metadataText(item, "language")}</span>}</>}
+          {item.source === "hacker-news" && <><span>{formatCount(metadataNumber(item, "points"))} Points</span><span>{formatCount(metadataNumber(item, "comments"))} Comments</span></>}
+          {item.contentType === "paper" && <><span>作者：{metadataStrings(item, "authors").join("、") || "未提供"}</span><span>分类：{metadataStrings(item, "categories").join("、") || "未提供"}</span></>}
+          {item.contentType === "job" && <span>地点：{metadataText(item, "location") ?? "未提供"}</span>}
         </div>
         <div className="mt-4 flex flex-wrap items-center justify-between gap-4"><SavedActions item={item} />
-          <a href={item.url} target="_blank" rel="noopener noreferrer" className="focus-ring inline-flex items-center gap-1.5 rounded-lg bg-[#6f5fd2] px-3 py-2 text-xs font-semibold text-white hover:bg-[#5c4bc1]">查看原始仓库 <ArrowUpRight size={13} /></a></div>
+          <a href={item.url} target="_blank" rel="noopener noreferrer" className="focus-ring inline-flex items-center gap-1.5 rounded-lg bg-[#6f5fd2] px-3 py-2 text-xs font-semibold text-white hover:bg-[#5c4bc1]">{item.source === "hacker-news" && item.url.startsWith("https://news.ycombinator.com/") ? "查看 HN 讨论" : "查看原文"} <ArrowUpRight size={13} /></a></div>
         <section className="mt-8"><h2 className="mb-4 text-base font-semibold text-[#3b3f52]">可核验元数据</h2>
           <dl className="grid gap-3 sm:grid-cols-2">{rows.map(([label, value]) => <div key={label} className="rounded-lg border border-[#eef0f5] bg-[#fbfbfd] p-3">
             <dt className="mb-1 flex items-center gap-1.5 text-[11px] text-[#697285]"><CalendarDays size={12} />{label}</dt>
             <dd className="break-words text-xs font-medium text-[#5c6174]">{formatShanghai(value)}</dd></div>)}</dl>
         </section>
         <section className="mt-7"><h2 className="mb-3 text-base font-semibold text-[#3b3f52]">来源与标签</h2>
-          <p className="break-words text-[12px] leading-6 text-[#777d8e]">GitHub Owner：{metadataText(item, "owner") ?? "未提供"}</p>
-          <p className="mt-1 break-words text-[12px] leading-6 text-[#777d8e]">GitHub Topics：{metadataStrings(item, "githubTopics").join(" · ") || "未提供"}</p>
+          {isRepository && <><p className="break-words text-[12px] leading-6 text-[#777d8e]">GitHub Owner：{metadataText(item, "owner") ?? "未提供"}</p>
+          <p className="mt-1 break-words text-[12px] leading-6 text-[#777d8e]">GitHub Topics：{metadataStrings(item, "githubTopics").join(" · ") || "未提供"}</p></>}
           <p className="mt-1 text-[12px] leading-6 text-[#777d8e]">公司归属：{companies.join("、") || "证据不足，未标注"}</p>
           <ul className="mt-3 space-y-1">{item.sourceRefs.map((ref) => <li key={`${ref.source}:${ref.externalId}:${ref.url}`} className="break-all text-[11px]">
             <a href={ref.url} target="_blank" rel="noopener noreferrer" className="text-[#6b59c8] hover:underline">{ref.source} · {ref.url}</a>
@@ -73,7 +80,7 @@ export function DetailClient({ items }: { items: readonly IntelligenceItem[] }) 
         <p className="mt-4 border-t border-[#f0f1f5] pt-3 text-[11px] leading-5 text-[#687184]">Profile {item.scoreBreakdown.profileVersion} · asOf {formatShanghai(item.scoreBreakdown.asOf)}</p>
       </section>
       <section className="rounded-xl border border-[#e8e4f8] bg-[#faf9ff] p-5"><p className="eyebrow mb-2">INTERPRETATION</p>
-        <p className="text-xs leading-6 text-[#77718f]">Personal Score 用于当前用户偏好排序。GitHub API 提供仓库元数据，不认证第三方项目声明；首次发现不代表项目首次发布。</p></section></aside>
+        <p className="text-xs leading-6 text-[#77718f]">Personal Score 用于当前用户偏好排序。不同内容类型的热度量纲不直接比较；首次发现不代表原始发布时间。Sitemap 的 lastmod 只代表页面更新提示。</p></section></aside>
     </div>
   </>;
 }
