@@ -15,7 +15,7 @@ Next.js 16 Static Export（静态导出）提供 Today、Explore、Topics、GitH
 ```text
 ai-frontier-radar/
 ├─ app/                    # 全部约定静态路由和页面
-├─ collectors/             # GitHub、HN、arXiv、官方 Sitemap 独立 Collector
+├─ collectors/             # GitHub、HN、arXiv、官方 Sitemap、招聘板独立 Collector
 ├─ config/sources/         # 数据源查询与请求规模配置
 ├─ components/             # 导航、条目、筛选、状态和本地收藏交互
 ├─ lib/                    # HTTP Client、发布读取、筛选与趋势统计
@@ -61,9 +61,9 @@ npm run dev
 npm run radar:run -- --date 2026-10-12 --as-of 2026-10-13T09:00:00.000Z
 ```
 
-`--date` 按 Asia/Shanghai 解释；`--as-of` 必须是毫秒精度 UTC，且晚于该日结束。同样的源数据与 asOf 可重算；API 返回的实时观测可能随时间变化。运行后如需静态文件，执行：
+`--date` 按 Asia/Shanghai 解释；`--as-of` 必须是毫秒精度 UTC，且晚于该日结束。同样的源数据与 asOf 可重算；API 返回的实时观测可能随时间变化。如本机访问公开 API 必须经过 HTTP 代理，可在当前 PowerShell 会话临时设置 `HTTPS_PROXY`、`HTTP_PROXY` 和 Node 24 的 `NODE_USE_ENV_PROXY=1`；具体代理地址由本机网络环境决定，不写入仓库。
 
-如本机访问公开 API 必须经过 HTTP 代理，可在当前 PowerShell 会话临时设置 `HTTPS_PROXY`、`HTTP_PROXY` 和 Node 24 的 `NODE_USE_ENV_PROXY=1`；具体代理地址由本机网络环境决定，不写入仓库。
+采集后运行质量检查并重新构建静态文件：
 
 ```powershell
 npm run test
