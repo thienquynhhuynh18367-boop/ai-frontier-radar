@@ -83,3 +83,12 @@ Web 不从浏览器请求 Raw Data。构建时 `loadPreview` 校验 latest 与 m
 Monthly Cash Operating Cost = ¥0。引入任何外部服务前检查是否收费、是否需要信用卡、是否会自动超额计费、免费额度和替换成本。未经明确批准，不加入付费服务或 LLM / RAG / Embedding / Agent / Skill / Coze / 飞书能力。
 
 公开 GitHub 仓库中的 `data/raw/` 仍然公开，只能保存重算所需的最小字段、来源 ID 和 URL，不保存没有必要的网页全文。**Raw Data 不进入网站静态发布产物。**
+
+## 8. GitHub Actions 与静态发布验证
+
+- 本地先运行 `npm run test`、`npm run lint`、`npm run typecheck`、`npm run build`、`npm run verify:export`、`npm audit --omit=dev` 和 `git diff --check`。需要验证项目子路径时在 PowerShell 临时设置 `$env:RADAR_BASE_PATH='/ai-frontier-radar'` 后构建和运行 `verify:export`。
+- `.github/workflows/daily-radar.yml` 的数据 Job 只暂存 `data/` 与 `public/data/`；Workflow 输入经 CLI 验证，Token 仅作为采集步骤的环境变量。日志只保留安全计数、来源错误码和退出状态。
+- `.github/workflows/deploy-site.yml` 只在正常用户 Push `main` 或手动触发时部署。自动数据提交使用 `GITHUB_TOKEN` 推送，不会产生新的 Push Run；Daily Radar 在自己的 Build / Deploy Job 中完成同一次发布。
+- 两个部署 Job 共用 `pages-production` 并发组，并在发布前确认 Artifact 对应当前 `main`；构建不通过、上传失败、远端推进或 Pages 设置错误时均不部署旧 Artifact。
+- 真实云端验收须分别检查 Actions Job、远端数据 Commit、Pages Deployment、线上 `latest.json` 与网页交互。仅有本地构建通过不得报告“已上线”。具体操作、故障排查和成本观察见 [OPERATIONS.md](OPERATIONS.md)。
+- 生产发布的 `--as-of` 必须是实际运行开始时刻附近（最多早 60 秒，绝不能在未来）。指定过去的 `--as-of` 可用于不发布的 Smoke / Diagnose；当前不把今天才获取的 API 结果伪装为某个过去时刻的 Raw 或 Health。晚于最新日期的缺失业务日可以用真实当前时间尝试有限回补，但来源实时索引未必保留完整旧数据；已晚于最新日期的旧日期不可覆盖 latest。

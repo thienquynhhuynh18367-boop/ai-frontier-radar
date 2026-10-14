@@ -11,6 +11,8 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "build": "next build",
+    "verify:export": "tsx scripts/verify-export.ts",
+    "verify:data-budget": "tsx scripts/check-data-budget.ts",
     "radar:run": "tsx scripts/radar.ts",
     "radar:smoke": "tsx scripts/radar.ts --smoke",
     "radar:diagnose": "tsx scripts/radar.ts --diagnose"
@@ -35,10 +37,11 @@
     "eslint": "9.39.5",
     "eslint-config-next": "16.4.0",
     "postcss": "8.5.30",
-    "shadcn": "4.21.4",
+    "shadcn": "4.21.5",
     "tailwindcss": "4.3.3",
     "tsx": "^4.23.15",
     "typescript": "6.0.3",
-    "vitest": "5.0.4"
+    "vitest": "5.0.4",
+    "yaml": "^2.8.3"
   }
 }

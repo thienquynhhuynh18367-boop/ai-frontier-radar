@@ -2,6 +2,7 @@
   "schemaVersion": 2,
   "date": "2026-10-14",
   "asOf": "2026-10-15T00:00:00.000Z",
+  "qualityFlags": ["as_of_was_future_at_collection"],
   "status": "success",
   "receivedCount": 2523,
   "acceptedCount": 528,

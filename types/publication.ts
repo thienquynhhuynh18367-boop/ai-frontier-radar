@@ -50,6 +50,7 @@ export const MultiSourceLatestSchema = z.strictObject({
   schemaVersion: z.literal(2),
   date: DaySchema,
   asOf: UtcTimestampSchema,
+  qualityFlags: z.array(z.enum(["as_of_was_future_at_collection"])).optional(),
   status: z.enum(["success", "partial"]),
   receivedCount: z.number().int().nonnegative(),
   acceptedCount: z.number().int().nonnegative(),

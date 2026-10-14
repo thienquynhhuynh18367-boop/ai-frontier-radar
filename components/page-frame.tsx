@@ -22,7 +22,8 @@ export function PageHeader({ eyebrow, title, description, action }: {
 export function DataBanner({ preview }: { preview: Preview }) {
   if (!preview.latest) return <div role="status" className="mb-6 flex items-start gap-3 rounded-xl border border-[#f3dcc5] bg-[#fffaf4] px-4 py-3 text-[12px] leading-5 text-[#8c613b]">
     <AlertCircle size={16} className="mt-0.5 shrink-0" /><span>{preview.message}</span></div>;
-  const issue = preview.stale || overallHealth(preview.health) !== "success";
+  const issue = preview.stale || overallHealth(preview.health) !== "success" ||
+    (preview.latest.schemaVersion === 2 && Boolean(preview.latest.qualityFlags?.length));
   return <div role="status" className={`mb-6 flex flex-wrap items-center gap-x-5 gap-y-2 rounded-xl border px-4 py-3 text-[12px] ${issue ? "border-[#f0ddc5] bg-[#fffbf5] text-[#85633f]" : "border-[#e5e8f2] bg-white text-[#74798c]"}`}>
     {issue ? <AlertCircle size={15} className="shrink-0" /> : <Database size={15} className="shrink-0 text-[#7869cc]" />}
     <span>{preview.message}</span>

@@ -25,6 +25,8 @@
 - arXiv 只保存标题、作者、摘要、分类、时间和原文链接；不自动下载论文 PDF。
 - 所有来源仅保存实现产品所需的最小元数据。Public GitHub Repository（公开 GitHub 仓库）中的 `data/raw/` 仍是公开数据；Raw Data（原始数据）不进入网站静态发布产物。
 
+Daily Radar（每日雷达）默认每天运行一次。正常无重试时，单轮至多约 **24 个来源请求**：GitHub Search 8、HN Algolia 8、arXiv 1、OpenAI Sitemap 5、Anthropic Sitemap 1、Anthropic 招聘板 1；HTTP 层有超时与有限重试，实际请求数可能增加。GitHub Search 使用工作流内置 `GITHUB_TOKEN`，其他五类公开读取不需 Token。来源临时失败仅影响自身，不能据此断言该日行业没有新内容。免费访问、限流和条款会变化，线上健康状态与 [上线运行手册](OPERATIONS.md) 应定期核对。
+
 ## 尚未登记具体来源的产品范围
 
 Products Radar 已有 HN Show HN 与官方页面更新候选，Career Radar 已有 Anthropic 公开奖聘板；两者都只覆盖目前已验证的来源。Startup Radar 与 Funding Radar **仍属于已确定产品范围**，但正式 PRD 没有指定足够稳定、免费的具体创业或融资数据源。后续应先核实来源身份、公开事件证据、免费条件、Token、Rate Limit、使用条款及 Fallback，再更新注册表并实现 Collector。不得将普通新闻或官方 Sitemap 的 `startup` 栏目直接推断为融资，也不得为了填满页面虚构创业公司或岗位事实。

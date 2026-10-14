@@ -1,0 +1,72 @@
+name: Deploy Site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "24"
+          cache: npm
+      - run: npm ci
+      - name: Offline quality gates
+        run: |
+          npm run test
+          npm run lint
+          npm run typecheck
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - name: Build and verify static site
+        env:
+          RADAR_BASE_PATH: /ai-frontier-radar
+        run: |
+          npm run build
+          npm run verify:export
+      - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        with:
+          path: out/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    concurrency:
+      group: pages-production
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+      - name: Check artifact still matches main
+        id: current
+        env:
+          EXPECTED_SHA: ${{ github.sha }}
+        run: |
+          remote_sha="$(git ls-remote origin refs/heads/main | cut -f1)"
+          if [[ "$remote_sha" == "$EXPECTED_SHA" ]]; then
+            echo "deploy=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "A newer main commit exists; skip stale deployment."
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Deploy GitHub Pages artifact
+        id: deployment
+        if: steps.current.outputs.deploy == 'true'
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4

@@ -264,3 +264,15 @@ HN 原文 URL 若只有已知追踪参数，则移除参数后保留；含其他
 **Partial Failure（部分来源失败）** 各来源独立尝试。失败、Schema 错误或异常骤降时，只沿用该来源最近有效条目，保持原 `collectedAt` 与 `firstSeenAt`，并在 SourceRun 中记录旧的 `lastSuccessAt`、`carriedCount` 和错误。某一来源部分成功时合并当轮新条目与该来源旧条目；最终 Deduplicate 后重算分数，`asOf` 是当轮评分时点，不能读作旧条目当日采集时间。若全源没有新条目、全部失败或整批校验失败，旧 `latest.json` 保持不变，只更新 Health。发布仍先暂存、结构与计数校验，再替换正式路径；Raw 只写 `data/raw/`，且是公开仓库内的最小字段，不进入 `public/` 与 `out/`。
 
 **Trend Statistics（趋势统计）** 读取真实每日快照，7/30/90 天都要求当前与前一等长窗口连续无缺日。两窗口每天必须有相同来源集合，且各来源为 `success` 或 `empty`；遇到 `partial`、失败或沿用旧数据时不计算增长率。统计 Topic Mention Count、内容类型计数、Source Diversity 和同一 GitHub 仓库至少两次真实 Stars 观测的差值；第一天与缺少配对观测时明确数据不足。Topic 状态使用公开阈值：当前少于 2 次为 Noise，前窗 0 且当前至少 2 次为 Emerging；当前至少 5 次且至少两个来源、增长 ≥30% 为 Rising；当前至少 5 次且下降 ≤−30% 为 Cooling；其他为 Stable。状态只反映采样内计数，不是行业观点。
+
+## 15. 第四阶段自动采集与静态部署
+
+**Run Clock（运行时钟）** 在 CLI 启动时读取真实 UTC `now`。默认 `asOf=now`，默认业务日为前一个已完成的 Asia/Shanghai 自然日；`--as-of` 不允许超过真实 UTC 时间，未来容差为零秒。指定历史计算时点仍须晚于业务窗口结束；在线正式发布进一步要求 `asOf` 距实际运行开始不超过 60 秒，避免当前联网观测被写成过去的 `firstSeenAt`、`collectedAt` 和 Health 时间。已有更新日期的 latest 时禁止用旧业务日覆盖；缺失的历史日期可在不覆盖较新 latest 的前提下独立研究，但当前 CLI 不提供会伪造历史实时状态的在线补跑。`radar:smoke`、`radar:diagnose` 可以用过去的合法 `asOf` 做不发布验证。
+
+2026-10-14 已发布 v2 批次保留全部原数据，在该日历史与发布 latest 中增加可选 `qualityFlags=["as_of_was_future_at_collection"]`。此字段只对这一批次作 provenance（来源过程）标记，不修饰 Raw、条目时间或评分。Schema Version（结构版本）保持 v2；旧 v1 与没有该可选字段的 v2 均可读。Web 的 DataBanner（数据横幅）明确提示该批次的时间相关评分与健康时间仅供参考。新运行不自动继承该标记；历史文件随 Git 提交留存。回滚可恢复上一稳定提交，不能用回滚抹去已经发生的云端运行记录。
+
+**Daily Radar（每日雷达）** 每日 UTC 00:17，即北京时间约 08:17，或由 `workflow_dispatch` 手动启动。`collect` Job 独占 `contents: write`，运行离线质量门槛、六源采集和发布验证，仅暂存 `data/` 与 `public/data/` 的变化，非强制推送 `main`；没有 Diff 时不提交。全部来源失败时，只提交安全 Health 状态，再明确让 Job 失败，保持旧 latest 与网站。部分来源失败但有新有效条目时，按 v2 SourceRun 沿用旧条目并继续构建部署。`build` Job 以数据提交 SHA 重新 Checkout，`contents: read` 权限执行 Next.js Static Export 和 `verify:export`，上传 `out/` Pages Artifact；`deploy` Job 只申请 `contents: read`、`pages: write`、`id-token: write`，在 `github-pages` 环境发布。
+
+**Deploy Site（网站部署）** 对用户正常 Push `main` 或手动触发执行测试、构建、Artifact、部署。`GITHUB_TOKEN` 推送的自动数据 Commit 不会触发新的 Push Workflow，因此 Daily Radar **同一次 Workflow Run 直接部署**，不依赖 Deploy Site 再触发。两条 Workflow 的部署 Job 共用 `pages-production` Concurrency Group（并发组）；部署前读取远端 `main` SHA，旧 Artifact 与最新提交不一致时跳过，避免过时页面盖住新版本。构建、推送或部署失败时不替换已有 Pages 站点；数据已成功提交但构建失败时，下一次正常 Push 或手动 Deploy Site 可重试网站部署。
+
+Pages 只从 `out/` Artifact 部署，构建时 `RADAR_BASE_PATH=/ai-frontier-radar`，保留 `output: "export"` 和 `trailingSlash`。`verify:export` 核对 13 个静态路由、CSS/JS 资源路径、latest/manifest/status 的版本与数量，并拒绝 Raw Data 出现在静态目录。Actions 采用 GitHub 官方 Action 的已核验 SHA；Node 24、标准 Ubuntu Runner、公开免费 API，不运行来源返回的代码。部署与故障排查见 [OPERATIONS.md](OPERATIONS.md)。

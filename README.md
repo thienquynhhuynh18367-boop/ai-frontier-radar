@@ -8,7 +8,7 @@ AI Frontier Radar 是供本人长期使用的 AI 行业前沿信息雷达 Web �
 
 ## 当前技术架构
 
-Next.js 16 Static Export（静态导出）提供 Today、Explore、Topics、GitHub Radar、Products、Research、Career、Trends、Saved、Data Source Health 和 Detail；Startup 与 Funding 在缺少可信数据时保持明确空状态。Node.js CLI 使用 FetchHttpClient 与 GitHub Search、HN Algolia、arXiv Atom、OpenAI/Anthropic 官方 Sitemap 及 Anthropic 官网链接的 Greenhouse 招聘板采集公开元数据，经 Normalize、Deduplicate、Classification、Ranking 与发布校验生成历史 JSON。网站构建时读取已验证的 `public/data/`；搜索筛选和收藏交互在浏览器，核心清洗与评分不在前端。趋势只用真实连续历史、相同来源覆盖计算；没有每日 GitHub Actions。
+Next.js 16 Static Export（静态导出）提供 Today、Explore、Topics、GitHub Radar、Products、Research、Career、Trends、Saved、Data Source Health 和 Detail；Startup 与 Funding 在缺少可信数据时保持明确空状态。Node.js CLI 使用 FetchHttpClient 与 GitHub Search、HN Algolia、arXiv Atom、OpenAI/Anthropic 官方 Sitemap 及 Anthropic 官网链接的 Greenhouse 招聘板采集公开元数据，经 Normalize、Deduplicate、Classification、Ranking 与发布校验生成历史 JSON。网站构建时读取已验证的 `public/data/`；搜索筛选和收藏交互在浏览器，核心清洗与评分不在前端。趋势只用真实连续历史、相同来源覆盖计算。Daily Radar 每天北京时间约 08:17 自动采集并在同一次 GitHub Actions 运行中部署；普通 `main` Push 由 Deploy Site 构建部署。
 
 ## 当前目录
 
@@ -37,7 +37,7 @@ ai-frontier-radar/
 └─ package-lock.json       # npm 锁定版本
 ```
 
-长期趋势算法已具备，但需要累计 14 / 60 / 180 个来源覆盖一致的真实业务日；每日自动化工作流和静态部署留待后续 Task。
+长期趋势算法已具备，但需要累计 14 / 60 / 180 个来源覆盖一致的真实业务日。自动化与 GitHub Pages 的配置、状态和故障处理见 [上线运行手册](docs/OPERATIONS.md)。
 
 ## 本地开发入口
 
@@ -70,11 +70,15 @@ npm run test
 npm run lint
 npm run typecheck
 npm run build
+npm run verify:export
+npm run verify:data-budget
 ```
 
 `npm run build` 将当前已发布 JSON 编入 `out/`，所以每次采集后要重新构建才能更新静态 HTML；首次克隆、尚无 JSON 时全部页面也能构建。Today、Explore、Topics、GitHub Radar、Products、Research、Career 与 Detail 读取真实条目；Trends 在历史不足或来源覆盖不一致时显示原因；Startup、Funding 缺可信来源时保持空状态。收藏、已读和隐藏只保存在当前浏览器的 LocalStorage，可在 Saved 页面导出/导入 JSON；清除浏览器数据前应自行备份。
 
-未来若部署到 GitHub Pages 仓库子路径，可在构建前设置 `$env:RADAR_BASE_PATH='/ai-frontier-radar'`。静态路由使用尾斜杠，固定 `/detail/?id=...` 路由可直接刷新；本 Task 不部署。详细规范见 [DEVELOPMENT.md](docs/DEVELOPMENT.md)。
+`--as-of` 不可晚于运行时真实 UTC 时间。在线正式发布还要求它与实际采集开始时刻相差不超过 60 秒，并禁止用旧业务日覆盖较新的 latest；历史重算只能在已有可信 Raw 快照的前提下离线处理。2026-10-14 批次保留原始记录并标注了当时的超前 `asOf`，时间相关评分和健康时间仅供参考，不把它当作准确的实时采集时刻。
+
+GitHub Actions 部署会在构建时设置 `RADAR_BASE_PATH=/ai-frontier-radar`。本地复现时可在 PowerShell 设置 `$env:RADAR_BASE_PATH='/ai-frontier-radar'` 再构建；静态路由使用尾斜杠，固定 `/detail/?id=...` 路由可直接刷新。Pages 启用、真实云端 Run 与线上验收以 [OPERATIONS.md](docs/OPERATIONS.md) 的记录为准。
 
 ## 文档入口
 
@@ -83,6 +87,7 @@ npm run build
 - [DATA-SOURCES.md](docs/DATA-SOURCES.md)：Data Source Registry（数据源注册表）及接入状态。
 - [DATA-QUALITY.md](docs/DATA-QUALITY.md)：GitHub Search 样本偏斜、受控诊断和发布门槛审查。
 - [DEVELOPMENT.md](docs/DEVELOPMENT.md)：开发、测试、Git、Bug 与 Task 规则。
+- [OPERATIONS.md](docs/OPERATIONS.md)：每日工作流、Pages 设置、失败处理、线上验收和成本观察。
 - [AGENTS.md](AGENTS.md)：Codex 工程硬约束。
 
 ## Zero Cost Constraint（零现金成本约束）

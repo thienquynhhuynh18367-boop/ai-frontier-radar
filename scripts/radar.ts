@@ -8,10 +8,8 @@ import { readFirstSeenByItemId, readLatest, publishMultiSource, recordMultiFailu
 import { FetchHttpClient } from "../lib/http-client";
 import { processMultiSource, type SourceBatch } from "../pipeline/multi-source";
 import { CollectorResultSchema, type Collector, type CollectorResult } from "../types/collector";
-import { UtcTimestampSchema } from "../types/primitives";
 import type { HttpClient } from "../types/http";
-
-const DAY_MS = 86_400_000;
+import { assertPublishableRun, resolveRunWindow } from "../lib/run-window";
 
 function pacedHttpClient(client: HttpClient): HttpClient {
   let nextAt = 0;
@@ -31,28 +29,16 @@ function argument(name: string): string | undefined {
   return index < 0 ? undefined : process.argv[index + 1];
 }
 
-function dayWindow(day: string): { start: string; end: string } {
-  const utcMidnight = Date.parse(day + "T00:00:00.000Z");
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(day) || !Number.isFinite(utcMidnight) ||
-    new Date(utcMidnight).toISOString().slice(0, 10) !== day) throw new Error("Invalid --date");
-  return {
-    start: new Date(utcMidnight - 8 * 60 * 60 * 1_000).toISOString(),
-    end: new Date(utcMidnight + 16 * 60 * 60 * 1_000).toISOString(),
-  };
-}
-
 async function main(): Promise<void> {
   const smoke = process.argv.includes("--smoke");
   const diagnose = process.argv.includes("--diagnose");
-  const asOf = argument("--as-of") ?? new Date().toISOString();
-  UtcTimestampSchema.parse(asOf);
-  const shanghaiDay = new Date(Date.parse(asOf) + 8 * 60 * 60 * 1_000).toISOString().slice(0, 10);
-  const defaultDay = new Date(Date.parse(shanghaiDay + "T00:00:00.000Z") - DAY_MS).toISOString().slice(0, 10);
-  const day = argument("--date") ?? defaultDay;
-  const window = dayWindow(day);
-  if (Date.parse(asOf) < Date.parse(window.end)) throw new Error("Window must be completed by --as-of");
+  const now = new Date();
+  const window = resolveRunWindow({ day: argument("--date"),
+    asOf: argument("--as-of"), now });
+  const { day, asOf, windowStart, windowEnd } = window;
   const root = process.cwd();
   const previous = diagnose ? null : await readLatest(root);
+  if (!smoke && !diagnose) assertPublishableRun(window, now, previous?.date ?? null);
   const queryDiagnostics: GitHubPageDiagnostic[] = [];
   const collector = new GitHubSearchCollector({
     token: process.env.GITHUB_TOKEN || undefined,
@@ -74,7 +60,7 @@ async function main(): Promise<void> {
     for (const source of collectors) {
       let result: CollectorResult;
       try {
-        result = await source.collect({ asOf, windowStart: window.start, windowEnd: window.end, cursor: null,
+        result = await source.collect({ asOf, windowStart, windowEnd, cursor: null,
           http: source.id === "github-search" ? pacedHttpClient(new FetchHttpClient()) : new FetchHttpClient() });
       } catch {
         result = CollectorResultSchema.parse({ collectorId: source.id, status: "failed", items: [],
@@ -105,7 +91,7 @@ async function main(): Promise<void> {
     return;
   }
   const result = await collector.collect({
-    asOf, windowStart: window.start, windowEnd: window.end, cursor: null,
+    asOf, windowStart, windowEnd, cursor: null,
     http: pacedHttpClient(new FetchHttpClient()),
   });
   process.stdout.write(JSON.stringify({
@@ -117,8 +103,12 @@ async function main(): Promise<void> {
   if (result.status !== "success") process.exitCode = 1;
 }
 
-main().catch(() => {
-  // 未知异常不输出原始 message/stack，避免环境变量或请求信息进入日志。
-  process.stderr.write("Radar run failed before publication; previous latest was preserved.\n");
+main().catch((error: unknown) => {
+  // 只输出本地静态校验文案；未知异常不含原始 message/stack，避免泄露请求信息。
+  const safeReasons = new Set(["--as-of cannot be later than current UTC time", "Window must be completed by --as-of",
+    "Historical run cannot replace a newer latest; use an existing Raw snapshot for offline replay",
+    "Published collection --as-of must match actual run time", "Invalid --date", "Invalid current time"]);
+  const reason = error instanceof Error && safeReasons.has(error.message) ? ` ${error.message}.` : "";
+  process.stderr.write(`Radar run failed before publication; previous latest was preserved.${reason}\n`);
   process.exitCode = 1;
 });
