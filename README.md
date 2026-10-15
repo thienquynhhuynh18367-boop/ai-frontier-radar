@@ -2,6 +2,8 @@
 
 AI Frontier Radar 是供本人长期使用的 AI 行业前沿信息雷达 Web 产品，目标是从公开信息中筛出值得关注的内容，并用历史数据展示可核验的趋势。
 
+**在线网站：**[打开 AI Frontier Radar](https://thienquynhhuynh18367-boop.github.io/ai-frontier-radar/)。这是可直接分享的公开网站地址；GitHub 仓库和授权页面不是网站入口。
+
 ## 核心价值
 
 围绕 AI 技术、Agent、RAG、MCP、AI Coding、产品、创业公司、融资、开源项目、论文和职业市场，建立“采集 → 标准化 → 去重 → 分类 → 排序 → 趋势统计 → Web 展示”的确定性数据链路，让每天的前沿输入更聚焦、可追溯、可沉淀。
