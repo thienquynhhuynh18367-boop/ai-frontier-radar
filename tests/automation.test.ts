@@ -41,11 +41,14 @@ describe("publication provenance and automation", () => {
     expect(() => assertDataBudget(MAX_DATA_BYTES)).not.toThrow();
     expect(() => assertDataBudget(MAX_DATA_BYTES + 1)).toThrow("750 MiB");
   });
-  it("keeps the existing batch and its explicit future-time quality flag parseable", async () => {
+  it("parses the current historical batch and optional future-time provenance flag", async () => {
     const historical = JSON.parse(await readFile(join(root, "data", "2026-10-14", "items.json"), "utf8")) as unknown;
     const parsed = LatestSchema.parse(historical);
     expect(parsed.schemaVersion).toBe(2);
-    if (parsed.schemaVersion === 2) expect(parsed.qualityFlags).toContain("as_of_was_future_at_collection");
+    if (parsed.schemaVersion === 2) {
+      expect(LatestSchema.safeParse({ ...parsed, qualityFlags: ["as_of_was_future_at_collection"] }).success).toBe(true);
+      expect(LatestSchema.safeParse({ ...parsed, qualityFlags: ["unknown_flag"] }).success).toBe(false);
+    }
   });
 
   it("uses bounded daily collection, job-scoped permissions, same-run deployment, and serial deployment", async () => {

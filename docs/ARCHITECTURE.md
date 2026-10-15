@@ -269,7 +269,7 @@ HN 原文 URL 若只有已知追踪参数，则移除参数后保留；含其他
 
 **Run Clock（运行时钟）** 在 CLI 启动时读取真实 UTC `now`。默认 `asOf=now`，默认业务日为前一个已完成的 Asia/Shanghai 自然日；`--as-of` 不允许超过真实 UTC 时间，未来容差为零秒。指定历史计算时点仍须晚于业务窗口结束；在线正式发布进一步要求 `asOf` 距实际运行开始不超过 60 秒，避免当前联网观测被写成过去的 `firstSeenAt`、`collectedAt` 和 Health 时间。已有更新日期的 latest 时禁止用旧业务日覆盖；缺失的历史日期可在不覆盖较新 latest 的前提下独立研究，但当前 CLI 不提供会伪造历史实时状态的在线补跑。`radar:smoke`、`radar:diagnose` 可以用过去的合法 `asOf` 做不发布验证。
 
-2026-10-14 已发布 v2 批次保留全部原数据，在该日历史与发布 latest 中增加可选 `qualityFlags=["as_of_was_future_at_collection"]`。此字段只对这一批次作 provenance（来源过程）标记，不修饰 Raw、条目时间或评分。Schema Version（结构版本）保持 v2；旧 v1 与没有该可选字段的 v2 均可读。Web 的 DataBanner（数据横幅）明确提示该批次的时间相关评分与健康时间仅供参考。新运行不自动继承该标记；历史文件随 Git 提交留存。回滚可恢复上一稳定提交，不能用回滚抹去已经发生的云端运行记录。
+2026-10-14 初始 v2 批次的 `asOf` 曾晚于真实采集时刻，在修复提交中对当时的历史与 latest 增加可选 `qualityFlags=["as_of_was_future_at_collection"]`。该字段只作 provenance（来源过程）标记，不修饰 Raw、条目时间或评分；旧 v1 与没有此字段的 v2 均可读，Web DataBanner 对带标记的快照显示警示。随后同一业务日的真实云端重采使用实际 UTC 时刻写入新快照，因此当前 `data/2026-10-14/items.json` 与 latest 没有该标记；先前带标记版本保留在 Git History（Git 历史）中。新运行不自动继承旧标记，回滚也不能抹去已发生的云端运行记录。
 
 **Daily Radar（每日雷达）** 每日 UTC 00:17，即北京时间约 08:17，或由 `workflow_dispatch` 手动启动。`collect` Job 独占 `contents: write`，运行离线质量门槛、六源采集和发布验证，仅暂存 `data/` 与 `public/data/` 的变化，非强制推送 `main`；没有 Diff 时不提交。全部来源失败时，只提交安全 Health 状态，再明确让 Job 失败，保持旧 latest 与网站。部分来源失败但有新有效条目时，按 v2 SourceRun 沿用旧条目并继续构建部署。`build` Job 以数据提交 SHA 重新 Checkout，`contents: read` 权限执行 Next.js Static Export 和 `verify:export`，上传 `out/` Pages Artifact；`deploy` Job 只申请 `contents: read`、`pages: write`、`id-token: write`，在 `github-pages` 环境发布。
 
