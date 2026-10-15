@@ -28,7 +28,7 @@ export function processMultiSource(batches: readonly SourceBatch[], date: string
   const inputs: NormalizedItem[] = [];
   const carried: IntelligenceItem[] = [];
   const sources: SourceRun[] = [];
-  let receivedCount = 0, acceptedCount = 0, rejectedCount = 0;
+  let receivedCount = 0, acceptedCount = 0, rejectedCount = 0, excludedCount = 0;
   for (const batch of batches) {
     const parsed = CollectorResultSchema.safeParse(batch.result);
     const prior = previousRun(previous, batch.id);
@@ -62,6 +62,8 @@ export function processMultiSource(batches: readonly SourceBatch[], date: string
       else if (normalized.length === 0) status = "empty";
       // 上次有效量大幅高于今天时，保留旧来源并标记异常，避免坏采样刷新日期。
       if (status === "success" && old.length >= 10 && normalized.length < Math.ceil(old.length * 0.5)) status = "anomaly";
+      // 异常来源的有效新条目只作诊断，不进入本轮去重；单独计数，避免误记为格式拒绝。
+      if (status === "anomaly") excludedCount += normalized.length;
       if (status === "success" || status === "empty" || status === "partial") inputs.push(...normalized);
     }
     const carry = status === "failed" || status === "schema_failed" || status === "anomaly" || status === "partial";
@@ -93,7 +95,7 @@ export function processMultiSource(batches: readonly SourceBatch[], date: string
     const status = sources.some((source) => !["success", "empty"].includes(source.status)) ? "partial" : "success";
     const latest = MultiSourceLatestSchema.parse({ schemaVersion: 2, date, asOf, status,
       receivedCount, acceptedCount, normalizedCount: inputs.length,
-      duplicateCount: dedup.duplicateCount, rejectedCount, itemCount: items.length, sources, items });
+      duplicateCount: dedup.duplicateCount, rejectedCount, excludedCount, itemCount: items.length, sources, items });
     return { status, latest };
   } catch {
     return { status: "schema_failed", errorCodes: ["publication_validation"], sources };

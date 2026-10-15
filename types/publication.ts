@@ -57,6 +57,8 @@ export const MultiSourceLatestSchema = z.strictObject({
   normalizedCount: z.number().int().nonnegative(),
   duplicateCount: z.number().int().nonnegative(),
   rejectedCount: z.number().int().nonnegative(),
+  // 旧 v2 快照无此字段时视作 0；异常骤降隔离的有效条目不等于 Normalize 拒绝。
+  excludedCount: z.number().int().nonnegative().optional(),
   itemCount: z.number().int().nonnegative(),
   sources: z.array(SourceRunSchema).min(1),
   items: z.array(IntelligenceItemSchema),
@@ -74,7 +76,7 @@ export const MultiSourceLatestSchema = z.strictObject({
   if (value.normalizedCount - value.duplicateCount !== value.itemCount - value.sources.reduce((n, s) => n + s.carriedCount, 0)) {
     ctx.addIssue({ code: "custom", path: ["duplicateCount"], message: "Deduplication count mismatch" });
   }
-  if (value.acceptedCount - value.rejectedCount !== value.normalizedCount) {
+  if (value.acceptedCount - value.rejectedCount - (value.excludedCount ?? 0) !== value.normalizedCount) {
     ctx.addIssue({ code: "custom", path: ["rejectedCount"], message: "Normalization count mismatch" });
   }
   for (const item of value.items) {

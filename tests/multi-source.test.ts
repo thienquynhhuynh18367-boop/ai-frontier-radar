@@ -139,6 +139,33 @@ describe("multi-source collectors and normalization", () => {
 });
 
 describe("multi-source publication and trends", () => {
+  it("publishes valid fresh sources while quarantining a source with an anomalous count drop", () => {
+    const papers = Array.from({ length: 10 }, (_, index) => {
+      const id = `2610.${String(10000 + index)}`;
+      return { ...arxivRaw, externalId: id, url: `https://arxiv.org/abs/${id}` };
+    });
+    const previous = processMultiSource([{ id: "arxiv", result: result("arxiv", papers) }],
+      "2026-10-14", asOf, null, new Map());
+    expect("latest" in previous).toBe(true);
+    if (!("latest" in previous)) return;
+    const next = processMultiSource([
+      { id: "arxiv", result: result("arxiv", [papers[0]]) },
+      { id: "hacker-news", result: result("hacker-news", [hnRaw]) },
+    ], "2026-10-15", "2026-10-16T00:00:00.000Z", previous.latest, new Map());
+    expect("latest" in next).toBe(true);
+    if (!("latest" in next)) return;
+    expect(next.latest.status).toBe("partial");
+    expect(next.latest.itemCount).toBe(11);
+    expect(next.latest.sources.find((source) => source.source === "arxiv"))
+      .toMatchObject({ status: "anomaly", acceptedCount: 1, carriedCount: 10 });
+    expect(next.latest.excludedCount).toBe(1);
+    expect(LatestSchema.safeParse(next.latest).success).toBe(true);
+    expect(LatestSchema.safeParse({ ...next.latest, excludedCount: 0 }).success).toBe(false);
+    const oldV2Shape = { ...previous.latest };
+    delete oldV2Shape.excludedCount;
+    expect(LatestSchema.safeParse(oldV2Shape).success).toBe(true);
+  });
+
   it("retains HN discussion evidence when the HN source fails but the official page is seen again", () => {
     const first = processMultiSource([
       { id: "hacker-news", result: result("hacker-news", [hnRaw]) },

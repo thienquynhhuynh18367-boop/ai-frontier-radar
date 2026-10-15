@@ -59,3 +59,7 @@
 ## 第四阶段历史批次时间标注
 
 2026-10-14 批次的 `asOf=2026-10-15T00:00:00.000Z` 在当时实际采集执行时仍属未来。其 Raw、历史条目、评分和来源健康时间不能被当作精确的真实采集时刻；本次保留全部数据，不倒填一个猜测的时间，不删除已提交历史。该日 `data/2026-10-14/items.json` 与当前发布 latest 增加可选 `qualityFlags=["as_of_was_future_at_collection"]`，网站横幅展示警示；旧 Schema Version 仍可读。后续合法的新批次不会继承此标记。作为趋势输入时，这个业务日的观测数量仍是实际返回的候选样本，但任何以该日 `asOf`、`firstSeenAt` 或评分时效为依据的历史结论都需谨慎；连续 14/60/180 天证据条件仍必须满足。
+
+## 第四阶段首次云端运行的计数契约修复
+
+首次 Daily Radar 云端运行中，arXiv 和 OpenAI 相比上次有效批次出现超过 50% 的条目骤降，按既定规则隔离其当轮有效新条目并沿用旧来源条目；GitHub Search、HN、Anthropic 及招聘来源取得新数据。此前发布契约仍把隔离条目计入 `acceptedCount`，却未计入送往去重的 `normalizedCount`，因此整批被误判为 `schema_failed`，旧 latest 按保护规则未覆盖。修复后 v2 快照单独记录 `excludedCount`，保留 `rejectedCount` 的格式拒绝语义，并在 Schema 中核对三者关系。异常来源继续标为 `anomaly`，沿用条目保留旧 `collectedAt`；不得将部分成功说成六源全部刷新。
