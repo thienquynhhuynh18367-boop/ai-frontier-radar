@@ -276,3 +276,9 @@ HN 原文 URL 若只有已知追踪参数，则移除参数后保留；含其他
 **Deploy Site（网站部署）** 对用户正常 Push `main` 或手动触发执行测试、构建、Artifact、部署。`GITHUB_TOKEN` 推送的自动数据 Commit 不会触发新的 Push Workflow，因此 Daily Radar **同一次 Workflow Run 直接部署**，不依赖 Deploy Site 再触发。两条 Workflow 的部署 Job 共用 `pages-production` Concurrency Group（并发组）；部署前读取远端 `main` SHA，旧 Artifact 与最新提交不一致时跳过，避免过时页面盖住新版本。构建、推送或部署失败时不替换已有 Pages 站点；数据已成功提交但构建失败时，下一次正常 Push 或手动 Deploy Site 可重试网站部署。
 
 Pages 只从 `out/` Artifact 部署，构建时 `RADAR_BASE_PATH=/ai-frontier-radar`，保留 `output: "export"` 和 `trailingSlash`。`verify:export` 核对 13 个静态路由、CSS/JS 资源路径、latest/manifest/status 的版本与数量，并拒绝 Raw Data 出现在静态目录。Actions 采用 GitHub 官方 Action 的已核验 SHA；Node 24、标准 Ubuntu Runner、公开免费 API，不运行来源返回的代码。部署与故障排查见 [OPERATIONS.md](OPERATIONS.md)。
+
+## 16. Vercel 静态镜像
+
+Vercel Production Deployment（生产部署）从同一 Next.js Static Export（静态导出）构建，保持 `RADAR_BASE_PATH` 未设置，使路由与 `_next` 资源位于域名根路径。`data/` 仍是 GitHub 仓库内的数据事实来源；Vercel 只发布构建生成的静态页面及 `public/data/` 的三份已验证 JSON，不运行 Collector，也不提供运行时 API、数据库或额外评分逻辑。GitHub Pages 继续独立部署并使用 `/ai-frontier-radar/` 子路径。
+
+Vercel Hobby（免费个人方案）仅用于当前个人非商业项目。首次生产部署已由 CLI 完成；GitHub Repository Connection（仓库连接）尚待账号所有者在 Vercel 绑定 GitHub 后验证，未连通前不能声称 Vercel 会跟随每日数据提交自动更新。Vercel 默认域名在部分中国大陆网络可能不可达，公开域名存在不等于任意手机网络均可访问。运行与验证步骤见 [OPERATIONS.md](OPERATIONS.md)。

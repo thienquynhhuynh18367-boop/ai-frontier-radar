@@ -12,6 +12,14 @@
 
 仓库必须保持 Public。到 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**；这是 Artifact 部署，不选择 branch `/docs`。到 **Settings → Actions → General → Workflow permissions** 确认内置 `GITHUB_TOKEN` 允许数据 Job 获得 `contents: write`；不需 Personal Access Token。必要时在 `github-pages` Environment 限制仅 `main` 部署。页面预期位于仓库项目子路径 `/ai-frontier-radar/`，但只有线上实际 HTTP 和浏览器检查通过后才能称为正式地址。所有步骤均使用标准 Ubuntu Runner 与公开免费 API。
 
+## Vercel 公开镜像
+
+Vercel Hobby 项目 `ai-frontier-radar` 的生产地址为 <https://ai-frontier-radar.vercel.app/>。首次 CLI 生产部署已完成，未登录访问首页、Explore、Health、`/data/latest.json` 与 CSS/JS 均返回 200；`/data/raw/`、每日历史和 `.env.local` 不在网站静态产物中。Vercel 构建不设置 `RADAR_BASE_PATH`，路由位于域名根路径；GitHub Pages 仍使用 `/ai-frontier-radar/`。两个主机消费同一仓库中经过验证的 `public/data/`，不在主机上采集。
+
+当前 Vercel 项目尚未连接 GitHub：账号所有者需到 **Vercel Account Settings → Authentication → Login Connections** 连接仓库所属 GitHub 账号，再对该项目执行 `vercel git connect`，并通过新一次 `main` Push 验证自动部署。连接并验证之前，每日 GitHub Actions 更新只会自动发布到 GitHub Pages，Vercel 保留上一次成功部署的数据快照。需要手动同步时，在仓库最新 `main` 且工作区干净的前提下运行 `vercel deploy --prod`，然后核对生产域名的 `data/latest.json` 日期、数量和 `asOf`；CLI 登录状态与 `.vercel/` 项目关联保存在本机，不能提交 Token 或 `.env.local`。Vercel 生产域名若启用访问保护，应使用未登录请求验证公开性。
+
+Vercel [Hobby 方案](https://vercel.com/docs/plans/hobby)只允许个人非商业使用，超出免费额度可能暂停服务；项目不得升级付费计划或添加收费功能以绕过零成本约束。Vercel [中国大陆访问说明](https://vercel.com/kb/guide/accessing-vercel-hosted-sites-from-mainland-china)指出默认 `vercel.app` 域名可能被阻断；广州、杭州外部节点在本次验收中连接超时，因此不能把 Vercel 镜像视为手机访问问题的保证修复。继续保留 GitHub Pages 地址，并以实际手机网络测试为准。
+
 ## 失败保护与重试
 
 | 情况 | 数据与网站结果 | 操作 |
