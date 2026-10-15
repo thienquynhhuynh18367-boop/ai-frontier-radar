@@ -4,8 +4,8 @@
     {
       "source": "github-search",
       "status": "success",
-      "lastAttemptAt": "2026-10-15T11:47:15.027Z",
-      "lastSuccessAt": "2026-10-15T11:47:15.027Z",
+      "lastAttemptAt": "2026-10-15T11:55:41.578Z",
+      "lastSuccessAt": "2026-10-15T11:55:41.578Z",
       "receivedCount": 340,
       "acceptedCount": 273,
       "itemCount": 273,
@@ -44,15 +44,15 @@
         {
           "id": "ai-coding:page-1",
           "received": 50,
-          "accepted": 47,
-          "rejected": 3,
+          "accepted": 46,
+          "rejected": 4,
           "requests": 1
         },
         {
           "id": "llm:page-1",
           "received": 50,
-          "accepted": 48,
-          "rejected": 2,
+          "accepted": 49,
+          "rejected": 1,
           "requests": 1
         },
         {
@@ -74,8 +74,8 @@
     {
       "source": "hacker-news",
       "status": "success",
-      "lastAttemptAt": "2026-10-15T11:47:15.027Z",
-      "lastSuccessAt": "2026-10-15T11:47:15.027Z",
+      "lastAttemptAt": "2026-10-15T11:55:41.578Z",
+      "lastSuccessAt": "2026-10-15T11:55:41.578Z",
       "receivedCount": 225,
       "acceptedCount": 171,
       "itemCount": 169,
@@ -144,7 +144,7 @@
     {
       "source": "arxiv",
       "status": "anomaly",
-      "lastAttemptAt": "2026-10-15T11:47:15.027Z",
+      "lastAttemptAt": "2026-10-15T11:55:41.578Z",
       "lastSuccessAt": "2026-10-15T00:00:00.000Z",
       "receivedCount": 100,
       "acceptedCount": 18,
@@ -167,7 +167,7 @@
     {
       "source": "openai",
       "status": "anomaly",
-      "lastAttemptAt": "2026-10-15T11:47:15.027Z",
+      "lastAttemptAt": "2026-10-15T11:55:41.578Z",
       "lastSuccessAt": "2026-10-15T00:00:00.000Z",
       "receivedCount": 629,
       "acceptedCount": 12,
@@ -218,8 +218,8 @@
     {
       "source": "anthropic",
       "status": "success",
-      "lastAttemptAt": "2026-10-15T11:47:15.027Z",
-      "lastSuccessAt": "2026-10-15T11:47:15.027Z",
+      "lastAttemptAt": "2026-10-15T11:55:41.578Z",
+      "lastSuccessAt": "2026-10-15T11:55:41.578Z",
       "receivedCount": 559,
       "acceptedCount": 2,
       "itemCount": 2,
@@ -239,8 +239,8 @@
     {
       "source": "anthropic-jobs",
       "status": "success",
-      "lastAttemptAt": "2026-10-15T11:47:15.027Z",
-      "lastSuccessAt": "2026-10-15T11:47:15.027Z",
+      "lastAttemptAt": "2026-10-15T11:55:41.578Z",
+      "lastSuccessAt": "2026-10-15T11:55:41.578Z",
       "receivedCount": 647,
       "acceptedCount": 2,
       "itemCount": 2,
