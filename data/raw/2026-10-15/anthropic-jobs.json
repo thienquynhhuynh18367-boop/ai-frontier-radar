@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-15",
+  "source": "anthropic-jobs",
+  "items": [
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5437172008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5437172008",
+      "collectedAt": "2026-10-16T04:26:48.906Z",
+      "data": {
+        "title": "Applied AI Engineer, Beneficial Deployments (Life Sciences)",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-10-14T18:29:40.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5449229008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5449229008",
+      "collectedAt": "2026-10-16T04:26:48.906Z",
+      "data": {
+        "title": "Staff Forward Deployed Engineer",
+        "location": "New York City, NY; San Francisco, CA; Seattle, WA",
+        "updatedAt": "2026-10-14T17:16:12.000Z"
+      }
+    }
+  ]
+}
