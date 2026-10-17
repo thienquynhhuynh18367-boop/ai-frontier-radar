@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-16",
+  "source": "anthropic-jobs",
+  "items": [
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5447368008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5447368008",
+      "collectedAt": "2026-10-17T04:21:01.730Z",
+      "data": {
+        "title": "Applied AI Architect, Partnerships",
+        "location": "Bangalore, India",
+        "updatedAt": "2026-10-16T11:39:28.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5445760008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5445760008",
+      "collectedAt": "2026-10-17T04:21:01.730Z",
+      "data": {
+        "title": "Applied AI Engineer, Beneficial Deployments (Clinical Development, Rare and Neglected Diseases)",
+        "location": "London, UK",
+        "updatedAt": "2026-10-16T10:18:15.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5454650008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5454650008",
+      "collectedAt": "2026-10-17T04:21:01.730Z",
+      "data": {
+        "title": "Applied AI Engineer, Startups (Life Sciences)",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-10-15T22:47:12.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5454673008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5454673008",
+      "collectedAt": "2026-10-17T04:21:01.730Z",
+      "data": {
+        "title": "Applied AI Engineer, Startups (Physical AI)",
+        "location": "San Francisco, CA",
+        "updatedAt": "2026-10-15T22:50:02.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5424305008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5424305008",
+      "collectedAt": "2026-10-17T04:21:01.730Z",
+      "data": {
+        "title": "Manager, Applied AI Architects - Digital Natives, EMEA",
+        "location": "London, UK",
+        "updatedAt": "2026-10-16T09:34:58.000Z"
+      }
+    }
+  ]
+}

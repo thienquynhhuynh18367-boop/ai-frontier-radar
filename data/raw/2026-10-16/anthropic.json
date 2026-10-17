@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-16",
+  "source": "anthropic",
+  "items": [
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "collectedAt": "2026-10-17T04:21:01.730Z",
+      "data": {
+        "lastmod": "2026-10-15T18:21:28.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/news/offering-expanded-claude-access-across-all-three-branches-of-government",
+      "url": "https://www.anthropic.com/news/offering-expanded-claude-access-across-all-three-branches-of-government",
+      "collectedAt": "2026-10-17T04:21:01.730Z",
+      "data": {
+        "lastmod": "2026-10-15T22:05:58.000Z"
+      }
+    }
+  ]
+}
