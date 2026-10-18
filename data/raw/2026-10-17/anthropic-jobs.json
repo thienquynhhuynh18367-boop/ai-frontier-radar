@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-17",
+  "source": "anthropic-jobs",
+  "items": [
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5383335008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5383335008",
+      "collectedAt": "2026-10-18T04:26:31.732Z",
+      "data": {
+        "title": "Applied AI Architect, Enterprise Tech",
+        "location": "San Francisco, CA | New York City, NY | Seattle, WA",
+        "updatedAt": "2026-10-16T20:52:51.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5445806008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5445806008",
+      "collectedAt": "2026-10-18T04:26:31.732Z",
+      "data": {
+        "title": "Applied AI Architect, Security Specialist ",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-10-16T17:35:30.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5409008008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5409008008",
+      "collectedAt": "2026-10-18T04:26:31.732Z",
+      "data": {
+        "title": "Applied AI Architect, Strategic Enterprise Tech",
+        "location": "San Francisco, CA | New York City, NY | Seattle, WA",
+        "updatedAt": "2026-10-16T20:53:05.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5057647008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5057647008",
+      "collectedAt": "2026-10-18T04:26:31.732Z",
+      "data": {
+        "title": "Applied AI Engineer, Enterprise Tech",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-10-17T03:56:40.000Z"
+      }
+    }
+  ]
+}

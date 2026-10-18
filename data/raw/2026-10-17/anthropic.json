@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-17",
+  "source": "anthropic",
+  "items": [
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+      "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+      "collectedAt": "2026-10-18T04:26:31.732Z",
+      "data": {
+        "lastmod": "2026-10-16T20:30:25.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/ai-expectations-gap",
+      "url": "https://www.anthropic.com/research/ai-expectations-gap",
+      "collectedAt": "2026-10-18T04:26:31.732Z",
+      "data": {
+        "lastmod": "2026-10-17T14:22:35.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
+      "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
+      "collectedAt": "2026-10-18T04:26:31.732Z",
+      "data": {
+        "lastmod": "2026-10-17T14:17:25.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/ecdsa-curve-origins",
+      "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+      "collectedAt": "2026-10-18T04:26:31.732Z",
+      "data": {
+        "lastmod": "2026-10-17T14:19:47.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/employment-at-anthropic",
+      "url": "https://www.anthropic.com/research/employment-at-anthropic",
+      "collectedAt": "2026-10-18T04:26:31.732Z",
+      "data": {
+        "lastmod": "2026-10-17T14:24:53.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/expectations-for-the-future",
+      "url": "https://www.anthropic.com/research/expectations-for-the-future",
+      "collectedAt": "2026-10-18T04:26:31.732Z",
+      "data": {
+        "lastmod": "2026-10-17T14:25:22.000Z"
+      }
+    }
+  ]
+}
