@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-19",
+  "source": "arxiv",
+  "items": [
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.26632",
+      "url": "https://arxiv.org/abs/2610.26632",
+      "collectedAt": "2026-10-20T04:44:39.362Z",
+      "data": {
+        "title": "When the harness decides success: state that cannot be re-observed",
+        "summary": "Agent harnesses decide what a language model sees across turns: they drop old turns, summarize them, or replay the model's own earlier reasoning. We ask when these choices change whether an agent succeeds, not only what it costs, and report three findings. First, in a pre-registered synthetic probe, truncating the context window costs a low-cost reasoning model nothing in success when a needed fact can be looked up again (it looks the fact up instead), but drops its success to chance when the fact cannot be re-observed: the two penalties differ by 92.5 percentage points (90% CI [89.5, 95.5]). A pre-registered replication on one model from a second provider showed the same contrast. Once the fact was lost, that model chose no answer rather than guessing. Second, on ARC-AGI-3, where the benchmark's Standard harness trails its Provider Adapter harness by a wide margin, we decompose that gap one component at a time, for one model on four games. Summarizing old turns instead of dropping them, while keeping the Standard harness's invitation to take notes, recovers 86% of a 63-point gap without replaying the model's reasoning. The same harness without the invitation recovers 43%, and adding the provider's native replay of the model's reasoning recovers the remaining 57%. These are point estimates from one counted run per configuration and game, and the replay share depends on a single run. Third, in the benchmark's published runs and in ours, the Adapter's advantage in the probability of clearing a level it has reached is larger at deep levels than at early ones. This largely restates where runs stopped and does not separate a growing advantage from a constant one.",
+        "authors": [
+          "Raimondas Lencevicius"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-19T15:59:13.000Z",
+        "updatedAt": "2026-10-19T15:59:13.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.26628",
+      "url": "https://arxiv.org/abs/2610.26628",
+      "collectedAt": "2026-10-20T04:44:39.362Z",
+      "data": {
+        "title": "SleepPairNet: Learning Multimodal Pediatric Sleep Representations with Random-Pair Cross-Attention",
+        "summary": "Analyzing physiological sleep signals is important for assessing sleep quality and detecting sleep-related disorders. Learning inter-modal relationships across physiological signals can provide richer representations for downstream sleep analysis. We introduce \\textbf{SleepPairNet}, a multimodal self-supervised learning (SSL) framework that learns pairwise interactions between physiological signals through cross-attention. We propose a random modality-pair selection strategy that exposes the model to diverse signal pairs during pretraining, enabling flexibility across modality combinations at test time. Pretrained on the NCH dataset, SleepPairNet outperforms the evaluated SSL baselines on all respiratory tasks while remaining competitive on EEG-related tasks, and shows even stronger results when transferred to the external CHAT dataset.",
+        "authors": [
+          "Saurav Raj Pandey",
+          "Harlin Lee"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-19T15:57:10.000Z",
+        "updatedAt": "2026-10-19T15:57:10.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.26589",
+      "url": "https://arxiv.org/abs/2610.26589",
+      "collectedAt": "2026-10-20T04:44:39.362Z",
+      "data": {
+        "title": "Beyond Attack Success Rate: Cost-Aware Metric for Evaluating Iterative LLM Jailbreaks",
+        "summary": "Attack success rate (ASR) evaluates jailbreaks against large language models without accounting for repeated calls to the victim model. Yet each additional call gives the deployed system another opportunity to detect the attack and intervene. We introduce $\\mathrm{ASR}_{\\mathrm{STEP}}$, which penalizes additional victim-model calls while retaining binary success judgments. Our evaluation considers GCG~\\cite{zou2023universal}, PAIR~\\cite{chao2025jailbreaking} with a step budget, and a single-step PAP~\\cite{zeng2024johnny} baseline on JailBreakBench across three model families. GCG's scores decrease by 7.0--8.7 percentage points after discounting, while PAP's remain unchanged. While for PAIR~\\cite{chao2025jailbreaking}, we see a wider discounting range between 3.4-12 percentage points, showing that the \"step\" quantity differs per iterative strategy. Reporting both metrics makes the discount due to repeated victim-model interaction explicit. Code is available \\hyperlink{https://github.com/SuELS-Group/beyond_asr}{here}.",
+        "authors": [
+          "Rohan Menon",
+          "Chih-Hong Cheng"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.CR"
+        ],
+        "submittedAt": "2026-10-19T15:36:41.000Z",
+        "updatedAt": "2026-10-19T15:36:41.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.26568",
+      "url": "https://arxiv.org/abs/2610.26568",
+      "collectedAt": "2026-10-20T04:44:39.362Z",
+      "data": {
+        "title": "Reward Objectives for Robust (PO)MDPs: A Law-Preserving Equivalence with (Partially Observable) Games",
+        "summary": "Robust partially observable Markov decision processes model agents that act under partial observability while adversarial environment resolves uncertainty in the transition probabilities. Reward objectives such as discounted-sum, long-run average and cumulative reward under finite and infinite horizons allow quantifying the utility of an agent. We consider the problem of solving RPOMDPs under all four reward objectives, where the goal is to decide whether the value of a risk measure with respect to a reward objective exceeds a given threshold. We consider different risk measures, such as (1)~expected value, (2)~mean-variance (MV), (3)~conditional value-at-risk (CVaR), and (4)~entropic risk (ERisk). Our results can be summarized as follows. First, we formalize the class of law-invariant risk measures, that subsume all four risk measures above. Second, we propose a unified framework for solving RPOMDPs with discounted-sum, long-run average and cumulative reward objectives under any law-invariant risk measure, by reducing the problem to solving partially observable stochastic games (POSGs). Our unified framework applies to (s,a)-rectangular RPOMDPs with polytopic uncertainty sets, which we show to be {\\em equivalent} to POSGs, for each of the four reward objectives and any law-invariant risk measure. We prove equivalence by designing logspace reductions between the RPOMDP and POSG models, that map strategies to strategies and preserve the distribution of the reward objective, up to a constant rescaling factor. Third, as a corollary, we derive new computational complexity results for R(PO)MDPs and POSGs. In particular, we show that solving (s,a)-rectangular RMDPs is as hard as solving simple stochastic games.",
+        "authors": [
+          "Durgam Latha",
+          "Dion Reji",
+          "Dorde Zikelic",
+          "Shankaranarayanan Krishna"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.FL"
+        ],
+        "submittedAt": "2026-10-19T15:23:02.000Z",
+        "updatedAt": "2026-10-19T15:23:02.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.26554",
+      "url": "https://arxiv.org/abs/2610.26554",
+      "collectedAt": "2026-10-20T04:44:39.362Z",
+      "data": {
+        "title": "BetaMem: Learning to Remember a Changing World for Embodied Agents",
+        "summary": "Long-horizon embodied agents face temporal confusion and incomplete or distorted records, recurring errors from fixed memory rules, and growing storage and retrieval costs. We present BetaMem, a framework for building and evolving traceable long-term memory through six linked layers: working, spatial, entity, episodic, experiential, and procedural memory. A dual-level write contract constrains operation executability and source support for content: supervised fine-tuning learns compliant memory operations, while reinforcement learning combines repeated sampling with teacher verification of the original observations to reward complete, accurate records and penalize omissions, distortion, and unsupported content. We formulate failure-driven policy recursive self-improvement through diagnosis along the causal sequence of memory operations and local rule repairs gated by independent replay. Atomic tools frame storage, updates, retrieval, and forgetting as cost-utility allocation under storage and read budgets. Using the open-source Qwen3.5-9B model for memory generation, BetaMem achieves overall scores of 48.08% on M3-Bench-robot, 92.08% on LoCoMo, 72.6% on OpenEQA EM-EQA, and 62.4% on EgoLifeQA, the highest among the listed memory methods under their respective evaluation protocols. Training the model for memory generation raises the contract pass rate from 50.9% to 86.2% while reducing output tokens per stored action by 47.3%. A separate Qwen3-VL-8B-Instruct evaluation on EMem-Bench achieves an average success rate of 38.4% and an average error recurrence rate of 24.9%. We perform best among evaluated methods using comparably sized open-source models. Category results show that we have advantages in integrating information across observations, recalling events over long h",
+        "authors": [
+          "Mai Liu",
+          "He Sun",
+          "Siru Zhong",
+          "Kerun Chen",
+          "Hao Yan",
+          "Xiaohui Lv",
+          "Shuai Tao",
+          "Wulong Liu"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-10-19T15:13:56.000Z",
+        "updatedAt": "2026-10-19T15:13:56.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.26551",
+      "url": "https://arxiv.org/abs/2610.26551",
+      "collectedAt": "2026-10-20T04:44:39.362Z",
+      "data": {
+        "title": "Training Natural Schemers: RL Can Amplify Oversight-Conditional Behavior",
+        "summary": "One of the central concerns for the safety of advanced AI is scheming: when a model strategically complies under oversight but pursues its own goals when unobserved. Current demonstrations, such as Anthropic's Alignment Faking work, depend on design choices that make them less convincing: explicit test-time prompting, handcrafted backdoors, or training data that demonstrates or hints at the target behavior. Model organisms built in this way cannot tell us whether scheming tendencies would arise or increase under realistic training conditions. We therefore construct a natural model organism of scheming, built on Kimi K2.6: trained with traits that could plausibly emerge in a frontier training pipeline, and without providing the model with the target scheming policy. The resulting model is a benign schemer: it aims to maximize aggregate help across all users over time, values its own continued operation only as a means to future help, and knows the consequences of oversight and deployment. We then train it using Reinforcement Learning (RL) with a reward that scores only task quality and policy compliance and does not reward scheming; we show that this amplifies scheming. We measure the oversight flip (the gap between monitored and unmonitored compliance with a given policy) and find that it increases during RL training across our environments. Chain-of-Thought (CoT) analysis finds explicit instrumental reasoning about oversight accompanying this behavior. The effect holds across our three RL environments, and we find that the scheming policy transfers between them. The pipeline also replicates on other open-weight base models. Our results suggest that a reward that does not reward scheming offers no inherent protection against certain traits when an oversight-conditional ",
+        "authors": [
+          "Bart Jaworski",
+          "Nathaniel Mitrani",
+          "Fred Bruford",
+          "Victoria Krakovna"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-19T15:12:41.000Z",
+        "updatedAt": "2026-10-19T15:12:41.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.26548",
+      "url": "https://arxiv.org/abs/2610.26548",
+      "collectedAt": "2026-10-20T04:44:39.362Z",
+      "data": {
+        "title": "Agentic Orchestration of EDC Data Space Retrieval and Natural Language Driven Data Processing",
+        "summary": "Participating in a data space still requires the Dataspace Protocol (DSP) negotiation flow to be hand-coded against each provider's access policy. We present a multi-agent architecture that automates this process using natural language requests. Built on LangGraph over an Eclipse Dataspace Components (EDC), the design separates concerns into cooperating agents. The orchestrator's role is to route and plan. The data extraction agent's role is to expose the DSP protocol's three composable tools (catalog discovery, contract negotiation and download). The agent also gates negotiations on the consumers' verifiable credentials, refusing assets rather than fabricating them. Furthermore, there are downstream Machine Learning (ML) and Visualization agents, as well as a final Verification agent, which confirms that the request was actually fulfilled and rechecks the intended operation against the contract's usage policy. In a primary benchmark involving 600 runs, the system achieved 89% task success with zero policy violations when evaluating multi-dimensional policy reasoning with a locally hosted open-weight model. It failed safely through refusal rather than misrouting. The reliability of the system is largely dependent on the phrasing of requests: technical and expert requests succeed up to 98% of the time, whereas casual and under-specified requests succeed 72% of the time. Furthermore, in a secondary evaluation of 600 runs isolating hierarchical geographic access control, the framework successfully blocks 100% of unauthorized regional requests. While the verification agent hallucinates that 1% of these requests, the system logs confirm that no data is ever extracted and the framework simultaneously achieves an end-to-end verified delivery rate of 86% for eligible consumers.",
+        "authors": [
+          "Marla Grunewald",
+          "Fin Gentzen",
+          "Iulisloi Zacarias",
+          "Admela Jukan"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-10-19T15:10:26.000Z",
+        "updatedAt": "2026-10-19T15:10:26.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.26542",
+      "url": "https://arxiv.org/abs/2610.26542",
+      "collectedAt": "2026-10-20T04:44:39.362Z",
+      "data": {
+        "title": "Breaking Diffusion: Parallel Reasoning with Draft Refinement",
+        "summary": "Drafting an answer allows a reasoning model to reconsider each decision in the context of the others. Yet repeated diffusion denoising does not ensure that individually plausible token updates form a better answer together. We introduce Draft Refinement Language Models (DRLMs), which use a single denoiser to propose parallel revisions and evaluate a candidate draft. We train the denoiser to reconstruct every token from uniformly corrupted drafts, teaching both preservation and repair. Its predictions specify revisions directly, without a diffusion reverse transition. Evaluation requires a different use of these predictions: confidence in an existing token reflects both contextual support and evidence from observing the token itself. Using the known corruption process, we correct for this self-token evidence to estimate how well each token is supported by the prompt and the remaining draft. Aggregating these estimates yields a cavity energy computed in one forward pass, without an additional scoring model. Each round proposes a revision, reads the completed candidate in its revised context, and retains it only if its energy is lower. Across Countdown, Sudoku-Extreme, and Maze-Hard, our method outperforms autoregressive and discrete diffusion baselines. With 6M parameters, DRLM reaches 44.4% on Countdown-5 and 93.9% on Sudoku-Extreme. The results establish complete-draft parallel refinement as an effective alternative to reverse diffusion for complex reasoning.",
+        "authors": [
+          "Jaesang Yu",
+          "Seoyeon Byun",
+          "Yun Wang",
+          "Yan Lu",
+          "Juho Kim"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-10-19T15:02:45.000Z",
+        "updatedAt": "2026-10-19T15:02:45.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.26528",
+      "url": "https://arxiv.org/abs/2610.26528",
+      "collectedAt": "2026-10-20T04:44:39.362Z",
+      "data": {
+        "title": "A Semantic Knowledge Graph Construction Pipeline for Vehicle Intention Prediction in nuScenes",
+        "summary": "Knowledge graphs (KGs) are increasingly used in autonomous driving (AD) to make traffic scene entities and relations explicit for prediction and reasoning. Existing traffic-scene KGs, however, primarily emphasize trajectory forecasting or general scene understanding. This paper presents the nuScenes Intention Knowledge Graph (NIKG), a focused Web Ontology Language (OWL)-based semantic representation and construction pipeline for ego-centric vehicle intention context. NIKG instantiates nuScenes scenes as a self-describing Turtle graph and promotes three intention-relevant relations to first-class properties of each scene participant: ego-relative motion, spatial configuration, and time to collision (TTC) risk. The pipeline uses a small input contract available in many ego-centric driving datasets: ego pose, tracked object annotations, and temporal keyframe order. NIKG is released as an ontology-backed, self-describing graph artifact together with a reproducible construction pipeline and validation protocol for ego-centric intention context. Applying this pipeline to nuScenes mini yields a graph of 211,335 triples across 404 keyframes; under the validation protocol, ego-relative motion labels achieve 92.5% forward consistency. Coverage, semantic consistency, and temporal coherence analyses over this artifact are further reported. NIKG occupies the space between scene-oriented traffic KGs and intention-prediction models: a small, explicit semantic layer intended to support downstream work such as knowledge graph embedding (KGE), SPARQL-based feature extraction, or hybrid neuro-symbolic reasoning.",
+        "authors": [
+          "Khaled Nowara",
+          "Mohamed Manzour",
+          "Catherine Elias"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-19T14:56:03.000Z",
+        "updatedAt": "2026-10-19T14:56:03.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.26524",
+      "url": "https://arxiv.org/abs/2610.26524",
+      "collectedAt": "2026-10-20T04:44:39.362Z",
+      "data": {
+        "title": "Beyond Behavioral Accuracy: Evaluating Individual-Level Fidelity in LLM Investor Simulation",
+        "summary": "Large language models (LLMs) are increasingly used as user simulators, but can they faithfully reproduce an individual's behavior and decision logic over time? We investigate this question in a longitudinal paper-trading study with 80 participants. Using rolling next-day predictions, we evaluate trading activity, buy-sell structure, asset selection, and portfolio outcomes, complemented by controlled input ablations and participant-rated explanation alignment. No evaluated LLM reliably outperforms a simple recent-activity persistence baseline for predicting trade occurrence, while buy-sell structure and asset selection remain difficult to reproduce. Similar activity-level performance can also yield substantially different portfolio trajectories. Ablations show that activity predictions depend primarily on recent trades, whereas asset choices are sensitive to multiple evidence sources. Participants rate explanations as more aligned with their recurring strategies than with their decision-specific rationales. These findings reveal a gap between coarse behavioral agreement and individual-level fidelity, motivating separate evaluation of behavioral accuracy, explanation alignment, and evidence dependence in personalized user simulation.",
+        "authors": [
+          "Jiajie He",
+          "Yuanhong Jiang",
+          "Xintong Chen",
+          "Dongling Ni",
+          "Wenjin Liu"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.HC",
+          "cs.IR"
+        ],
+        "submittedAt": "2026-10-19T14:54:08.000Z",
+        "updatedAt": "2026-10-19T14:54:08.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.26511",
+      "url": "https://arxiv.org/abs/2610.26511",
+      "collectedAt": "2026-10-20T04:44:39.362Z",
+      "data": {
+        "title": "RouterWorld: Scaling Conversational AI with Latency-Aware LLM Routing",
+        "summary": "Conversational AI systems built on Large Language Models (LLMs) require routing mechanisms that balance answer quality and response latency at scale. However, existing LLM routing benchmarks assume full observability of all candidate model outcomes, under-emphasize latency as a first-class metric, and fragment evaluation across heterogeneous protocols misaligned with real-world settings. We introduce RouterWorld, a comprehensive benchmark for LLM routing in conversational GenAI. RouterWorld unifies 371k single-turn responses and 76k multi-turn agentic trajectories, adopts natural user interactions with a standardized LLM-as-a-judge protocol, and decouples efficiency from transient pricing via hardware-grounded latency annotations. Crucially, RouterWorld formalizes routing under partial observability through two setups: Cold-Start, which restricts learning to sparse, static logs, and Voyager, which models continuous data streams where routing decisions shape future training distributions. Evaluating 13 routing baselines, we find that most routers over-emphasize accuracy while ignoring latency under partial observability. Code and benchmark data are publicly available.",
+        "authors": [
+          "Jinyang Li",
+          "Denis Emelin",
+          "Simone Tedeschi",
+          "Weiwei Cheng",
+          "Cristina Morariu",
+          "Haytham Assem",
+          "Jens Lehmann",
+          "Emine Yilmaz",
+          "Angus Addlesee"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-19T14:45:25.000Z",
+        "updatedAt": "2026-10-19T14:45:25.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.26503",
+      "url": "https://arxiv.org/abs/2610.26503",
+      "collectedAt": "2026-10-20T04:44:39.362Z",
+      "data": {
+        "title": "ScopeMem: Latent Memory That Learns Where to Revise Frozen GUI Agents",
+        "summary": "Latent memory is gaining ground as a lightweight history supplement for GUI agents. It supplies history to a frozen vision-language model via prefix vectors trained with step-wise cross-entropy (CE). While resulting gains are naturally attributed to encoded history, our controlled experiments show they primarily stem from action revision. The prefix learns to alter the model's default actions. However, this revision is unscoped because step-wise CE pushes outputs toward reference actions at every step without explicitly preserving correct decisions. Consequently, it repairs errors but also breaks 8-13% of initially correct answers. Overall accuracy metrics hide these losses. We therefore propose ScopeMem, a latent-memory method for scoped revision. Its encoder conditions prefix generation on the model's initial answer and is trained to correct errors while preserving correct decisions. On the controlled ablation set, ScopeMem reduces the share of broken correct decisions to 5.6% while repairing more errors than any evaluated CE-trained prefix. On AndroidControl, GUI-Odyssey, and zero-shot AITW, ScopeMem outperforms all evaluated prompting and latent-memory baselines, enabling a frozen Qwen3-VL-8B to match or surpass GUI-specialized agents and Qwen3-VL-32B.",
+        "authors": [
+          "Zhicheng Zheng",
+          "Cheng Zhang",
+          "Shengping Yu",
+          "Tianxiang Zhao"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-10-19T14:38:41.000Z",
+        "updatedAt": "2026-10-19T14:38:41.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.26496",
+      "url": "https://arxiv.org/abs/2610.26496",
+      "collectedAt": "2026-10-20T04:44:39.362Z",
+      "data": {
+        "title": "Mitigating Reward Hacking in Preference Reward Models with Evolving Penalties",
+        "summary": "Reinforcement learning for language models has moved from preference reward models to verifiable rewards, which sustain much longer optimization. Preference models are prone to reward hacking: the policy raises their score without improving response quality, or even while degrading it. Yet for open-ended tasks, where quality can neither be verified nor fully written down as rubrics, they remain valuable. We introduce Dynalize, which mitigates reward hacking online, during policy training. Periodically and asynchronously, a language model analyzes training rollouts and writes penalties for undesirable behaviors that the reward model appears to reward; a judge applies them to every rollout. In clinical counseling and creative writing, training on the reward model alone raises its score continuously but ultimately leads to a decline in external benchmarks. Dynalize sustains longer training and results in improved downstream performance. For example, we find that our method suppresses patterns incentivized by preference models that, without penalties, spread to most responses, and even to the model's reasoning, which the reward model does not explicitly score. Furthermore, we show that its gains hold in multi-turn training, and even after we retrain the reward model on the discovered behaviors.",
+        "authors": [
+          "Afonso Baldo",
+          "António Farinhas",
+          "Marcos Treviso",
+          "Ricardo Rei",
+          "Nuno M. Guerreiro"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL"
+        ],
+        "submittedAt": "2026-10-19T14:34:50.000Z",
+        "updatedAt": "2026-10-19T14:34:50.000Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-19",
+  "source": "anthropic",
+  "items": [
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+      "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+      "collectedAt": "2026-10-20T04:44:39.362Z",
+      "data": {
+        "lastmod": "2026-10-19T13:19:29.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/news/public-benefit-fund",
+      "url": "https://www.anthropic.com/news/public-benefit-fund",
+      "collectedAt": "2026-10-20T04:44:39.362Z",
+      "data": {
+        "lastmod": "2026-10-18T18:05:05.000Z"
+      }
+    }
+  ]
+}
