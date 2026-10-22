@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-21",
+  "source": "anthropic",
+  "items": [
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/news/public-benefit-fund",
+      "url": "https://www.anthropic.com/news/public-benefit-fund",
+      "collectedAt": "2026-10-22T04:38:33.483Z",
+      "data": {
+        "lastmod": "2026-10-21T11:37:13.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/attack-surface-reduction",
+      "url": "https://www.anthropic.com/research/attack-surface-reduction",
+      "collectedAt": "2026-10-22T04:38:33.483Z",
+      "data": {
+        "lastmod": "2026-10-20T22:16:43.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+      "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+      "collectedAt": "2026-10-22T04:38:33.483Z",
+      "data": {
+        "lastmod": "2026-10-20T16:04:01.000Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-21",
+  "source": "anthropic-jobs",
+  "items": [
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5406982008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5406982008",
+      "collectedAt": "2026-10-22T04:38:33.483Z",
+      "data": {
+        "title": "Applied AI Architect, Startups",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-10-20T18:36:32.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5057647008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5057647008",
+      "collectedAt": "2026-10-22T04:38:33.483Z",
+      "data": {
+        "title": "Applied AI Engineer, Enterprise ",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-10-20T23:56:30.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5454442008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5454442008",
+      "collectedAt": "2026-10-22T04:38:33.483Z",
+      "data": {
+        "title": "Manager, Applied AI Cyber Specialists",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-10-20T20:18:43.000Z"
+      }
+    }
+  ]
+}
