@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-22",
+  "source": "anthropic-jobs",
+  "items": [
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5457043008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5457043008",
+      "collectedAt": "2026-10-23T04:44:27.674Z",
+      "data": {
+        "title": "Product Manager, Claude Marketplace",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-10-22T00:12:16.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5415822008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5415822008",
+      "collectedAt": "2026-10-23T04:44:27.674Z",
+      "data": {
+        "title": "Product Manager (Technical), Product Support Experience",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-10-21T23:16:00.000Z"
+      }
+    }
+  ]
+}
