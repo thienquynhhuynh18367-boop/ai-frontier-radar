@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "source": "anthropic",
+  "items": [
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+      "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+      "collectedAt": "2026-10-24T04:31:43.841Z",
+      "data": {
+        "lastmod": "2026-10-22T17:48:51.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/news/open-call-guest-investigators-life-sciences",
+      "url": "https://www.anthropic.com/news/open-call-guest-investigators-life-sciences",
+      "collectedAt": "2026-10-24T04:31:43.841Z",
+      "data": {
+        "lastmod": "2026-10-22T21:59:15.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/alignment-assessment-ukaisi",
+      "url": "https://www.anthropic.com/research/alignment-assessment-ukaisi",
+      "collectedAt": "2026-10-24T04:31:43.841Z",
+      "data": {
+        "lastmod": "2026-10-23T14:51:41.000Z"
+      }
+    }
+  ]
+}

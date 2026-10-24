@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "source": "anthropic-jobs",
+  "items": [
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5455627008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5455627008",
+      "collectedAt": "2026-10-24T04:31:43.841Z",
+      "data": {
+        "title": "Applied AI Architect, Public Sector (Federal Civilan)",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-10-23T01:53:49.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5460211008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5460211008",
+      "collectedAt": "2026-10-24T04:31:43.841Z",
+      "data": {
+        "title": "Applied AI Architect, Public Sector (GovTech)",
+        "location": "Washington, DC",
+        "updatedAt": "2026-10-23T01:53:09.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5461873008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5461873008",
+      "collectedAt": "2026-10-24T04:31:43.841Z",
+      "data": {
+        "title": "Applied AI Security Architect - Healthcare & Life Sciences",
+        "location": "New York City, NY; San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-10-23T14:31:11.000Z"
+      }
+    }
+  ]
+}
