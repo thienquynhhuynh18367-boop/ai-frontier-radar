@@ -1,0 +1,807 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "source": "anthropic",
+  "items": [
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/81k-economics",
+      "url": "https://www.anthropic.com/research/81k-economics",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:33.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/ai-expectations-gap",
+      "url": "https://www.anthropic.com/research/ai-expectations-gap",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:18.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/AI-fluency-index",
+      "url": "https://www.anthropic.com/research/AI-fluency-index",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:19.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/anthropic-economic-index-insights-from-claude-sonnet-3-7",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-insights-from-claude-sonnet-3-7",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:24.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:28.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/anthropic-economic-index-september-2025-report",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-september-2025-report",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:15.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/anthropic-education-report-how-educators-use-claude",
+      "url": "https://www.anthropic.com/research/anthropic-education-report-how-educators-use-claude",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:26.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/anthropic-education-report-how-university-students-use-claude",
+      "url": "https://www.anthropic.com/research/anthropic-education-report-how-university-students-use-claude",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:29.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/anthropic-interviewer",
+      "url": "https://www.anthropic.com/research/anthropic-interviewer",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:20.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/anthropic-public-record",
+      "url": "https://www.anthropic.com/research/anthropic-public-record",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:17.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/attack-navigator",
+      "url": "https://www.anthropic.com/research/attack-navigator",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:16.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/attack-surface-reduction",
+      "url": "https://www.anthropic.com/research/attack-surface-reduction",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:13.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/biorisk",
+      "url": "https://www.anthropic.com/research/biorisk",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:36.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/building-ai-cyber-defenders",
+      "url": "https://www.anthropic.com/research/building-ai-cyber-defenders",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:16.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/claude-4-cyber",
+      "url": "https://www.anthropic.com/research/claude-4-cyber",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:36.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/claude-code-expertise",
+      "url": "https://www.anthropic.com/research/claude-code-expertise",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:32.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/claude-personal-guidance",
+      "url": "https://www.anthropic.com/research/claude-personal-guidance",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:22.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/claude-plays-robotics",
+      "url": "https://www.anthropic.com/research/claude-plays-robotics",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:34.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/claude-values-models-languages",
+      "url": "https://www.anthropic.com/research/claude-values-models-languages",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:25.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/clio",
+      "url": "https://www.anthropic.com/research/clio",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:27.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/collective-constitutional-ai-aligning-a-language-model-with-public-input",
+      "url": "https://www.anthropic.com/research/collective-constitutional-ai-aligning-a-language-model-with-public-input",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:30.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/critical-infrastructure-defense",
+      "url": "https://www.anthropic.com/research/critical-infrastructure-defense",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:36.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/cyber-competitions",
+      "url": "https://www.anthropic.com/research/cyber-competitions",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:36.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/cyber-toolkits",
+      "url": "https://www.anthropic.com/research/cyber-toolkits",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:37.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/cyber-toolkits-update",
+      "url": "https://www.anthropic.com/research/cyber-toolkits-update",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:37.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/discovering-cryptographic-weaknesses",
+      "url": "https://www.anthropic.com/research/discovering-cryptographic-weaknesses",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:35.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/ecdsa-curve-origins",
+      "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:31.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/economic-index-geography",
+      "url": "https://www.anthropic.com/research/economic-index-geography",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:25.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/economic-index-june-2026-report",
+      "url": "https://www.anthropic.com/research/economic-index-june-2026-report",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:35.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/economic-index-march-2026-report",
+      "url": "https://www.anthropic.com/research/economic-index-march-2026-report",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:18.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/economic-index-primitives",
+      "url": "https://www.anthropic.com/research/economic-index-primitives",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:25.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/economic-index-survey-announcement",
+      "url": "https://www.anthropic.com/research/economic-index-survey-announcement",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:23.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/economic-policy-responses",
+      "url": "https://www.anthropic.com/research/economic-policy-responses",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:28.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/employment-at-anthropic",
+      "url": "https://www.anthropic.com/research/employment-at-anthropic",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:24.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/enabling-independent-research",
+      "url": "https://www.anthropic.com/research/enabling-independent-research",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:22.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/estimating-productivity-gains",
+      "url": "https://www.anthropic.com/research/estimating-productivity-gains",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:15.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/evaluating-ai-systems",
+      "url": "https://www.anthropic.com/research/evaluating-ai-systems",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:30.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/evaluating-and-mitigating-discrimination-in-language-model-decisions",
+      "url": "https://www.anthropic.com/research/evaluating-and-mitigating-discrimination-in-language-model-decisions",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:31.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/evaluating-feature-steering",
+      "url": "https://www.anthropic.com/research/evaluating-feature-steering",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:33.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/expectations-for-the-future",
+      "url": "https://www.anthropic.com/research/expectations-for-the-future",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:33.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/exploit",
+      "url": "https://www.anthropic.com/research/exploit",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:37.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/exploit-evals",
+      "url": "https://www.anthropic.com/research/exploit-evals",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:17.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/formal-verification",
+      "url": "https://www.anthropic.com/research/formal-verification",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:14.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
+      "url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:14.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic",
+      "url": "https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:26.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/how-australia-uses-claude",
+      "url": "https://www.anthropic.com/research/how-australia-uses-claude",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:20.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/how-canada-uses-claude",
+      "url": "https://www.anthropic.com/research/how-canada-uses-claude",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:32.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/impact-software-development",
+      "url": "https://www.anthropic.com/research/impact-software-development",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:28.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/india-brief-economic-index",
+      "url": "https://www.anthropic.com/research/india-brief-economic-index",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:14.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities",
+      "url": "https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:21.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/labor-market-impacts",
+      "url": "https://www.anthropic.com/research/labor-market-impacts",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:21.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source",
+      "url": "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:19.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/measuring-agent-autonomy",
+      "url": "https://www.anthropic.com/research/measuring-agent-autonomy",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:34.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/measuring-model-persuasiveness",
+      "url": "https://www.anthropic.com/research/measuring-model-persuasiveness",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:16.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/multiagent-systems",
+      "url": "https://www.anthropic.com/research/multiagent-systems",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:21.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/mythos-preview",
+      "url": "https://www.anthropic.com/research/mythos-preview",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:35.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/n-days",
+      "url": "https://www.anthropic.com/research/n-days",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:27.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/nuclear-safeguards-for-ai",
+      "url": "https://www.anthropic.com/research/nuclear-safeguards-for-ai",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:38.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/political-even-handedness",
+      "url": "https://www.anthropic.com/research/political-even-handedness",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:23.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/predictability-and-surprise-in-large-generative-models",
+      "url": "https://www.anthropic.com/research/predictability-and-surprise-in-large-generative-models",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:29.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/project-fetch-phase-two",
+      "url": "https://www.anthropic.com/research/project-fetch-phase-two",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:28.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/project-fetch-robot-dog",
+      "url": "https://www.anthropic.com/research/project-fetch-robot-dog",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:33.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/project-pilot",
+      "url": "https://www.anthropic.com/research/project-pilot",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:26.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/project-swap",
+      "url": "https://www.anthropic.com/research/project-swap",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:32.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/project-vend-1",
+      "url": "https://www.anthropic.com/research/project-vend-1",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:34.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/project-vend-2",
+      "url": "https://www.anthropic.com/research/project-vend-2",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:38.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/property-based-testing",
+      "url": "https://www.anthropic.com/research/property-based-testing",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:38.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/red-teaming-language-models-to-reduce-harms-methods-scaling-behaviors-and-lessons-learned",
+      "url": "https://www.anthropic.com/research/red-teaming-language-models-to-reduce-harms-methods-scaling-behaviors-and-lessons-learned",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:31.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/reviewing-the-evidence-on-worker-retraining-programs",
+      "url": "https://www.anthropic.com/research/reviewing-the-evidence-on-worker-retraining-programs",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:18.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/self-replicating-ai",
+      "url": "https://www.anthropic.com/research/self-replicating-ai",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:27.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/smart-contracts",
+      "url": "https://www.anthropic.com/research/smart-contracts",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:38.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/strategic-warning-for-ai-risk-progress-and-insights-from-our-frontier-red-team",
+      "url": "https://www.anthropic.com/research/strategic-warning-for-ai-risk-progress-and-insights-from-our-frontier-red-team",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:25.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/the-anthropic-economic-index",
+      "url": "https://www.anthropic.com/research/the-anthropic-economic-index",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:19.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/the-capacity-for-moral-self-correction-in-large-language-models",
+      "url": "https://www.anthropic.com/research/the-capacity-for-moral-self-correction-in-large-language-models",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:31.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/towards-measuring-the-representation-of-subjective-global-opinions-in-language-models",
+      "url": "https://www.anthropic.com/research/towards-measuring-the-representation-of-subjective-global-opinions-in-language-models",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:30.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/trustworthy-agents",
+      "url": "https://www.anthropic.com/research/trustworthy-agents",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:19.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/values-wild",
+      "url": "https://www.anthropic.com/research/values-wild",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:16.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/what-work-can-robots-do",
+      "url": "https://www.anthropic.com/research/what-work-can-robots-do",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:23.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/your-thoughts-on-ai",
+      "url": "https://www.anthropic.com/research/your-thoughts-on-ai",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:29.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/zero-days",
+      "url": "https://www.anthropic.com/research/zero-days",
+      "collectedAt": "2026-10-25T04:36:23.186Z",
+      "data": {
+        "lastmod": "2026-10-23T20:56:39.000Z"
+      }
+    }
+  ]
+}
