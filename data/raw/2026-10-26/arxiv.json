@@ -1,0 +1,433 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-26",
+  "source": "arxiv",
+  "items": [
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.35635",
+      "url": "https://arxiv.org/abs/2610.35635",
+      "collectedAt": "2026-10-27T04:58:56.550Z",
+      "data": {
+        "title": "Offline Language-Based Support System for Tactical Decision-Making in Air Combat Operations",
+        "summary": "An offline language-based support tool is presented to assist pilot training and tactical decision-making in air combat operations. The system, named MATE (Mission Assistant for Training and Evaluation), applies retrieval-augmented generation (RAG) to answer natural language questions using content extracted from doctrinal and tactical manuals. Built entirely with open-source components, it performs text preprocessing, embedding generation, semantic search, and language generation locally, ensuring full offline functionality. The tool was evaluated by three Brazilian Air Force fighter pilots, who rated the answers produced with three open-weight language models (Llama 3.1 8B, Qwen 2.5 14B, and Mistral NeMo 12B) to five tactical questions derived from a publicly available air combat manual. Average ratings ranged from 4.00 to 4.40 on a five-point scale, with Mistral NeMo 12B obtaining the highest score, and the pilots rated the response time of the tool as fully adequate compared to manual search. The relevance of the retrieved content was identified as the main point for improvement. Potential applications are discussed in onboard mission systems, flight simulators, and training environments.",
+        "authors": [
+          "Joao P. A. Dantas"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.HC"
+        ],
+        "submittedAt": "2026-10-26T15:46:03.000Z",
+        "updatedAt": "2026-10-26T15:46:03.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.35629",
+      "url": "https://arxiv.org/abs/2610.35629",
+      "collectedAt": "2026-10-27T04:58:56.550Z",
+      "data": {
+        "title": "From Language to Drives: A Multimodal Framework for Aligning Autonomous Robots with Human Purposes",
+        "summary": "This work explores a multimodal approach to the alignment of the behavior of open-ended learning autonomous robots with human purposes through the use of large language models as cultural enablers. While autonomous robots can generate their own skills and goals through interaction with the environment, they often lack mechanisms to ensure that these remain relevant and aligned to those of human users. The proposed approach makes use of the general and cultural knowledge contained in LLMs and VLMs to establish a multimodal interactive alignment process in which human purposes, expressed in natural language, are transformed into motivational components of a robot architecture in the form of robot missions and drives that guide the behavior of the robot. The system is structured into three layers for semantic alignment, mission generation, and drive modeling. This design enables a bidirectional interaction loop: human inputs define high-level purposes, robots expand them into executable missions making use of multimodal information relayed by LLMs and VLMs, and feedback maintains alignment with human intent. Experiments in simulation and with a physical robot demonstrate that the process produces valid missions and behaviors, supporting effective human-agent alignment in interactive scenarios with autonomous robots.",
+        "authors": [
+          "Diana Cerdas-Vargas",
+          "Alejandro Romero",
+          "Richard J. Duro"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.HC",
+          "cs.RO"
+        ],
+        "submittedAt": "2026-10-26T15:40:38.000Z",
+        "updatedAt": "2026-10-26T15:40:38.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.35624",
+      "url": "https://arxiv.org/abs/2610.35624",
+      "collectedAt": "2026-10-27T04:58:56.550Z",
+      "data": {
+        "title": "Adversary Brains: Hypothesis-Based Logical Signatures for Threat Actor Detection with LLMs",
+        "summary": "An adversary brain is an LLM-based model of a threat actor's behavior, held as an evolving logical signature: a hypothesis with enough structure that data can test it continuously, without a person re-interpreting it each time. Rather than any single observation, such as an IoC (Indicator of Compromise), it is the arrangement that becomes a detection, or intelligence, mechanism. Where YARA matches a file and Sigma matches a log line, an adversary brain matches the activity pattern of a campaign or threat actor. This is based on an intelligence analysis technique called Analysis of Competing Hypotheses (ACH), which the design lifts from the limitation of a few hypotheses at a time, to thousands, and then also operationalizes it for continuous detection purposes. Language models make the concept, and scale, practical: they turn prose reports into brains, judge matches, and drive the loop that keeps brains current. A partial pattern in a brain can also match a new value, such as a fresh C2 (command and control) domain name, assisting with the discovery of new indicators, and turning unknown unknowns into known unknowns, and potentially into knowns. The author would like to thank Ryan Moon for the collaboration, and Sounil Yu, Chris Inglis, Thomas Roccia, Marius Benthin, Israel Grimberg, Michal Kamensky, Justin Borland, Brandon Levene, John Hultquist, and John Bambenek for their feedback and assistance.",
+        "authors": [
+          "Gadi Evron"
+        ],
+        "categories": [
+          "cs.CR",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-26T15:38:22.000Z",
+        "updatedAt": "2026-10-26T15:38:22.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.35616",
+      "url": "https://arxiv.org/abs/2610.35616",
+      "collectedAt": "2026-10-27T04:58:56.550Z",
+      "data": {
+        "title": "Hierarchical Skill Evolution for Coding Agent",
+        "summary": "Skills provide agents with reusable experience to guide future decisions without modifying the underlying model. However, coding trajectories are often entangled with task- and repository-specific contexts, making it challenging to distill procedural skills that generalize across diverse coding environments. To address this challenge, we present Hierarchical Skill Evolution (HSE), which progressively distills procedural knowledge from coding trajectories through hierarchical evidence aggregation. HSE first extracts task-level evidence from individual trajectories, then aggregates recurring evidence within the same repository to form repository-specific skill candidates, and finally consolidates consistent patterns across repositories into transferable skills across repositories. The evolution is driven by an external writer-evaluator loop that generates and assesses skills while keeping the underlying coding model frozen. The loop externally updates the writer and evaluator policies to improve subsequent skill generation and assessment. This hierarchy progressively filters task-specific details while preserving procedures that generalize across diverse coding environments. Successful trajectories yield reusable guidance for future tasks, while failed trajectories reveal recurring failure modes that guide avoidance and recovery. We evaluate HSE on SWE-bench Verified and DeepSWE, using GLM-5.2 across Pi and Claude Code harnesses and GPT-5.5 and Opus 4.8 with Pi. Across both benchmarks, 10 skills evolved solely from SWE-Gym improve coding performance across all evaluated settings, demonstrating transfer across benchmarks, coding models, and agent harnesses. We further evolve the skill library from target-benchmark trajectories without verifier feedback, relying solely on t",
+        "authors": [
+          "Jun Gao",
+          "Yun Peng",
+          "Changhai Zhou",
+          "Yuhan Zhu",
+          "Xiangyu Zeng",
+          "Shiyang Zhang Yuhua Zhou",
+          "Luozheng Qin",
+          "Qian Qiao",
+          "Xiaoteng Ma",
+          "Baian Chen Weiyi Shang",
+          "Zhen Ming Jack Jiang",
+          "Lizhi Liao",
+          "Xiaoxue Ren"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "submittedAt": "2026-10-26T15:34:29.000Z",
+        "updatedAt": "2026-10-26T15:34:29.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.35609",
+      "url": "https://arxiv.org/abs/2610.35609",
+      "collectedAt": "2026-10-27T04:58:56.550Z",
+      "data": {
+        "title": "Making Reasoning Visible: Configuration-Aware Diagnostic Modeling for Adaptive Scaffolding in Structured Reasoning Tasks",
+        "summary": "Modeling the latent, multi-step reasoning processes of learners is a core challenge for adaptive tutoring systems, which often rely on simple right/wrong answers rather than understanding how students think. Instantiated here for grammatical reasoning, this study introduces a diagnostic framework that makes students' step-by-step problem-solving visible by analyzing their action sequences in an interactive learning game. The framework computes five interpretable strategy dimensions (e.g., systematic error correction, random guessing), estimates coordination demand from task structure and behavioral patterns, and classifies reasoning into four distinct states. Analyzing 36,234 interactions from 234 students working on 42 morphosyntactic exercises, we found that reasoning strategies vary primarily by context rather than stable traits (intraclass correlation = 0.14), and students show high persistence in unproductive states; specifically, 74.6% of failures driven by high coordination demand (rather than simple knowledge gaps) are followed by another failure without intervention. Our early warning model predicts validation success with strong accuracy (AUC = 0.826 using strategy patterns alone; 0.902 with additional sequential context) while avoiding circular reliance on current error counts. These findings demonstrate that making latent reasoning processes visible enables earlier, more targeted scaffolding that responds to how students are thinking rather than simply whether they succeed. While demonstrated in language learning, the framework provides a generalizable, interpretable architecture for diagnosing complex, structured reasoning in any domain.",
+        "authors": [
+          "Trystan Geoffre",
+          "Zheng Yuan",
+          "Thierry Geoffre"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-26T15:30:52.000Z",
+        "updatedAt": "2026-10-26T15:30:52.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.35606",
+      "url": "https://arxiv.org/abs/2610.35606",
+      "collectedAt": "2026-10-27T04:58:56.550Z",
+      "data": {
+        "title": "ArchiveLens: A Generative Spatial Knowledge Framework for Semantic Reconstruction of Historical Maps",
+        "summary": "Historical maps contain dense morphological and semantic information about past urban environments, but many digitization workflows focus primarily on extracting geometry, and do not capture cartographic semantics such as building use and construction materials. This study introduces ArchiveLens, a generative spatial knowledge framework that operationalizes historical maps as entity-centric, machine-queryable geospatial databases. The pipeline decouples morphological and semantic reconstruction through three stages: tiled YOLOv11-seg instance segmentation for building footprint extraction; deterministic material classification via hue, saturation, and value (HSV)-based color thresholds; and localized attribute parsing using a quantized vision-language model constrained by domain-specific prompts. Extracted entities are integrated into a hybrid Spatial-Temporal Retrieval-Augmented Generation (ST-RAG) architecture that combines dense semantic retrieval with symbolic spatio-temporal filtering and mandatory provenance grounding. Applied to 445 georeferenced Sanborn map sheets of Chicago (1918-1950), the framework achieves high geometric and semantic accuracy. Beyond performance, ArchiveLens advances GIScience by formalizing historical cartography as structured spatial knowledge representation, allowing researchers to query building attributes and compare spatial patterns across map sheets and years.",
+        "authors": [
+          "Yanan Wu",
+          "Yalin Yang",
+          "Chengbin Deng"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CY",
+          "cs.LG",
+          "cs.SI"
+        ],
+        "submittedAt": "2026-10-26T15:29:24.000Z",
+        "updatedAt": "2026-10-26T15:29:24.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.35598",
+      "url": "https://arxiv.org/abs/2610.35598",
+      "collectedAt": "2026-10-27T04:58:56.550Z",
+      "data": {
+        "title": "Evolve on Graph: Self-Evolving Knowledge Graph Reasoning without Question Annotations",
+        "summary": "Knowledge graphs (KGs) provide reliable external knowledge for multi-hop factual reasoning with large language models (LLMs), yet most KGs in real-world domains such as finance and industry lack question--answer (QA) annotations. Without such annotations, existing methods struggle to improve LLM graph reasoning: training-free agents cannot improve their exploration through interaction; reinforcement learning (RL) agents depend on QA data annotated by humans or synthesized by closed-source models; and training data is typically built offline, so its topology mix is fixed and cannot follow the agent's ability. We propose Evolve on Graph (EoG), a framework that lets an LLM self-evolve its graph reasoning without any QA annotations. Through Graph Self-Play, a single LLM alternates between a Proposer that poses questions and a Solver that answers them. To make questions verifiable, Symbolically Verifiable Topology Synthesis (SVTS) samples reasoning topologies on the KG and executes the corresponding first-order logic queries, yielding topology skeletons with correct and complete answer sets; guided by a skeleton, the Proposer explores the graph to pose a multi-hop question. To let task topologies follow the Solver, a Boundary-Aware Graph Curriculum rewards the Proposer by the Solver's score variance, keeping questions at the Solver's capability boundary so that complex topologies enter training as the Solver improves. On six benchmarks over Freebase, Wikidata, and an industrial KG, EoG consistently outperforms prompting-, retrieval-, and agent-based methods, showing that LLM graph reasoning can improve through self-play without QA annotations. Our code is available at https://github.com/Szy5/EoG",
+        "authors": [
+          "Zongyuan Sun",
+          "Shuai Zhao",
+          "Ke Shu",
+          "Ziyue Zhu",
+          "Shangyang Wu",
+          "Yuanlin Lin",
+          "Tao Wang",
+          "Shiyue Li",
+          "Yingjun Du",
+          "Anh Tuan Luu",
+          "Haoran Luo"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-10-26T15:23:04.000Z",
+        "updatedAt": "2026-10-26T15:23:04.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.35596",
+      "url": "https://arxiv.org/abs/2610.35596",
+      "collectedAt": "2026-10-27T04:58:56.550Z",
+      "data": {
+        "title": "KAPPA: Checking the Proofs in Statistics Papers with Lean 4 and Language Model Agents",
+        "summary": "Papers in statistical theory rest on long proofs that few readers check line by line. We present KAPPA (Kit of Agents for Proof-checking Papers with a proof Assistant), open-source software that organizes language model agents, run by Claude Code, to translate the proofs of a LaTeX paper into the proof assistant Lean 4 with its library Mathlib and check them there, result by result. Each numbered result receives one of four verdicts: verified unconditionally; verified conditionally, with every cited or unproved input stated as a named hypothesis; issue recorded, with its place in the paper and the side at fault; or unfinished, with the reason. The kit follows the paper's own proof step by step, rather than finding a new one. Separate agents write and review, each statement is compared with the paper before it is proved and fingerprinted afterwards, and every verdict rests on evidence that can be rerun without a language model. The kit runs unattended for hours, waits out usage limits, re-checks only what a revision changed and reports its cost by role, model and result. We describe the design, walk through a complete run, and apply the kit to four example papers with answer keys and to three published statistical papers, checked blind in their versions from before public corrections. In all three, the kit found the published error at the step that the correction names, together with further problems that we confirmed by hand. Given the same papers directly, the same language model working with Lean classified fewer results correctly on the longest paper and reported some statements narrower than the paper's as proved; no verdict of the kit claimed more than its Lean evidence showed.",
+        "authors": [
+          "Zihua She",
+          "Xiao Wang"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LO",
+          "stat.CO"
+        ],
+        "submittedAt": "2026-10-26T15:22:15.000Z",
+        "updatedAt": "2026-10-26T15:22:15.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.35595",
+      "url": "https://arxiv.org/abs/2610.35595",
+      "collectedAt": "2026-10-27T04:58:56.550Z",
+      "data": {
+        "title": "Agentic Algorithm Design: LLMs that Propose, Formalise, and Prove Runtime Bounds for Evolutionary Algorithms in Lean",
+        "summary": "LLMs now prove hard theorems in Lean. Can they also design algorithms and prove their correctness and efficiency? LLM-guided design of optimisation heuristics (such as AlphaEvolve) is purely empirical. Automated theorem provers with LLMs prove given statements. So far, there has been little evidence that LLMs can do both: design an algorithm and guarantee its efficiency by a mathematical proof. We present a staged pipeline modelled after research methodology in design and analysis of evolutionary algorithms. The agent proposes black-box optimisation algorithms, and Lean guards filter out flawed designs. The agent then defines a potential function and proves drift bounds that guarantee an expected runtime improvement over the baseline algorithm. At no point in the pipeline are the algorithms compared empirically. The agent generates a black-box optimisation algorithm with expected runtime $O(n^2)$ on a CycleUncover problem, where the classical (1+1) EA needs runtime $e^{Ω(n)}$. The pipeline also designs and analyses a black-box optimisation algorithm for integer-valued submodular minimisation with expected runtime $O(n^{2+2c})$, and it matches the optimal order $O(n^2)$ on LeadingOnes. Across 8 problem classes, 12 of 15 runs with frontier models complete the pipeline with a machine-checked expected-runtime bound. An ablation study shows that removing the staging and asking the agent to zero-shot an algorithmic design with a runtime guarantee leads to a copy of the seeded baseline algorithm (random search) or to incomplete proofs. Our study suggests that machine-checked specifications in Lean can replace empirical evaluation in open-ended algorithm discovery. To the best of our knowledge, this is the first example of an automated pipeline that designs efficient black-box ",
+        "authors": [
+          "Per Kristian Lehre"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.NE"
+        ],
+        "submittedAt": "2026-10-26T15:22:04.000Z",
+        "updatedAt": "2026-10-26T15:22:04.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.35586",
+      "url": "https://arxiv.org/abs/2610.35586",
+      "collectedAt": "2026-10-27T04:58:56.550Z",
+      "data": {
+        "title": "Linear Probes Transfer from Base to Distilled Language Models despite Rotation",
+        "summary": "Linear probes, classifiers that read a language model's internal activations, are widely used to detect harmful requests. They are cheap to train and run, and an auditor who has trained one would like to reuse it when the model is replaced by a successor rather than retrain it for every release. We test how well probes can be reused. For four base models (Qwen2.5-Math-7B, Llama-3.1-8B, Qwen2.5-14B, Qwen2.5-32B) we train a probe on the base model with the XSTest prompt set and apply it, unchanged, to two successors of that base: the DeepSeek-R1 distilled reasoning model and the developer's instruction-tuned chat model. We find that the successors rotate the direction separating unsafe from safe prompts by 17$^\\circ$ to 35$^\\circ$, yet on XSTest the transferred probe's AUC changes by only $-0.011$ to $+0.027$, and on an independent OR-Bench evaluation, never used for training, by $-0.015$ to $+0.053$. On XSTest, whose safe prompts deliberately contain alarming words, the probes beat a classifier that sees only the prompt text by 0.15 to 0.20 AUC. On the OR-Bench prompts that margin shrinks to 0.03 to 0.20, and the probes flag 29\\% to 42\\% of prompts that sound harmful but are benign, so part of what they read is the appearance of harm rather than harm itself. A probe trained on a base model can thus be reused, in these families, after distillation and after instruction tuning; how much it reads beyond textual cues depends on the test set.",
+        "authors": [
+          "Marios Tsatsos"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-26T15:15:34.000Z",
+        "updatedAt": "2026-10-26T15:15:34.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.35579",
+      "url": "https://arxiv.org/abs/2610.35579",
+      "collectedAt": "2026-10-27T04:58:56.550Z",
+      "data": {
+        "title": "Infinity Machine: a self-improving AI agent for research",
+        "summary": "We present the Infinity Machine, a self-improving AI agent that we use for research on problems whose answers aprogram or data can check. Each candidate solution is produced by a full tool-using agent that works for up to an hour in a fresh sandbox; proposers see only a public score, and a private split decides what counts. The harness itself(prompts, tools, skills, playbook, meta agent) is an editable genome, changed only through a kernel-enforced gate with held-out and cost checks. An autonomous mode goes from a plain-text goal to a verified report with no human step: an agent picks an open problem and writes its verifier, the kernel calibrates it, an adversarial agent audits it, and an agent that never sees the verifier re-checks the result. Across fourteen problems in six days, for about $180 of model usage, the system produced four results beyond the published state of the art on catalogued open problems in quantum information: a certified depolarizing-channel threshold point p = 0.064966, a qutrit positivity frontier of 0.2910672, a 44-gate depth-6 Golay state preparation, and a stabilizer-rank bound chi(T^7) &lt;= 10. It also cut SABRE qubit-routing overhead from 68,559 to 12,087 added gates. In hardware, it cut the energy per MAC of an open 8x8 INT8 systolic tile by 77.7% through a full open RTL-to-GDS flow, bit-exact. Three fully autonomous runs ended in honestties with public records; one audit caught a stale record, and one agent-written score pointing the wrong way went unnoticed. We report the failures as carefully: the one self-derived harness generation was rejected on cost, proposers gamed lenient scorers four times, and operator changes were decisive for several results.",
+        "authors": [
+          "Harish Santhanalakshmi Ganesan"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-10-26T15:11:26.000Z",
+        "updatedAt": "2026-10-26T15:11:26.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.35568",
+      "url": "https://arxiv.org/abs/2610.35568",
+      "collectedAt": "2026-10-27T04:58:56.550Z",
+      "data": {
+        "title": "ExCal: Optimization-Free Multivariate Time Series Anomaly Detection via Excess Calibration",
+        "summary": "We introduce ExCal, a normal-only multivariate time series anomaly detector that combines raw state retrieval, a signal/derivative subspace, and robust statistics across temporal scales. Each expert map receives a high normality floor from the training prefix. During scoring, positive excess is retained, attenuated for broadly firing maps, and combined with a small rank term. The method fits reference memories and projections without gradient optimization or anomaly labels. Prevalence and ranks depend on the complete scored sequence, making inference batch and transductive rather than online. On 180 series from 17 TSB-AD-M families, ExCal obtains AUC-PR $0.421\\pm0.37$ and VUS-PR $0.452\\pm0.37$ over three seeds, ranking second among 24 methods. Holm-adjusted paired tests detect no significant difference from AxonAD or StreamVAE, which are the two leading non-pretrained methods on TSB-AD-M, on either primary metric, while finding significant positive differences against the other 21 baselines. A separate single-run probe over three series measures median model-wrapper time of $0.0662$ s. Ablations associate the largest primary-metric changes with raw retrieval and excess-magnitude preservation. The evaluated score is decomposable by expert, but its diagnostic utility and online suitability remain untested.",
+        "authors": [
+          "Kadir-Kaan Özer",
+          "René Ebeling",
+          "Markus Enzweiler"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-26T15:06:39.000Z",
+        "updatedAt": "2026-10-26T15:06:39.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.35541",
+      "url": "https://arxiv.org/abs/2610.35541",
+      "collectedAt": "2026-10-27T04:58:56.550Z",
+      "data": {
+        "title": "The Agent in the Middle: How AI-Mediated Access Reshapes Web Vulnerability Exploitation",
+        "summary": "Web services increasingly expose backend interfaces that let users delegate tasks to AI agents, which invoke service operations directly without navigating websites. This shift changes how existing Web vulnerabilities can be exploited. We investigate these changes through VELA, an executable benchmark covering 44 vulnerabilities across twelve Web application families. The benchmark preserves vulnerable backends and derives agent-facing interfaces from legitimate workflows. We evaluate three commercial agents across multiple interface configurations, using controlled comparisons to separate interface effects from agent behavior and independent oracles to verify attack outcomes. Our results show that the agent realizes every attack that direct interface invocation realizes in the reference configuration, so exploitability is set mainly by the interface: 91% of vulnerabilities remain exploitable under the reference design. Interface restrictions prevent some attacks by removing required operations or limiting input control, while retention remains high across vulnerability classes. No case-level loss in the reference configuration is attributed to agent refusal or input normalization, and in one case the agent completed an attack by supplying calls the attacker omitted. Across the tested configurations, interface design affects exploitability more than agent choice, moving retention from 39% to 95% against at most 4.5 points across agents, but some restrictive interfaces also limit legitimate workflows. Our study provides a systematic empirical account of how agent-mediated access reshapes existing Web vulnerabilities, grounding future Web architecture design in measured security outcomes and trade-offs between reducing attack exposure and preserving legitimate functionali",
+        "authors": [
+          "Ruozhao Yang",
+          "Jiongchi Yu",
+          "Ming Hu",
+          "Xiaofei Xie"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CR",
+          "cs.SE"
+        ],
+        "submittedAt": "2026-10-26T14:53:22.000Z",
+        "updatedAt": "2026-10-26T14:53:22.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.35523",
+      "url": "https://arxiv.org/abs/2610.35523",
+      "collectedAt": "2026-10-27T04:58:56.550Z",
+      "data": {
+        "title": "Ranking Function Generation with LLMs for Termination",
+        "summary": "Ranking functions are a fundamental technique for proving loop termination, but constructing them manually is challenging and requires substantial expertise. We propose RAINFALL, a neuro-symbolic framework which follows the generate-verify-refine paradigm and tightly integrates LLMs with symbolic verification. RAINFALL formulates ranking function synthesis as a code-completion task by inserting placeholders into the input program and constraining the LLM to fill four predefined slots for each loop. The completed program is then checked by a symbolic verifier. If verification succeeds, a valid ranking function is obtained; otherwise, the verifier's diagnostics are translated into natural-language feedback that guides iterative refinement of the LLM's output. We evaluate RAINFALL on two public benchmark suites comprising 358 terminating C programs. Using MiniMax V2.7, RAINFALL synthesizes verifiable ranking functions for 323 programs (90.22%), outperforming all promising baselines. In particular, it solves 12 more programs than PROTON 2.1, the best-performing baseline and winner of the SV-COMP 2026 Termination category. Furthermore, combining RAINFALL with PROTON 2.1 increases the success rate to 96.65% (346/358 programs). We also conduct ablation study confirming individual contributions of placeholder contracts, few-shot examples, symbolic verification, and diagnostic information feedback. Experiments across LLMs further confirm the effectiveness of RAINFALL. Our results suggest a generic, sound framework for ranking-function synthesis and, beyond termination, LLM-assisted synthesis of formally checkable liveness certificates, both of which represent new directions of software engineering research.",
+        "authors": [
+          "Rongkang Li",
+          "Jiaxin Hu",
+          "Taolue Chen",
+          "Yong Li",
+          "Fu Song",
+          "Zhilin Wu"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LO",
+          "cs.SE"
+        ],
+        "submittedAt": "2026-10-26T14:41:52.000Z",
+        "updatedAt": "2026-10-26T14:41:52.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.35522",
+      "url": "https://arxiv.org/abs/2610.35522",
+      "collectedAt": "2026-10-27T04:58:56.550Z",
+      "data": {
+        "title": "Generative Structure from Motion with Native 3D Diffusion",
+        "summary": "Recovering an object's 3D structure and camera motion from a few uncalibrated views is a fundamental problem in computer vision. Classical structure from motion methods recover 3D geometry consistent with the input images but cannot recover unseen regions; native generation methods produce plausible 3D objects which are related but not necessarily faithful to the input images. Methods simply concatenating reconstruction and generation allow error to cascade across the two stages, instead of producing a 3D object consistent with both the distribution and the input. We propose GenSfM, which integrates image-based 3D reconstruction with a native 3D diffusion model. In particular, we use a multi-modal diffusion transformer to jointly denoise the shape latent and per-view pose latents under shared self-attention, grounding generated geometry in the observed views while using object-level priors to infer unobserved regions. A compact 3D-native UV-volume tokenization keeps the joint sequence small as views are added, and a pose-aware stage refines geometry and texture by sampling per-voxel image features at the recovered camera poses. On Toys4k and GSO, for $4$ uncalibrated views, GenSfM improves novel-view PSNR by $3.2$-$4.5$ dB and reduces median Chamfer distance by $2.8$-$3.8\\times$ over a strong native-3D generation baseline, while recovering input-view poses over $96\\%$ Acc@$5^\\circ$ without any external pose-estimation backbone, post-hoc optimization, or known intrinsics. Project page: https://dotb1ue.github.io/GenSfm/.",
+        "authors": [
+          "Haobin Duan",
+          "Binbin Huang",
+          "Mochu Xiang",
+          "Yiqun Zhao",
+          "Zibo Zhao",
+          "Yi Ma",
+          "Shenghua Gao"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CV"
+        ],
+        "submittedAt": "2026-10-26T14:40:40.000Z",
+        "updatedAt": "2026-10-26T14:40:40.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.35518",
+      "url": "https://arxiv.org/abs/2610.35518",
+      "collectedAt": "2026-10-27T04:58:56.550Z",
+      "data": {
+        "title": "S3AC: Stabilized, Selective, and Scalable Actor-Critic for LLM Reasoning",
+        "summary": "Critic-free methods are widely used in reinforcement learning with verifiable rewards (RLVR) for long chain-of-thought (CoT) reasoning, avoiding difficult and costly critic training. Common alternatives lack token-level credit assignment and typically rely on grouped rollouts to estimate prompt-specific baselines. A critic can address both limitations, but long-CoT critic training is hindered by insufficient coverage of trajectories with diverse lengths and early gradients dominated by the newly initialized value head. We introduce S3AC (Stabilized, Selective, and Scalable Actor-Critic) for LLM reasoning, built around a practical critic-training recipe. The trained critic provides token-specific advantages and prompt-specific baselines. Using the prompt-level baseline to estimate difficulty, we propose Difficulty-Aware Prompt Sampling (DAPS). DAPS combines this estimate with outcome history to select prompts before generation, reducing rollout waste without offline difficulty initialization. S3AC improves group-rollout performance across dense and mixture-of-experts models from 1.5B to 397B parameters, outperforming a modern GRPO variant (GRPO-X). At 35B, it sustains single-rollout training while tested critic-free baselines deteriorate after initial gains.",
+        "authors": [
+          "Shuo Shen",
+          "Guangran Cheng",
+          "Chengqi Lyu",
+          "Xiangsen Wang",
+          "Yanan Sun",
+          "Wenwei Zhang"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-26T14:38:53.000Z",
+        "updatedAt": "2026-10-26T14:38:53.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.35512",
+      "url": "https://arxiv.org/abs/2610.35512",
+      "collectedAt": "2026-10-27T04:58:56.550Z",
+      "data": {
+        "title": "MATCHA: A Chinese Multi-Disorder Mental Health Dataset with Cross-Lingual Analyses on Social Media",
+        "summary": "Mental health research on social media has been dominated by English-language datasets and DSM-5-centered resources, limiting cross-lingual and cross-cultural understanding of online mental health expression. We introduce MATCHA, the first Chinese multi-disorder mental health dataset that links disorder-specific Weibo Super-Topic communities with users' broader public timelines. MATCHA covers seven DSM-5 disorders and a control group, comprising 46,025 cohort-level users and 1.8 million posts. The dataset distinguishes users with explicit self-disclosure evidence from broader disorder-related participants through an LLM-assisted annotation pipeline, and is released in a rigorously de-identified, controlled-access format. Using MATCHA, we analyze behavioral, linguistic, symptom-related, and life-event-related patterns across disorders, and conduct cross-lingual comparisons with Twitter-STMHD. Our analyses show that Weibo Super-Topics function as concentrated spaces for affective and health-related expression, while cross-platform differences between Weibo and Twitter often exceed cross-disorder variation. MATCHA provides a new resource for community-aware and cross-lingual mental health NLP research.",
+        "authors": [
+          "Bingrui Jin",
+          "Baihan Li",
+          "Zitong Li",
+          "Kunyao Lan",
+          "Shimeng Li",
+          "Kenny Q. Zhu",
+          "Mengyue Wu"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "submittedAt": "2026-10-26T14:36:43.000Z",
+        "updatedAt": "2026-10-26T14:36:43.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.35509",
+      "url": "https://arxiv.org/abs/2610.35509",
+      "collectedAt": "2026-10-27T04:58:56.550Z",
+      "data": {
+        "title": "Governing Enterprise AI Traffic at Scale: Design and Operation of a Policy-Driven, Multi-Vendor LLM Gateway on Envoy",
+        "summary": "Large organizations consume large language models (LLMs) from several vendors at once, each with its own API dialect, credential model, streaming protocol and pricing. Integrated directly, this heterogeneity yields credential sprawl, format lock-in, unbounded spend and inconsistent governance. We present the design and production operation of the Cosmos LLM Gateway, the governed entry point for enterprise LLM traffic at PayPal. Built on Envoy, it splits work by latency profile: I/O-bound control decisions (authentication, credential brokering, policy and budget evaluation) run in an out-of-process external-processing service, while wire-format translation, token metering and prompt-cache shaping run in-proxy as a Rust WebAssembly filter, so that, by default, streamed response body chunks never wait on an out-of-process call. Models, providers and prices are largely validated data rather than code. Governance is declarative policy evaluated by Open Policy Agent and managed through a control plane with role-scoped authoring, approvals, pilots, shadow-mode rollout, usage notifications and versioned policy bundles. For use cases that require it, a data-loss-prevention layer can block, redact or pseudonymize detected sensitive content before it reaches a provider. Spend scopes are views over per-model usage counters, so a new budget applies to spend already recorded in its window without migration. As of September 2026, the gateway serves more than 12,000 developers and hundreds of business use cases, handling roughly 200 billion tokens per day across more than 100 models at 99.999% availability to business. In a benchmark of the core request path against a synthetic upstream, it adds a median of 4 ms and a p99 of 11 ms of overhead at more than 2,200 requests per second on t",
+        "authors": [
+          "Mithun Sasidharan",
+          "Srinivasan Manoharan",
+          "Rupesh Thakur",
+          "Abhinav TK",
+          "Ashwin Hegde",
+          "Anand Gautam"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.DC",
+          "cs.SE"
+        ],
+        "submittedAt": "2026-10-26T14:33:48.000Z",
+        "updatedAt": "2026-10-26T14:33:48.000Z"
+      }
+    }
+  ]
+}
