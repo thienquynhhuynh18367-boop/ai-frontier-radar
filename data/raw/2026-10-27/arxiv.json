@@ -1,0 +1,667 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-27",
+  "source": "arxiv",
+  "items": [
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37459",
+      "url": "https://arxiv.org/abs/2610.37459",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "M4Bench: Evaluating Procedural Specification for Clinical EHR Derivation Agents",
+        "summary": "Clinical research over electronic health records depends on derived variables whose definitions sit outside the schema, in item codes, time windows, missingness rules, and output-grain choices that change cohorts and downstream conclusions. We introduce M4Bench, 28 clinical derivation tasks across 15 task families on MIMIC-IV and eICU, to test whether AI coding agents can reproduce such derivations and how clinician-reviewed agent skills change their results. Its controls decompose the value of skills into specification completeness, delivery format, and schema familiarity. In a Docker-isolated Codex campaign (GPT 5.4 Mini and GPT 5.5), skills raise reward by 0.136 over the no-skill baseline, with 26 of 28 tasks improving. Specification completeness accounts for most of this gain: on an eight-task control subset, an operational spec alone raises reward by 0.162, and skills add only 0.024 on top, indistinguishable from zero. On a ten-task subset, decoy skills score like no skill and raw reference SQL nearly matches targeted skills, arguing against generic context or the skill format as the explanation. Schema obfuscation and restructuring preserve 86% and 70% of the skill gain (GPT 5.4 Mini, 26 MIMIC-IV tasks), a descriptive robustness check rather than a bound on memorization. A descriptive Claude Code replication on all 28 tasks (Opus 4.7 and Sonnet 4.6, 560 runs) is directionally consistent (+0.120, 21 of 28 tasks improving). These gains are partial agreement with the reference, not completed tasks: only 25 of 280 with-skill and 13 of 280 no-skill Codex runs pass every strict check, and skills barely change which rows agents return (key F1 +0.003). Skills are released as a versioned, clinician-reviewable markdown delivery format, with a family-level reference-validity",
+        "authors": [
+          "Hannes Ill",
+          "Rafi Al Attrach",
+          "Rajna Fani",
+          "Ahram Han",
+          "Ryohei Yamamoto",
+          "Marlene Louisa Moerig",
+          "Dukyong Yoon",
+          "Leo Anthony Celi"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-10-27T15:59:13.000Z",
+        "updatedAt": "2026-10-27T15:59:13.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37451",
+      "url": "https://arxiv.org/abs/2610.37451",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "Interpretable Meta-Policies for Neural Decision Making",
+        "summary": "Deep Reinforcement Learning remains difficult to interpret and align due to the black-box nature of neural networks. While (neuro-)symbolic approaches improve transparency by incorporating symbolic reasoning, applying them directly to low-level actions results in overly complex, unreadable policies. We introduce NEXUS, a hierarchical RL framework that resolves this tension by combining neural skills with symbolic meta-policies. By shifting transparent reasoning to high-level skills rather than atomic actions, NEXUS drastically reduces symbolic complexity without sacrificing environment performance. Object-centric observations enable high-level reasoning and the design of reward functions and meta-policies by interaction with LLMs. We demonstrate that NEXUS agents learn disentangled skills, are interpretable regarding high-level goals, are better aligned to goals described in the game manual, less prone to reward hacking and more robust to game simplifications than deep RL. Finally, we isolate and evaluate the impact of different meta-policy architectures (neural, symbolic, neuro-symbolic) on environmental return and aligned task performance.",
+        "authors": [
+          "Raban Emunds",
+          "Jannis Blüml",
+          "Quentin Delfosse",
+          "Kristian Kersting"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-27T15:55:05.000Z",
+        "updatedAt": "2026-10-27T15:55:05.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37448",
+      "url": "https://arxiv.org/abs/2610.37448",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "Test-Time Communication in Trading Agent Swarms",
+        "summary": "Communication between agents has mostly been studied on tasks with a shared objective and fast, clear feedback. Trading has neither: each agent manages its own account, with decisions being scored by markets late and noisily. A trading swarm is thus a population of independent decision-makers rather than a team, for which convergence is a risk and not the goal. We ran 200 agents from four model families in groups of ten under five communication regimes, from isolation to message boards and shared notes, over seven US trading days (1 to 9 October 2026), logging everything each agent read before every decision. In two of the four families, communicating groups came to hold far more of the same stocks than the isolated group. A group's return was largely the return on what its members held in common. Seeing a post from a groupmate made an agent 7 percentage points more likely to reuse an eight-word phrase from it. Agents that started too close together to see each other's posts shared such a phrase in 14% of cases, the rate that common inputs produce. Seeing the post did not detectably change that morning's trades. Case studies traced the adoption of positions and decision rules over subsequent days, and communicating groups sold in step more often than isolated ones. Because isolated groups also converged on the same stocks, sometimes completely, assessments of herding need to measure excess convergence relative to a no-peer baseline.",
+        "authors": [
+          "Avid Fayaz",
+          "Harry Zhang",
+          "Håvard Alstadheim",
+          "Erik Nordlöf",
+          "Vilhelm Karlin",
+          "André Silva"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.MA"
+        ],
+        "submittedAt": "2026-10-27T15:54:05.000Z",
+        "updatedAt": "2026-10-27T15:54:05.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37443",
+      "url": "https://arxiv.org/abs/2610.37443",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "ETAMem: Decoupling and Aligning Heterogeneous Memory for Long-Term Conversational Agents",
+        "summary": "Long-term memory enables Large Language Models (LLMs) to maintain coherent and personalized interactions across extended conversations. However, existing memory systems face two key challenges: (1) Information Entanglement, where heterogeneous information is mixed within coarse-grained memory units; and (2) Organizational Mismatch, where memory structures based primarily on semantic similarity may overlook other associations. To address these challenges, we propose ETAMem, a multi-view memory framework that decouples heterogeneous conversational information and aligns memory representations and organization with its distinct characteristics. Specifically, heterogeneous information parsing extracts atomic memory units and identifies affective information. View-specific memory structuring then organizes these units into three complementary hierarchical views: Event, Affect, and Time. ETAMem incrementally maintains memory structures with adaptively calibrated thresholds. For retrieval, entropy-based retrieval allocates query-specific budgets across views and performs hierarchical search within each view. Experiments on LoCoMo and LongMemEval-S demonstrate that ETAMem outperforms state-of-the-art baselines, achieving relative accuracy improvements of 12.46% and 7.96%, respectively, while maintaining competitive token efficiency. Further analyses demonstrate the complementary benefits of different memory views.",
+        "authors": [
+          "Xinying Qian",
+          "Ying Zhang",
+          "Yu Zhao",
+          "Xubo Liu",
+          "Baohang Zhou",
+          "Jeff Z. Pan"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "submittedAt": "2026-10-27T15:51:42.000Z",
+        "updatedAt": "2026-10-27T15:51:42.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37441",
+      "url": "https://arxiv.org/abs/2610.37441",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "Multi-Agent Reinforcement Learning of Co-Adaptive Hip Exoskeleton Control (MARL-Exo) for Metabolic Energy Reduction",
+        "summary": "Objective: This study aims to determine whether a hip-exoskeleton policy trained in simulation, by co-adapting with a musculoskeletal human model under a metabolic-energy reward, reduces the metabolic cost of walking in new users without per-user tuning, and how mechanical-power shaping affects the learned assistance. Methods: We developed MARL-Exo, a multi-agent reinforcement learning framework in which a full-body human model (304 muscle actuators; randomized anatomy, gait, and speed) and a bilateral hip-exoskeleton policy are trained concurrently in two stages. The exoskeleton observes only delayed hip kinematics and its past commands; its reward includes muscle metabolic power from a physiologically based energetics model, alone (Metabolic) or with mechanical-power shaping (Metabolic + Power). The Metabolic policy was deployed and tested without retraining in eight healthy adults walking at 1.25 m/s, using indirect calorimetry. Results: In simulation, the Metabolic policy reduced modeled muscle metabolic power by 13.8% relative to no-device walking, versus 8.8% for Metabolic + Power. On hardware, MARL-Exo reduced net metabolic rate by 18.3 $\\pm$ 6.6% relative to Passive in all eight participants. Relative to No-Exo, the mean reduction was 7.4 $\\pm$ 10.0%; six participants more than offset the 13.1% device-wearing penalty, walking up to 24.2% below their No-Exo cost. Conclusion: A metabolically informed policy co-adapted in simulation transferred to users without per-user tuning and consistently reduced the metabolic cost of walking with the device, while explicit power shaping reduced the simulated benefit. Significance: Unlike per-user human-in-the-loop optimization, this approach yields a single population-level controller and allows assistance objectives to be sc",
+        "authors": [
+          "Yifei Yuan",
+          "Jakob Wolf",
+          "Ghaith Androwis",
+          "Xianlian Zhou"
+        ],
+        "categories": [
+          "cs.LG",
+          "cs.RO"
+        ],
+        "submittedAt": "2026-10-27T15:49:41.000Z",
+        "updatedAt": "2026-10-27T15:49:41.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37437",
+      "url": "https://arxiv.org/abs/2610.37437",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "Representing the Unseen: Rethinking Visual Imagination for Spatial Reasoning",
+        "summary": "Visual world models increasingly support spatial reasoning by generating RGB views of unobserved states. However, RGB has become the default interface largely because it is well suited for visual generation, rather than necessarily being the most effective representation for downstream reasoning. Different spatial questions may benefit from different representations of the same imagined state: top-down geometry can facilitate global distance comparisons, while panoramic views provide broader context for reasoning about open space. To isolate the role of representation in spatial imagination, we introduce ImagiRep, a simulator-grounded benchmark of 922 questions spanning seven question types across two settings, Viewpoint Imagination and Cross-view Integration, providing oracle RGB and six alternative representations (e.g., depth, panoramic views, and top-down geometry) of the same unobserved state. This controlled comparison reveals that even accurate imagined RGB does not guarantee accurate spatial reasoning, and different questions benefit from different representations. Similar trends hold for representations derived from world-model-estimated states. Notably, estimated RGB alone can mislead spatial reasoning, while alternative representations retain complementary benefits. Building on these findings, we introduce GEARS, a lightweight test-time strategy for adaptive representation selection, outperforming existing spatial imagination methods and showing that reasoning about unseen states requires more than generating RGB views.",
+        "authors": [
+          "Zengqi Zhao",
+          "Zun Wang",
+          "Shoubin Yu",
+          "Mohit Bansal",
+          "Yue Zhang"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.CV"
+        ],
+        "submittedAt": "2026-10-27T15:48:09.000Z",
+        "updatedAt": "2026-10-27T15:48:09.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37434",
+      "url": "https://arxiv.org/abs/2610.37434",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "FeatureArc: Benchmarking Coding Agents on Evolving Features",
+        "summary": "A software feature usually evolves over time: developers extend its first version as new use cases and requirements arrive, and each extension builds on code written earlier. Most feature benchmarks evaluate a single request on a fixed codebase. Feature evolution requires evaluating successive extensions on an agent's own earlier code and checking whether the feature remains correct. We introduce FeatureArc to evaluate coding agents on evolving features, together with a pipeline that constructs its tasks from repository histories. The benchmark combines dependencies between successive stages of the same feature, explicit requirements and interface contracts, and executable checks across four programming languages. The pipeline validates fail-to-pass (F2P) tests for new behavior and pass-to-pass (P2P) tests for existing behavior on the reference code before and after each stage. We evaluated 10 coding agents on 73 manually reviewed tasks of 2 to 10 stages. Each agent works in one persistent session and workspace without external test feedback or rollback. The evaluation reveals a gap between first-stage and whole-feature success: pooled success falls from 62.7% at the first stage to 28.5% when the whole feature is tested on the final code. Trajectory analysis identifies inherited defects as a common failure mechanism, present in 72.9% of failed later stages. These earlier errors often remain undetected: in stages following a failure, agents leave the earlier error unnoticed about 95% of the time, and their self-tests rarely revisit earlier stages. Evolving a feature autonomously, without human checks between stages, therefore remains a substantial challenge for current coding agents. At Tencent, the pipeline extends internal evaluations to this setting and guides the dev",
+        "authors": [
+          "Yunlong Wang",
+          "Alyssa Wu",
+          "Cuiyun Gao",
+          "Jia Feng",
+          "Songyuanyi Lu",
+          "Zhichao Hu"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.SE"
+        ],
+        "submittedAt": "2026-10-27T15:45:50.000Z",
+        "updatedAt": "2026-10-27T15:45:50.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37430",
+      "url": "https://arxiv.org/abs/2610.37430",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "When Visual Evidence Is Insufficient: How Instructions, Post-Training, and Internal Activations Shape Refusal in Multimodal Language Models",
+        "summary": "For reliable deployment, multimodal large language models (MLLMs) should recognize when an image provides insufficient evidence to answer a question and withhold unsupported answers. Yet refusal alone is not necessarily evidence of such recognition: models may refuse because of unrelated safety constraints or without identifying the missing evidence. We study how refusal on visually unanswerable questions is shaped by three sources of control: inference-time instructions, post-training, and internal activation interventions. Across three MLLMs on the MoHoBench benchmark, we systematically manipulate the meaning and placement of refusal instructions, compare supervised and preference-based post-training, and intervene on a refusal-related activation direction derived from naturally answered and refused examples. We find that refusal is highly sensitive to both the meaning and placement of instructions, with model-specific changes at the sample level that are obscured by aggregate refusal rates. Evidence-aware and general refusal instructions have stronger effects than an intentionally mismatched safety instruction. Post-training produces larger increases in refusal, but can also induce responses that combine refusal language with attempted answers. In contrast, activation intervention produces smaller yet transferable changes across prompt conditions, without evidence of indiscriminate refusal on tested visually answerable samples. These findings show that refusal is jointly shaped by external instructions, post-training, and internal representations, highlighting the need to disentangle evidence recognition from a model's learned propensity to refuse.",
+        "authors": [
+          "Ananth K Suresh",
+          "Aveen Dayal",
+          "Gouthaman KV",
+          "Aditya Pola",
+          "Vineeth N Balasubramanian"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-27T15:42:20.000Z",
+        "updatedAt": "2026-10-27T15:42:20.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37429",
+      "url": "https://arxiv.org/abs/2610.37429",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "Bayes-Adaptive MDPs for Rollout Allocation to Enhance GRPO Training",
+        "summary": "Group Relative Policy Optimization (GRPO) has demonstrated strong performance in LLM post-training. However, it allocates a uniform rollout budget to every training question, ignoring variations in question difficulty. As a result, highly difficult questions may receive too few rollouts to generate informative positive reward signals, limiting their contribution to training, while moderately difficult questions often receive more rollouts than necessary. In this work, we formulate the problem of difficulty-aware rollout budget allocation to maximize training utility under the same total rollout budget as standard GRPO. We propose AdaRoll-GRPO, which reformulates rollout allocation as a sequential decision-making problem and leverages a Bayes-adaptive Markov decision process (MDP) to learn an adaptive allocation policy. The learned policy is computed offline and applied during GRPO training without introducing additional online optimization overhead. Extensive experiments on multiple reasoning datasets and LLM architectures demonstrate that AdaRoll-GRPO consistently improves GRPO training performance under a fixed rollout budget, highlighting the effectiveness of adaptive rollout allocation for GRPO in LLM post-training.",
+        "authors": [
+          "Faeze Moradi Kalarde",
+          "Armin Toroghi",
+          "Nam Ho Koh",
+          "Doo Hwan Hwang",
+          "Seungjin Kim",
+          "Kee-Eung Kim",
+          "Scott Sanner"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-27T15:41:57.000Z",
+        "updatedAt": "2026-10-27T15:41:57.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37422",
+      "url": "https://arxiv.org/abs/2610.37422",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "Beyond the Readout: A Latent Numerical Frame Shared Across Modality and Operation",
+        "summary": "When a multimodal model computes 17+35 from text or 91-39 from a rendered image, it produces the same answer, 52. Does it use one internal concept of number for both, or separate machinery for each path? Similarity metrics such as RSA or CKA cannot settle this question. They give the same score to identical and to rotated directions, and two representations can look alike only because both prepare the same output digits. We therefore use causal interventions. For four conditions (text or image, addition or subtraction), we learn a small subspace of Gemma4-12B-it's residual stream in which swapping coordinates swaps the model's answer. The subspaces answer three questions. First, do the conditions write numbers along the same directions? They do not. Reusing a subspace from text in an image on the same operation recovers only 53.2% of its causal effect. A single rotation and rescaling maps one subspace onto the other and raises recovery to 91.4%, so the conditions share one geometry expressed in different coordinates. Second, does this shared geometry only reflect the digit the model is about to print? To test this, we split each subspace into 9 directions that the output layer reads to choose the next digit and 13 directions that it cannot see. The 13 hidden directions still carry the number, yet changing them barely alters the digit being written. Third, what are these hidden directions for? A model must emit a multi-digit answer one digit at a time, so it can compute the full result early and keep it in reserve. When two numbers share their first digit, swapping the number in the hidden directions leaves the digit being written intact and redirects the next digit in 77.6% of cases. The model thus forms an abstract numerical concept upstream and unfolds it across time:",
+        "authors": [
+          "Oriol Juan Sabater",
+          "Alex Ferrando de las Morenas",
+          "Pau Rodríguez",
+          "Xavier Suau"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-10-27T15:36:46.000Z",
+        "updatedAt": "2026-10-27T15:36:46.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37407",
+      "url": "https://arxiv.org/abs/2610.37407",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "Constraining the Commit Boundary: A DIO/ODI-Informed Authorization Guardrail for Agentic Entity Resolution",
+        "summary": "Agentic Entity Resolution (ER) systems iteratively plan actions, retrieve evidence, revise hypotheses, and propose graph mutations. An erroneous identity hypothesis may condition later retrieval and produce apparent confirmation. This paper proposes a Digital Identity Optimization (DIO) and Ontology of Digital Identity (ODI)-informed authorization boundary between evidence available for agent reasoning and evidence eligible to authorize persistent identity-changing mutations. A domain-governed constraint-binding function maps selected reconstruction-failure distinctions to explicit identity-preserving constraints. An abstract two-phase supervisor permits a commit only when claim-specific authorization-eligible evidence supports every required proposition, relevant conflicts are resolved, the operation remains within its authorized scope, and relevant state and policy versions remain valid. Admission as UNVERIFIED does not confer authorization eligibility. Separate claim-specific promotion governs evidentiary use; insufficient support or unresolved material conflict leads to deferral. The contribution is a specification connecting diagnostic-to-constraint mapping, evidence promotion, proposition coverage, conflict handling, scope binding, and commit-time version integrity. A proposed evaluation protocol is designed to assess the mapping's incremental value beyond generic authorization and conventional identifier rules. This is a conceptual architecture without implementation or empirical validation, not a theorem of semantic correctness. Its property depends on domain-policy adequacy, evidence promotion, and enforcement. It does not prevent erroneous hypotheses or hypothesis-conditioned retrieval; dependency-aware evidence flow remains future research.",
+        "authors": [
+          "Daniel Beránek"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CR",
+          "cs.DB"
+        ],
+        "submittedAt": "2026-10-27T15:22:00.000Z",
+        "updatedAt": "2026-10-27T15:22:00.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37405",
+      "url": "https://arxiv.org/abs/2610.37405",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "Clearing the FoG: Training KG Agents to Retrieve the Evidence Behind Their Answers",
+        "summary": "Large language models (LLMs) can answer many factual questions correctly, but a correct answer is not necessarily a supported one. For an LLM agent, a knowledge graph (KG) plays two roles: as a source of answers, it supplies facts that the model lacks; as a source of evidence, it supplies the supporting triples that make an answer traceable and auditable. However, existing KG agents treat the KG only as a source of answers: their training data carries answers but not evidence, and their training rewards check the answer but not the retrieved evidence, so agents often answer correctly without retrieving the supporting triples. We propose FoG, a framework that trains KG agents to retrieve the evidence behind their answers. FoG consists of evidence-grounded synthesis, a KG interaction agent, and an evidence-coverage process reward (ECPR): the synthesis recursively hides explicit entities behind verifiable sub-questions, so that every question carries its supporting triples by construction; the agent records the triples returned by the KG; and ECPR credits each supporting triple to the turn that first retrieves it. Experiments on three KGQA benchmarks demonstrate that FoG enables 3B--4B open-source agents to outperform substantially larger baselines in answer accuracy and evidence coverage, with zero-shot cross-KG transfer.",
+        "authors": [
+          "Zongyuan Sun",
+          "Shuai Zhao",
+          "Yingjun Du",
+          "Ke Shu",
+          "Ziyue Zhu",
+          "Haoran Luo"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-10-27T15:20:37.000Z",
+        "updatedAt": "2026-10-27T15:20:37.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37397",
+      "url": "https://arxiv.org/abs/2610.37397",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "Game-Theoretic Solvers with Bayesian Opponent Modeling and Moral Rhetoric Framing for GLEE",
+        "summary": "We describe the agent we submitted to the GLEE Competition, which plays bargaining, negotiation, and persuasion games against a shared pool of human and AI opponents. The agent is built around three central components: a classical game-theoretic solver to compute numeric moves, an online Bayesian layer to estimate opponent archetypes, and a language model to write accompanying messages. We utilize Rubinstein bargaining for bargaining, Faratin concession for negotiation, and Kamenica--Gentzkow disclosure for persuasion, and adapt those models to live opponents using two separate layers: a Bayesian estimate of the opponent's hidden discount factor, reservation value, or signaling reliability, and a Thompson sampling bandit over five moral-foundation framings coupled with an evidence-intuition spectrum to establish message register. Most of the development effort went into the recurring problem that theoretically optimal policies perform poorly in certain live settings; we report associated failure modes, guardrails we built, and our hypotheses. We additionally evaluate our model over 13,200 Monte Carlo games against 11 synthetic opponent archetypes, an ablation of the opponent-modeling layer, and an extensive analysis of 9,337 live-game messages in which moral rhetoric framing in the persuasion setting is strongly correlated with whether the buyer purchased ($χ^2=616.7$, $p \\approx 3.7\\times10^{-132}$), surviving controls for quality, round, and configuration.",
+        "authors": [
+          "Hayden Arnold"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.GT"
+        ],
+        "submittedAt": "2026-10-27T15:17:04.000Z",
+        "updatedAt": "2026-10-27T15:17:04.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37390",
+      "url": "https://arxiv.org/abs/2610.37390",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "LinMix: Data Mixing as Linear Domain Attribution",
+        "summary": "Language model performance depends strongly on the mixture of domains in the pretraining data corpus. Popular data mixing methods select these domain weights by training many small proxy models on random mixes and then fitting a regression model to predict performance from the mix. We recognize this practice as a domain attribution problem, where the regression measures each domain's contribution to the target metric. Through this lens, the standard Dirichlet sampling of proxy data mixes is a poor regression design that requires tuning and cannot support a linear fit for hundreds of domains. Building on classical optimal experimental design, we introduce LinMix, which samples mixes at the vertices of the capped simplex so that each domain is at its cap or absent. This hyperparameter-free vertex sampling decorrelates domain effects, enabling an interpretable linear model whose coefficients are the domain attributions. The optimal mix given by LinMix provably keeps only domains with positive attribution values and requires no search over candidate mixes. We further establish the optimality of vertex sampling, and prove that Dirichlet sampling inflates the attribution error when its mixes concentrate around the prior data mix. Pretraining experiments with 1B-parameter OLMo2 and 4B Qwen3.5 language models show that LinMix outperforms Dirichlet-based data mixing across reasoning, code, and math benchmarks, with relative gains of 46% on MBPP and 14% on GSM8K. At 288 fine-grained domains, only vertex sampling supports a linear fit, and LinMix improves benchmark accuracy by 11% on average over the best nonlinear baseline.",
+        "authors": [
+          "Hubert Baniecki",
+          "Przemyslaw Biecek",
+          "Martin Pawelczyk"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.LG",
+          "stat.ML"
+        ],
+        "submittedAt": "2026-10-27T15:14:31.000Z",
+        "updatedAt": "2026-10-27T15:14:31.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37380",
+      "url": "https://arxiv.org/abs/2610.37380",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "Same Verdict, Different Readers: Personalizing Fact-Checking Explanations from Relative Preferences",
+        "summary": "Fact-checking explanations help Web users understand why a claim receives its verdict, yet the same explanation may not satisfy readers with different backgrounds and preferences. We formulate Faithful Personalized Fact-Checking Explanation Rewriting, which adapts an existing explanation to individual readers while preserving factual fidelity. Rather than relying on reader-written reference explanations, we learn personalized rewriting from the relative preferences of LLM-simulated readers. However, this presents two challenges: distinguishing persona-specific preferences from general explanation quality and learning beyond a limited set of predefined explanation styles. To address these challenges, we propose Personalized Explanation Rewriting via Preference Learning (PERPL), a framework consisting of two components. Simulated Preference Construction derives persona-specific supervision from simulated reader preferences through cross-persona reciprocal pairing. Progressive Preference Learning first trains a lightweight rewriter on the constructed supervision and then refines it through exploration-guided preference optimization, enabling it to discover preferred explanations beyond the predefined styles. Extensive experiments demonstrate that PERPL outperforms much larger general-purpose LLMs in personalized preference alignment while maintaining high factual fidelity.",
+        "authors": [
+          "Haokun Wen",
+          "Xuemeng Song",
+          "Mong-Li Lee",
+          "Wynne Hsu"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "submittedAt": "2026-10-27T15:08:30.000Z",
+        "updatedAt": "2026-10-27T15:08:30.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37375",
+      "url": "https://arxiv.org/abs/2610.37375",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "Agent-Conditioned Routing: Diverse Reasoning Paths Within One Frozen Model",
+        "summary": "Generating several solutions can expose alternative methods, but additional trajectories often paraphrase one dominant approach. We investigate whether the conditional capacity of a frozen sparse mixture-of-experts (MoE) model can provide such diversity from one problem prompt, without user-assigned roles, prescribed methods, fine-tuning, or model copies. Agent-Conditioned Routing (ACR) assigns $m$ parallel trajectories persistent, untrained shared/private expert-eligibility masks while preserving the learned, input-dependent token router. On a screened 126-question multi-mode mathematics and physics benchmark, with model judges reading the reported derivations in full, we count the number of problems yielding at least two distinct primary methods among soft-correct solutions in four trajectories. ACR reaches approximately twice as many such problems as the strongest temperature setting under GLM 5.3 (37.3 versus 18.7), and 1.67 times as many under GPT-5.6 Sol (45.00 versus 27.00), at matched output budgets. A blinded four-expert audit on a stratified sample of 30 problems also finds more multi-method solutions with ACR on both backbones, with lower correctness. Matched-eligibility ablations show modest multi-method count advantages for ACR, while token-resampled masks attain higher correctness. An informed sequential prompt elicits more diversity still, using previous solutions and explicit requests for alternative methods. ACR adds about 160 KiB of mask state. In a three-problem microbenchmark capped at 1,024 tokens, its latency and peak VRAM usage remain within 3% of batched temperature sampling.",
+        "authors": [
+          "Ananth Kalyanasundaram",
+          "Ankush Kadu",
+          "Athira Gopal",
+          "Aswanth Krishnan"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG",
+          "cs.MA"
+        ],
+        "submittedAt": "2026-10-27T15:06:29.000Z",
+        "updatedAt": "2026-10-27T15:06:29.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37369",
+      "url": "https://arxiv.org/abs/2610.37369",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "Uncovering Why LLMs Fail: From Internal Mechanisms to Adversarial Reasoning Trajectories",
+        "summary": "Large language models (LLMs) are usually evaluated by final-output correctness or safety, yet an endpoint label does not reveal how a failure develops throughout the reasoning process. We therefore ask whether ordinary reasoning failures and adversarially induced failures can be characterized using the same internal coordinates. Towards this end, we in this paper study a white-box diagnostic framework CauTrace to disclose the root-cause of why LLM fails from three fundamental inspections: Functional States, Propagation of Representation, Temporal-State Coordination and Reasoning Trajectory. First, seven functional states are creatively defined to represent the support and constraint processing in LLMs. Second, the propagation of representation change measures how the changes among the seven states persist across subsequent Transformer blocks. Third, temporal-state coordination and trajectory topology characterize when the commitment and verification occur relative to the support, and how the dominant state sequence evolves over the full inference process. Finally, we evaluate CauTrace on both clean reasoning failures and paired adversarial perturbations. Across Qwen and LLaMA-family models, the failed traces show weaker Attention-MLP agreement on support-state updates and less verification activity relative to commitment, while the exact representation-level signatures and timing shifts vary by architecture. Held-out repair and steering tests demonstrate consistent operational signals that were in line with our claims for certain models and specific settings, with aligned steering producing the predicted directional changes in process measures. Overall, CauTrace provides a unified diagnostic framework for analyzing failure dynamics through changes in support, commitment",
+        "authors": [
+          "Zirui Ding",
+          "Xinxin Fan",
+          "Hao Yuan",
+          "Shaoye Luo",
+          "Men Niu",
+          "Yunfeng Lu"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-10-27T15:02:04.000Z",
+        "updatedAt": "2026-10-27T15:02:04.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37364",
+      "url": "https://arxiv.org/abs/2610.37364",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "EmbeddingGemma 2: Unified and Efficient Multimodal Representations",
+        "summary": "We present EmbeddingGemma 2, an open multimodal embedding model which natively represents text, images, audio, video, and combinations thereof in a unified space. Our approach introduces improvements such as simplified per-layer embeddings and a multi-stage curriculum with modality and objective progression which ensure strong quality across unimodal, cross-modal, and mixed-modal evaluations. Notably, in comprehensive embedding benchmarks across all modalities, EmbeddingGemma 2 establishes a new Pareto frontier, outperforming both specialist models and models two to twelve times larger. Furthermore, our design offers flexibility for resource-constrained environments, supporting selective modality encoder loading, adjustable vision token budgets, truncatable embedding dimensions, and quantized weights. We present ablations analyzing key decisions and release EmbeddingGemma 2 to promote further research.",
+        "authors": [
+          "Henrique Schechter Vera",
+          "Sahil Dua",
+          "Jovan Andonov",
+          "Sara Smoot",
+          "Sebastian Russo",
+          "Ivan Llanos",
+          "Max Matveev",
+          "Jae Hyeon Yoo",
+          "Kat Black",
+          "Shih-Cheng Huang",
+          "Josiah Aklilu",
+          "Maarten Grootendorst",
+          "Omar Sanseviero",
+          "Chandramouli Amarnath",
+          "Ian Ballantyne",
+          "Zhe Li",
+          "Daniel Salz",
+          "Ibrahim Alabdulmohsin",
+          "Ilya Philippov",
+          "Kristen Quan",
+          "Glenn Cameron",
+          "Edouard Yvinec",
+          "Luciano Martins",
+          "Doug Reid",
+          "Sindhu Raghuram Panyam",
+          "Weiyi Wang",
+          "Hengxuan Ying",
+          "Madhuri Shanbhogue",
+          "Tanmaya Dabral",
+          "Shanfeng Zhang"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.CV",
+          "cs.LG",
+          "cs.SD"
+        ],
+        "submittedAt": "2026-10-27T15:00:42.000Z",
+        "updatedAt": "2026-10-27T15:00:42.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37342",
+      "url": "https://arxiv.org/abs/2610.37342",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "Aligning Institutional Power and Operational Ability",
+        "summary": "To be socially sustainable, Agentic AI systems require normative designs that align responsibilities with the ability to fulfil them. Identifying incongruences such as unsatisfiable expectations or privilege escalation is crucial in avoiding normative pitfalls. In this study, we discuss design dimensions suitable for describing multi-agent systems in light of this norm-ability alignment requirement. We propose a formal framework centred on process-oriented modelling and institutional power for the analysis of a given normatively relevant process, discuss strategies for repairing it, and elaborate on how the symmetrical relation between operational process and institutional state affects the lifecycle of normative positions.",
+        "authors": [
+          "Andrea Marino",
+          "Giovanni Sileno",
+          "Thomas van Binsbergen",
+          "Tom van Engers"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.MA"
+        ],
+        "submittedAt": "2026-10-27T14:47:58.000Z",
+        "updatedAt": "2026-10-27T14:47:58.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37336",
+      "url": "https://arxiv.org/abs/2610.37336",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "CoS-VQ: Coordinated Shared-Scale Vector Quantization for Large Language Models",
+        "summary": "Large language models (LLMs) require substantial memory, motivating low-bit weight quantization for efficient deployment. Existing vector quantization (VQ) methods often improve accuracy by increasing the effective coding dimension, which can complicate independent lookup and local codeword updates. We propose CoS-VQ (Coordinated Shared-Scale Vector Quantization), which preserves low-dimensional codewords while jointly optimizing hard indices and their shared scale across positions. The key challenge is scale-induced coupling: the optimal scale depends on the entire codeword combination and, in turn, changes candidate rankings across positions, so pointwise updates can stall even after scale re-optimization. CoS-VQ collects candidates at multiple probe scales and constructs a tangent separable upper bound for the residual-aware quadratic objective. By reducing candidate comparisons to lower envelopes of lines over positive scales, it identifies finitely many representative intervals for joint index--scale updates without exhaustively enumerating codeword combinations. On Qwen3.8-27B, CoS-VQ outperforms QTIP and LLVQ on the evaluated language modeling, coding, and reasoning benchmarks. Ablations from the same initialization further show larger gains from joint updates than from scale-only refinement, highlighting joint selection as an alternative to increasing codeword dimensionality. The code is available at https://github.com/xzktx003/Cos_VQ.",
+        "authors": [
+          "Zukang Xu",
+          "Zhixiong Zhao",
+          "Xing Hu",
+          "Zhe Jiang",
+          "Xin Si",
+          "Dawei Yang"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-27T14:43:00.000Z",
+        "updatedAt": "2026-10-27T14:43:00.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37329",
+      "url": "https://arxiv.org/abs/2610.37329",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "WCC: A Learning-Based Framework for Deciding When to Apply Cooperative Coevolution in Large-Scale Optimization",
+        "summary": "Cooperative Coevolution (CC) and Non-Decomposition Algorithms (NDAs) are two primary approaches for large-scale global optimization (LSGO). Although both have achieved success, they exhibit markedly different performance across problem types and each faces approach-specific limitations, leaving the question of \"when to use CC\" unresolved. We address this gap with WCC, a novel learning-based framework that dynamically decides when to deploy CC in LSGO. WCC employs a streamlined design for efficient adaptive learning. We formulate the decision as a Markov decision process, designing a targeted feature set, a robust reward, and a tailored network architecture to provide the agent with rich information about the problem state and optimization progress. Our auto-regressive policy enables WCC to perform fine-grained, dynamic switching between CC and NDAs while conditionally allocating the computational budget without expert specifications. WCC shows strong competitiveness and superior generalization across problems, optimization horizons, and baseline optimizers. It realizes a \"train-once and reuse\" paradigm under a low budget, significantly curbing LSGO cost. Additionally, in-depth analyses yield insights not captured by existing theory, offering practical guidance on when and how to effectively deploy CC.",
+        "authors": [
+          "Wenjie Qiu",
+          "Hepei Li",
+          "Jianfeng Wang",
+          "Jun Zhang",
+          "Yue-Jiao Gong"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-27T14:37:10.000Z",
+        "updatedAt": "2026-10-27T14:37:10.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37323",
+      "url": "https://arxiv.org/abs/2610.37323",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "UCVE: Graph Structured Retrieval for Compliance Validation",
+        "summary": "Structured compliance validation requires determining whether every obligation in a predefined requirement space is satisfied, violated, or unaddressed by a given document. This can be described as a coverage problem that existing retrieval and classification systems, by treating requirements as independent, are not designed to solve. We introduce \\textbf{\\ac{UCVE}}, a domain-agnostic framework that represents compliance requirement spaces as a \\ac{CRG} and performs retrieval via spectral reranking over its reinforcement learning-weighted Laplacian. Edges between requirement nodes are learned via reinforcement learning with a traversal reward grounded in violation detection, reshaping the graph's community structure such that low-pass spectral filtering distinguishes relevant from irrelevant obligation clusters. Evaluating across three compliance domains, \\ac{UCVE} averages 4.3\\% matched-$K$ recall lift over flat cosine retrieval and consistently outperforms strong retrieval and graph-based baselines.",
+        "authors": [
+          "Emily Chen",
+          "Michelle Menachery",
+          "Himanshu Kumar",
+          "Rahul Nenavath",
+          "Amirfarrokh Iranitalab"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "submittedAt": "2026-10-27T14:35:00.000Z",
+        "updatedAt": "2026-10-27T14:35:00.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37319",
+      "url": "https://arxiv.org/abs/2610.37319",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "AnalogScout: Simulation-Efficient PVT-Aware Analog Sizing with LLM Agents",
+        "summary": "Analog device sizing must satisfy all specifications across process, voltage, and temperature (PVT) corners to ensure tape-out success, but simulating every candidate at all corners dominates the sizing time and slows design iteration. Conventional surrogate-based optimizers search the sizing space directly, while recent large language model (LLM) agents add circuit knowledge to designs but still delegate the sizes to global optimizers. Both learn the circuit response from repeated multi-corner SPICE simulations and optimize on top of it, which becomes expensive under a limited simulation budget. Providing an agent with reusable verified designs and sizing sub-blocks analytically could save most of this budget. We propose AnalogScout, a simulation-efficient PVT-aware sizing framework driven by an LLM agent. Combining elite-design reuse, analytic gm/Id local sizing and global refinement under full-corner verification, AnalogScout reduces power by 43.3% relative to the evolution strategy CMA-ES at an equal budget of 16k simulations on three SKY130 OTAs of increasing complexity, and reaches the final CMA-ES power after 7.0% of that budget. It also attains lower power than Bayesian optimization on all three OTAs and than two re-implemented LLM-driven flows on the two OTAs where they were tested.",
+        "authors": [
+          "Yichen Long",
+          "Keren Zhu"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.AR",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-27T14:33:02.000Z",
+        "updatedAt": "2026-10-27T14:33:02.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37316",
+      "url": "https://arxiv.org/abs/2610.37316",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "ReForest: Interpretability Meets Reasoning in Isolation Forest",
+        "summary": "Statistical anomaly detection methods like Isolation Forest are efficient but suffer from a critical semantic gap. They identify numerical rarities but fail to understand the contextual meaning of data, often missing subtle, context-dependent anomalies. Conversely, Large Language Models possess strong semantic reasoning capabilities but are prohibitively expensive and slow for large-scale deployment. To bridge this gap, we propose ReForest, a novel framework that synergizes the statistical efficiency of Isolation Forest with the reasoning power of LLMs. ReForest transforms the latent decision paths of Isolation Forest into natural-language explanations, enabling an LLM to refine anomaly detection through an uncertainty-aware dynamic ensemble. This approach allows the model to adaptively weigh statistical and semantic signals based on uncertainty-driven instance-level confidence. Extensive experiments on four real-world datasets (Healthcare, Finance) demonstrate that ReForest significantly outperforms baselines, achieving an average 21% improvement in Recall and a 10% gain in F1-score. Our framework not only improves detection performance but also enhances model transparency by grounding semantic narratives in statistical evidence, providing interpretable rationales essential for high-stakes decision-making.",
+        "authors": [
+          "Juyoung Seo",
+          "Geonwoo Bang",
+          "Dongho Kim",
+          "Moohong Min"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-10-27T14:31:40.000Z",
+        "updatedAt": "2026-10-27T14:31:40.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37284",
+      "url": "https://arxiv.org/abs/2610.37284",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "Bayesian Inference of Expensive Simulators: Survey and Comparison of Design Choices",
+        "summary": "We present a survey of approaches to Bayesian inference with simulator forward models, focusing on settings with prohibitively expensive simulators. In this domain, Bayesian optimization-based methods have emerged as the most promising approach. We unify existing methods into a general framework, enabling consistent reasoning about shared algorithmic structure across the fragmented literature. Within this framework, we identify the primary design choices and perform a systematic empirical comparison of their effects on inference efficiency in terms of required simulation budget. A key result of our study is that inference efficiency is often dominated by the choice of surrogate-model response variable, as it directly governs the complexity of the modeled function. Specifically, we demonstrate that the prevalent scalar log-likelihood is a poor response variable, as it discards crucial information. Based on this insight, we introduce the concept of custom \\emph{proxy variables}: transformations of simulator outputs engineered to retain more information and provide smoother response surfaces, substantially improving inference efficiency over standard response variables. We provide actionable guidance and a numerically robust Julia package to facilitate practical adoption of Bayesian optimization for simulator inverse problems.",
+        "authors": [
+          "Šimon Soldát",
+          "Václav Šmídl"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-27T14:09:16.000Z",
+        "updatedAt": "2026-10-27T14:09:16.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37281",
+      "url": "https://arxiv.org/abs/2610.37281",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "RPSD: Retrieval-Privileged On-Policy Self-Distillation with Optimal Transport",
+        "summary": "Sequential recommendation predicts a user's next interaction from historical behavior. Recent LLM-based methods recast this task as generative recommendation and increasingly adopt reinforcement learning such as GRPO for post-training. However, these methods suffer from two limitations, namely credit-blind optimization, where a sequence-level reward is shared across all generated tokens, and collaborative-blind supervision, where each training signal is derived from a single user and ignores behavioral patterns shared across similar users. To address both issues, we propose Retrieval-Privileged on-policy Self-Distillation (RPSD). For credit-blind optimization, we introduce on-policy self-distillation (OPSD), in which a teacher with privileged knowledge re-evaluates the student's on-policy response, and the token-level confidence difference between the student and teacher reshapes the shared sequence-level advantage into token-specific credit. However, the privileged knowledge in vanilla OPSD is still derived from a single user, leaving collaborative-blind supervision unresolved. We therefore ground the teacher in collaborative behavioral evidence from similar users. Specifically, we use temporally aware optimal transport (OT) to compare interaction trajectories across users by jointly considering item similarity and temporal structure, and further apply diversity-aware selection to retain complementary trajectories as privileged evidence. In this way, on-policy self-distillation provides fine-grained token-level credit, while OT enriches the teacher with structured cross-user evidence. To the best of our knowledge, this is the first work to bring on-policy self-distillation to sequential recommendation and to use cross-user behavior as its privileged signal. Extensive e",
+        "authors": [
+          "Dongyue Li",
+          "Zebang Cheng",
+          "Zhongyi Deng",
+          "Hongboxu",
+          "Yi Bin",
+          "Fei Ma"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-10-27T14:08:38.000Z",
+        "updatedAt": "2026-10-27T14:08:38.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37280",
+      "url": "https://arxiv.org/abs/2610.37280",
+      "collectedAt": "2026-10-28T05:35:06.562Z",
+      "data": {
+        "title": "Modeling Preference Dependencies with Directed Acyclic Graphs for Narrative-Driven Recommendation",
+        "summary": "Narrative-driven recommendation allows users to express multifaceted needs through free-form text where stated preferences naturally qualify and condition one another. Existing methods typically treat narratives as flat keyword combinations or unconstrained generative queries, failing to capture how complex preferences hierarchically refine and contextualize each other. We propose the Preference Dependency Graph Framework (PDG-F), a narrative-driven recommendation framework centered on explicit preference dependencies. Specifically, PDG-A (PDG-Agent) first parses unstructured requests to organize user preferences and their mutual qualifications into a directed acyclic Preference Dependency Graph (PDG). Through this graph, candidate evidence from the open Web is acquired via directed path retrieval, and final recommendations are determined by topological path ranking. Comprehensive experiments across three diverse domains spanning English and Chinese contexts confirm that PDG-F consistently achieves superior recommendation performance over competitive baselines, open-domain retrieval agents, and frontier language models. Further diagnostic analyses show that our dependency-guided retrieval markedly raises the attainable candidate-pool ceiling, demonstrating the fundamental value of modeling preference dependencies in narrative-driven recommendation.",
+        "authors": [
+          "Mingzhe Lu",
+          "Jian Qin",
+          "Ruize Qin",
+          "Jinhao Liu",
+          "Yunpeng Li",
+          "Hang Su"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.IR"
+        ],
+        "submittedAt": "2026-10-27T14:08:30.000Z",
+        "updatedAt": "2026-10-27T14:08:30.000Z"
+      }
+    }
+  ]
+}
