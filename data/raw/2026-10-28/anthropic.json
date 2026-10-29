@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-28",
+  "source": "anthropic",
+  "items": [
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/news/expanding-partnership-gsa",
+      "url": "https://www.anthropic.com/news/expanding-partnership-gsa",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "lastmod": "2026-10-27T22:21:46.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/news/s1-sec",
+      "url": "https://www.anthropic.com/news/s1-sec",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "lastmod": "2026-10-27T21:40:46.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/agents-judgment-calls",
+      "url": "https://www.anthropic.com/research/agents-judgment-calls",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "lastmod": "2026-10-27T19:17:23.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/claude-discovers-novel-enzyme-system",
+      "url": "https://www.anthropic.com/research/claude-discovers-novel-enzyme-system",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "lastmod": "2026-10-28T04:28:01.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/coding-agents-social-sciences",
+      "url": "https://www.anthropic.com/research/coding-agents-social-sciences",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "lastmod": "2026-10-28T04:28:52.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude",
+      "url": "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "lastmod": "2026-10-28T15:31:36.000Z"
+      }
+    }
+  ]
+}

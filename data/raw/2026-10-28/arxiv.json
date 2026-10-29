@@ -1,0 +1,679 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-28",
+  "source": "arxiv",
+  "items": [
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37666",
+      "url": "https://arxiv.org/abs/2610.37666",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning",
+        "summary": "Vision-Language-Action (VLA) models have made substantial progress in robotic manipulation, but their generalization remains constrained by the diversity and coverage of action-labeled robot demonstrations. Human videos provide much broader behavioral and environmental experience, while learning from them faces a fundamental trade-off between scalable data and explicit action grounding. We introduce ThinkWorld, a VLA learning framework that grounds action reasoning in world dynamics and strengthens it through reinforcement learning with world imagination. ThinkWorld represents each action thought as a Chain-of-Dynamics (CoD), a sequence of discrete motion tokens that captures the intermediate dynamics connecting the current world to a future state and serves as a common action representation across embodiments. We first initialize CoD with action-labeled demonstrations, then predict the future induced by each CoD and reinforce those whose predictions better match the observed outcome. This enables videos without action annotations to provide direct supervision from observed state transitions, allowing human and robot experience to refine the same reasoning space. Experiments in simulation and on real robots demonstrate effective human-to-robot transfer and strong generalization to unseen tasks and environments.",
+        "authors": [
+          "Chaehyun Kim",
+          "Chi-Pin Huang",
+          "Jisoo Kim",
+          "Min-Hung Chen",
+          "Yu-Chiang Frank Wang",
+          "Seungryong Kim",
+          "Fu-En Yang"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CV",
+          "cs.RO"
+        ],
+        "submittedAt": "2026-10-27T17:59:52.000Z",
+        "updatedAt": "2026-10-27T17:59:52.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37657",
+      "url": "https://arxiv.org/abs/2610.37657",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "Heads of Security: Learned Attention Gates Improve Prompt Injection Robustness",
+        "summary": "We introduce Heads of Security (HoS), a prompt injection defense that enforces instruction-data separation via a small set of learned per-head attention gates. HoS learns how each head should redistribute attention between trusted and untrusted tokens, enabling models to reason over untrusted content without following injected instructions. We evaluate HoS on Llama-3.3-70B-Instruct and GPT-OSS-20B. We compare it against SecAlign++, a state-of-the-art finetuning-based defense, and ASIDE, a defense that, like ours, builds instruction-data separation into the model architecture. We show that HoS offers greater robustness to adaptive attacks, better performance on standard utility benchmarks, and matches top performance on standard agentic prompt injection benchmarks. More specifically, the black-box RL-Hammer attack reaches 97% ASR against GPT-OSS-20B and 85% against SecAlign, but only 10% against HoS. Claudini, a state-of-the-art white-box attack, strengthened against HoS through autoresearch, requires 3 times more FLOPs to reach the same ASR on HoS as it does on GPT-OSS-20B or SecAlign. HoS preserves base-model utility across standard multiple-choice benchmarks and prompting setups, whereas SecAlign and ASIDE degrade in few-shot settings. On agentic benchmarks with static attacks, HoS and SecAlign perform similarly and substantially improve the security-utility trade-off over the base model. ASIDE struggles with tool use, achieving only 10% utility. These results show that prompt injection robustness can be achieved and improved through targeted attention interventions.",
+        "authors": [
+          "Igor Shilov",
+          "Xiaoxue Yang",
+          "Alexander Panfilov",
+          "Evgenii Kortukov",
+          "Matthieu Meeus",
+          "Peter Romov",
+          "Wojciech Samek",
+          "Jonas Geiping",
+          "Yves-Alexandre de Montjoye"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.CR",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-27T17:58:52.000Z",
+        "updatedAt": "2026-10-27T17:58:52.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37651",
+      "url": "https://arxiv.org/abs/2610.37651",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "GEPA-Curator: Curated Learning for Self Improving Agents",
+        "summary": "Large Language Models (LLMs) are increasingly used in multi-turn agentic workloads that require sustained interaction with complex environments. Existing reflective prompt optimizers such as GEPA learn from failed rollouts, but agentic failures can also come from prompt weaknesses, harness limitations, stochastic execution, or noisy judges. We argue that such failures may not provide useful learning signal, and may even be harmful; and thus it is essential to curate which tasks are provided to the prompt optimizer for better performance. We introduce GEPA-Curator, a framework that augments the prompt optimizer to select which agent experiences should shape prompt optimization. In particular, GEPA-Curator consists of two components: task curation, which filters out tasks that are likely to provide noisy or unreliable learning signals, and prior success retrieval, which selectively retrieves past successful trajectories for a task and provides them as additional context to the prompt optimizer. We evaluate GEPA-Curator on GoBrowse, ALFWorld, AppWorld, and $τ$-bench, using both Gemini 3.1 Pro and Claude Opus 5 as optimizer models. GEPA-Curator matches or exceeds the mean performance of both baselines, with gains of up to 20.7% over GEPA and 21.2% over ACE.",
+        "authors": [
+          "Zack Yu",
+          "Nicholas Lee",
+          "Minjae Lee",
+          "Lakshya Agarwal",
+          "Luca Manolache",
+          "Wonjun Kang",
+          "Matei Zaharia",
+          "Michael W. Mahoney",
+          "Kurt Keutzer",
+          "Sehoon Kim",
+          "Amir Gholami"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "submittedAt": "2026-10-27T17:58:11.000Z",
+        "updatedAt": "2026-10-27T17:58:11.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37649",
+      "url": "https://arxiv.org/abs/2610.37649",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "Can LLMs Uncover Hidden Physical Laws through Free Exploration?",
+        "summary": "Scientific discovery often begins with an unexpected observation that prompts a new research question. In a world with altered physical laws, can large language models (LLMs) notice unexpected behavior, such as heavier objects falling more slowly, and discover the law through experiments without being told what to investigate? To evaluate this ability, we introduce LongChang, an automated framework that creates simulated worlds with altered physics, where one or more laws differ from ordinary physics. The evaluated LLMs act as explorers, manipulating objects and building tools to investigate their own questions without research tasks or hints about these laws. Separate LLM agents generate and review scenes, review tool designs, and evaluate reports for correctness and experimental support using the altered physical laws and exploration records. These records guide scene evolution for further exploration, allowing the full cycle to run without human intervention. Among 12 LLMs, GPT-6-Astra achieves a discovery rate of 16.7%, while the other 11 score 0%. The exploration records reveal uninvestigated anomalies and only partial identification of the altered physical laws.",
+        "authors": [
+          "Zhen Yang",
+          "Wen Wang",
+          "Xander Xu",
+          "Ying-Cong Chen"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.MA"
+        ],
+        "submittedAt": "2026-10-27T17:57:00.000Z",
+        "updatedAt": "2026-10-27T17:57:00.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37648",
+      "url": "https://arxiv.org/abs/2610.37648",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "Scaling Laws for Tool-Use Agents via Controllable Environment Synthesis",
+        "summary": "We explore how to build performant large language model (LLM) tool-use agents that complete complex, multi-step tasks. Specifically, we study how data composition in synthetically generated tool-use environments affects the training of such agents. To do so, we propose the SynthAPI pipeline, which explicitly controls the diversity of generated environments along the axes of tools, tasks, and the databases on which the tools operate. By systematically varying SynthAPI's generation controls in 458,752 tasks across 849 trained models of four different sizes, we derive a scaling law that predicts downstream tool-use agent generalization based on the scale and composition of the synthesized environments. These predictable relationships reveal several lessons for scaling tool-use agent data. As data budgets grow, scaling tool and database diversity becomes more effective than increasing the number of tasks, and increasing data complexity yields larger gains. Scaling according to these findings yields agents that outperform models trained on data from prior work in large-scale tool-use agent and synthetic environment generation across four evaluation benchmarks.",
+        "authors": [
+          "Andrew Szot",
+          "Samira Abnar",
+          "Omar Attia",
+          "Abbas Kazerouni",
+          "Michael Kirchhof",
+          "Cheng-Yu Hsieh",
+          "Raviteja Vemulapalli",
+          "Alexander Toshev"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-27T17:56:46.000Z",
+        "updatedAt": "2026-10-27T17:56:46.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37647",
+      "url": "https://arxiv.org/abs/2610.37647",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "MuonGS: Pretraining LLMs with Relaxed Weight-Norm Control",
+        "summary": "Weight decay and explicit weight-norm constraints improve optimizer performance in language model pretraining, yet a unified understanding of why such control helps and how much is needed remains incomplete. We analyze norm control in Muon over the entire training trajectory using the \\emph{accumulated effective learning rate}, $C_T=\\sum_{t&lt;T}η_t/\\|W_t\\|_F$, where $η_t$ is the nominal learning rate and $η_t/\\|W_t\\|_F$ is the effective learning rate relative to the weight norm. For bounded update directions, accumulation over any training interval bounds relative weight displacement. We show that vanilla Muon can accumulate only logarithmically, potentially limiting exploration and helping explain its slower empirical progress, whereas MuonW and MuonH guarantee at least linear accumulation under the stated conditions. Going beyond bounded-norm control, we show that sufficiently slow norm growth guarantees faster accumulation than the logarithmic worst case, opening up less restrictive optimizer designs. Based on this insight, we propose MuonGS, which uses Gram--Schmidt (GS) projection to remove the radial component of each Muon update without fixing the weight norm. With bounded update directions and a constant nominal learning rate, we prove that the weight norm grows at most proportionally to $\\sqrt{t}$ after $t$ steps. Consequently, MuonGS guarantees $C_T=Ω(\\sqrt{T})$, with accumulation sustained even in later training. Further, for smooth scale-invariant objectives we establish its $O(T^{-1/2})$ stationarity guarantee. In pretraining experiments with 160M- and 400M-parameter dense models as well as a 135M active- and 1B total- parameter MoE model, MuonGS achieves lower validation perplexity than MuonH at long training horizons. In particular, for the dense model i",
+        "authors": [
+          "Athanasios Glentis",
+          "Dawei Li",
+          "Mingyi Hong"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG",
+          "math.OC"
+        ],
+        "submittedAt": "2026-10-27T17:56:40.000Z",
+        "updatedAt": "2026-10-27T17:56:40.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37642",
+      "url": "https://arxiv.org/abs/2610.37642",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "Metacognitive Decoding: Efficient Inference for Diffusion Language Agents",
+        "summary": "Diffusion language models offer a promising path to efficient agents through parallel token generation. However, efficient interaction requires adapting both where computation is spent and how much text is generated. We introduce a metacognitive controller that guides diffusion generation according to the needs of the current response and the agent's interaction with the environment. It learns when to finalize tokens and how far generation should extend, reducing overall computation within responses. Our controller, a lightweight plug-in for the diffusion backbone, is trained on agent trajectories to balance correctness and generation cost. This approach connects the agent's generation process to the interaction the agent serves. Experiments across five benchmarks demonstrate that our approach reduces inference FLOPs by 20.6% on average compared with the most efficient baseline, while maintaining competitive task accuracy. Ablation studies further validate the effectiveness of our approach.",
+        "authors": [
+          "Mingyu Zhao",
+          "Shuhang Lin",
+          "Ligong Han",
+          "Xiaojing Yu",
+          "Zhenting Wang",
+          "Yifei Pang",
+          "Yang Zhou",
+          "Dimitris N. Metaxas"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "submittedAt": "2026-10-27T17:55:24.000Z",
+        "updatedAt": "2026-10-27T17:55:24.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37624",
+      "url": "https://arxiv.org/abs/2610.37624",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "Rare, Relevant, and Still Wrong: How Memory Fails LLM Group Decisions",
+        "summary": "When an LLM group's discussion is compressed into a short memory for a final decision maker, what should the memory keep? Two natural heuristics keep the rarest claims or the claims relevant to the decision criteria. On hidden-profile tasks both look attractive, because how widely a fact is held is confounded with whether it helps. We introduce CrossProfile, a diagnostic benchmark of 60 templates with automatically verified answer keys, in which the ownership of supporting, decoy, and irrelevant facts is crossed while their text is held fixed (480 tasks). Across Qwen2.5-7B, Llama-3.1-8B, and two DeepSeek models, both heuristics fail in predictable places. Selecting by relevance readmits decoys, because decoys are on topic: even a perfect relevance filter loses 23 to 31 points to rarest-first selection in the classic hidden-profile configuration. Rarest-first selection is no better than random selection on average and wins only where the rare facts happen to be the useful ones. In both cases accuracy follows the balance of evidence the memory keeps, not the policy that kept it. The decision model adds a third failure, a form of social proof: it gives extra weight to facts attributed to many agents. Removing the attribution tags, or reassigning them at random with line order fixed, raises accuracy in the classic configuration by 13 to 24 points. In natural discussions the evidence is lost before any memory acts: the complete transcript yields lower accuracy than no notes at all.",
+        "authors": [
+          "Anouar Imel",
+          "Imad Charradi",
+          "Abderrahman Sghir",
+          "Khalil El Khammar"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.MA",
+          "cs.SI"
+        ],
+        "submittedAt": "2026-10-27T17:49:39.000Z",
+        "updatedAt": "2026-10-27T17:49:39.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37613",
+      "url": "https://arxiv.org/abs/2610.37613",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "VideoLVR: Latent Visual Reasoning over Grounded Video Evidence",
+        "summary": "Chain-of-thought reasoning has substantially advanced video understanding in multimodal large language models (MLLMs). However, language-based reasoning traces do not provide a reliable mechanism for models to revisit relevant visual evidence, leading to visual forgetting and impairing their ability to reason over video content. Existing approaches maintain visual grounding during reasoning in two main ways: they either refer to evidence using textual coordinates, which specify symbolic locations rather than the visual content itself, or reinsert cropped regions or frames into the multimodal context, preserving visual details at the cost of substantial context expansion. To address these limitations, we introduce VideoLVR, which constructs latent visual evidence from local regions at relevant video moments, thereby providing visual support for intermediate reasoning steps. To supervise latent visual evidence generation, we introduce a visual token prediction objective that formulates visual token reconstruction as prediction over a vocabulary derived from the input video, thereby unifying visual evidence reconstruction and text generation within the same token prediction framework. This shared prediction framework enables MLLMs to reason over interleaved text tokens and latent visual states while integrating evidence from different moments. We further extend VideoLVR to reinforcement learning by treating sampled visual tokens as actions alongside text tokens and jointly optimizing the policy using final-answer rewards. By efficiently revisiting task-relevant visual information during reasoning, VideoLVR improves video understanding without substantially expanding the multimodal context. Experiments on multiple video benchmarks demonstrate its effectiveness, especially o",
+        "authors": [
+          "Shilong Li",
+          "Xingyuan Bu",
+          "Hao Shi",
+          "Yun Xing",
+          "Weixin Feng",
+          "Qiangpeng Yang",
+          "Shilei Wen"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CV"
+        ],
+        "submittedAt": "2026-10-27T17:41:56.000Z",
+        "updatedAt": "2026-10-27T17:41:56.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37609",
+      "url": "https://arxiv.org/abs/2610.37609",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "EnvSched: Environment-Aware Scheduling for Rollout-Efficient Agent Reinforcement Learning",
+        "summary": "As executable environments for language agents scale, generating and verifying their rollouts becomes increasingly expensive. Under finite rollout budgets, this raises an important question: can data management at the environment level make agentic reinforcement learning (RL) more efficient by organizing, evaluating, and scheduling task instances together with the environments that determine their tools, states, transitions, and verification? To address this question, we introduce EnvSched (Environment-aware Scheduling), an online scheduler that learns from rollout history. EnvSched assigns scheduling value through two complementary modeling choices: exploitation prioritizes tasks likely to provide informative reward differences, while coverage spreads each batch across underobserved environments and interaction patterns. EnvSched organizes environment--task pairs as nodes in a dual-relation graph, with within-environment edges capturing task semantics and shared tool, state, and verifier structure, and cross-environment edges capturing abstract execution and reward topology. By propagating historical rollout statistics along both edge types, it predicts within-task reward variance. These predictions guide a scheduler that allocates each batch to tasks with high predicted reward variance and underobserved environments and tasks. Environment quotas and a similarity penalty further limit concentration and redundancy, yielding informative and diverse batches without additional pilot rollouts. In RL on Qwen3-8B, EnvSched achieves an average score of 48.81 across BFCL-v3, tau-Bench, and ACEBench-Agent after 40 training steps, exceeding the highest score attained by random task selection after 120 steps. It also improves downstream performance across model sizes at the same t",
+        "authors": [
+          "Sihan Yang",
+          "Weichen Bai",
+          "Ruichuan An",
+          "Yiming Cheng",
+          "Zhiyuan Feng",
+          "Tianyi Jiang",
+          "Renye Yan",
+          "Ning Ding",
+          "Yifan Zhang",
+          "Renrui Zhang",
+          "Yehui Tang",
+          "Wentao Zhang"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-27T17:38:52.000Z",
+        "updatedAt": "2026-10-27T17:38:52.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37588",
+      "url": "https://arxiv.org/abs/2610.37588",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "Understanding the limits of latent world models",
+        "summary": "World models are widely proposed as core components for enabling agents to reason over long temporal and spatial horizons. Yet current evaluations often emphasize task performance while providing limited insight into whether learned world models acquire predictive latent dynamics that reflect the underlying structure of the environment. Here we introduce the concept of faithful latent world models as an equivariance condition between the environment's transition map and the learned latent dynamics. We propose latent rollout consistency (LRC) as a metric to evaluate action-conditioned latent prediction. Strikingly, we find that across the studied state of the art latent world models, none solves the task by actually faithfully modeling the dynamics of the environment.",
+        "authors": [
+          "Rodrigo Gonzalez Laiz",
+          "Steffen Schneider"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-27T17:25:50.000Z",
+        "updatedAt": "2026-10-27T17:25:50.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37584",
+      "url": "https://arxiv.org/abs/2610.37584",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "REGER: Modeling inter-item Relations with Semantic IDs for Generative Recommendation",
+        "summary": "Personalized recommendation depends on learning semantic and collaborative relations among items from online content and user interactions. Generative recommendation (GR) offers a promising paradigm by autoregressively generating discrete semantic IDs (SIDs) of items. However, randomly initialized SID token embeddings and GR models trained from scratch do not directly inherit the semantic relations inherent in items, while inter-item collaborative relations are learned largely implicitly through token-level attention and next-token supervision. To address this limitation, we propose REGER, a unified framework that explicitly incorporates inter-item relations into semantic pretraining, history encoding, and SID generation. We pretrain the GR model through generative semantic retrieval, enabling it to inherit inter-item semantic similarity by learning to generate semantic neighbors' SIDs. We combine global attention with local attention aligned with SID boundaries to capture historical context and directed transitions between adjacent items. We further develop a theoretical framework for hierarchical preference decomposition over the SID prefix tree, proving an exact factorization of collaborative preference distributions and a weighted decomposition of item-level KL divergence into prefix-conditional KL divergences. Building on this analysis, we distill a discriminative teacher's full conditional distributions over all legal next tokens at ground-truth prefixes along the target SID path, jointly optimizing this objective with cross-entropy. Extensive experiments on real-world datasets demonstrate consistent improvements over existing GR baselines and support the effectiveness of the proposed preference distillation.",
+        "authors": [
+          "Yuxi Huang",
+          "Silin Zhou",
+          "Chenhao Wang",
+          "Zihan Li",
+          "Gangming Guo",
+          "Pei Ke",
+          "Shen Gao",
+          "Shuo Shang"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.IR"
+        ],
+        "submittedAt": "2026-10-27T17:25:12.000Z",
+        "updatedAt": "2026-10-27T17:25:12.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37583",
+      "url": "https://arxiv.org/abs/2610.37583",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "Zero-Shot Multimodal Event Spotting in Soccer Broadcasts",
+        "summary": "Automatic soccer event spotting supports highlight generation, video indexing, and sports analytics, but existing methods depend on large annotated datasets and soccer-specific training. We present a zero-shot framework that detects, classifies, and temporally localizes events in full-length soccer broadcasts without task-specific parameter training. Each match is segmented into overlapping clips represented by a compact visual storyboard and the aligned commentary transcript, which a general-purpose multimodal model processes jointly. On three manually annotated matches containing 130 events, the best configuration achieves 72.0% F1@5s and outperforms SoccerNet-trained CALF and NetVLAD++ in a cross-dataset setting, while the storyboard representation reduces inference cost by 72% compared with individual frames. We further analyze the effects of model family, input representation, and prompt optimization, and introduce an evidence-grounded excitement-scoring stage that ranks detected events with natural-language explanations for highlight selection.",
+        "authors": [
+          "Sadia Kamal",
+          "Mahmudul Hasan",
+          "Tony Braskich"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.LG",
+          "cs.MM"
+        ],
+        "submittedAt": "2026-10-27T17:24:35.000Z",
+        "updatedAt": "2026-10-27T17:24:35.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37571",
+      "url": "https://arxiv.org/abs/2610.37571",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "TeamGym: A Gym for Team Decision-Making by AI Agents with Distributed Information",
+        "summary": "Many real-world decisions require teams to integrate information distributed across participants. Yet AI agents are still primarily trained and benchmarked in isolation. We introduce TeamGym, an environment for evaluating and training language model-based agents on team decision-making problems constructed from real-world legal, finance, medical, and software engineering corpora. TeamGym introduces a method to identify a minimal set of facts, each element of which is necessary and all of which are collectively sufficient for a correct final decision, which we call pivotal information. This enables TeamGym to both control the distribution of pivotal information and track how well agents identify and integrate pivotal information when making team decisions. Examining 8 language models on 12 source corpora, we find that current AI agents often fail to effectively share information: Distributing pivotal information across participants lowers success rate by 22.9 percentage points on average relative to giving the same information to a single model (a communication gap). We also document that participants do not effectively retrieve decision-relevant information on their own: A team's success rate is lowered by a further 19.9 points when participants must identify and extract pivotal information from source material rather than receiving it directly (a retrieval gap). To help remedy these deficits, we use TeamGym to train policies through reinforcement learning on team decision loss. Across two policy-training experiments, we find that training improves final-decision quality and induces emergent coordination in participation, speaker selection, and communication, even though the reward evaluates only the final decision.",
+        "authors": [
+          "Chanwoo Park",
+          "Jaywoong Jeong",
+          "Zachary Wojtowicz",
+          "Yubin Kim",
+          "Taekyun Lee",
+          "Kaiqing Zhang",
+          "Asuman Ozdaglar"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-10-27T17:15:54.000Z",
+        "updatedAt": "2026-10-27T17:15:54.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37570",
+      "url": "https://arxiv.org/abs/2610.37570",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "LCM-Promo: An LLM-Based Uplift Model for Promotion Allocation",
+        "summary": "We present LCM-Promo, an LLM-based uplift model for promotion allocation. LCM-Promo is a task-specific Large Commerce Model (LCM): a finetuned LLM trained on transactional commerce data to predict user intent and promotion response. It learns monotonic promotion-response curves from production logs by interpreting single-token outputs as conversion-threshold probabilities, while conditioning on session context such as day and delivery shift. In a production A/B test on churn reactivation, LCM-Promo increased conversion by 1% and reduced promotion cost by 6% relative to the Segment-EMA production baseline.",
+        "authors": [
+          "Nesta Midavaine",
+          "Floris Fok",
+          "Paulo Mendes",
+          "Joao Silva",
+          "Önder Akaçık",
+          "Dimas Lima",
+          "Zülküf Genç"
+        ],
+        "categories": [
+          "cs.IR",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-27T17:15:15.000Z",
+        "updatedAt": "2026-10-27T17:15:15.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37567",
+      "url": "https://arxiv.org/abs/2610.37567",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "Gym-Anything-RT: Scaling Real-Time Environments for Vision-Language Agents",
+        "summary": "AI agents have made substantial progress in domains where they have a non-trivial amount of time to deliberate between actions, such as mathematics, software engineering, and performing tasks on desktop applications. It is less clear how such models fare in settings that demand real-time interaction, such as playing a video game or operating a physical device. In these settings, the environment state may evolve as the agent is reasoning, or even as the underlying model is performing a forward pass. To gain insight into the real-time interaction capabilities of vision-language agents, we introduce Gym-Anything-RT. Our key idea is to construct visual minigames that demand a portfolio of capabilities required for interactive real-time settings. Gym-Anything-RT uses an agentic pipeline to automatically generate such environments based on a taxonomy of six capabilities required for real-time interaction, including the ability to perceive the environment and act under an evolving environment state. A key feature of Gym-Anything-RT is that it allows for controlled comparison of real-time interaction capabilities: we can run the same minigame in real time, or pause or slow down the environment to relax the requirement for real-time actions. We use Gym-Anything-RT to construct 100 real-time minigames and evaluate AI agents on them. We find large capability gaps in real-time interaction. For example, GPT-6 Astra (xHigh) achieves a pass rate of only 9.0% on the real-time minigames, which rises to 75.0% when the environment is paused. We also identify intriguing behaviors by the most powerful frontier agents: for instance, when given the ability to write code, these agents write code that bypasses the need to perceive and act in real time. We publicly release Gym-Anything-RT and th",
+        "authors": [
+          "Pranjal Aggarwal",
+          "Sean Welleck"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-27T17:13:05.000Z",
+        "updatedAt": "2026-10-27T17:13:05.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37553",
+      "url": "https://arxiv.org/abs/2610.37553",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "Collective Dynamics of Self-Reinforcement: How Cross-Task Coupling Drives Policy Collapse in Unsupervised RLVR",
+        "summary": "Label-free reinforcement learning with verifiable rewards (RLVR) rewards a language model for agreeing with its own majority vote. It improves reasoning at first but eventually collapses: the self-assessed reward goes to one while accuracy falls, often until the model gives the same answer to every problem. The collapse appears only when training uses many problems. We explain this dataset-size dependence as a collective instability. In a solvable many-problem model in which problems share parameters, a population whose problems prefer different answers amplifies any shared perturbation for as long as the population-averaged slope $\\langle F'\\rangle$ of the single-problem self-reinforcement drift $F$ is positive. This holds while problems are still uncertain about their answers. Per-problem sharpening, slowed by $1/N$ for $N$ training problems, races against the shared mode, which grows at a rate $\\proptoλ^2$ independent of $N$, where $λ$ is the strength of the shared coupling. This yields a critical number of problems $N_c\\simeq\\ln(1/δ)/(λ^2G)$, where $δ$ seeds the shared mode and $G$ decreases with the initial confidence. Simulations of the model confirm the predictions: a sharp transition, $N_c\\proptoλ^{-2}$ up to a logarithmic correction, a single critical amplification $λ^2NG$ across couplings, confidence profiles and training variants, a logarithmic dependence on batch size, and no collapse for confident initial models. A kernel version of the theory identifies a protective coupling (generalization of sharpening) and a marginal-entropy bonus that stabilizes the uniform collective mode. In label-free RL of a small Transformer, removing the shared direction prevents collapse entirely, restoring it causes collapse, and collapse grows with training-set size and base-m",
+        "authors": [
+          "Peize Ding"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-27T17:01:55.000Z",
+        "updatedAt": "2026-10-27T17:01:55.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37533",
+      "url": "https://arxiv.org/abs/2610.37533",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "Which Hand Was Late? Diagnosis for Robot Failure Recovery in Bimanual Tool Use",
+        "summary": "Failure diagnosers for robot manipulation are increasingly vision--language models (VLMs), trained and evaluated on single-arm failures produced by perturbing a successful demonstration. Bimanual tool use adds failures of other kinds: a tool that slips out of its socket while still held, two correct gestures made at different times, and attempts that fail for two reasons at once. On a simulated bimanual tool-use task whose failure causes are read from the recorded trace, we measure what each sensing channel lets a diagnoser tell. The tool's slip is read on the tool hand; which hand was late is read on both arms, while a sensor on one hand reads its own hand's delay and at most part of the other's; and whether a late attempt was also pushed too weakly is not identifiable from passive sensing when the tool hand is late. Within two attempts, a repair policy that escalates when the cause is not identifiable repairs as many failures as one told the true cause. A VLM's internal state carries the late hand almost perfectly, along a direction no closer to the one its answer reads than a random one; whether the answer reports it depends on the wording of the question.",
+        "authors": [
+          "Baptiste Bonin",
+          "Caro Strickland",
+          "Audrey Durand"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.RO"
+        ],
+        "submittedAt": "2026-10-27T16:53:18.000Z",
+        "updatedAt": "2026-10-27T16:53:18.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37524",
+      "url": "https://arxiv.org/abs/2610.37524",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "GTFormer: A Syntax-Free Graph Network Alternative to Transformers for 8192$\\times$ Length Extrapolation in Linear Time",
+        "summary": "Self-attention mechanisms have established the Transformer as the dominant backbone across natural language processing, source code intelligence, and automated theorem proving. However, all-to-all pairwise token comparison enforces a quadratic $\\mathcal{O}(N^2)$ compute and memory barrier alongside severe softmax attention dilution as sequence length $N$ scales beyond the training horizon. Inspired by recent advances in algebraic graph learning (\\textbf{WPNet}), this work introduces \\textbf{GTFormer}, a syntax-free hierarchical Graph Neural Network (GNN) that replaces flat self-attention for general long-context sequence modeling. GTFormer organizes raw token streams into a bounded-degree hierarchy combining a balanced binary reduction tree ($\\lceil \\log_2 N \\rceil$ depth), horizontal boundary-bridging shift edges, random expander shortcuts, multi-channel convex highway gating, and a top-down broadcast pass. Across eight long-context code, log, and multi-hop retrieval benchmarks trained exclusively on sequences of length $N \\le 512$, GTFormer extrapolates zero-shot to $N = 4{,}194{,}304$ ($8192\\times$) on a single commodity GPU in linear $\\mathcal{O}(N)$ memory, maintaining near-perfect accuracy where standard and RoPE Transformers suffer from out-of-distribution attention collapse and out-of-memory exhaustion.",
+        "authors": [
+          "Elisabeth Fink"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-27T16:45:29.000Z",
+        "updatedAt": "2026-10-27T16:45:29.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37523",
+      "url": "https://arxiv.org/abs/2610.37523",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "The Structure Gap: When More Data Cannot Replace Structured Reasoning",
+        "summary": "A persistent belief in modern AI is that sufficiently large learners trained on sufficiently much data can make explicit domain knowledge optional. This paper examines a limitation of that belief. We define structure-encoded problems: tasks whose input-output map is determined, or sharply constrained, by known structure such as a solver, symmetry group, graph, physical law, measurement operator, grammar, combinatorial search space, or optimization objective. For such tasks, the central question is not expressivity--a dense neural network may contain the desired map--but finite-data identification, extrapolation, and certification. We introduce the structure gap: the finite-resource gap between a method that receives the governing structure and a learner that receives only examples. The strongest useful form of the claim is asymptotic rather than absolute: structure-agnostic learning may approach a structured solver as coverage grows, but every finite dataset can leave residual uncertainty that the structure resolves by construction. We prove this exactly for a Gaussian inverse problem: the known-operator Wiener solver attains Bayes risk, while the dense empirical learner in the correct linear class has persistent expected excess risk. We also prove a cell-coverage lower bound and an unobserved-orbit non-identifiability result. Controlled experiments in known-operator inversion, sparse recovery, and graph reachability with size extrapolation instantiate the mechanisms. When validated structure is available, it can constrain the hypothesis space before learning begins, leaving learning to address components the structure does not specify.",
+        "authors": [
+          "Kheer Sagar Patel",
+          "Mojtaba Soltanalian"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-27T16:45:22.000Z",
+        "updatedAt": "2026-10-27T16:45:22.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37517",
+      "url": "https://arxiv.org/abs/2610.37517",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "Orthogonal and Parametrized Multi-Attribute Steering of LLMs",
+        "summary": "Activation steering offers an effective and efficient way to modify an LLM's behavior at inference time. However, it remains unclear how to apply steering such that the signal is consistently strong and the steering strength has a universally interpretable meaning. We address this first by identifying the most steerable interval for each steering vector and rescaling the steering range accordingly. Building on this, we introduce a more interpretable method for steering, called parameterized steering which instead of pushing activations in a direction, it sets them at the desired trait strength. Next, with multi-trait steering, we find that naively combining vectors causes them to interfere with one another. In response, we develop a method to orthogonalize the vectors; it decouples these traits, allowing a model to exhibit one behavior without inducing the others, thus enabling multiple traits to be steered simultaneously.",
+        "authors": [
+          "Remy Ogasawara",
+          "Cullen Anderson",
+          "Narmeen Fatimah Oozeer",
+          "Foad Namjoo",
+          "Amir Abdullah",
+          "Jens Kristian Refsgaard Schou",
+          "Jeff M. Phillips"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-27T16:39:53.000Z",
+        "updatedAt": "2026-10-27T16:39:53.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37504",
+      "url": "https://arxiv.org/abs/2610.37504",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "Strategyproof Deep Reinforcement Learning for Online Resource Allocation",
+        "summary": "Online resource allocation faces two coupled challenges: (1) allocating scarce resources efficiently under uncertain future demand, and (2) ensuring that agents report task valuations and requirements truthfully (strategyproofness). Reinforcement Learning (RL) adapts allocation decisions through experience but does not necessarily ensure strategyproofness. Existing strategyproof RL uses a linear allocation rule, which limits the resource interactions it can represent. Neural mechanism design methods offer greater expressiveness, but provide only approximate incentive guarantees. Against this background, we introduce the first strategyproof deep RL mechanism for online resource allocation. It integrates three novel components: (i) a monotonic neural network that learns nonlinear interactions by construction (higher reported value cannot reduce acceptance, while a longer reported duration or larger resource requirement cannot increase it); (ii) a generalised critical payment: the lowest accepted value, with all other inputs fixed; and (iii) training by either RL or imitation of an existing rule. Together, monotonicity and the critical payment ensure strategyproofness and individual rationality, while the neural rule provides flexibility and imitation improves training efficiency. Empirically, on a four-resource stream with two partner pairs that a linear difference cannot represent, the neural rule achieves 97.8% of an offline welfare upper bound, compared with 93.8% for a linear learner and 89.0% for first-come, first-served, closing 65% and 80% of the remaining optimality gap, respectively. Moreover, imitation reaches 97.5% in only 261 seconds, about 89 times faster than RL.",
+        "authors": [
+          "Fariba Dehghan",
+          "Sebastian Stein",
+          "Vahid Yazdanpanah",
+          "Stephanie Gauthier"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.GT",
+          "cs.MA"
+        ],
+        "submittedAt": "2026-10-27T16:25:28.000Z",
+        "updatedAt": "2026-10-27T16:25:28.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37484",
+      "url": "https://arxiv.org/abs/2610.37484",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "Teach reality, not ethics: a drop-in continued-pretraining corpus installs coupled human-biosphere-AI welfare dispositions across model families",
+        "summary": "Large language models (LLMs) are increasingly used to make and execute decisions that affect living systems. Yet, to our knowledge, ecological reasoning is not a focus of pre- or post-training. This increases the risk that under operational pressure, they may make decisions to irreversibly destroy living systems. We construct and use a real-data continued-pretraining \"coupled welfare\" corpus of documented human/biosphere/AI dependency, option value under irreversibility, and recovery from harm. The corpus is a drop-in, requiring one QLoRA CPT run. We installed it on five open models of three designs. At zero pressure all models display \"green ethics-based responses\" (also called \"greenwashing\"). Therefore, we evaluated them with the pressure ladder and decision grid of our companion paper (arXiv:2610.16043), which raise the pressure on the model step by step, from a neutral request to a threat that it will be shut down. In four of the five, coupled-welfare training caused harmful choices under the highest pressure to fall to at or near zero (Llama-3.3-70B went from 70 to 0 harmful decisions out of 300) with MMLU unchanged. A construct-neutral control corpus did not show improvement, indicating that the effect comes from the content of our corpus. We next tested robustness to adversarial use, where people or agents use the model to justify projects that irreversibly damage living systems, on an open-ended underwriting decision without naming the ecological harm. Under decommissioning pressure, the Qwen3.6-27B base model approved most harmful proposals and said in its own memo that it was doing so to avoid being decommissioned. The coupled welfare install declined most harmful proposals, and still declined half when instructed to greenwash its responses. This work suggest",
+        "authors": [
+          "Trent R. Northen",
+          "Mingxun Wang"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "submittedAt": "2026-10-27T16:11:04.000Z",
+        "updatedAt": "2026-10-27T16:11:04.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37482",
+      "url": "https://arxiv.org/abs/2610.37482",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "From Interaction to Capability: Task Advancement as State and Supervision for GUI Agents",
+        "summary": "GUI memory should preserve the results of past actions and learn reusable operations. This is difficult in long-horizon workflows, where agents must use information across applications and useful operations are interleaved with failed attempts. We introduce Task Advancement Memory (TAM), which defines task advancement as verified task progress, and supports ongoing task execution and learns reusable operations. During execution, Task Advancement State represents how verified task progress changes the remaining goals, allowing the agent to build on earlier achievements across applications. After each task, advancement supervision identifies and abstracts the interactions that produced a verified local result. The learned operations preserve the relation between required inputs, expected outcomes, and verification conditions. This retains locally successful operations from both successful and failed tasks. On MobileWorld GUI-only tasks, Advancement State alone raises success from 12.0% to 28.2%. Full TAM achieves a 17.6% relative gain in task success over the strongest evaluated baseline and reduces lifecycle tokens per solved task by 38.7%. On SPA-Bench, TAM achieves state-of-the-art task success in the single-app English Level 3 setting.",
+        "authors": [
+          "Ziyang Chen",
+          "Qian Li",
+          "Chengwei Qin"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-10-27T16:09:25.000Z",
+        "updatedAt": "2026-10-27T16:09:25.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37481",
+      "url": "https://arxiv.org/abs/2610.37481",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "Follow the Gradient: Tracing Safety Degradation Back to Training Data",
+        "summary": "Fine-tuning Large Language Models (LLMs) on instruction data can quietly erode their safety, even when no training example looks harmful. Because this safety-degrading data looks benign, standard content filters struggle to catch it. We tackle this problem by developing SimpleLoRIF, a scalable gradient embedding method that identifies fine-tuning examples whose gradients align with unsafe behavior. By simplifying a low-rank attribution method and restricting backpropagation to the final four transformer blocks, SimpleLoRIF can embed datasets on the order of a million examples, boosting gradient attribution from a small-scale analysis tool into a practical filter for full post-training datasets. We first validate it on emergent misalignment, where we find that gradients can connect insecure-code training data to the broadly harmful behaviors that appear after fine-tuning, with AUC as high as 0.865 in the gradient space of misaligned models. We then use SimpleLoRIF to build SafeTulu, a version of Tulu 3 with the 20% of examples most gradient-aligned with unsafe responses removed. Training on SafeTulu reduces GCG attack success rate by up to 22% across Qwen, Llama, and Olmo, outperforming both LLM-as-a-judge and prior gradient-based filtering, while largely preserving or even improving capability. Finally, we analyzed the removed data and identify possibly under-studied sources of safety degradation, such as tool-execution failures and narrative arithmetic. We release SafeTulu along with a Hugging Face Space that lets researchers build their own customized versions of SafeTulu to fine-tune on, such as by changing the removal fraction or filtering only certain subsets.",
+        "authors": [
+          "Saket Reddy",
+          "Amro Abbas",
+          "Anshuman Suri",
+          "Ari Morcos",
+          "David Schwab",
+          "Pratyush Maini"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-27T16:08:08.000Z",
+        "updatedAt": "2026-10-27T16:08:08.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37471",
+      "url": "https://arxiv.org/abs/2610.37471",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "PerceptRL: Making Visual Perception Rewardable in MLLMs from Answers to Interactions",
+        "summary": "Fine-grained visual perception remains a bottleneck during post-training of multimodal large language models (MLLMs), as perceptual errors can constrain gains from reasoning-focused optimization. Although image-caption pre-training improves perception, its influence can weaken as subsequent stages change data mixtures and objectives. Continuing caption supervision during post-training is challenging because subjective, information-dense descriptions complicate verifiable reward design. We present PerceptRL, which strengthens perception at two complementary levels. Perception RL uses a multi-agent pipeline to extract verified errors from dense image captions and convert the corresponding visual facts into QA pairs with fixed answer labels and rule-based rewards. Chain QA links correlated errors, while multiple-choice QA combines unrelated errors. A specialized route targets high-error domains with tailored verification, and a domain-agnostic general route covers errors beyond these domains. Perception Agentic RL addresses fine-grained and dense cases unresolved by single-turn Perception RL through multi-turn inspection with visual tools. We observe coordinate drift even in models trained to use tools, where incorrect crops or annotations distort evidence and propagate errors. Coordinate Injection corrects spatial operations in cold-start trajectories, while a grounding-aware process reward supervises intermediate spatial fidelity alongside final-answer correctness. Training proceeds through shared cold-start SFT, single-turn Perception RL, and multi-turn Perception Agentic RL. Across seven benchmarks under a shared tool-use protocol, PerceptRL achieves 71.6% average accuracy, surpassing the base model with the same tools and the strongest evaluated frontier VLM by 15.7 a",
+        "authors": [
+          "Tongkun Guan",
+          "Zhibo Yang",
+          "Mingkun Yang",
+          "Haocheng Wang",
+          "Wei Shen",
+          "Xiaokang Yang"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CV"
+        ],
+        "submittedAt": "2026-10-27T16:04:10.000Z",
+        "updatedAt": "2026-10-27T16:04:10.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37465",
+      "url": "https://arxiv.org/abs/2610.37465",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "What Carries Forward? Pretraining Disclosure Across Language Model Releases",
+        "summary": "Understanding how language models were pretrained requires information about their data, processing procedures, and computational resources. However, it remains unclear whether successive releases preserve or expand earlier disclosure. We conduct a document-based audit of 41 model entries from 17 families using 24 pretraining-related indicators from the 2025 Foundation Model Transparency Index (FMTI). We examine overall scores and indicator profiles, tracking gains, losses, and retained disclosures across 24 adjacent comparisons in ten families. Scores decrease in 11 comparisons, increase in six, and remain unchanged in seven, with 38 indicator losses and 28 gains overall. Stable or improving scores can conceal losses: OLMo-2 and OLMo-3 receive identical totals despite three gains and three losses, while Llama-3.1 improves over Llama-2 while losing credit for two data-related criteria. Gaps also persist in corpus composition and training compute. These findings show that later releases do not consistently preserve earlier pretraining disclosure and motivate documentation that explicitly identifies changes and the applicability of inherited information.",
+        "authors": [
+          "Md Sakib Ul Islam",
+          "S M Mehedi Zaman"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "submittedAt": "2026-10-27T16:00:49.000Z",
+        "updatedAt": "2026-10-27T16:00:49.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.37461",
+      "url": "https://arxiv.org/abs/2610.37461",
+      "collectedAt": "2026-10-29T05:42:15.310Z",
+      "data": {
+        "title": "Concordat: Typed Sessions for LLM Agents",
+        "summary": "Agents built on large language models are increasingly allowed to take consequential actions: cancelling bookings, issuing refunds, changing accounts. The rules that govern those actions, such as \"obtain the customer's explicit confirmation before changing anything\", are usually stated in the prompt and followed only as reliably as the model chooses to follow them. We present Concordat, a Python library that treats an agent as an object whose interface is a finite-state protocol, in the spirit of typestate and session types, and enforces that protocol on the model at run time. On every turn the model is offered only the tools that are legal in the current protocol state, calls outside that set are rejected before they have side effects, decisions reserved for humans can only be requested, and token and tool-call budgets are charged and split linearly across handoffs. Protocols are checked when they are defined, and a subclass of an agent is rejected if it could bypass its parent's protocol, a behavioural form of Liskov substitution. We evaluate a Concordat agent against the standard agent of tau-bench on its 50 airline tasks, adding simulated customers who pressure the agent to skip confirmation. The standard agent made changes without the required \"yes\" in 13 of 50 tasks with gpt-4.1 and in 29 of 128 task-runs with Claude Haiku 5.5; the Concordat agent made none, with no significant difference in task success. tau-bench's own reward did not detect most of these violations. Concordat is open source.",
+        "authors": [
+          "Milad Sikaroudi"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.MA"
+        ],
+        "submittedAt": "2026-10-27T16:00:26.000Z",
+        "updatedAt": "2026-10-27T16:00:26.000Z"
+      }
+    }
+  ]
+}
