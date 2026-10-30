@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-29",
+  "source": "arxiv",
+  "items": [
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.40327",
+      "url": "https://arxiv.org/abs/2610.40327",
+      "collectedAt": "2026-10-30T05:41:27.460Z",
+      "data": {
+        "title": "Radiology Guideline-derived Decision Graph for Efficient Clinical Decision Support",
+        "summary": "Radiological risk stratification and management planning are essential downstream tasks in medical imaging. Automating these tasks is challenging because clinical guideline criteria are distributed across prose, tables, and cross-referenced definitions. We present Guideline-derived Decision Graph (GDGraph), a framework that decouples guideline compilation from case evaluation. During compilation, a large language model partitions guidelines into section-based chunks, extracts local decision subgraphs with linked definitions, and aggregates related branches into an executable decision graph. During inference, a fast System One model answers localized clinical questions while deterministic traversal resolves Boolean logic, turning opaque single-pass predictions into a traceable decision path without task-specific training. Across 347 cases spanning renal cyst, adnexal mass, and thyroid nodule guidelines, GDGraph improves System One accuracy from 57.3% to 90.8%, outperforming retrieval-augmented GPT-4o (80.1%) and graph-guided GPT-4o with chain-of-thought (82.7%) at substantially lower latency and cost. The source code will be available.",
+        "authors": [
+          "Xuewen Zhou",
+          "Zhen Chen"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CV"
+        ],
+        "submittedAt": "2026-10-29T15:56:27.000Z",
+        "updatedAt": "2026-10-29T15:56:27.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.40305",
+      "url": "https://arxiv.org/abs/2610.40305",
+      "collectedAt": "2026-10-30T05:41:27.460Z",
+      "data": {
+        "title": "Rimuru: Unified Memory Management for Modern LLM Serving via Elastic Expert Offloading",
+        "summary": "Modern LLMs strain device memory through large model weights and attention states, particularly in resource-constrained scenarios. Existing systems separately provision memory for model weights and attention states, imposing fixed fixed boundaries that cannot adapt to the changing memory demands of workloads. Under heavy workloads, insufficient state capacity limits request concurrency and reduces throughput; under light workloads, idle memory in one region cannot be reallocated to another, wasting device memory. Meanwhile, modern LLM architectures introduce heterogeneous tensors with diverse layouts and lifetimes, further complicating memory management. These problems motivate unified memory management for heterogeneous tensors. However, a shared pool alone does not make memory directly reusable across tensors with different allocation granularities and execution layouts. This paper presents Rimuru, a modern LLM serving system that unifies memory management through elastic expert offloading. Rimuru establishes a shared page pool to enables elastic memory sharing across heterogeneous tensors. To accommodate different allocation granularities, Rimuru introduces memory views that allow each tensor type to interpret the shared memory space using its own page size and page table. Furthermore, Rimuru combines huge-page alignment with a multi-level page allocator that splits and merges pages, enabling cross-type capacity reuse. A page-table-aware fused MoE kernel directly accesses non-contiguous expert weights, avoiding copy overhead. Building on these mechanisms, Rimuru employs a workload-aware adjuster that dynamically reallocates pages across tensor types according to runtime demands. Implemented on top of vLLM, Rimuru remains compatible with modern LLMs. Evaluations show ",
+        "authors": [
+          "Zhiyuan Fang",
+          "Dingyang Li",
+          "Jianfeng Zhong",
+          "Bin Wang",
+          "Weixi Zhu",
+          "Cunshu Ni",
+          "Zicong Hong",
+          "Wuhui Chen",
+          "Zibin Zheng"
+        ],
+        "categories": [
+          "cs.LG",
+          "cs.OS"
+        ],
+        "submittedAt": "2026-10-29T15:47:19.000Z",
+        "updatedAt": "2026-10-29T15:47:19.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.40292",
+      "url": "https://arxiv.org/abs/2610.40292",
+      "collectedAt": "2026-10-30T05:41:27.460Z",
+      "data": {
+        "title": "DolphinRouting: Cluster-Level Binary Routing for Disaggregated LLM Inference Serving",
+        "summary": "Prefill-decode (PD) disaggregation isolates the two phases of large language model serving, but request-level path selection must account for prefill work, cache reuse, and decode demand. We present DolphinRouting, which learns this choice from end-to-end SLO feedback under a given P/D resource allocation. Requests are clustered by raw prompt length, cache-adjusted input lengths on both worker pools, and output-length information. Offline policy search learns one binary action per cluster. Online feature extraction, cluster assignment, and table lookup select local or remote prefill. We evaluate DolphinRouting on a real PD-disaggregated cluster using three public benchmarks, a mixed workload, and real data. Across the mixed workload and real data, DolphinRouting with $k$-means reduces P90 TTFT by 5.7--7.9\\% and P90 TPOT by 2.6--10.1\\% relative to Dynamo.",
+        "authors": [
+          "Yishuo Yuan",
+          "Shaoyu Yang",
+          "Chunrong Fang"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-29T15:42:05.000Z",
+        "updatedAt": "2026-10-29T15:42:05.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.40287",
+      "url": "https://arxiv.org/abs/2610.40287",
+      "collectedAt": "2026-10-30T05:41:27.460Z",
+      "data": {
+        "title": "Only Accepted Tokens Count: An Energy Accounting of Speculative Decoding Under Latency Targets",
+        "summary": "Large language model serving is limited by facility power. Energy per token determines how many tokens a datacenter can serve, while a latency target bounds how quickly each user receives them. During decode, every weight is read from memory for every generated token. Batching amortizes this read across users but makes no individual user faster. Speculative decoding does: a drafter proposes several future tokens, and the target model verifies them in a single forward pass that reuses the same weight read. Because every drafted token must be verified whether or not it is accepted, the energy speculation saves depends on how many drafted tokens are accepted. This saving is hard to pin down. It varies across target models from different attention families and across drafting schemes, and it depends on the text being served. Every drafter we evaluate accepts fewer tokens on conversation than on code, and every trained drafter accepts fewer on Romansh, a low-resource language, than on English. We measure speculative decoding under production serving conditions (SGLang, CUDA graphs enabled) on H100 and H200 GPUs, at batch sizes up to 64 across 5 corpora. On dense models, verification, not drafting, dominates the energy cost. The saving shrinks as the batch grows, because batching has already shared the weight read that speculation would divide among the accepted tokens. At large batch sizes, block drafters push verification past the balance point between arithmetic and memory traffic into the compute-bound regime, where the saving becomes a loss, and a drafter with low acceptance raises energy per token. Meeting a tighter latency target with speculation then costs additional energy. Larger batches lower energy per token without speculation. Speculation adds to that saving onl",
+        "authors": [
+          "Bole Ma",
+          "Ayesha Afzal",
+          "Jan Eitzinger",
+          "Harald Koestler",
+          "Gerhard Wellein"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.DC",
+          "cs.LG",
+          "cs.PF"
+        ],
+        "submittedAt": "2026-10-29T15:37:45.000Z",
+        "updatedAt": "2026-10-29T15:37:45.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.40283",
+      "url": "https://arxiv.org/abs/2610.40283",
+      "collectedAt": "2026-10-30T05:41:27.460Z",
+      "data": {
+        "title": "Latent Path Exploration via Potential-Guided Subtrajectory Balance",
+        "summary": "Continuous latent reasoning enables language models to perform intermediate computation without generating explicit reasoning traces. Advances in stochastic latent reasoning allow multiple paths to be sampled in continuous space, but stochasticity alone does not ensure effective exploration. A key challenge is guiding stochastic transitions between intermediate latent states toward useful reasoning paths. We introduce SubLAT, which couples a relative answer potential with Subtrajectory Balance to learn stochastic latent exploration. The relative potential evaluates the answer support of sampled states against replacement states, with a correctness signal at the terminal state. Subtrajectory Balance relates potential differences to forward and backward transition densities across subtrajectories of different lengths. The model is jointly trained with answer supervision, CoT supervision, and representation distillation. Experiments on arithmetic and deductive reasoning show increasing solution coverage with larger sampling budgets across in-domain and out-of-domain benchmarks, as well as improvements on several structural OOD benchmarks. Trajectory analyses reveal progressive divergence among sampled latent paths and higher mean relative potentials for correct trajectories across arithmetic benchmarks.",
+        "authors": [
+          "Xiaoling Zeng",
+          "Qi Zhang"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-29T15:35:28.000Z",
+        "updatedAt": "2026-10-29T15:35:28.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.40276",
+      "url": "https://arxiv.org/abs/2610.40276",
+      "collectedAt": "2026-10-30T05:41:27.460Z",
+      "data": {
+        "title": "TaskFrame: Connecting Task-Level Planning with Frame-Level Control for Game Agents",
+        "summary": "Building general game agents requires both high-level task reasoning and low-latency action control in rapidly changing visual environments. These capabilities favor models with substantially different computational profiles, making them difficult to realize within a single model. In this work, we present TaskFrame, a hierarchical planner-controller framework that connects task-level planning with frame-level keyboard-and-mouse control. A vision-language task planner decomposes a high-level goal into an ordered sequence of atomic instructions and is optimized through supervised learning and dependency-aware GRPO. The hidden states of special goal tokens that terminate each atomic instruction provide continuous goal embeddings that are cached and reused across control steps. A causal Transformer controller combines the embedding of the active goal with recent observations to predict discrete keyboard and mouse-button actions and continuous camera motion at every game step. We train the system in three stages: planner training, controller pretraining, and joint alignment. Experiments in Minecraft show that TaskFrame is competitive with general-purpose vision-language models on instruction decomposition, and that in closed-loop evaluation the agent achieves a higher combat success rate than the evaluated baselines.",
+        "authors": [
+          "Guangzhi Wang",
+          "Junfu Pu",
+          "Yiran Wang",
+          "Xingyilang Yin",
+          "Honghao Chen",
+          "Cheng Cheng",
+          "Lingen Li",
+          "Yinan Zhou",
+          "Jiarui Wu",
+          "Yinuo Jiang",
+          "Hongbo Jin",
+          "Xiaodong Cun",
+          "Ying Shan"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CV"
+        ],
+        "submittedAt": "2026-10-29T15:31:37.000Z",
+        "updatedAt": "2026-10-29T15:31:37.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.40264",
+      "url": "https://arxiv.org/abs/2610.40264",
+      "collectedAt": "2026-10-30T05:41:27.460Z",
+      "data": {
+        "title": "From MS/MS evidence to adaptive spectroscopic characterization: Reinforcement learning guided by candidate molecular structures",
+        "summary": "Small-molecule identification from tandem mass spectrometry (MS/MS) may require complementary measurements. Herein, we propose a structure-informed deep Q-network (SI-DQN) that uses existing MS/MS evidence to decide whether further characterization is needed, which measurement to request, and when to stop. The policy combines spectral representations and candidate rankings with score-weighted descriptors of the candidates' chemical features and structural differences. The policy was evaluated on 79,462 held-out samples with simulated MS/MS, infrared (IR), and nuclear magnetic resonance (NMR) spectra from the Multimodal Spectroscopic Dataset. Evaluation used fixed hard candidate sets containing the correct structure and equal normalized acquisition costs. Averaged across three training runs, SI-DQN increased Top-1 accuracy from 80.10% to 93.78% for positive-ion MS/MS starts and from 70.44% to 93.31% for negative-ion starts. The corresponding mean additional measurement counts were only 0.227 and 0.340 per sample, respectively. Complete acquisition achieved 97.72% accuracy with four additions, whereas SI-DQN reduced the additional measurement count by 94.3% and 91.5%. Relative to a rule-based policy, SI-DQN reduced the composite loss combining terminal ranking error and acquisition cost by 19.3% and 25.5%. Adding structural information to DQN further improved accuracy while reducing requests across all three training runs. At comparable ranking uncertainty, SI-DQN increased request rates relative to DQN more strongly in groups with high structural disagreement, where larger reductions in composite loss were also observed. Together, these results support using the ambiguity among candidate structures after MS/MS analysis to guide further characterization, providing a quant",
+        "authors": [
+          "Bowen Gao",
+          "Lei Zhu",
+          "Yiying Wang",
+          "Wenjie Yu"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-10-29T15:27:53.000Z",
+        "updatedAt": "2026-10-29T15:27:53.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2610.40256",
+      "url": "https://arxiv.org/abs/2610.40256",
+      "collectedAt": "2026-10-30T05:41:27.460Z",
+      "data": {
+        "title": "When Requirements Interact: Scaling Long-Horizon Coding via Interdependent Specifications",
+        "summary": "To succeed in real-world long-horizon software development, coding agents must satisfy multi-dimensional task specifications, such as interface compatibility and error handling, and do so without breaking existing dependencies. However, current works lack specification in both quantity and diversity, often emphasizing primary goals while ignoring complex constraints. Synthesizing tasks to bridge this gap presents two challenges: naively adding specifications risks reducing tasks to trivial checklists rather than compelling joint reasoning, and verifying these subtle interactions risks overlooking hidden flaws or rejecting valid alternatives. To address these challenges, we introduce CodeSpecWeave, a framework for synthesizing tasks with rich, interdependent specifications. Grounded in real developer seeds, a synthesis agent iteratively develops both coupled task requirements and executable tests, while a review agent audits solution trajectories from multiple models to guarantee test reliability. Using this pipeline, we construct 4,670 training tasks across 2,865 repositories. Applying Reinforcement learning on these tasks significantly improves performance over the base model on DeepSWE-v1.1, largely outperforming existing baselines. Furthermore, we curate CodeSpecWeave-Bench, a rigorous benchmark comprising 100 tasks and 1,044 specifications, which clearly separates frontier models and reveals significant headroom in handling interdependent engineering constraints.",
+        "authors": [
+          "Yishuo Cai",
+          "Minzheng Wang",
+          "Liang Zhao",
+          "Linghao Zhang",
+          "Lei Li",
+          "Shicheng Li",
+          "Xu Sun",
+          "Fuli Luo"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.SE"
+        ],
+        "submittedAt": "2026-10-29T15:22:49.000Z",
+        "updatedAt": "2026-10-29T15:22:49.000Z"
+      }
+    }
+  ]
+}
