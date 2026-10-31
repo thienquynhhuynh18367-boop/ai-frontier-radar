@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-30",
+  "source": "anthropic",
+  "items": [
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/news/expanding-partnership-gsa",
+      "url": "https://www.anthropic.com/news/expanding-partnership-gsa",
+      "collectedAt": "2026-10-31T05:35:10.841Z",
+      "data": {
+        "lastmod": "2026-10-29T17:09:08.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/claude-code-best-practices",
+      "url": "https://www.anthropic.com/research/claude-code-best-practices",
+      "collectedAt": "2026-10-31T05:35:10.841Z",
+      "data": {
+        "lastmod": "2026-10-29T17:35:57.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude",
+      "url": "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude",
+      "collectedAt": "2026-10-31T05:35:10.841Z",
+      "data": {
+        "lastmod": "2026-10-30T15:24:16.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/managed-agents",
+      "url": "https://www.anthropic.com/research/managed-agents",
+      "collectedAt": "2026-10-31T05:35:10.841Z",
+      "data": {
+        "lastmod": "2026-10-30T15:51:07.000Z"
+      }
+    }
+  ]
+}
