@@ -4,11 +4,11 @@
     {
       "source": "github-search",
       "status": "success",
-      "lastAttemptAt": "2026-11-01T05:58:08.444Z",
-      "lastSuccessAt": "2026-11-01T05:58:08.444Z",
-      "receivedCount": 350,
-      "acceptedCount": 275,
-      "itemCount": 275,
+      "lastAttemptAt": "2026-11-02T05:57:02.365Z",
+      "lastSuccessAt": "2026-11-02T05:57:02.365Z",
+      "receivedCount": 349,
+      "acceptedCount": 266,
+      "itemCount": 266,
       "carriedCount": 0,
       "consecutiveFailures": 0,
       "errorCodes": [],
@@ -16,36 +16,36 @@
         {
           "id": "ai-agent:page-1",
           "received": 50,
-          "accepted": 47,
-          "rejected": 3,
+          "accepted": 46,
+          "rejected": 4,
           "requests": 1
         },
         {
           "id": "agent:page-1",
-          "received": 50,
-          "accepted": 44,
-          "rejected": 6,
-          "requests": 1
-        },
-        {
-          "id": "rag:page-1",
           "received": 50,
           "accepted": 43,
           "rejected": 7,
           "requests": 1
         },
         {
+          "id": "rag:page-1",
+          "received": 50,
+          "accepted": 39,
+          "rejected": 11,
+          "requests": 1
+        },
+        {
           "id": "mcp:page-1",
           "received": 50,
-          "accepted": 42,
-          "rejected": 8,
+          "accepted": 45,
+          "rejected": 5,
           "requests": 1
         },
         {
           "id": "ai-coding:page-1",
           "received": 50,
-          "accepted": 44,
-          "rejected": 6,
+          "accepted": 40,
+          "rejected": 10,
           "requests": 1
         },
         {
@@ -57,16 +57,16 @@
         },
         {
           "id": "large-language-model:page-1",
-          "received": 5,
+          "received": 6,
           "accepted": 5,
-          "rejected": 0,
+          "rejected": 1,
           "requests": 1
         },
         {
           "id": "enterprise-ai:page-1",
-          "received": 45,
-          "accepted": 44,
-          "rejected": 1,
+          "received": 43,
+          "accepted": 38,
+          "rejected": 5,
           "requests": 1
         }
       ]
@@ -74,11 +74,11 @@
     {
       "source": "hacker-news",
       "status": "success",
-      "lastAttemptAt": "2026-11-01T05:58:08.444Z",
-      "lastSuccessAt": "2026-11-01T05:58:08.444Z",
-      "receivedCount": 214,
-      "acceptedCount": 158,
-      "itemCount": 157,
+      "lastAttemptAt": "2026-11-02T05:57:02.365Z",
+      "lastSuccessAt": "2026-11-02T05:57:02.365Z",
+      "receivedCount": 199,
+      "acceptedCount": 147,
+      "itemCount": 148,
       "carriedCount": 0,
       "consecutiveFailures": 0,
       "errorCodes": [],
@@ -106,8 +106,8 @@
         },
         {
           "id": "mcp",
-          "received": 25,
-          "accepted": 25,
+          "received": 30,
+          "accepted": 30,
           "rejected": 0,
           "requests": 1
         },
@@ -120,22 +120,22 @@
         },
         {
           "id": "openai",
-          "received": 23,
-          "accepted": 23,
+          "received": 11,
+          "accepted": 11,
           "rejected": 0,
           "requests": 1
         },
         {
           "id": "anthropic",
-          "received": 21,
-          "accepted": 21,
+          "received": 16,
+          "accepted": 16,
           "rejected": 0,
           "requests": 1
         },
         {
           "id": "claude",
-          "received": 25,
-          "accepted": 25,
+          "received": 22,
+          "accepted": 22,
           "rejected": 0,
           "requests": 1
         }
@@ -144,8 +144,8 @@
     {
       "source": "arxiv",
       "status": "empty",
-      "lastAttemptAt": "2026-11-01T05:58:08.444Z",
-      "lastSuccessAt": "2026-11-01T05:58:08.444Z",
+      "lastAttemptAt": "2026-11-02T05:57:02.365Z",
+      "lastSuccessAt": "2026-11-02T05:57:02.365Z",
       "receivedCount": 100,
       "acceptedCount": 0,
       "itemCount": 0,
@@ -165,13 +165,13 @@
     {
       "source": "openai",
       "status": "anomaly",
-      "lastAttemptAt": "2026-11-01T05:58:08.444Z",
+      "lastAttemptAt": "2026-11-02T05:57:02.365Z",
       "lastSuccessAt": "2026-10-25T04:36:23.186Z",
       "receivedCount": 653,
-      "acceptedCount": 93,
+      "acceptedCount": 10,
       "itemCount": 284,
       "carriedCount": 284,
-      "consecutiveFailures": 7,
+      "consecutiveFailures": 8,
       "errorCodes": [
         "item_count_drop"
       ],
@@ -179,48 +179,48 @@
         {
           "id": "product",
           "received": 202,
-          "accepted": 24,
-          "rejected": 178,
+          "accepted": 1,
+          "rejected": 201,
           "requests": 1
         },
         {
           "id": "release",
           "received": 85,
-          "accepted": 9,
-          "rejected": 76,
+          "accepted": 0,
+          "rejected": 85,
           "requests": 1
         },
         {
           "id": "research",
           "received": 58,
-          "accepted": 12,
-          "rejected": 46,
+          "accepted": 1,
+          "rejected": 57,
           "requests": 1
         },
         {
           "id": "startup",
           "received": 26,
-          "accepted": 17,
-          "rejected": 9,
+          "accepted": 4,
+          "rejected": 22,
           "requests": 1
         },
         {
           "id": "company",
           "received": 282,
-          "accepted": 36,
-          "rejected": 246,
+          "accepted": 4,
+          "rejected": 278,
           "requests": 1
         }
       ]
     },
     {
       "source": "anthropic",
-      "status": "success",
-      "lastAttemptAt": "2026-11-01T05:58:08.444Z",
-      "lastSuccessAt": "2026-11-01T05:58:08.444Z",
+      "status": "empty",
+      "lastAttemptAt": "2026-11-02T05:57:02.365Z",
+      "lastSuccessAt": "2026-11-02T05:57:02.365Z",
       "receivedCount": 588,
-      "acceptedCount": 1,
-      "itemCount": 1,
+      "acceptedCount": 0,
+      "itemCount": 0,
       "carriedCount": 0,
       "consecutiveFailures": 0,
       "errorCodes": [],
@@ -228,8 +228,8 @@
         {
           "id": "sitemap",
           "received": 588,
-          "accepted": 1,
-          "rejected": 587,
+          "accepted": 0,
+          "rejected": 588,
           "requests": 1
         }
       ]
@@ -237,9 +237,9 @@
     {
       "source": "anthropic-jobs",
       "status": "empty",
-      "lastAttemptAt": "2026-11-01T05:58:08.444Z",
-      "lastSuccessAt": "2026-11-01T05:58:08.444Z",
-      "receivedCount": 675,
+      "lastAttemptAt": "2026-11-02T05:57:02.365Z",
+      "lastSuccessAt": "2026-11-02T05:57:02.365Z",
+      "receivedCount": 673,
       "acceptedCount": 0,
       "itemCount": 0,
       "carriedCount": 0,
@@ -248,9 +248,9 @@
       "queryStats": [
         {
           "id": "ai-pm-fde-applied-ai",
-          "received": 675,
+          "received": 673,
           "accepted": 0,
-          "rejected": 675,
+          "rejected": 673,
           "requests": 1
         }
       ]
