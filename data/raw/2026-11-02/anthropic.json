@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-02",
+  "source": "anthropic",
+  "items": [
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/Claude-accelerates-protein-design",
+      "url": "https://www.anthropic.com/research/Claude-accelerates-protein-design",
+      "collectedAt": "2026-11-03T06:43:39.784Z",
+      "data": {
+        "lastmod": "2026-11-02T10:11:06.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/claude-shaped-science",
+      "url": "https://www.anthropic.com/research/claude-shaped-science",
+      "collectedAt": "2026-11-03T06:43:39.784Z",
+      "data": {
+        "lastmod": "2026-11-02T10:11:59.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/vibe-physics",
+      "url": "https://www.anthropic.com/research/vibe-physics",
+      "collectedAt": "2026-11-03T06:43:39.784Z",
+      "data": {
+        "lastmod": "2026-11-02T10:12:52.000Z"
+      }
+    }
+  ]
+}
