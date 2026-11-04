@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-03",
+  "source": "anthropic-jobs",
+  "items": [
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5450798008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5450798008",
+      "collectedAt": "2026-11-04T06:11:33.261Z",
+      "data": {
+        "title": "Applied AI Architect",
+        "location": "Sydney, Australia",
+        "updatedAt": "2026-11-03T00:45:18.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5456581008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5456581008",
+      "collectedAt": "2026-11-04T06:11:33.261Z",
+      "data": {
+        "title": "Head of Southern Europe & MEA, Applied AI",
+        "location": "Paris, France",
+        "updatedAt": "2026-11-03T09:59:02.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5454442008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5454442008",
+      "collectedAt": "2026-11-04T06:11:33.261Z",
+      "data": {
+        "title": "Manager, Applied AI Cyber Specialists",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-11-02T21:51:22.000Z"
+      }
+    }
+  ]
+}

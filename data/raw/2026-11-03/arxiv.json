@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-03",
+  "source": "arxiv",
+  "items": [
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.05088",
+      "url": "https://arxiv.org/abs/2611.05088",
+      "collectedAt": "2026-11-04T06:11:33.261Z",
+      "data": {
+        "title": "LatentTriad: Pre-Action Risk Representations for Malicious Agent Skill Detection",
+        "summary": "Large language model agents are increasingly extended with reusable skills, but untrusted skill content can induce operations outside the user's task. Detecting this contextual risk requires more than suspicious-pattern matching, while dynamic analysis incurs the cost of skill execution. We find that hidden states formed during prefill contain readable information about task-operation consistency, including across held-out expression forms in controlled evaluations. Matched Operation-state interventions also affect later Boundary states and shift fixed risk readouts toward the donor label. Based on these findings, we introduce LatentTriad, which combines contextual Boundary features, group-adjusted Operation directions, and departures from benign state relationships. All branches share one prefill: detection generates no output tokens, invokes no tools, and executes no skill code. Across 5,830 skill packages from five sources and seven backbones, LatentTriad achieves 99.0-99.2% pooled F1 and 93.0-94.6% source-macro F1. A separately measured compact implementation completes prefill and detection in a median of 259-284 ms. These results connect pre-action risk readability and functional influence to execution-free skill screening.",
+        "authors": [
+          "Zhe Yu",
+          "Yi Liu",
+          "Ying Zhang",
+          "Simin Chen"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-11-03T15:46:12.000Z",
+        "updatedAt": "2026-11-03T15:46:12.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.05066",
+      "url": "https://arxiv.org/abs/2611.05066",
+      "collectedAt": "2026-11-04T06:11:33.261Z",
+      "data": {
+        "title": "VIGOR: Visual Gain Ordering for Hallucination Mitigation in Multimodal Discrete Diffusion Language Models",
+        "summary": "Multimodal discrete diffusion language models (dLLMs) generate responses through iterative mask prediction and offer a promising alternative to autoregressive large vision-language models. However, they still suffer from hallucination, producing outputs that are plausible under language priors but insufficiently grounded in the image. We argue that hallucination in multimodal dLLMs is not only a token prediction problem, but also a premature commitment problem: during iterative denoising, some masked positions are unmasked too early because their confidence is driven more by language priors than by visual evidence, and these early commitments can bias later generation. To address this issue, we propose Visual Gain Ordering (VIGOR), a training-free and plug-and-play inference strategy that reorders masked positions according to counterfactual visual evidence. At each denoising step, VIGOR compares the confidence of each candidate token under the original image-conditioned pass and an additional visual-ablation pass, and prioritizes positions whose predictions are more strongly supported by the image. Experiments on LLaDA-V and Lumina-DiMOO show that VIGOR consistently reduces hallucination and improves multimodal reasoning performance across benchmarks. Code is available at https://github.com/THU-BPM/Vigor.",
+        "authors": [
+          "Junzhe Chen",
+          "Tian Qin",
+          "Eugenie Shi",
+          "Tianshu Zhang",
+          "Qiang Ju",
+          "Lijie Wen"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CV"
+        ],
+        "submittedAt": "2026-11-03T15:28:11.000Z",
+        "updatedAt": "2026-11-03T15:28:11.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.05058",
+      "url": "https://arxiv.org/abs/2611.05058",
+      "collectedAt": "2026-11-04T06:11:33.261Z",
+      "data": {
+        "title": "Do Agentic Policies Need to Look at Every Step? Geometric Abstraction for Reasoning and Action",
+        "summary": "Recent multimodal language models can reason directly about robot scenes, but it is unclear whether they need to repeatedly reinterpret raw visual observations at every step of an interaction. We propose shifting routine spatial reasoning from images to text and symbols through a 3D geometric abstraction that is refreshed locally from observations and read directly by the language models. Specifically, our interface represents scene geometry via typed, evidence-aware symbolic references to object parts, grounds them from calibrated RGB-D, and returns compact textual checkpoints with metric residuals after each action. Symbolic task structure can thus be reused across decisions while metric values are rebound to the current scene, with direct visual reasoning invoked only on demand. Across offline policy synthesis and continuous online execution, reasoning over grounded text and symbols improves multi-step manipulation completion while substantially reducing repeated multimodal queries, positioning explicit geometric state as an effective substrate for agentic robot policies.",
+        "authors": [
+          "Yihang Liu",
+          "Yiming Chen",
+          "Mingzhe Zheng"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CV",
+          "cs.RO"
+        ],
+        "submittedAt": "2026-11-03T15:22:46.000Z",
+        "updatedAt": "2026-11-03T15:22:46.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.05055",
+      "url": "https://arxiv.org/abs/2611.05055",
+      "collectedAt": "2026-11-04T06:11:33.261Z",
+      "data": {
+        "title": "Ablating Design Choices for Protein Ensemble Generators Across Structural Regimes",
+        "summary": "Generative models of protein conformational ensembles inherit much of their design from structure prediction for folded proteins. Ordered and disordered proteins, however, occupy distinct structural regimes, and we investigate how design choices hold up across them. Using a minimal C$α$ flow-matching model, we ablate choices of architecture, sequence conditioning, rigid-body alignment and training source, and evaluate each variant against experimental SAXS and NMR chemical-shift data partitioned into ordered, disordered, multi-domain and transitional proteins. Mixture-of-experts routing, a static pair representation and a disorder probe have no detectable effect, a smaller protein language model performs worse on ordered proteins but not on disordered ones, and alignment in the loss degrades agreement with SAXS. Replacing coarse-grained simulations of disordered proteins with fragment-assembled ensembles improves agreement with chemical shifts at a cost to SAXS, while an equal mixture of the two keeps most of the gain at a smaller cost. This points to the training data, rather than the architecture, as the main constraint.",
+        "authors": [
+          "Eoin Quinn",
+          "Oliver Bent"
+        ],
+        "categories": [
+          "cs.LG",
+          "q-bio.BM"
+        ],
+        "submittedAt": "2026-11-03T15:20:50.000Z",
+        "updatedAt": "2026-11-03T15:20:50.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.05039",
+      "url": "https://arxiv.org/abs/2611.05039",
+      "collectedAt": "2026-11-04T06:11:33.261Z",
+      "data": {
+        "title": "ALBI: LLM-Guided Inductive Logic Programming via Iterative Generate-Test-Constrain Refineme",
+        "summary": "We introduce ALBI (Agent for Learning By Induction), a neuro-symbolic ILP framework that replaces the ASP-based hypothesis generator in the Learning from Failures (LFF) paradigm with a Large Language Model (LLM), while retaining SWI-Prolog as a formal verifier. ALBI implements an iterative generate-test-constrain loop: the LLM proposes candidate hypotheses from structured prompts; Prolog tests each candidate; and diagnostic feedback drives refinement. We further introduce semantic anonymization, a metamorphic testing methodology, to distinguish structural symbolic induction from surface-level pattern matching on predicate names. Experiments on 30 standard ILP benchmarks show that ALBI achieves 100% success across three frontier LLMs (Gemini 3.1 Pro, GPT 5.4 Pro, Claude Opus 4.6), matching Popper while requiring only 1.4-1.7 iterations on average. Under anonymization, all models maintain 100% success with a moderate iteration increase (1.36-1.67 times), providing evidence of robust symbolic reasoning.",
+        "authors": [
+          "Aboubaker Seddiq Benterki",
+          "Jüri Vain",
+          "Gert Kanter",
+          "Leelo Aino Jürgenstein"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.SC"
+        ],
+        "submittedAt": "2026-11-03T15:11:41.000Z",
+        "updatedAt": "2026-11-03T15:11:41.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.05036",
+      "url": "https://arxiv.org/abs/2611.05036",
+      "collectedAt": "2026-11-04T06:11:33.261Z",
+      "data": {
+        "title": "ToolSpace: Scaling Tool-Centric Environment Synthesis for Long-Horizon Agents",
+        "summary": "Large language models are deployed as long-horizon agents that compose diverse tools across MCP services into executable workflows. Existing MCP environment-scaling methods are data-centric: they first synthesize a database and scenario, then derive tools and tasks from them. As a result, tool interfaces may not match real ones, tool compositions are not grounded in execution, and tasks rarely span more than one environment. We propose ToolSpace, a tool-centric framework that reverses this order. ToolSpace mines data, state, and retry dependencies from adjacent calls in execution traces of real MCP services and open agent corpora, using deterministic rules rather than LLM judgment, and clusters the resulting weighted tool-composition graph into environments. Databases are synthesized only for state-mutating environments, while query and stateless tools replay recorded returns. ToolSpace then performs state-aware random walks with rollback and decompiles each chain into a natural-language task with assertion-based checks, keeping only samples that replay successfully from the initial state. Applied to AutomationBench and tau3-Bench Banking, the pipeline produces harder Pro versions on which 7 frontier models drop by up to 38.2 points. Across seven long-horizon tool-use benchmarks, ToolSpace raises Qwen3.6-35B-A3B from 23.0 to 41.0 average score (43.2 with RL) and GLM-5.2 from 44.6 to 56.6, on par with Claude Opus 5. Ablations show that execution-witnessed edges clearly outperform LLM-judged ones, and performance keeps improving with data and environment scale.",
+        "authors": [
+          "Guanting Dong",
+          "Zhichao Sun",
+          "Xinyu Yang",
+          "Rui Wang",
+          "Xin Deng",
+          "Jiajie Jin",
+          "Zhixiong Yang",
+          "Junhao Huang",
+          "Han Han",
+          "Mingyu Ma",
+          "Xiaotao Wang",
+          "Yuyang Hu",
+          "Xiaoshuai Song",
+          "Xiaoxi Li",
+          "Jiejun Tan",
+          "Zhecan Wang",
+          "Shihan Dou",
+          "Honglin Guo",
+          "Zhiheng Xi",
+          "Tao Gui",
+          "Tao Ji",
+          "Qi Zhang",
+          "Yutao Zhu",
+          "Ji-Rong Wen",
+          "Zhicheng Dou"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "submittedAt": "2026-11-03T15:09:01.000Z",
+        "updatedAt": "2026-11-03T15:09:01.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.05033",
+      "url": "https://arxiv.org/abs/2611.05033",
+      "collectedAt": "2026-11-04T06:11:33.261Z",
+      "data": {
+        "title": "Whose Effect Is It? How Objectives Inflate Learned Subspace Interventions",
+        "summary": "Interpretability often locates concepts by copying part of a language model's state from one input into another (activation patching). A larger output change counts as stronger evidence that this part carries the concept. Methods that learn which part to copy often change the output more than the whole state does. By that reading, learned parts isolate the concept more cleanly. Yet the whole contains the part. So whose effect is this excess, the network's or the method's? Copying the whole state learns nothing, so it shows what the network produces. We prove that, to first order, the effects of orthogonal parts add up to that of the whole. A part therefore exceeds the whole exactly when the rest moves the output back, which does not require isolating the concept more cleanly. Objectives that reward a larger effect select such parts. Distributed alignment search with cross-entropy, for example, exceeds the whole-state copy just before the output on almost all tasks, and inside the network at most sites. In both, changing only its objective to target what the network produces removes most of the excess. It therefore comes largely from the objective, so a larger learned effect alone is not stronger evidence.",
+        "authors": [
+          "Toygar Tanyel",
+          "Serkan Ayvaz"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "submittedAt": "2026-11-03T15:06:46.000Z",
+        "updatedAt": "2026-11-03T15:06:46.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.05029",
+      "url": "https://arxiv.org/abs/2611.05029",
+      "collectedAt": "2026-11-04T06:11:33.261Z",
+      "data": {
+        "title": "DRAP: Dynamics-Risk Adaptive Plasticity for Continual Learning in Physical AI",
+        "summary": "Continual learning in physical AI differs from conventional continual learning because small per-step policy errors can accumulate over a trajectory. Each deviation may move the agent outside the training distribution, increase subsequent prediction errors, and ultimately cause closed-loop task failure. This work introduces Dynamics-Risk Adaptive Plasticity (DRAP), a replay-free method that estimates the historical importance of adaptable model tensors from sample-level action gradients weighted by local trajectory-amplification risk. A ridge-regularized local linear model is fitted to expert state-action transitions, and the largest singular value of its state-transition matrix provides a policy-independent, Lyapunov-inspired estimate of one-step perturbation amplification. After each task, risk-weighted squared gradients are accumulated in a tensor-level importance memory. During subsequent tasks, DRAP uses normalized cumulative importance to scale the effective AdamW learning rate of each tensor, immediately reducing the plasticity of components that supported previous behavior at dynamically sensitive trajectory points. We instantiate DRAP on a fixed KappaTune-selected subnetwork of OpenVLA and evaluate replay-free sequential adaptation across the LIBERO Spatial, Object, and Goal suites. Compared with standard AdamW fine-tuning and EWC, the results show substantially improved retention of previously learned behaviors while preserving strong new-suite acquisition.",
+        "authors": [
+          "Oswaldo Ludwig"
+        ],
+        "categories": [
+          "cs.LG",
+          "cs.RO"
+        ],
+        "submittedAt": "2026-11-03T15:05:06.000Z",
+        "updatedAt": "2026-11-03T15:05:06.000Z"
+      }
+    }
+  ]
+}
