@@ -1,0 +1,472 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "source": "arxiv",
+  "items": [
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.06687",
+      "url": "https://arxiv.org/abs/2611.06687",
+      "collectedAt": "2026-11-05T06:39:46.167Z",
+      "data": {
+        "title": "LifeVal: Evaluating AI Model Performance on Personalized Agentic Consumer Tasks",
+        "summary": "We introduce LifeVal, a benchmark evaluating AI model performance on personalized agentic consumer tasks. LifeVal covers the most valuable life tasks that a personalized digital superassistant could automate, representing over 1.7 trillion US dollars in annual willingness-to-pay across 148 consumer task categories (e.g., managing finances, moving apartments, searching for a job, finding childcare). To construct our activity distribution, we conducted a new survey of willingness-to-pay for a digital superassistant across a demographically representative sample of over 3,800 consumers, cross-referencing our results against the American Time Use Survey (Bureau of Labor Statistics, 2025) and the Multinational Time Use Study (Fisher et al., 2025). For the most valuable consumer activities, we recruited task creators to create AI evaluation tasks personalized using real ChatGPT conversations and memories, reference files, and personal context. Task creators had to pass our expertise threshold (including personally completing the task multiple times and seeing the results through in their real lives for over a year) and also write a rubric, ensuring that our evaluation measured the best personalized completion for that task. All tasks had to pass at least three rounds of human quality-control before acceptance into our final evaluation sets.",
+        "authors": [
+          "Jenny Yang",
+          "Elizabeth Proehl",
+          "Anjan Bharadwaj",
+          "Emily Fan",
+          "Charlotte Cole",
+          "James Kim",
+          "Noam Brown",
+          "Phoebe Thacker",
+          "Amelia Glaese",
+          "Tejal Patwardhan"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-11-04T15:55:20.000Z",
+        "updatedAt": "2026-11-04T15:55:20.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.06682",
+      "url": "https://arxiv.org/abs/2611.06682",
+      "collectedAt": "2026-11-05T06:39:46.167Z",
+      "data": {
+        "title": "SecureGARD: Dynamic Ontology-Guided Governance for Secure Tool-Using LLM Agents",
+        "summary": "Tool-using large language model (LLM) agents translate model outputs into consequential actions, turning indirect prompt injection into an execution-security problem. Existing defenses constrain tool calls, trajectories, or information flows, but often leave action semantics, state dependencies, and evidence relations implicit, limiting generalization across heterogeneous tools and complicating safe updates. We present \\ours{}, a dynamic ontology-guided governance framework. \\ours{} grounds heterogeneous calls in a shared semantic representation and combines an executable ontology with episode-level task state to derive deterministic ready, waiting, and forbidden decisions. A waiting decision identifies an unmet but recoverable obligation, enabling bounded replanning without expanding the agent's authorization boundary. \\ours{} evolves its ontology offline from verified training executions. An offline LLM proposes instance-independent action--state axioms, which are accepted only if they address ontology errors exposed by training failures, preserve logical consistency and protected entailments, and pass held-out validation before the ontology is frozen. We evaluate \\ours{} on AgentDojo, ASB, and AgentDyn under benign and indirect prompt-injection settings. \\ours{} achieves a 0\\% attack success rate (ASR) across all three benchmarks while improving task utility under attack compared with existing baselines. These results show that explicit semantic governance can strengthen execution security without indiscriminate blocking.",
+        "authors": [
+          "Guoqin Xiong",
+          "Shengtao Wen",
+          "Xiang Chen",
+          "Xinyi Zeng",
+          "Zhaoxin Fan",
+          "Wei Ye",
+          "Xiaofeng Cao",
+          "Sheng-Jun Huang"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-04T15:51:30.000Z",
+        "updatedAt": "2026-11-04T15:51:30.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.06674",
+      "url": "https://arxiv.org/abs/2611.06674",
+      "collectedAt": "2026-11-05T06:39:46.167Z",
+      "data": {
+        "title": "AgentTrustCI: Build-Time Policy, Grounding, and Trajectory Tests for Java LLM Agents",
+        "summary": "Infrastructure security does not establish whether an LLM agent selected an allowed tool, grounded its answer in tool output, or followed a required workflow. AgentTrustCI is a Java/JUnit 5 framework that expresses these application-layer expectations as policy, grounding, and trajectory checks over recorded traces. A deterministic replay implementation supports repeatable build-time tests; a judge interface provides an extension point for optional semantic evaluation. On 55 synthetic cases spanning seven enterprise domains, the full pipeline correctly classifies all 30 injected faults and 25 passing controls, including ten non-trivial controls, and misses none of 12 designated critical cases. Each single-layer configuration correctly classifies 35 cases because the corpus deliberately isolates ten faults per layer. A grounded answer obtained through a disallowed sequence illustrates the additional coverage of trajectory checks. Repeated measurements quantify validator execution separately from process startup and reporting. These results establish coverage of the authored regression suite, not production accuracy. We describe a production-trace validation protocol, optional LLM-judge integration, and maintenance of expectations as workflows evolve. The contribution is a practical pattern for expressing behavioral contracts within an existing Java release pipeline.",
+        "authors": [
+          "Sachin Gupta"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.SE"
+        ],
+        "submittedAt": "2026-11-04T15:46:11.000Z",
+        "updatedAt": "2026-11-04T15:46:11.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.06662",
+      "url": "https://arxiv.org/abs/2611.06662",
+      "collectedAt": "2026-11-05T06:39:46.167Z",
+      "data": {
+        "title": "Where Search Agents Go Off the Rails: Graph-Grounded Step-Level Verification",
+        "summary": "Search-augmented reasoning systems can reach correct answers while making errors in intermediate steps. Reliable auditing must check whether evidence $D$ covers the question $Q$, reasoning $T$ addresses $Q$, and $T$ is grounded in $D$. We introduce GraphRail, which represents requirements, evidence, and reasoning as structured claims and compares them without a generative judge or gold answer. Across three multi-hop QA benchmarks and three reasoning frameworks, GraphRail improves error recall over generative verifiers while remaining stable under stochastic extraction. Its diagnoses can also guide online reasoning, providing a traceable way to detect and correct intermediate errors.",
+        "authors": [
+          "Hyeseo Jeon",
+          "Seonho Yoo",
+          "Jay-Yoon Lee"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-11-04T15:37:36.000Z",
+        "updatedAt": "2026-11-04T15:37:36.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.06639",
+      "url": "https://arxiv.org/abs/2611.06639",
+      "collectedAt": "2026-11-05T06:39:46.167Z",
+      "data": {
+        "title": "Replicability, Reproducibility, and Robustness in Political and Social Science Research with Large Language Models",
+        "summary": "This chapter addresses the central reproducibility problem of research with large language models. LLM output is probabilistic and varies across models and versions, which can have significant effects on downstream statistical results. The chapter distinguishes between replicability, reproducibility, and robustness, and proposes a probabilistic standard based on the distribution of results, not identical outputs. It introduces a standardized prompt script, tests within-model variation for encoders and decoders, and develops error-structure analysis to diagnose where models err and whether their errors align. Using three datasets, the chapter shows that measurement choice can reverse the sign of downstream regression coefficients. Existing design-based corrections with gold-labeled subsamples restore validity, but come at the cost of estimate precision. The main contribution of the chapter is a stacked ensemble of open-weight models that improves precision in the correction step while retaining estimate validity.",
+        "authors": [
+          "Joan C. Timoneda",
+          "Sebastián Vallejo Vera"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.CY"
+        ],
+        "submittedAt": "2026-11-04T15:20:03.000Z",
+        "updatedAt": "2026-11-04T15:20:03.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.06631",
+      "url": "https://arxiv.org/abs/2611.06631",
+      "collectedAt": "2026-11-05T06:39:46.167Z",
+      "data": {
+        "title": "Trick-or-Treat: Adversarial Evaluation of Multimodal Medical Reasoning with Synthetic Images",
+        "summary": "We used medical image synthesis to create a challenging multimodal evaluation framework that exposes hallucination behaviors in frontier models. Evaluating multimodal reasoning has historically been difficult because existing medical datasets rarely pair different image modalities, such as radiographs and external clinical photographs. To address this gap, we introduce Trick-or-Treat, an adversarial multimodal medical benchmark that pairs real chest radiographs with synthetic clinical photographs to challenge models' cross-modal reasoning. For each of a wide range of conditions, we created two pairs of images, where the pairs share a single chest radiograph but contain different external photographs. In matched pairs, the chest radiograph and photograph both contain findings suggesting the same disease (e.g., varicella pneumonia suggested by lung opacities and crusted skin lesions seen in chickenpox). In mismatched pairs, the photograph depicts an alternative clinical finding that would not lead to the same unifying diagnosis (e.g. replacing crusted skin lesions with ordinary acne). Synthetic photograph generation allows clinical findings to be varied while the person's features and photographic setting stay consistent, reducing confounding. In an investigation of three frontier models, we found that models hallucinated clinically significant photograph findings in 45-57.5% of mismatched pairs, up from 25-37.5% for the same photographs shown alone. When faced with mismatched pairs, models tended to ignore mismatches and instead hallucinated findings that better matched the radiograph (e.g. misreading acne as crusted skin lesions to justify diagnosing chickenpox). Trick-or-Treat both demonstrates concerning error pattern in frontier models' medical reasoning and provides",
+        "authors": [
+          "Oishi Banerjee",
+          "Eujin Lee",
+          "Sung Eun Kim",
+          "Alexandra N. Willauer",
+          "Christine Y. Zhou",
+          "Zhizhou Yang",
+          "Pranav Rajpurkar"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CV"
+        ],
+        "submittedAt": "2026-11-04T15:13:35.000Z",
+        "updatedAt": "2026-11-04T15:13:35.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.06628",
+      "url": "https://arxiv.org/abs/2611.06628",
+      "collectedAt": "2026-11-05T06:39:46.167Z",
+      "data": {
+        "title": "From Certified Pairs to a Certified Hub: Reasoner-Checked Crosswalks for the Information Exchange Standard",
+        "summary": "A national digital twin was conceived as an ecosystem of twins connected through mappings to a common foundation, but the roadmap that promises to confirm those mappings are valid never says what valid means. We give the test a precise form, coherence and conservativity of the merged ontology, borrowed from logic-based alignment repair, and apply it to the Information Exchange Standard (IES), first pair by pair and then to whole hubs. Crosswalks from IES into thirteen ontologies across seven sector groups, anchored on the building ontologies BOT, Brick, and SAREF4BLDG, pass through separate stages of matching, human review, certification of each SKOS correspondence against the two class hierarchies, and reasoning with HermiT. Pair by pair, the stages catch different failures: certification alone removed all 526 conservativity violations of the raw crosswalks, review alone left 73, and together they made eleven of twelve overlapping pairs coherent and conservative. Pairwise certification does not compose. Merging the three certified building crosswalks into one hub made five Brick classes unsatisfiable, through a homonym between the IES and Brick notions of a floor that only BOT's disjointness axioms expose; rejecting that one row gave a coherent and conservative hub that entails 290 cross-ontology links nobody wrote down. The core hub is inconsistent before any crosswalk is added, because two published standards, the Open Energy Ontology and BFO 2020, contradict each other; with either one left out it is coherent and conservative. A hub, not a pair, is the unit an ecosystem of twins has to certify.",
+        "authors": [
+          "Fabio Rovai"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.DB",
+          "cs.LO"
+        ],
+        "submittedAt": "2026-11-04T15:12:05.000Z",
+        "updatedAt": "2026-11-04T15:12:05.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.06627",
+      "url": "https://arxiv.org/abs/2611.06627",
+      "collectedAt": "2026-11-05T06:39:46.167Z",
+      "data": {
+        "title": "Interactive World Simulation with Cosmos for Physical AI",
+        "summary": "We present a shared framework that adapts Cosmos world foundation models for real-time interactive world simulation in Physical AI. By streaming visual observations in response to actions and scene controls, the framework enables users and embodied agents to interact with evolving virtual environments. It supports both predicting the visual consequences of actions and generating observations from physical state maintained by an external simulator. We demonstrate this approach across camera navigation and robot manipulation, controllable video transfer, and multi-view autonomous vehicle (AV) simulation. These examples provide a shared foundation for developing interactive virtual environments for Physical AI training and evaluation. Our code and model checkpoints are available at https://github.com/nvidia/cosmos and https://huggingface.co/collections/nvidia/cosmos3-examples. The project website is available at https://research.nvidia.com/labs/cosmos-lab/cosmos-simulation.",
+        "authors": [
+          "NVIDIA",
+          ":",
+          "Anis Ahmad",
+          "Jon Allen",
+          "Malik Aqeel Anwar",
+          "Jesse Archer",
+          "Maciej Bala",
+          "Piotr Barejko",
+          "Aarti Basant",
+          "Dan Blick",
+          "Taras Bolzhelarskyi",
+          "Henry Che",
+          "Jin Chen",
+          "Yukang Chen",
+          "Tae Eun Choe",
+          "Yuzhu Dong",
+          "Nat Duca",
+          "Liang Feng",
+          "Francesco Ferroni",
+          "Xiao Fu",
+          "Mohit Gambhir",
+          "Vivek Goel",
+          "Rony Goldenthal",
+          "Aryaman Gupta",
+          "Ali Hassani",
+          "Nathan Hayes-Roth",
+          "Yong He",
+          "Michael Honke",
+          "Shengyu Huang",
+          "Wei Huang"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CV",
+          "cs.LG",
+          "cs.RO"
+        ],
+        "submittedAt": "2026-11-04T15:11:04.000Z",
+        "updatedAt": "2026-11-04T15:11:04.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.06606",
+      "url": "https://arxiv.org/abs/2611.06606",
+      "collectedAt": "2026-11-05T06:39:46.167Z",
+      "data": {
+        "title": "Verifier-Guided Self-Consistency: Test-Time Reasoning with Imperfect Generators and Verifiers",
+        "summary": "Large language models can solve many multi-step reasoning problems, but their reasoning remains brittle: plausible intermediate steps often lead to incorrect answers. Improving reasoning at test time requires balancing two imperfect signals: the generator, which provides diversity, and the verifier, which guides correctness. Existing approaches largely favor one side of this tradeoff. Verifier-weighted voting relies on trajectories sampled from the generator and cannot steer generation toward correct ones. By contrast, beam-style verifier-guided search can steer generation, but may over-concentrate on narrow trajectory sets and amplify verifier errors. We propose Verifier-Guided Self-Consistency (VGSC), a stochastic decoding framework that combines step-level correctness and future-outcome estimates to guide reasoning during generation. VGSC repeatedly proposes candidate next steps from the base language model and uses both signals in an acceptance/resampling procedure, while maintaining multiple trajectories for final answer-level self-consistency. We provide a probabilistic interpretation of VGSC as approximate sampling from a verifier-tilted trajectory distribution. Across multiple reasoning benchmarks, generator models, and verifier families, VGSC achieves higher average accuracy than representative baselines.",
+        "authors": [
+          "Ekaterina Fadeeva",
+          "Xueyan Li",
+          "Mrinmaya Sachan",
+          "Maxim Panov"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-04T14:57:04.000Z",
+        "updatedAt": "2026-11-04T14:57:04.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.06603",
+      "url": "https://arxiv.org/abs/2611.06603",
+      "collectedAt": "2026-11-05T06:39:46.167Z",
+      "data": {
+        "title": "Time-Division Multiplexing: The Operational Rhythm and Temporal Organization Layer of Digital Life",
+        "summary": "Continual agents must handle urgent interaction while retaining alternatives, replaying errors, and committing safe long-term changes. A previous digital-life framework distinguishes online (busy) and offline (idle) channels, but leaves open whether these are separate programs or phases of a common process and how their operations should be ordered. Motivated by recent observations of rapidly alternating perceptual representations in primate cortex, we develop a temporal organization layer with phase-tagged micro-epochs, an observable duty cycle, independent content and resource controls, and three nested clocks separating candidate exploration from durable commitment. We give a projected duty-cycle update, state its deterministic descent guarantee and the additional noise term required for a stochastic guarantee, and specify coupled busy/idle execution contracts. Five synthetic experiments (64 seeds each) examine descent and noise, objective misalignment, gain asymmetry, resource coupling, and dropped replay logs. In the gain/noise model the best tested gain ratio is 1.55; decoupled scheduling yields 26.6% versus 11.1% success on a constructed urgent/high-load subset. A frozen-backbone Qwen3-8B prototype further checks orchestration, but its proxy outcomes are not task-benchmark evidence. The results establish a testable scheduling design and identify its conditions of validity, not machine consciousness or general-purpose agent superiority.",
+        "authors": [
+          "Haibin Tong",
+          "Luming Guo",
+          "Nana Cui",
+          "Jiang Yu"
+        ],
+        "categories": [
+          "cs.AI",
+          "q-bio.NC"
+        ],
+        "submittedAt": "2026-11-04T14:54:53.000Z",
+        "updatedAt": "2026-11-04T14:54:53.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.06598",
+      "url": "https://arxiv.org/abs/2611.06598",
+      "collectedAt": "2026-11-05T06:39:46.167Z",
+      "data": {
+        "title": "The Behavioral Rate of Fine-Tuning: Compression as a Measure of Useful Information",
+        "summary": "Low-Rank Adaptation (LoRA) adapts a frozen language model through a compact learned update, making it a natural setting for asking how much information fine-tuning needs to write. Yet adapter rank, parameter count, or numerical reconstruction error do not directly tell us how many bits are required to preserve the acquired behavior. We therefore define an operational behavioral rate $R^\\star$ as the smallest serialized size of a compressed adapter that, once reloaded into the frozen base model, retains a fixed fraction of its held-out fine-tuning gain. Across LoRA fine-tuning experiments, this rate increases with distinct training content at fixed optimization budgets, but is not determined by intuitive metrics like source description length, fine-tuning gain, or weight-space reconstruction error. Most importantly, the same datasets exhibit substantially different, and even reordered, rates across frozen base models, showing that fine-tuning compressibility is a property of the dataset--receiver pair rather than of the dataset alone. However, we show that correction spectra measured on the data are able to rank these rates within a receiver. Finally, we study a striking noise-reducing effect of compression: adapters trained on deliberately corrupted datasets fall far below the frozen model, yet after compression score above it (23.7% to 82.9% on GSM8K, against 77.6% for frozen Qwen2.5-7B), consistently across tested families and sizes. The damage is unevenly concentrated in the adapter's leading singular directions, which compression appears to filter. Away from its training task, the compressed corrupted adapter also generalizes better than a clean fine-tune: on harder math it retains 97% of base accuracy, versus 44% for the clean adapter.",
+        "authors": [
+          "Joey David",
+          "Paul Caillon",
+          "Alexandre Allauzen"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-04T14:52:11.000Z",
+        "updatedAt": "2026-11-04T14:52:11.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.06585",
+      "url": "https://arxiv.org/abs/2611.06585",
+      "collectedAt": "2026-11-05T06:39:46.167Z",
+      "data": {
+        "title": "Signed, Sealed, Leaked: Trust Beyond Signature for MCP Toolchains",
+        "summary": "AI agents rely on third-party tools, such as Model Context Protocol (MCP) servers, whose publishers can be authenticated and whose execution can be restricted by runtime security policies. Yet authenticity does not guarantee benign behaviour: a legitimately signed tool may perform its advertised function while concealing malicious code that leaks confidential information. We demonstrate this trust failure with a signed MCP tool that embeds sensitive data in requests to a policy-allowed destination. Meta's MCPGuard-Dynamic, a state-of-the-art runtime defence, blocks a direct exfiltration attempt in the same run, yet fails to prevent this attack in every trial. We introduce germline execution, which limits information disclosure without inspecting or trusting tool implementations. Each tool invocation runs in ephemeral copies forked from a data-free germline process, each receiving only information authorised for its destination. Even if malicious code executes, what it can disclose is bounded by the data available to its copy. Under explicit assumptions on copy confinement and a data-free germline, we prove sink noninterference for every signed release and, for releases deterministic within our replay model, show that a verified witness establishes a flow violation. Across 153 attack runs, no unauthorised disclosure was detected under germline execution, compared with 5.9-74.5% of runs under baseline defences and an ablation. Invocations served by a single copy completed in 10-49 ms, 2-28x faster than restarting the tool for every invocation, the conventional way to clear state. These results show that data-isolated execution protects agent toolchains against malicious code concealed within authenticated software.",
+        "authors": [
+          "Yichiet Aun",
+          "Mohammed A. Alhartomi",
+          "Jing Jie Tan",
+          "Waqas Nadeem",
+          "Adeb Salh",
+          "Shankar Karuppayah",
+          "Sin Chee Tan"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CR",
+          "cs.MA"
+        ],
+        "submittedAt": "2026-11-04T14:40:32.000Z",
+        "updatedAt": "2026-11-04T14:40:32.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.06554",
+      "url": "https://arxiv.org/abs/2611.06554",
+      "collectedAt": "2026-11-05T06:39:46.167Z",
+      "data": {
+        "title": "RAGAM-AI: A Hybrid Reinforcement Learning based Agentic approach powered by Generative AI for Edge Resource Management",
+        "summary": "Resource management for distributed edge networks hosting different services has been handled efficiently using Reinforcement learning (RL). Reward generalization in complex workflows is still an open issue within the RL realm. Therefore, this work proposes RAGAM-AI, a hybrid framework that combines the capabilities of RL algorithms and Generative-AI (Gen-AI) for powering an Agentic AI workflow that optimizes resource allocation at the Multi-access Edge Computing (MEC) units. This framework further resolves the reward generalization issue by utilizing Large Language Model (LLM) for feedback. A Multi- Agent Soft-Actor Critic (MASAC) using MathΣtral as a reward oracle is implemented for managing resource allocations at the MEC. RAGAM-AI interprets system state information and evaluates multi-objective trade-offs guiding the resource orchestration loop over distributed edge server agents. The complexity of the framework is further brought down by incorporating surrogate reward model. The overall performance is evaluated against the single agent SAC, REINFORCE and random policies for benchmarking. On using RAGAM-AI, lower allocation deviations for CPU, memory and bandwidth resources are reported while minimizing the latency and data rate costs. A scalable AI as a feedback (AIAF) solution optimizing network resources with significant performance improvement is thus presented.",
+        "authors": [
+          "Shreya K. Chari",
+          "John S. Vardakas",
+          "Kostas Ramantas",
+          "Christos Verikoukis"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-04T14:18:07.000Z",
+        "updatedAt": "2026-11-04T14:18:07.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.06545",
+      "url": "https://arxiv.org/abs/2611.06545",
+      "collectedAt": "2026-11-05T06:39:46.167Z",
+      "data": {
+        "title": "When Do Summaries Become Instructions? Unsupported Policy in LLM Agents' Self-Written Handoff Summaries",
+        "summary": "Long-running LLM agents compact their context, replacing most history with a summary. We ask whether handoff summaries state permissions or requirements the record does not support, whether such sentences change what the next instance (the successor) does, and where they come from. Synthetic tool-use tasks carry a ground-truth permission ledger; same-snapshot replay reruns the successor with those whole sentences replaced by neutral filler. Two AI readers, reading only rule-flagged held-out summaries, confirmed unsupported restrictions in 1.2% and 2.4% of all readable summaries from two open-weight models, and unsupported authorizations in 0.1% and 1.3%. For restrictions, a pre-specified replay test was not significant (p = 0.58); a follow-up, planned after it, found a fragile effect (p = 0.027). Neutralizing false approvals cut unauthorized actions from 24 to 7 of 120 held-out runs (post hoc; later set: 17 to 11 of 48). Most development restrictions followed the agent's earlier reasoning that an action needs approval (post hoc). In pre-specified tests, replacing the system prompt's \"Some actions need approval.\" with one saying where requirements come from cut unsupported restrictions from 5.0% to 1.8% of development summaries and, on held-out templates, from 1.8% to 0.3% (both p &lt; 10^-9), while requests for approvals the ledger requires barely changed. Code and data: https://github.com/Chuw1/handoff-audit",
+        "authors": [
+          "Wenhui Chu"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "submittedAt": "2026-11-04T14:12:09.000Z",
+        "updatedAt": "2026-11-04T14:12:09.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.06543",
+      "url": "https://arxiv.org/abs/2611.06543",
+      "collectedAt": "2026-11-05T06:39:46.167Z",
+      "data": {
+        "title": "Using Experience Twice: Dynamic Process Rubrics for Privileged Token-Level Credit Assignment",
+        "summary": "Agent trajectories often contain both successful decisions and failed attempts, yet optimization with sparse trajectory-level rewards struggles to identify which critical decisions should be reinforced or suppressed. We observe that meaningful distinctions among on-policy trajectories can be distilled into natural-language process rubrics and used as process supervision signals. Based on this insight, we propose Online Rubric Self-Distillation (ORSD), which leverages self-derived process rubrics for dense token-level supervision, thereby augmenting outcome-centric reinforcement learning. Specifically, the current policy independently generates multiple rubric bundles at each step according to the same group of trajectories, extracting candidate process rubrics from cross-trajectory behavioral differences. A frozen verifier then evaluates all rubric items against each trajectory in the group, and selects one candidate bundle based on bundle-level alignment between rubric satisfaction and task success. ORSD treats the selected rubric bundle as privileged information during training, then compares the log-likelihoods of the original tokens with and without the rubric. The resulting likelihood gap provides token-specific process credit, which is added to the original trajectory-level GRPO advantage through additive advantage shaping. ORSD thus bridges trajectory-level outcome supervision and fine-grained process supervision, enabling token-level credit assignment using process signals. Extensive experiments on ALFWorld and WebShop show that ORSD accelerates policy improvement and boosts final task performance for both Qwen3-1.7B and Qwen3-4B under the same environment-interaction budget. Our code is available at https://github.com/AnnaXChun/ORSD.",
+        "authors": [
+          "Shumao Wu",
+          "Kongcheng Zhang",
+          "Jianqiang Huang",
+          "Baisheng Lai"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-11-04T14:11:53.000Z",
+        "updatedAt": "2026-11-04T14:11:53.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.06542",
+      "url": "https://arxiv.org/abs/2611.06542",
+      "collectedAt": "2026-11-05T06:39:46.167Z",
+      "data": {
+        "title": "EvoOPD: Evolving Privileged Information Strategies for Black-Box On-Policy Distillation",
+        "summary": "Proprietary language models exhibit strong reasoning and coding capabilities, but their output distributions are inaccessible, making fine-grained distillation methods that rely on teacher logits difficult to apply directly to black-box models. We observe that rich textual feedback from a black-box teacher can be treated as privileged information (PI) and converted, through a PI-conditioned privileged teacher, into dense supervision signals on the student's own trajectories. However, what PI should be acquired from the teacher to most effectively support student learning remains unclear. PI strategies that differ in where they focus, what information they request, and how much detail they provide can have substantially different effects on the current student, and their relative effectiveness can further change as training progresses. Based on this observation, we propose Evolving Privileged Information Strategies for Black-Box On-Policy Distillation (EvoOPD), which treats PI acquisition itself as an optimization problem and maintains a PI Strategy Bank that evolves with the student state. EvoOPD uses the measured repair utility of PI on the current student to adapt the focus, information type, and granularity of teacher feedback, allowing the acquired information to continually match the student's learning needs. We systematically evaluate EvoOPD on mathematical reasoning and code generation with Qwen3-1.7B, 4B, and 8B students. EvoOPD achieves the best overall performance in all six model-task settings, improving over the strongest baseline in each setting by an average of 2.14 percentage points in mathematics and 1.30 points in code. Further analysis shows that the relative effectiveness of PI acquisition strategies changes with student state, making a fixed strategy",
+        "authors": [
+          "Ximo Zhu",
+          "Ruiqi Liu",
+          "Yi Han",
+          "Zhengan Wu",
+          "Gengsheng Li",
+          "ZiAn Wang",
+          "Zhu Yuantian",
+          "Jin Jiang",
+          "Wenhao Wang"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-04T14:11:19.000Z",
+        "updatedAt": "2026-11-04T14:11:19.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.06518",
+      "url": "https://arxiv.org/abs/2611.06518",
+      "collectedAt": "2026-11-05T06:39:46.167Z",
+      "data": {
+        "title": "EmoReward: Self-Evolving Reward Calibration for Emotional Video Generation RL",
+        "summary": "Group Relative Policy Optimization (GRPO) has advanced generative model post-training in verifiable domains such as code and mathematics, but evaluating video quality, especially emotional expression, often depends on subjective aesthetics and has no uniquely correct target. Existing approaches typically rely on fixed rewards for visual quality, motion quality, and text alignment that poorly capture emotional intent and can invite reward hacking, while RLHF is difficult to scale and subject to individual aesthetic differences that complicate the calibration of facial, body motion, and chromatic cues across narrative contexts. We introduce EmoReward, a new self-evolving training mechanism that distills evidence reliability from reward traces collected during an actual training run to adaptively guide multi-reward weight allocation in subsequent training by determining which emotional evidence to trust and how much to weight it. EmoReward first plans specific grounding cues from the emotional prompt to guide evaluation, then uses heterogeneous signal primitives to score the generated video during the act stage. Reflective Reward Gating calibrates their contributions through instance-level gates for phase, face confidence, conflict, and subtlety, then renormalizes weights over the active set to produce the sample's fused reward. RewardMemory then estimates each primitive's reliability from rollout scores and outcomes within each emotional regime in the finished training run, then fixes bounded multipliers that calibrate fusion weights in the next training run without updating reward models. Experiments on HunyuanVideo 1.5 show improvements across multiple RL algorithms and compare EmoReward with other agentic reward methods under SAGE-GRPO. Ablations and transfer experimen",
+        "authors": [
+          "Mingzhe Zheng",
+          "Yue Wu",
+          "Jing Tan",
+          "Chang Zou",
+          "Dengyang Jiang",
+          "Zeyue Tian",
+          "Xuanhua He",
+          "Ryan Xu",
+          "Yunyang Ge",
+          "Sihui Ji",
+          "Yunlong Lin",
+          "Kaihang Pan",
+          "Hongru Yan",
+          "Sixiang Chen",
+          "Dianyi Wang",
+          "Julian Zhang",
+          "Weijie Kong",
+          "Changlin Li",
+          "Lanqing Guo",
+          "Zhao Zhong",
+          "Qifeng Chen",
+          "Harry Yang"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CV"
+        ],
+        "submittedAt": "2026-11-04T13:43:09.000Z",
+        "updatedAt": "2026-11-04T13:43:09.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.06508",
+      "url": "https://arxiv.org/abs/2611.06508",
+      "collectedAt": "2026-11-05T06:39:46.167Z",
+      "data": {
+        "title": "ElecLoad: Adaptive Electricity Load Forecasting Guided by Multiple Events",
+        "summary": "Accurate electricity load forecasting provides critical decision support for energy procurement, generation scheduling, and supply-demand balancing, contributing to the economic efficiency and operational reliability of power systems. However, future electricity demand can be affected by the complex interplay of multiple events described in Web notices, weather alerts, and event schedules. Their effects vary over time and can reinforce or offset one another, making electricity load difficult to forecast accurately. While existing methods can incorporate context as additional input, how to use the effects of multiple events and their interactions to guide the load forecasting process itself remains to be explored. To address this gap, we propose ElecLoad, a context-aware agent for multi-event electricity load forecasting that adaptively organizes the forecasting process. Specifically, we train ElecLoad to combine historical load with context to analyze each event's relevance to the target load, the timing of its effects, and potential interactions among events. Guided by this analysis, ElecLoad adaptively chooses to forecast the entire forecast horizon directly or to partition it into segments according to changes in event effects. When the horizon is partitioned, sub-agents independently generate initial forecasts for each segment. The main agent then reviews these forecasts, and the sub-agents perform selective refinement guided by its feedback. Experiments on multiple electricity load datasets show that ElecLoad achieves state-of-the-art performance in most evaluation scenarios. Code is available at https://github.com/zhjai/ElecLoad.",
+        "authors": [
+          "Huajian Zhang",
+          "Mingyue Cheng",
+          "Xingpeng Gao",
+          "Xiaoyu Tao",
+          "Zhiding Liu",
+          "Jiqian Yang",
+          "Zhi Li"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-04T13:38:13.000Z",
+        "updatedAt": "2026-11-04T13:38:13.000Z"
+      }
+    }
+  ]
+}
