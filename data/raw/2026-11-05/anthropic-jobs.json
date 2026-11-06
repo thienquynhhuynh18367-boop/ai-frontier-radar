@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "source": "anthropic-jobs",
+  "items": [
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5456581008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5456581008",
+      "collectedAt": "2026-11-06T06:35:49.278Z",
+      "data": {
+        "title": "Head of Southern Europe & MEA, Applied AI",
+        "location": "Paris, France",
+        "updatedAt": "2026-11-04T22:13:57.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5390890008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5390890008",
+      "collectedAt": "2026-11-06T06:35:49.278Z",
+      "data": {
+        "title": "Manager Applied AI Architecture, Healthcare & Life Sciences",
+        "location": "New York City, NY; San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-11-04T17:03:06.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5473079008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5473079008",
+      "collectedAt": "2026-11-06T06:35:49.278Z",
+      "data": {
+        "title": "Recruiter, Applied AI",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-11-04T16:58:18.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5096878008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5096878008",
+      "collectedAt": "2026-11-06T06:35:49.278Z",
+      "data": {
+        "title": "Research Product Manager, Labs",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-11-04T21:35:57.000Z"
+      }
+    }
+  ]
+}

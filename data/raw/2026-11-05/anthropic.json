@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "source": "anthropic",
+  "items": [
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/news/the-long-term-benefit-trust",
+      "url": "https://www.anthropic.com/news/the-long-term-benefit-trust",
+      "collectedAt": "2026-11-06T06:35:49.278Z",
+      "data": {
+        "lastmod": "2026-11-05T15:44:46.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/alignment-assessment-ukaisi",
+      "url": "https://www.anthropic.com/research/alignment-assessment-ukaisi",
+      "collectedAt": "2026-11-06T06:35:49.278Z",
+      "data": {
+        "lastmod": "2026-11-05T14:10:48.000Z"
+      }
+    }
+  ]
+}

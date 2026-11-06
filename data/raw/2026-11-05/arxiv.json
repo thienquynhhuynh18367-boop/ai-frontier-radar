@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "source": "arxiv",
+  "items": [
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.08196",
+      "url": "https://arxiv.org/abs/2611.08196",
+      "collectedAt": "2026-11-06T06:35:49.278Z",
+      "data": {
+        "title": "SMART: State-based Multi Agent Reasoning Traces for Verification-oriented Problem-Solving",
+        "summary": "Complex problems with limited context, such as claims, require a means to obtain additional knowledge necessary for solution reasoning. We propose a multi-agent framework, SMART, to obtain knowledge through capturing the implicit state of participating entities in a problem context. SMART curates the state knowledge as diverse, complementary and solution-salient premises using a variety of LLMs and a structured role-based prompt strategy. Using knowledge from these real-world verified curated premises, SMART's knowledge guided solution reasoning improves validation performance up to 20% on complex scientific claims spanning 3 datasets. We show that grounding premises in real-world knowledge is necessary and improves performance up to 5%.",
+        "authors": [
+          "Sai Vallurupalli",
+          "Francis Ferraro"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL"
+        ],
+        "submittedAt": "2026-11-05T15:51:39.000Z",
+        "updatedAt": "2026-11-05T15:51:39.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.08179",
+      "url": "https://arxiv.org/abs/2611.08179",
+      "collectedAt": "2026-11-06T06:35:49.278Z",
+      "data": {
+        "title": "Knowing When to Teach: Learning from Teachable Prefixes in Multilingual Reasoning Distillation",
+        "summary": "On-Policy Self-Distillation (OPSD) improves reasoning by training a student on its own reasoning, using the same model conditioned on reference solutions as a teacher. Applying OPSD to multilingual reasoning requires the teacher to provide useful feedback across languages, even when the student makes mistakes in intermediate steps. We observe a phenomenon we call Teacher Drift: as these mistakes accumulate, the teacher may follow the student's incorrect steps instead of correcting them. Our analysis shows that this shift tends to occur earlier in lower-resource languages. To account for these differences across languages, we propose Teachable On-Policy Self-Distillation (TOPSD), which determines where and whether teacher supervision should be applied to each reasoning trajectory. TOPSD uses teacher-student likelihood to estimate where drift begins and select a prefix for supervision. It then verifies whether the teacher can recover the correct answer from that prefix, applying distillation only to prefixes that pass verification. Experiments on multilingual mathematical reasoning across ten languages and three model scales show that TOPSD consistently outperforms conventional OPSD, particularly in low- and medium-resource languages.",
+        "authors": [
+          "Jaewon Cho",
+          "Minseo Yoon",
+          "Jinyoung Park",
+          "Jinwoo Seo",
+          "Jaewon Chu",
+          "Alice Oh",
+          "Hyunwoo J. Kim"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL"
+        ],
+        "submittedAt": "2026-11-05T15:34:23.000Z",
+        "updatedAt": "2026-11-05T15:34:23.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.08177",
+      "url": "https://arxiv.org/abs/2611.08177",
+      "collectedAt": "2026-11-06T06:35:49.278Z",
+      "data": {
+        "title": "BabyTheorist: A Benchmark for Learning to Theorize the World from Observation Alone",
+        "summary": "How would we know whether a machine truly understands the world? We argue that one key capability is \\textit{observational theory learning}: acquiring reusable theories from pure observations and applying them to new situations. Current visual reasoning benchmarks focus primarily on the latter, presenting each task as a few-shot puzzle grouped by a common rule. We introduce BabyTheorist, a benchmark for controlled training and evaluation of observational theory learning. BabyTheorist generates continual streams of before-after visual observations from hidden compositional programs; during training, learners see only the resulting transitions, with no program labels, task identities, or support sets. To support theory learning and evaluation, BabyTheorist controls the program language, a curriculum over program complexity, recurring frequent subprograms, and a continual train-test protocol with level skipping. Seven representative baselines plateau well below ceiling, with the gap widening as the curriculum advances---evidence that BabyTheorist isolates a capability current program-learning approaches do not yet address.",
+        "authors": [
+          "Doojin Baek",
+          "Junyeob Baek",
+          "Mingyu Jo",
+          "Hosung Lee",
+          "Taegu Kang",
+          "Gyubin Lee",
+          "Sungjin Ahn"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-11-05T15:33:32.000Z",
+        "updatedAt": "2026-11-05T15:33:32.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.08175",
+      "url": "https://arxiv.org/abs/2611.08175",
+      "collectedAt": "2026-11-06T06:35:49.278Z",
+      "data": {
+        "title": "PCBRouteAgent: How Close Are LLM Agents to Becoming PCB Routing Engineers?",
+        "summary": "Automating printed circuit board (PCB) routing requires coordinating board-level connectivity decisions with geometric execution under strict design rules. Although recent agents can interact with native routing tools, reliable routing on complex boards remains challenging. We present PCBRouteAgent, a multimodal PCB routing agent inspired by how human engineers coordinate global strategy with local execution. A Global Routing Planner combines board images and structured electrical and geometric information to specify connection topology, routing order, corridors, and layer transitions. A Detailed Routing Executor realizes these guides through KiCad's native routing engine and performs bounded local recovery. Unresolved failures are returned as structured feedback, enabling targeted guide revisions while preserving accepted routes. We evaluate PCBRouteAgent on 247 synthetic and real-world boards from four PCBWorld-Bench test splits. It achieves clean-pass rates of 100%, 94.9%, 100%, and 40% on D2, D3-A, D3-B, and D3-C, respectively. On the three real-world subsets, PCBRouteAgent outperforms the best evaluated baseline in clean-pass rate by 13.9, 36, and 10 percentage points, respectively.",
+        "authors": [
+          "Yue Zhang",
+          "Jilei Sun",
+          "Liqiang Jing",
+          "Yijie Wei",
+          "Ruohan Yang"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-11-05T15:31:15.000Z",
+        "updatedAt": "2026-11-05T15:31:15.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.08173",
+      "url": "https://arxiv.org/abs/2611.08173",
+      "collectedAt": "2026-11-06T06:35:49.278Z",
+      "data": {
+        "title": "Regret Bounds for Profit Maximization in Bilateral Trade: Learning the Best Posted-Price Mechanism",
+        "summary": "Bilateral trade models the task of intermediating between two strategic agents, a seller and a buyer, willing to trade a good for which they hold private valuations. We study this problem from the perspective of a profit-maximizing broker in a regret minimization framework. At each time step, a new seller and buyer arrive and the broker proposes a trading price to each agent. The trade happens if both agents accept, and the profit of the broker is the difference between the price received from the buyer and the one paid to the seller. At the end of each interaction, the learner only observes whether the trade occurred, and its goal is to achieve sublinear regret relative to the best fixed pair of prices in hindsight. We start by investigating the adversarial version of the problem, where buyer and seller valuations are generated by an adversary. In this setting, we construct a polynomial-time learning algorithm with a $\\tilde O(T^{\\frac 23})$ regret rate, which is nearly tight even if the valuations are drawn i.i.d. from independent distributions, thus matching the rate for one-sided pricing. Our adversarial algorithm combines a localized estimation procedure with an information-based minimax construction. We then consider valuations drawn i.i.d. from independent distributions satisfying the monotone-hazard-rate (MHR) property and provide a learning algorithm with nearly tight $\\tilde{O}(\\sqrt{T})$ regret. The algorithm combines localized estimation with a stochastic convex bandit routine applied to the negative logarithm of expected profit. Finally, we complement this result by showing a separation between MHR and regular distributions, proving that the minimax regret rate in the latter setting is $\\tilde Θ(T^{\\frac 35})$. This last result contrasts with the $\\tilde{O}",
+        "authors": [
+          "Johannes Brüstle",
+          "Simone Di Gregorio",
+          "Federico Fusco",
+          "Stefano Leonardi"
+        ],
+        "categories": [
+          "cs.DS",
+          "cs.GT",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-05T15:30:25.000Z",
+        "updatedAt": "2026-11-05T15:30:25.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.08162",
+      "url": "https://arxiv.org/abs/2611.08162",
+      "collectedAt": "2026-11-06T06:35:49.278Z",
+      "data": {
+        "title": "RouteAlign: Aligning Task Requirements with Model Profiles for LLM Service Selection",
+        "summary": "LLM service selection requires performance evidence that reflects the demands of the current task. Aggregate scores obscure differences in capability and difficulty, while semantically related examples can involve different combinations of skills. We present RouteAlign, which uses task requirements to structure both the measurement of model performance and the selection of services. Task requirements describe capability demand and difficulty, enabling alignment with corresponding model performance measurements. Historical requirements determine how outcomes contribute to global profiles and local capability estimates; incoming requirements determine how those measurements inform the current decision. A shared scorer integrates the evidence, and a generation-cost preference controls selection among eligible services. Evaluation across diverse tasks and heterogeneous LLM services shows that RouteAlign extends the empirical quality-cost frontier toward higher task quality. Comparisons with open Jev-style decision backends show consistent quality gains, with lower generation cost than their strongest tested configuration. Ablations support the contribution of local performance evidence, while catalog-update experiments demonstrate effective reuse of the fitted scorer with refreshed model measurements.",
+        "authors": [
+          "Jihao Zhao",
+          "Ding Chen",
+          "Yanfang Chen",
+          "Bo Tang",
+          "Feiyu Xiong",
+          "Junchi Yan",
+          "Zhiyu Li"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.SE"
+        ],
+        "submittedAt": "2026-11-05T15:21:16.000Z",
+        "updatedAt": "2026-11-05T15:21:16.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.08154",
+      "url": "https://arxiv.org/abs/2611.08154",
+      "collectedAt": "2026-11-06T06:35:49.278Z",
+      "data": {
+        "title": "Interpretable Multimodal MRI-Clinical Fusion for Functional Outcome Prediction After Acute Ischemic Stroke",
+        "summary": "This study evaluates the added prognostic value of day-1 multimodal MRI for predicting three-month functional outcome after acute ischemic stroke (AIS). Sixty-six AIS patients with ADC, DWI, FLAIR, and clinical data were analyzed. Three-dimensional pretrained ResNet embeddings were extracted from each MRI modality, reduced using fold-isolated principal component analysis, and combined with structured clinical variables and ADC-derived lesion biomarkers. Linear support vector machines were evaluated using eight-fold stratified group cross-validation across MRI modality combinations. Clinical-only modeling achieved strong performance (AUC = $0.899 \\pm 0.151$), while MRI-only models showed limited discrimination (AUC $\\approx$ $0.67$-$0.73$). Among multimodal configurations, FLAIR-clinical fusion achieved the highest mean cross-validated performance (AUC = $0.948 \\pm 0.061$), followed by ADC-clinical fusion (AUC = $0.941 \\pm 0.094$). Full ADC-DWI-FLAIR fusion did not consistently outperform single-modality clinical fusion. Feature-importance analysis identified age, NIHSS subscores, ADC lesion burden, and learned FLAIR representations as key contributors, while qualitative FLAIR activation maps showed responses over lesion-like regions. These findings suggest that compact day-1 FLAIR and ADC representations provide complementary prognostic information beyond clinical variables and support interpretable, data-efficient outcome prediction in AIS.",
+        "authors": [
+          "Sina Raeisadigh",
+          "Henning Müller",
+          "Abderrahmane Hedjoudje"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CV",
+          "cs.LG",
+          "eess.IV"
+        ],
+        "submittedAt": "2026-11-05T15:14:58.000Z",
+        "updatedAt": "2026-11-05T15:14:58.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.08153",
+      "url": "https://arxiv.org/abs/2611.08153",
+      "collectedAt": "2026-11-06T06:35:49.278Z",
+      "data": {
+        "title": "A Generative Foundation Model for Multimodal Tokamak Tasks",
+        "summary": "Tokamak experiments record diverse measurements, including waveforms, profiles, fields, and scalars, which are used to reconstruct the plasma, forecast its evolution, recover associated control signals, and estimate disruption risk. Most models are built separately for one task and a fixed set of inputs and outputs, and each relies on a prescribed subset of diagnostics rather than structuring the full multimodal observation set to extract global, cross-signal information about the discharge. These limitations motivate a reusable foundation model that adapts to each task's input-output schema and models heterogeneous target signals jointly, rather than retraining a separate model for every configuration. In this work, we extend the TokaMark benchmark with two groups of tasks for actuator action inversion and disruption prediction, yielding 20 MAST tasks in six groups with explicit schemas and evaluation protocols. Then, we introduce GenToka, a generative tokamak foundation model that jointly generates schema-selected targets through a shared conditional diffusion Transformer, with signal-specific codecs preserving native time series, profiles, fields, and scalars; foundation pretraining and task-specific adaptation transfer cross-signal structure across all six groups. Evaluation on MAST measurements shows that GenToka reduces macro-average normalized root mean squared error relative to TokaMind by 4.7% on Groups 1-4 and by 17.7% on Group 5, and improves macro-average window-level F1 on Group 6 by 8.4% at a common validation-selected threshold. GenToka provides a reusable, generative, and multimodal pathway for experimental tokamaks, linking plasma-state reconstruction, actuator inference, and disruption warning from shared measurements to support more integrated, data-d",
+        "authors": [
+          "Yingshuai Ji",
+          "Haodong Feng",
+          "Guohong Deng",
+          "Gelin Bian",
+          "Yue Wang"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CE"
+        ],
+        "submittedAt": "2026-11-05T15:13:48.000Z",
+        "updatedAt": "2026-11-05T15:13:48.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.08144",
+      "url": "https://arxiv.org/abs/2611.08144",
+      "collectedAt": "2026-11-06T06:35:49.278Z",
+      "data": {
+        "title": "Detecting Silent Faults at the Environment-Trainer Boundary in Reinforcement Learning",
+        "summary": "Robot reinforcement learning increasingly runs environments outside the trainer: in another process, on another machine, in another language. Many faults at this boundary raise no error. We make the boundary a wire protocol and ask what notices a fault in it. On Pendulum, HalfCheetah, Hopper and a 7-joint arm (Pusher), we injected up to 23 faults into what crosses the wire and 2 into the trainer's log, from one value to every value. Unless every value was wrong, a learning-curve threshold caught at most one run in ten, and a comparison with ten fault-free seeds at most 21%. A clean evaluation of all 1,060 final policies agreed with the curves: of the 728 boundary-fault runs both curve checks passed, 723 scored no more than three standard deviations below fault-free seeds, though nearly all ended on other weights and, for reward faults, logged other returns. Checks of the run itself, not of its outcome, saw every fault. A step ledger kept on both sides and compared step by step caught and located every fault that crossed, on Pendulum, Hopper and Pusher on one machine and on Pendulum across two, with no fault-free run and, on Pendulum, a median 3% more training time. An episode record kept at the environment caught the faults in the trainer's log. We list such faults found in practice, in Gymnasium 1.3 and our own code and, reported by others, in five multi-agent libraries, and recommend a step ledger and episode counts kept at the environment.",
+        "authors": [
+          "Zuo Gou",
+          "Chenhao Lu"
+        ],
+        "categories": [
+          "cs.LG",
+          "cs.RO",
+          "cs.SE"
+        ],
+        "submittedAt": "2026-11-05T15:05:07.000Z",
+        "updatedAt": "2026-11-05T15:05:07.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.08116",
+      "url": "https://arxiv.org/abs/2611.08116",
+      "collectedAt": "2026-11-06T06:35:49.278Z",
+      "data": {
+        "title": "Create Your Own Work Stack: Deploying Self-hosted AI and Tooling in a Tech Startup",
+        "summary": "Self-hosting AI is often presented as a way to reduce inference costs and increase control, but deployment introduces its own costs. We report our experience deploying a hybrid AI stack at Grayhat Developers, a small software company with an AI-intensive development workflow. Our initial motivation was to counter the growing cost of commercial AI usage: Claude/Codex incurred approximately \\$325 per month, with more than 25.93 billion recorded tokens. We experimented with local open-source models as replacements for commercial coding agents, but after learning that their performance and inference speed were insufficient, we adopted a hybrid approach in which commercial agents remained responsible for complex tasks while local models handled lower-complexity tasks, organizational information retrieval, and synchronization with self-hosted tools including Outline, Plane, and ERPNext. We estimated that approximately 30--40\\% of our commercial AI workload was associated with context transfer, documentation synchronization, task management, and related operational coordination. By moving this work to local models, we estimate that approximately 90\\% of this coordination workload could be handled without commercial inference, corresponding to an estimated 27--36\\% reduction in overall commercial-AI workload or cost-equivalent usage. Our first internal deployment nevertheless failed to achieve adoption because it introduced UX friction. Replacing it with a centrally configured deployment substantially improved feedback and adoption. We conclude that local inference is most useful not as a wholesale replacement for commercial AI, but as part of a hybrid architecture that assigns tasks according to their capability requirements, cost, context demands, and operational sensitivity.",
+        "authors": [
+          "Saad Ahmed Bazaz",
+          "Talha Amjad",
+          "Abdurrehman Subhani",
+          "Sohaib Ahmed Bazaz",
+          "Abdullah Aamir"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-11-05T14:49:11.000Z",
+        "updatedAt": "2026-11-05T14:49:11.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.08094",
+      "url": "https://arxiv.org/abs/2611.08094",
+      "collectedAt": "2026-11-06T06:35:49.278Z",
+      "data": {
+        "title": "PersonaAgent: Retrieval-Augmented Transaction Anomaly Scoring with Refreshable Multi-Entity Persona Memory",
+        "summary": "In large-scale payment networks, entities (card, merchant, etc.) and their interactions play a key role in transaction anomaly detection. However, transaction patterns between different entities usually change more frequently than the production model refresh schedule. Meanwhile, entity embedding tables suffer from high-cardinality and sparse interaction issues. To resolve the above challenges, we present PersonaAgent, an agentic transaction anomaly detection framework which represents the latest entity behavior signals as personas and saves them in a refreshable memory. Offline, a weekly scheduled batch job is used to extract the latest behavior signals and update them in the memory. At inference time, a lightweight adapter retrieves the corresponding entity behavior signals of each transaction from memory and uses them to augment the base anomaly classifier's scoring. Through comprehensive benchmarking with different anomaly detection models at Visa, PersonaAgent is able to score transactions efficiently (a 1,000-transaction CPU batch in 1-2 ms), lifting the PR-AUC by 0.65-6.58% and the production business metric by 8.93-14.24% relatively in deployment.",
+        "authors": [
+          "Zhengyu Fang",
+          "Liang Wang",
+          "Yingtong Dou",
+          "Yuzhong Chen",
+          "Shubham Jain",
+          "Junpeng Wang",
+          "Xiran Fan",
+          "Menghai Pan",
+          "Jiarui Sun",
+          "Yan Zheng",
+          "Yiwei Cai"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-05T14:37:16.000Z",
+        "updatedAt": "2026-11-05T14:37:16.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.08092",
+      "url": "https://arxiv.org/abs/2611.08092",
+      "collectedAt": "2026-11-06T06:35:49.278Z",
+      "data": {
+        "title": "Gabor Gabor: E-Gaborformer, a Strictly Causal Speech Recognizer with Gabor-Dictionary Convolutions and Delta-Rule Memory",
+        "summary": "Real-time voice agents need a speech recognizer that never waits for future audio and whose memory per call does not grow with the length of the call. We present E-Gaborformer, a strictly causal encoder that combines Gated DeltaNet-2 recurrent layers with sliding-window attention in a 3:1 ratio, and builds every temporal convolution from a fixed dictionary of causal Gabor atoms. Its streaming state is constant, about 19 MB per call at production scale including the prediction network, where a causal-attention encoder of the same size accumulates over 1 GB after ten minutes. In a controlled causal study on LibriSpeech, E-Gaborformer leaves the initial plateau earlier, reaches a given accuracy up to 18% sooner, and matches or beats an E-Branchformer trained with the identical front end and recipe. At production scale, a 0.6B-parameter Hebrew and English streaming transducer built on E-Gaborformer has 28 to 31% lower word error rate (WER) than NVIDIA's Nemotron 3.5 ASR Streaming, a model of the same size, on English voice-agent traffic, and up to 20% lower Hebrew WER than our previous production system. The same weights serve strictly causal and 480 ms-lookahead decoding with no loss in accuracy, and a two-class formulation of the RNN-T lattice trains the transducer 2.6x faster with exact loss and gradients.",
+        "authors": [
+          "Nir Krakowski",
+          "Tamir Cohen",
+          "Ohad Zohar",
+          "Chen Zarfati"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.LG",
+          "cs.SD"
+        ],
+        "submittedAt": "2026-11-05T14:36:34.000Z",
+        "updatedAt": "2026-11-05T14:36:34.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.08088",
+      "url": "https://arxiv.org/abs/2611.08088",
+      "collectedAt": "2026-11-06T06:35:49.278Z",
+      "data": {
+        "title": "Value or Attention: Investigating Layer-wise Relevance Propagation for Graph Attention Networks",
+        "summary": "Graph Attention Networks (GATs) are increasingly used in domains where scientists need to read a model's reasoning, from medicine to materials science, yet the routing they learn remains opaque to most explainers. Layer-wise Relevance Propagation (LRP) follows the model's computation, but in an attention layer the relevance reaching a node is the sum of two mechanically different quantities: its content relevance through the value path and its routing relevance through the attention path. Existing rules either drop one or add them into a single number. We write a single product rule with free weights on the two factors that recovers current approaches as special cases. The value path measures what content a node supplied against a zero baseline; the attention path measures how the node shaped what was passed relative to its neighborhood, and its sign records whether the node's features moved the gating the way the prediction demanded. On a ground-truth classification task, we show that the same node receives negative, positive and near-zero relevance under three settings of the rule. The separated relevance maps yield a hypothesis about the model: it gains by not reading that node. We give reading rules for both paths and argue that they should be interpreted separately.",
+        "authors": [
+          "Ken Schreiber",
+          "René P. Klausen",
+          "Sebastian Lapuschkin",
+          "Wojciech Samek",
+          "Jonas Naujoks"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-05T14:35:00.000Z",
+        "updatedAt": "2026-11-05T14:35:00.000Z"
+      }
+    }
+  ]
+}
