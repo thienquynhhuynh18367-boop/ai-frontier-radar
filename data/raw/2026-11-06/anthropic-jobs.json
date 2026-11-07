@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-06",
+  "source": "anthropic-jobs",
+  "items": [
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5390811008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5390811008",
+      "collectedAt": "2026-11-07T05:54:20.693Z",
+      "data": {
+        "title": "Applied AI, Research Engineer ",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-11-05T20:39:50.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5475240008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5475240008",
+      "collectedAt": "2026-11-07T05:54:20.693Z",
+      "data": {
+        "title": "Recruiter, Applied AI",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-11-06T13:23:32.000Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-06",
+  "source": "anthropic",
+  "items": [
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/news/open-call-guest-investigators-life-sciences",
+      "url": "https://www.anthropic.com/news/open-call-guest-investigators-life-sciences",
+      "collectedAt": "2026-11-07T05:54:20.693Z",
+      "data": {
+        "lastmod": "2026-11-06T10:22:49.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/accelerating-scientific-research",
+      "url": "https://www.anthropic.com/research/accelerating-scientific-research",
+      "collectedAt": "2026-11-07T05:54:20.693Z",
+      "data": {
+        "lastmod": "2026-11-06T10:23:12.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/early-progress-drug-development",
+      "url": "https://www.anthropic.com/research/early-progress-drug-development",
+      "collectedAt": "2026-11-07T05:54:20.693Z",
+      "data": {
+        "lastmod": "2026-11-06T00:33:28.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/how-researchers-use-claude",
+      "url": "https://www.anthropic.com/research/how-researchers-use-claude",
+      "collectedAt": "2026-11-07T05:54:20.693Z",
+      "data": {
+        "lastmod": "2026-11-06T15:55:34.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/investigating-vault-particles-with-claude",
+      "url": "https://www.anthropic.com/research/investigating-vault-particles-with-claude",
+      "collectedAt": "2026-11-07T05:54:20.693Z",
+      "data": {
+        "lastmod": "2026-11-06T01:53:44.000Z"
+      }
+    }
+  ]
+}
