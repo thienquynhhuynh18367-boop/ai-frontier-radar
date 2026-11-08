@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-07",
+  "source": "anthropic-jobs",
+  "items": [
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5473198008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5473198008",
+      "collectedAt": "2026-11-08T05:56:49.084Z",
+      "data": {
+        "title": "Applied AI Architect, Democratic Partnerships ",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-11-06T17:43:55.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5473195008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5473195008",
+      "collectedAt": "2026-11-08T05:56:49.084Z",
+      "data": {
+        "title": "Applied AI Architect, International Policy",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-11-06T17:43:11.000Z"
+      }
+    }
+  ]
+}

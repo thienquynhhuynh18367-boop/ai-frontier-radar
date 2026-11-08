@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-07",
+  "source": "anthropic",
+  "items": [
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/components-of-agent-memory",
+      "url": "https://www.anthropic.com/research/components-of-agent-memory",
+      "collectedAt": "2026-11-08T05:56:49.084Z",
+      "data": {
+        "lastmod": "2026-11-06T21:15:32.000Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/project-eve-claude-plays-mmorpgs",
+      "url": "https://www.anthropic.com/research/project-eve-claude-plays-mmorpgs",
+      "collectedAt": "2026-11-08T05:56:49.084Z",
+      "data": {
+        "lastmod": "2026-11-06T17:09:29.000Z"
+      }
+    }
+  ]
+}
