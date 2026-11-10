@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-09",
+  "source": "arxiv",
+  "items": [
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.12592",
+      "url": "https://arxiv.org/abs/2611.12592",
+      "collectedAt": "2026-11-10T07:12:41.392Z",
+      "data": {
+        "title": "Fairness in Explainable AI Narratives: Decomposing Social Disparities in LLM-Generated Explanations",
+        "summary": "Large language models (LLMs) are increasingly used to translate technical explainable AI (XAI) artefacts such as SHAP into explanatory narratives (XAINs) for lay users. In high-risk domains, these explanations are often the main resource through which individuals can understand and contest adverse decisions. Yet LLMs are known to reproduce social bias, even from proxy variables alone, and fairness in XAINs remains unstudied. Because XAINs are bound to a ground-truth artefact, fairness concerns not only what a narrative says and how, but also whether it is equally faithful across social groups. We introduce fairness in XAINs as a new field of research and propose a framework that generates narratives under three conditions (protected attribute disclosed, withheld, or counterfactually swapped), allowing five comparisons that pinpoint the cause of disparities. We apply it to adversely classified instances from four datasets in credit scoring, education and employment, generating narratives with five LLMs, and evaluate faithfulness, feature coverage and sentiment. We find significant disparities across all datasets, metric families and models, arising in two ways. Faithfulness disparities result from feature values: LLMs make plausible but false statements, triggered by values that are unequally distributed across social groups. Feature coverage and sentiment disparities stem from the protected attribute itself: once it is disclosed, LLMs give less explanation to, or frame more negatively the narratives of, groups that have historically been discriminated against or are stereotypically associated with worse outcomes. A more faithful model removes the faithfulness disparities, and withholding protected attributes mostly removes the others, but neither suffices on its own. Fa",
+        "authors": [
+          "Wannes Van den Bulck",
+          "Sofie Goethals",
+          "David Martens"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "submittedAt": "2026-11-09T15:42:42.000Z",
+        "updatedAt": "2026-11-09T15:42:42.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.12574",
+      "url": "https://arxiv.org/abs/2611.12574",
+      "collectedAt": "2026-11-10T07:12:41.392Z",
+      "data": {
+        "title": "Evaluating Cross-Signal Coherence in Mammography Vision-Language Models",
+        "summary": "As vision-language models (VLMs) move toward interpreting medical images directly, their outputs increasingly include not just a label but a stated confidence and a written justification. Yet the field still predominantly evaluates VLMs using just accuracy. We evaluate the coherence between answer, confidence, and explanation across four VLMs on breast density and BI-RADS categorization, using two mammography datasets. We perform controlled perturbations of the question, multiple choice option orders, and the images and assess changes in the three outputs. Our results suggest confidence does not decrease even as the mammography image is changed. Shuffling the options also changes most VLMs' answers. Notably, there are cases where a model's own stated reasoning contradicts its final answer, a distinction accuracy alone cannot capture but one that governs whether an AI-generated answer can be trusted.",
+        "authors": [
+          "Rebeca Nam",
+          "Chase M. Fensore",
+          "Christian A. Fauria-Robinson",
+          "Judy Gichoya",
+          "Joyce C. Ho"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.CV",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-09T15:33:50.000Z",
+        "updatedAt": "2026-11-09T15:33:50.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.12557",
+      "url": "https://arxiv.org/abs/2611.12557",
+      "collectedAt": "2026-11-10T07:12:41.392Z",
+      "data": {
+        "title": "WanderBench: Can World Models Explore Dynamic Worlds from Video?",
+        "summary": "Video world models conditioned on an input video make it possible to explore real, recorded dynamic scenes, enabling re-shooting of footage, free-viewpoint replay, and real-to-sim environments for embodied agents. Such uses require the generated rollout to stay faithful to the recorded world, yet existing benchmarks start from a single image or a text prompt, and video-conditioned generation is evaluated mainly on perceptual quality and camera following. These evaluations do not directly assess whether exploration preserves subject identity, event progression, and scene consistency upon revisiting a location. We introduce WanderBench, a benchmark for exploring dynamic worlds from video. It comprises 745 single-shot source videos of real and AI-generated content in three difficulty tiers (3-25 s), paired with camera routes given as keyboard actions, and evaluates six dimensions with 24 human-validated sub-metrics. Benchmarking eight models, we find that as clips grow longer, models keep the static scene and visual quality but lose camera control and the source dynamics, and that none keeps revisited places consistent. We further propose WanderLand, a training-free framework that conditions each frame of a frozen model on the same-instant source and, on revisits, on its own earlier static content. WanderLand improves five models on every dimension, by up to 8.3 points in source-dynamics fidelity.",
+        "authors": [
+          "Yuhang Chen",
+          "Jiheng Li",
+          "Jiale Wang",
+          "Zai Wang",
+          "Guangyue Liu"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CV"
+        ],
+        "submittedAt": "2026-11-09T15:23:53.000Z",
+        "updatedAt": "2026-11-09T15:23:53.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.12552",
+      "url": "https://arxiv.org/abs/2611.12552",
+      "collectedAt": "2026-11-10T07:12:41.392Z",
+      "data": {
+        "title": "SciMARS: Multi-Agent Recursive Self-Improvement for Closed-Loop Scientific Discovery",
+        "summary": "We propose SciMARS, a framework for recursive task-local adaptation of multi-agent harnesses in closed-loop scientific discovery. Multi-agent systems coordinate analysis, experimental design, and verification as scientific evidence evolves. However, two problems limit their effectiveness: (i) without shared memory, agents lose observations and repeat work; (ii) fixed role procedures, handoffs, and memory policies perpetuate mistakes despite retained evidence. We address these problems with a shared evidence graph and separate component editors. SciMARS adapts roles and coordination; SciMARS + Memory adds a third editor for how agents record, retrieve, and receive evidence. Candidate probes guide composition and selection of the next harness. We evaluate scientific discovery through experimental-data replay and a digital twin. SciMARS + Memory resolves 12/18 GPT-6-Astra and 2/18 GLM-5.3 attempts on Autonomous Science Bench, compared with 8/18 and 1/18 for the base multi-agent team. On ScienceAgentBench and AppWorld, it solves 14/38 and 11/20 tasks, compared with 11/38 and 5/20 for the base team. These results support combining shared memory with harness adaptation across scientific and interactive tasks.",
+        "authors": [
+          "Weimin Wu",
+          "Han Liu"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-11-09T15:20:32.000Z",
+        "updatedAt": "2026-11-09T15:20:32.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.12529",
+      "url": "https://arxiv.org/abs/2611.12529",
+      "collectedAt": "2026-11-10T07:12:41.392Z",
+      "data": {
+        "title": "Perceived Agency During Agent-Avatar Control Transitions in Virtual Reality",
+        "summary": "Prior beliefs about whether a virtual human (VH) is controlled by a human or a computer can shape how users interpret and respond to its behaviour. As emerging hybrid VH systems allow control to transfer between human operators and computer programs during an ongoing interaction, it remains unclear whether perceived agency updates with the actual controller or continues to reflect users' prior beliefs and first impressions. We investigated this question in a within-subject VR study with 24 participants across four conditions: always computer-controlled, computer-to-human, human-to-computer, and always human-controlled. We designed an interaction task in which participants acted as interviewers, asking the VHs a fixed set of questions. Before each interaction, participants were informed whether the VH was human- or computer-controlled, matching the actual controller at the beginning, but were unaware of possible control transitions. We found that perceived agency was strongly influenced by the controller presented at the beginning of the interaction, with no evidence of updating following the control transitions. Social evaluations including likeability and co-presence were generally higher in conditions where human control occurred later and covered a greater proportion of the interaction. The results suggest that prior beliefs and first impressions continued to shape perceived agency, whereas social evaluations were more sensitive to the VH's actual behaviour over the interaction.",
+        "authors": [
+          "Jingyi Zhang",
+          "Anthony Steed"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.HC"
+        ],
+        "submittedAt": "2026-11-09T15:03:45.000Z",
+        "updatedAt": "2026-11-09T15:03:45.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.12478",
+      "url": "https://arxiv.org/abs/2611.12478",
+      "collectedAt": "2026-11-10T07:12:41.392Z",
+      "data": {
+        "title": "AuDiR: Diagnosing Audio Reasoning with Rule and Percept Interventions",
+        "summary": "Answer accuracy alone does not distinguish failures in acoustic perception, rule knowledge, and rule application. AuDiR (Audio Diagnostic Reasoning) examines these distinctions through controlled input interventions. Each item contains an audio clip, a multiple-choice question, a task-general rule, and a textual description of the acoustic observations needed to answer. Three conditions progressively supply the rule and observations; a fourth removes the audio while retaining the question and rule. The first correct diagnostic condition assigns an operational response label, without identifying a unique internal cause. The current benchmark contains 201 items in 18 families drawn from 9 sources, with answer references documented separately from percept extraction. In a preliminary evaluation of Gemini-3.8-flash, accuracy is 29.3% without supplied information, 31.3% with the rule, and 98.5% with the observations also supplied. No-audio accuracy is 23.9%, with a confidence interval containing the 25.0% chance rate. A family-level knowledge probe associates incomplete rule recall with larger gains from rule provision. These results show the benefit of supplying acoustic observations as text, while incomplete validation, possible recognition shortcuts, and non-monotonic responses limit stronger failure-attribution claims.",
+        "authors": [
+          "Chengwei Wei",
+          "Yi Ma",
+          "Nancy F. Chen"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-11-09T14:23:38.000Z",
+        "updatedAt": "2026-11-09T14:23:38.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.12466",
+      "url": "https://arxiv.org/abs/2611.12466",
+      "collectedAt": "2026-11-10T07:12:41.392Z",
+      "data": {
+        "title": "Prediction with Foundation Models under Deployment Budgets",
+        "summary": "Foundation models can supply predictions for a downstream task that draw on knowledge from extensive pretraining, but they differ in task-specific accuracy and query cost. We develop a framework that improves prediction for the task under a budget on the average query cost per input, using training data to learn which models to query and how to combine their outputs with features available without querying. The first method queries the same models for every input; the second lets them vary across inputs and uses Q-learning to decide which model to query next and when to stop. For the first method, we show that several individually inaccurate outputs can jointly outperform the best single one. It attains the minimax rate when the regression function depends on the outputs only through models within the budget. Otherwise, any method within the budget can be forced to a slower rate, which the first method attains. For the second method, we show when varying the queried models across inputs strictly improves on querying the same models for every input, and bound its prediction risk and average cost in finite samples. In simulations and a multimodal laptop price application, both methods outperform existing methods.",
+        "authors": [
+          "Zhaohui Xu",
+          "Xiaofei Xu",
+          "Doudou Zhou"
+        ],
+        "categories": [
+          "cs.LG",
+          "stat.ML"
+        ],
+        "submittedAt": "2026-11-09T14:15:18.000Z",
+        "updatedAt": "2026-11-09T14:15:18.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.12458",
+      "url": "https://arxiv.org/abs/2611.12458",
+      "collectedAt": "2026-11-10T07:12:41.392Z",
+      "data": {
+        "title": "Causal discovery from Bayesian symbolic regression",
+        "summary": "Causal discovery from observational data is central to scientific reasoning, yet established constraint-based and score-based methods often recover only a Markov equivalence class and provide no signal in bivariate or strongly autocorrelated regimes typical in some areas of science. Here, we recast causal discovery as a Bayesian symbolic regression problem. Given a set of candidate parents for each target variable, the Bayesian symbolic regression samples closed-form expressions from a posterior over symbolic models. The fraction of sampled expressions in which each candidate variable appears defines a posterior inclusion probability that we use as the causal score. This replaces pointwise model selection by an ensemble of plausible mechanisms. We evaluate the method on coupled nonlinear bivariate dynamics, on the CauseMe benchmark suite spanning linear, chaotic, nonlinear, higher-dimensional and high-noise settings, and on a four-variable biogeoscience structural causal model under Gaussian, heavy-tailed and mixed-noise regimes. Our approach is competitive with, and often outperforms, specialized causal discovery algorithms. Additionally, the method returns closed-form mechanisms leading to explicit causality and interpretability.",
+        "authors": [
+          "Roger Guimerà",
+          "Kai-Hendrik Cohrs",
+          "Sergio Pedreira",
+          "Marta Sales-Pardo",
+          "Gustau Camps-Valls"
+        ],
+        "categories": [
+          "cs.LG",
+          "physics.comp-ph",
+          "physics.data-an",
+          "stat.ML"
+        ],
+        "submittedAt": "2026-11-09T14:10:22.000Z",
+        "updatedAt": "2026-11-09T14:10:22.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.12429",
+      "url": "https://arxiv.org/abs/2611.12429",
+      "collectedAt": "2026-11-10T07:12:41.392Z",
+      "data": {
+        "title": "Can Frontier Auto Researchers Reconstruct Human Research Decisions in AI?",
+        "summary": "Scientific research has long been driven by substantial human effort, from reviewing prior work and identifying research gaps to designing specific solutions. Recent advances in harness-based agent systems have given rise to increasingly capable Auto Researchers, which can autonomously carry out these tasks and, increasingly, entire end-to-end research workflows. Yet despite their rapidly growing capabilities, how closely the research decisions and outputs produced by auto researchers align with those of human experts remains underexplored. We investigate this gap through the lens of research reconstruction and study: Given comparable research context, how similar are the research decisions and outputs produced by Auto Researchers to those of human researchers in AI research? To answer this question, we introduce AutoResearcher-Human Research Similarity (AutoHRS), a stage-wise evaluation framework for assessing how faithfully auto researchers reconstruct human research artifacts across different stages of the scientific workflow. Using 152 ICLR oral papers as our corpus, we generate 456 research trajectories spanning different stages of the research process. Applying AutoHRS to these trajectories, we find that current Auto Researchers frequently fail to recover key research decisions and their resulting artifacts across multiple stages of the research process.",
+        "authors": [
+          "Shengyun Si",
+          "Junjie Chu",
+          "Ye Leng",
+          "Yang Zhang"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "submittedAt": "2026-11-09T13:54:46.000Z",
+        "updatedAt": "2026-11-09T13:54:46.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.12426",
+      "url": "https://arxiv.org/abs/2611.12426",
+      "collectedAt": "2026-11-10T07:12:41.392Z",
+      "data": {
+        "title": "dNaViT: Discrete Codes are General-Purpose Visual Representations",
+        "summary": "Discrete autoregressive modeling, notably through next-token prediction, has become a cornerstone of modern language models. Extending this paradigm to vision allows visual and language models to converge on a unified framework, thereby fostering shared methodology and infrastructure. This work investigates a central question: how far can a finite discrete vocabulary go in representing the richness of the visual world? We present dNaViT, a Discrete Native-resolution Vision Transformer that produces discrete visual primitives analogous to language tokens. Built upon a frozen pretrained encoder, dNaViT applies lightweight residual modulation with a dual-branch objective to inject reconstruction-aware cues into semantic features. By leveraging grouped product quantization, it scales discrete capacity without inflating spatial sequence lengths, while a balanced training recipe maintains both semantic and pixel-level information. Consequently, dNaViT functions as a versatile discrete visual tokenizer, enabling unified encoding across downstream tasks alongside high-fidelity image decoding. Extensive evaluations show that dNaViT matches or exceeds task-specific baselines across 12 visual understanding benchmarks, 4 generation benchmarks, and an image editing benchmark. These findings demonstrate that a compact discrete vocabulary can serve as a universal visual currency and unlock the full potential of fully unified, native multimodal methodology.",
+        "authors": [
+          "Xiaotong Li",
+          "Zhengrong Yue",
+          "Xu Huang",
+          "Jialv Zou",
+          "Minhao Jing",
+          "Wenhao Yan",
+          "Haodong Li",
+          "Hai Huang",
+          "Bo Zhao",
+          "Yan Feng",
+          "Peng Pei",
+          "Xunliang Cai"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CV"
+        ],
+        "submittedAt": "2026-11-09T13:51:18.000Z",
+        "updatedAt": "2026-11-09T13:51:18.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.12422",
+      "url": "https://arxiv.org/abs/2611.12422",
+      "collectedAt": "2026-11-10T07:12:41.392Z",
+      "data": {
+        "title": "Two-Phase Rapid Simulation-Based Inference with Differentiable Simulators",
+        "summary": "We introduce Rapid Simulation Based Inference (RSBI), a diffusion-based variational approach to likelihood-free Bayesian inference that achieves high sampling efficiency under large prior-to-posterior volumes. RSBI builds on advances in Schrödinger Bridge (SB) diffusion sampling to handle multi-modal posteriors, with an initial likelihood supplied by a distance measure via a differentiable simulator. The key innovation of this initial surrogate likelihood is that it gives a highly efficient proposal distribution, replacing sequential rounds of other methods with an efficient one-shot proposal. Subsequent refinement then transports the proposal to the true posterior as specified by the simulator and the original prior. The SB sampler is warm-started from the proposal, and its energy is corrected by a neural likelihood ratio that is learned only where the proposal places mass. As a variational method, RSBI does not suffer from prior leakage commonly observed in standard sequential posterior estimation methods. To improve mode coverage we optionally utilize the well-tempered meta-dynamics framework, which also encourages exploration of the prior volume. We observe strong performance on standard SBI benchmarks, particularly when the prior volume is increased relative to the ground truth posterior, achieving a performance degradation of only $\\sim5\\%$ on Two Moons under a highly constrained simulation budget. Additionally, we evaluate RSBI's performance for gravitational wave ring-down posterior estimation, in a real-world physics benchmark inspired by black hole spectroscopy.",
+        "authors": [
+          "Uros Zivanovic",
+          "Rahul Srinivasan",
+          "Roberto Trotta",
+          "Andre Scaffidi"
+        ],
+        "categories": [
+          "cs.LG",
+          "stat.ML"
+        ],
+        "submittedAt": "2026-11-09T13:49:15.000Z",
+        "updatedAt": "2026-11-09T13:49:15.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.12420",
+      "url": "https://arxiv.org/abs/2611.12420",
+      "collectedAt": "2026-11-10T07:12:41.392Z",
+      "data": {
+        "title": "Path-Level Structural and Semantic Alignment for Hierarchical Multi-Label Text Classification",
+        "summary": "Hierarchical multi-label text classification (HMTC) requires models to capture both structural dependencies among labels and the fine-grained semantics of labels at different hierarchy levels. Existing methods often model hierarchy through prediction constraints or representations of individual labels and local relations. Structural and semantic supervision, however, are usually formulated separately. We instead use complete root-to-node label paths as a shared unit for both. Our framework introduces two auxiliary training objectives while retaining a standard multi-label classifier at inference. PathSimNCE aligns document representations with hierarchical paths using hierarchy-aware contrastive targets. These targets provide graded supervision for structurally related paths while preserving explicit supervision for the ground-truth paths. The complementary semantic objective uses LLM-generated, document-conditioned descriptions of the same positive paths. It thereby provides context-specific label semantics beyond static label representations. Experiments on three benchmarks show consistent improvements: structural alignment is particularly beneficial in deeper hierarchies, while semantic alignment provides additional gains for fine-grained labels.",
+        "authors": [
+          "Xindi Wang",
+          "Aifen Xiong",
+          "Baiyang Wang",
+          "Xuri Ge",
+          "Robert Mercer",
+          "Frank Rudzicz",
+          "Yifan Peng",
+          "Zhumin Chen",
+          "Hongjun Wang"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "submittedAt": "2026-11-09T13:49:01.000Z",
+        "updatedAt": "2026-11-09T13:49:01.000Z"
+      }
+    }
+  ]
+}

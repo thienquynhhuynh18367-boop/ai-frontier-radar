@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-09",
+  "source": "openai",
+  "items": [
+    {
+      "source": "openai",
+      "sourceType": "sitemap",
+      "externalId": "https://openai.com/index/introducing-gpt-6-cyber/",
+      "url": "https://openai.com/index/introducing-gpt-6-cyber/",
+      "collectedAt": "2026-11-10T07:12:41.392Z",
+      "data": {
+        "lastmod": "2026-11-09T14:00:19.027Z"
+      }
+    },
+    {
+      "source": "openai",
+      "sourceType": "sitemap",
+      "externalId": "https://openai.com/index/powering-product-discovery-in-chatgpt/",
+      "url": "https://openai.com/index/powering-product-discovery-in-chatgpt/",
+      "collectedAt": "2026-11-10T07:12:41.392Z",
+      "data": {
+        "lastmod": "2026-11-08T16:03:17.741Z"
+      }
+    }
+  ]
+}
