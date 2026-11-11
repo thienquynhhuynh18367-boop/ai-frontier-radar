@@ -1,0 +1,384 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-10",
+  "source": "arxiv",
+  "items": [
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.14247",
+      "url": "https://arxiv.org/abs/2611.14247",
+      "collectedAt": "2026-11-11T06:08:09.794Z",
+      "data": {
+        "title": "Personalized Affective Perception via Continual Learning in Human-Agent Negotiation",
+        "summary": "Self-interested intelligent agents that negotiate with humans should interpret nonverbal expressions and adapt their behavior accordingly. However, generic facial-affect models degrade across individuals and contexts, creating a generalization gap. We introduce an affect-adaptive negotiation strategy that incorporates Continual Learning with Imagination for Facial Expression Recognition (CLIFER) to personalize valence-arousal perception in real time. Differential feedback converts changes in valence-arousal direction and intensity into adjustments of the agent's target utility. An asynchronous architecture updates CLIFER in the background during live interaction. In a counterbalanced within-subject study in which 66 participants negotiated with a humanoid robot, the CL-enabled agent achieved significantly higher individual utility and elicited higher participant concession rates than the FaceChannel baseline. The CL condition yielded significantly higher mean arousal estimates, alongside a broader output range. Participant utility and Nash distance did not change significantly between conditions. These outcomes support the practical value of coupling continual affective personalization with differential feedback for real-time negotiation.",
+        "authors": [
+          "Mehmet Onur Keskin",
+          "Berk Buzcu",
+          "Nikhil Churamani",
+          "Reyhan Aydogan",
+          "Hatice Gunes",
+          "Catholijn Jonker"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.HC",
+          "cs.LG",
+          "cs.MA",
+          "cs.RO"
+        ],
+        "submittedAt": "2026-11-10T15:57:45.000Z",
+        "updatedAt": "2026-11-10T15:57:45.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.14246",
+      "url": "https://arxiv.org/abs/2611.14246",
+      "collectedAt": "2026-11-11T06:08:09.794Z",
+      "data": {
+        "title": "SinkState: On-the-Fly SVD of Recurrent States for Efficient Hybrid LLM Serving",
+        "summary": "Hybrid models combine softmax attention with linear attention, which compresses history into fixed-size recurrent states to balance model quality and inference efficiency. However, linear attention has not pushed this compression to its limit: we find that the queries, keys, and values of linear layers concentrate in a stable, low-dimensional subspace, a phenomenon we call the linear attention sink, so each state is effectively low-rank, with a rank that varies across states. Yet existing serving systems keep these redundant states dense, reading and rewriting them in full at every decoding step, so their memory traffic grows with the batch size and dominates the decoding cost. Thus SinkState stores each recurrent state in an adaptive low-rank form throughout inference with buffered updates and a local SVD restricted to the top subspace. SinkState further consolidates the remaining components asynchronously on the CPU. On four hybrid models with Mamba-2 and Gated DeltaNet (GDN) layers, from 4B to 120B parameters, SinkState reduces the peak memory of recurrent states by up to 2.6x (1.9x on average) and speeds up decoding by up to 1.58x (1.25x on average) over Mamba-SSM and FLA, while maintaining accuracy.",
+        "authors": [
+          "Haolin Jiang",
+          "Weihang Li",
+          "Zhongzhu Zhou",
+          "Jinwen Pan",
+          "Santosh Pandey",
+          "Hang Liu"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-10T15:57:35.000Z",
+        "updatedAt": "2026-11-10T15:57:35.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.14244",
+      "url": "https://arxiv.org/abs/2611.14244",
+      "collectedAt": "2026-11-11T06:08:09.794Z",
+      "data": {
+        "title": "An AI Assistant for Automating Anti-Corruption Expertise of Draft Legislation Based on the TRACE Framework",
+        "summary": "We present an AI assistant for automating anti-corruption expertise of draft legislation based on the TRACE architecture, designed to screen bills for corruption risks: pinpoint provisions an expert would criticise and name the regulatory defect in each. The pipeline combines a deterministic parsing core, model-guided single-provision qualification, rule-based factor assignment, and external human oversight. To evaluate the assistant, we constructed an open benchmark from the published conclusions of Ukraine's National Agency on Corruption Prevention (NAZK), comprising 132 draft laws with 474 model-extracted findings. A system flag agrees with a finding when it targets a compatible provision and an LLM judge rates the risk as the same (strict) or partly the same (lenient). On 100 draft laws, the pipeline matches 0.28 of the findings within its top ten flags using the local Gemma 4 31B model, 0.30 with Sonnet 5.5, and 0.43-0.46 across all flags (non-blind; the frozen blind baseline achieves 0.21, 95% CI 0.16-0.26). Across all runs, most misses occur on provisions that the system located but qualified as a different risk, and none of the 32 legal-collision findings was matched. On 21 acts held out from tuning, the pipeline outperforms a monolithic prompt containing the full methodology under the strict measure, though not under the lenient one, and Opus 5.5 adds nothing over Sonnet. The reported scores reflect agreement with model-extracted findings rated by an LLM judge whose two access routes agree on 73 of 74 labels, without human expert validation.",
+        "authors": [
+          "Serhii Zabolotnii",
+          "Alina Tarasova"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL"
+        ],
+        "submittedAt": "2026-11-10T15:56:01.000Z",
+        "updatedAt": "2026-11-10T15:56:01.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.14241",
+      "url": "https://arxiv.org/abs/2611.14241",
+      "collectedAt": "2026-11-11T06:08:09.794Z",
+      "data": {
+        "title": "Dyship: Leveraging Acoustic Features For Speaker Relationship Classification From Dyadic Conversations",
+        "summary": "We introduce DyShip, a framework for classifying speaker familiarity and kinship from dyadic conversations in the Seamless Interaction corpus. We compare five speech representations: spectrograms, MFCCs, self-supervised WavLM representations, x-vectors, and estimated articulatory movements. Spectral features perform best for familiarity classification, reaching an accuracy of 87.81%, while WavLM achieves the highest kinship accuracy of 85.17%. X-vectors and articulatory features yield weaker results on familiarity classifiaction, but shine for kinship classification, with an AUC of 0.909 for x-vectors. Most classifiers exceed previously reported human and audio language model scores on the same dataset. These findings highlight the potential of conventional acoustic features for relationship inference and motivate further investigation of the conversational cues captured by different representations.",
+        "authors": [
+          "Kieran Sturges",
+          "Thomas Thebaud",
+          "Yaohan Guan",
+          "Najim Dehak"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL"
+        ],
+        "submittedAt": "2026-11-10T15:53:43.000Z",
+        "updatedAt": "2026-11-10T15:53:43.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.14236",
+      "url": "https://arxiv.org/abs/2611.14236",
+      "collectedAt": "2026-11-11T06:08:09.794Z",
+      "data": {
+        "title": "StaRSE: Compact Russian Sentence Embeddings with a Sign-Coded Static Encoder",
+        "summary": "Transformer sentence encoders provide strong retrieval quality, but their inference cost becomes a bottleneck when embeddings must be produced on CPUs or refreshed frequently. We introduce StaRSE, a compact Russian static sentence encoder that removes Transformer inference at deployment time: token directions are stored as sign bits, token norms are stored separately, and sentences are encoded by mean pooling over norm-scaled sign directions. StaRSE is initialized from ruBERT-base, fine-tuned on Russian adjacent-sentence and task-shaped pairs, and post-trained with a contrastive stage that directly optimizes the sign-projected token table. On RuMTEB, StaRSE reaches a task mean of $51.16$, $7.98$ points above the strongest included static baseline. The packaged model occupies $11.3$ MiB and has a mean CPU latency of $0.08$ ms per sentence, compared with an estimated $55.7$ MiB 16-bit parameter footprint and $1.43$ ms mean CPU latency for the closest-quality contextual encoder. Ablations examine adjacent-sentence supervision, token norms, and direct sign-projected post-training.",
+        "authors": [
+          "Boris Malashenko",
+          "Ivan Jarsky",
+          "Egor Soldatov",
+          "Vladislav Luzhnov",
+          "Sviatoslav Stumpf",
+          "Vladislav Shmatkov",
+          "Viacheslav Shalamov",
+          "Andrey Stankevich",
+          "Valeria Efimova"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.IR"
+        ],
+        "submittedAt": "2026-11-10T15:47:46.000Z",
+        "updatedAt": "2026-11-10T15:47:46.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.14211",
+      "url": "https://arxiv.org/abs/2611.14211",
+      "collectedAt": "2026-11-11T06:08:09.794Z",
+      "data": {
+        "title": "Verifiable Agentic Traffic Class: A Policed Quality-of-Service Mechanism for Agentic AI Traffic, Evaluated from Simulation to Real-Kernel Adversarial Testing",
+        "summary": "Software agents built on large language models generate traffic unlike human web traffic, yet routers have no class for it and cannot verify a sender's claim to be an agent. This paper proposes the Verifiable Agentic Traffic Class (VATC), which combines a reserved Differentiated Services Code Point (DSCP) value declaring agent traffic, a router-side classifier that demotes flows contradicting the declaration to a class served after best-effort traffic, and a rate-limited priority queue. VATC was compared with static Differentiated Services (DiffServ), a dedicated class that trusts the marking, and fq_codel, a per-flow fair-queuing scheduler, in two simulators and on a real Linux kernel. VATC matched DiffServ under steady load. In a constructed burst it cut mean agent queuing delay by 98% relative to DiffServ in simulation (assuming an immediate verdict), at a 12% increase in human delay; most of the gain came from the separate class. Under a spoofed flood in the kernel, the rate limit held human latency 11 times below DiffServ's. Without verification, DiffServ and a tightly configured fq_codel gave legitimate agents lower latency than VATC; a live four-feature classifier then demoted all 20 bulk-shaped spoofers and gave agents 0.30 ms, but missed six spoofers that copied the agent pattern. With emulated network delay, a timing feature of the classifier stopped separating agent from human flows. In real agent harnesses on a congested link, router queueing took 13% to 63% of task time, depending on harness and assumed model latency. The traffic was synthetic or sandbox-scale.",
+        "authors": [
+          "Naveen Babu Narayanan Nair",
+          "Sajay Kurup"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG",
+          "cs.NI"
+        ],
+        "submittedAt": "2026-11-10T15:33:22.000Z",
+        "updatedAt": "2026-11-10T15:33:22.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.14210",
+      "url": "https://arxiv.org/abs/2611.14210",
+      "collectedAt": "2026-11-11T06:08:09.794Z",
+      "data": {
+        "title": "Tree-Ising: Repairing Language Models with Bit-Level Ising Edits",
+        "summary": "Weight-space programming, introduced in recent MIT work by Takehi et al., enables a frontier LLM agent to read a network's weights and write a repair. Their GPT-6 Astra agent corrected the reasoning loops of Qwen3.5-0.8B without gradients, using 158 agent turns, 89.7 million tokens, and 50 forward-pass requests. Our method, Tree-Ising, casts this repair as a sparse discrete optimization problem over the model's own BF16 weights. Forward statistics define an objective that weakens a loop direction, strengthens a concluding direction, and preserves the layer's output on productive tokens. Within a state-tree representation, where lossless BF16 storage acts as a special case, the admissible edits are sign flips and exponent shifts that preserve all shared group exponents and mantissas. We decompose this objective exactly into independent QUBO (Ising) problems, one per output row, which we solve on a GPU using simulated annealing or quantum-inspired simulated bifurcation. On the agent's two layers, Tree-Ising achieves 54.6% on MATH-500, outperforming the agent's edit (51.7%) under the same evaluation protocol, while the base model scores 7.9% as reported. The simulated bifurcation solver yields a statistically indistinguishable repair at 55.1%. Both solvers outperform the agent edit across all five math benchmarks, with statistically significant improvements on MATH-500 and GSM8K after correcting for multiple comparisons. Our approach modifies 13% to 17% fewer weights and reduces BF16 bit flips by a factor of 2.2 to 2.3. It requires only four forward-pass requests and zero LLM tokens, with the annealing recipe costing about $0.90 in GPU time. On Qwen3.5-2B, with layers and dose selected using only the base model, the same recipe increases greedy GSM8K accuracy from 21.6% to",
+        "authors": [
+          "Hadi Salloum",
+          "Ammar Ali"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-10T15:32:04.000Z",
+        "updatedAt": "2026-11-10T15:32:04.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.14209",
+      "url": "https://arxiv.org/abs/2611.14209",
+      "collectedAt": "2026-11-11T06:08:09.794Z",
+      "data": {
+        "title": "Breakdown of Autoregressive Multi-Step Reasoning Under Concentrated vs. Diffuse Attention Head Dropout",
+        "summary": "During extended wakefulness, mammalian neocortical networks experience localized periods of transient neuronal silence termed off-states. Here, we examine how analogous spatiotemporally concentrated disruptions affect sequential reasoning in autoregressive Large Language Models (LLMs). Evaluating 250 paired derivations on the GSM8K benchmark across two 8B models (Qwen3-8B and LLaMA-3.1-8B-Instruct), we contrast clustered bursts of attention head masking against budget-matched diffuse i.i.d. dropout. Concentrated bursts induce substantial reasoning degradation: at onset parameter $\\mathcal{B}=0.10$ (scheduling $\\sim 5.7\\%$ of vulnerable head-token volume), Qwen3-8B accuracy drops from $91.2\\%$ under diffuse noise to $78.8\\%$ under burst dropout ($Δ= -12.4$ percentage points [pp], exact McNemar $p = 5.5 \\times 10^{-6}$), while LLaMA-3.1-8B-Instruct drops from $84.0\\%$ to $76.8\\%$ ($Δ= -7.2$ pp, $p = 0.0198$). Conversely, dispersing the identical cumulative budget uniformly across generation steps via stratified quintile matching yields substantially milder degradation (retaining $91.2\\%$ in Qwen and $84.0\\%$ in LLaMA). In an exploratory factorial dissociation ($N=100$), single-step dropout density is associated with an acute drop in a single schedule draw ($-10.0$ pp on Qwen, $p_{\\text{holm}} = 0.0425$), while multi-token continuity exhibits an inconclusive compounding trend ($-7.0$ pp, $p_{\\text{holm}} = 0.1892$). Error analysis reveals that Qwen failures reflect derivation errors within formatted responses (conditional accuracy drop of $-11.4$ pp), whereas in LLaMA $22.2\\%$ of discordant losses lack a final answer format line (conditional gap narrows to $-5.0$ pp). These findings demonstrate that autoregressive reasoning chains are particularly vulnerable to concentrate",
+        "authors": [
+          "Karol Struniawski"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL"
+        ],
+        "submittedAt": "2026-11-10T15:29:57.000Z",
+        "updatedAt": "2026-11-10T15:29:57.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.14126",
+      "url": "https://arxiv.org/abs/2611.14126",
+      "collectedAt": "2026-11-11T06:08:09.794Z",
+      "data": {
+        "title": "Hierarchical Graph Representation Learning with Pooling-Induced Substructures",
+        "summary": "Hierarchical graph-level tasks that require reasoning over substructures that extend beyond local neighborhoods are posing challenges for standard Graph Neural Networks (GNNs). While graph pooling aims to address this by coarsening graphs into hierarchical representations, existing methods often fail to explicitly preserve the substructures they induce, leading to inconsistent empirical performance. Moreover, evaluating such approaches remains challenging due to the lack of benchmarks with explicit hierarchical structure. We propose Pooled-Substructure-Aware GNNs, an approach to graph pooling that explicitly preserves and processes substructures uncovered by structure-based pooling schemes. We show that this design enhances the expressive power of pooling-based GNNs in the sense of the Weisfeiler-Lehman (WL) test. To enable principled evaluation, we introduce two new synthetic datasets with controllable hierarchical structure and propose a metric to characterize the prevalence of hierarchical patterns in real-world graph-level benchmarks. On tasks with relevant hierarchical structure, our approach outperforms matched pooling baselines, while remaining competitive on structurally simpler benchmarks. Code and datasets are publicly available at https://github.com/lsbicego/PSA-GNN/.",
+        "authors": [
+          "Luca Sbicego",
+          "Xiaowen Dong",
+          "Dorina Thanou"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-10T14:13:37.000Z",
+        "updatedAt": "2026-11-10T14:13:37.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.14124",
+      "url": "https://arxiv.org/abs/2611.14124",
+      "collectedAt": "2026-11-11T06:08:09.794Z",
+      "data": {
+        "title": "CroCoMAE: Cross-modal self-supervised collaborative representation learning for SAR-optical remote sensing data",
+        "summary": "Remote sensing increasingly captures the Earth's surface through complementary sensors such as SAR and optical, yet ground-truth annotations remain scarce, limiting supervised approaches. Self-supervised learning (SSL) addresses the label scarcity, and cross-modal SSL further exploits the complementarity between co-located sensors, but existing cross-modal frameworks align modalities mostly through global image-level representations or treat them as largely redundant, leaving their fine-grained complementary structure underexploited. We propose CroCoMAE, a cross-modal SSL framework for SAR-optical remote sensing that unifies contrastive learning and masked image modeling within a ViT-based architecture, operating at two complementary levels. At the image level, an intra-modality contrastive loss on the class token yields globally discriminative, augmentation-invariant representations. At the patch level, masked image modeling drives fine-grained per-modality representations, while a cross-modal contrastive objective aligns a shared subspace across SAR and optical patch tokens, leaving the complementary subspace unconstrained to retain modality-specific information. On two SAR-optical benchmarks covering scene classification and semantic segmentation, CroCoMAE improves over uni-modal SSL baselines and outperforms state-of-the-art cross-modal frameworks in most configurations, with gains in both single-modality and multi-modal evaluation across varying label regimes and the largest improvements on semantic segmentation.",
+        "authors": [
+          "Vito Recchia",
+          "Giuseppe Guarino",
+          "Cássio Fraga Dantas",
+          "Giuseppina Andresini",
+          "Annalisa Appice",
+          "Dino Ienco"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-10T14:10:41.000Z",
+        "updatedAt": "2026-11-10T14:10:41.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.14122",
+      "url": "https://arxiv.org/abs/2611.14122",
+      "collectedAt": "2026-11-11T06:08:09.794Z",
+      "data": {
+        "title": "Hx2Dx: From Anamnesis to Diagnosis - A Multimodal Arena for Conversational Clinical Reasoning in LLMs",
+        "summary": "Large language models (LLMs) achieve expert-level diagnostic accuracy in static evaluations, where the model receives a curated vignette or case report that already condenses the diagnostically relevant findings. Such evaluations measure inference over already selected evidence; the evaluations do not account for the inquiry used to obtain it. In clinical practice, however, diagnosis is an iterative process of inquiry. Clinicians take the patient's history, or anamnesis (Hx), through targeted questioning, examine the patient, and request and interpret tests, progressively narrowing the differential until they reach a final diagnosis (Dx). We introduce Hx2Dx ARENA, an interactive benchmark of 1'000 clinical cases from the New England Journal of Medicine (NEJM). Each case is a simulated encounter that proceeds from initial presentation through history taking and physical examination to diagnostic workup. We evaluate open- and closed-source LLMs under multiple configurations. Performance varies considerably across models in the interactive setting, and every model loses diagnostic accuracy relative to the static setting, where the full case is presented upfront. The ability to ask the right questions accounts for much of both the gap between models and the loss of accuracy: diagnosis improves as questions become more targeted and build a more complete clinical picture. LLMs thus reason well once the relevant data are available but remain limited in hypothesis-driven information gathering, in knowing what to ask in order to know. Closing this gap is a prerequisite for their safe integration into real-world diagnostic workflows.",
+        "authors": [
+          "Federico Ravenda",
+          "Mirko Cesarini",
+          "Daniele Montagnani",
+          "Volodymyr Karpenko",
+          "Antonietta Mira",
+          "Andrea Raballo"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-11-10T14:09:33.000Z",
+        "updatedAt": "2026-11-10T14:09:33.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.14113",
+      "url": "https://arxiv.org/abs/2611.14113",
+      "collectedAt": "2026-11-11T06:08:09.794Z",
+      "data": {
+        "title": "Looking One Step Ahead: An Anticipation-guided Agent for Object State Readout in Videos",
+        "summary": "Understanding the progress of an activity requires tracking how the objects involved change over time. Object state readout provides this information by describing a target object's states and transitions across video frames. Although multimodal large language models (MLLMs) generate detailed visual descriptions, these descriptions may leave the attributes needed to distinguish successive states insufficiently specified. In this paper, we propose look-ahead state readout (LASER), an anticipation-guided agent for object state readout that uses possible next-step changes to determine which attributes to inspect in the present. Given temporally ordered frames and a target object, LASER converts anticipated changes into targeted visual questions and inspects the current frame to establish attribute values. It then checks state readouts and forecasts against independent observations of subsequent frames, refining a state record used to generate the final description. Reusable textual observation skills guide this process and are refined by tracing discrepancies with reference captions to the responsible instructions. Candidate revisions are selected on separate videos based on improved caption quality without increased contradictions with reference facts. Model parameters remain frozen throughout adaptation and inference, and the revised skills remain fixed during evaluation. Experiment results and further analysis on OSCaR and PLM RCap show consistent improvements of LASER over strong baselines and existing approaches, which demonstrates the effectiveness of our approach.",
+        "authors": [
+          "Yuanhe Tian",
+          "Yan Song"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CV"
+        ],
+        "submittedAt": "2026-11-10T14:05:39.000Z",
+        "updatedAt": "2026-11-10T14:05:39.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.14111",
+      "url": "https://arxiv.org/abs/2611.14111",
+      "collectedAt": "2026-11-11T06:08:09.794Z",
+      "data": {
+        "title": "Model-Free Runtime Measurement of Task-Relevant Information",
+        "summary": "Autonomous systems increasingly monitor physical kinematics, environmental states and task completion outcomes. While existing work provides methods to plan information seeking actions and interpret acquired observations, current approaches do not monitor whether the live process of information gathering is functioning properly. Consequently, such systems can remain operationally active without resolving outstanding mission requirements. To address this limitation, we introduce Acquisition-State Telemetry (AST), a model free architecture that evaluates ongoing information acquisition from observable evidence relative to declared task requirements. Specifically, a domain interface maps raw observations into task resolution coordinates and normalized comparative representations, which are processed by a fixed causal monitor. This monitor emits two continuous real time signals that quantify (i) prospective progress across unresolved requirements and (ii) informational friction generated when recurrent evidence yields negligible informational gain. We evaluated a single, unadjusted monitor configuration across eight diverse domains including search and rescue dialogue, spatial grid exploration, hierarchical capability acquisition, continuous robotic manipulation, and probabilistic intent estimation. We show that across these domains the friction channel distinguished unproductive stagnation from purposeful exploration prior to task completion, while remaining muted during post completion activity. Furthermore, in closed loop reinforcement learning experiments under early termination constraints, we demonstrate that penalizing informational friction allowed agents to sustain high mission success, whereas unpenalized policies and baselines with matched operational costs faile",
+        "authors": [
+          "Dimitris Panagopoulos",
+          "Adolfo Perrusquía",
+          "Yang Xing",
+          "Weisi Guo"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.RO"
+        ],
+        "submittedAt": "2026-11-10T14:02:31.000Z",
+        "updatedAt": "2026-11-10T14:02:31.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.14106",
+      "url": "https://arxiv.org/abs/2611.14106",
+      "collectedAt": "2026-11-11T06:08:09.794Z",
+      "data": {
+        "title": "ProofCoder: Continuous Reasoning for Automated Software Verification",
+        "summary": "Formal verification using proof assistants provides strong correctness guarantees for software, but constructing proofs remains labor-intensive and requires significant expertise. Recent approaches based on large language models (LLMs) have shown promise in automating proof synthesis. However, these approaches typically constrain the model to a rigid tactic-generation loop, in which the surrounding system controls premise retrieval, proof-state management, and backtracking. We introduce ProofCoder, an agentic proof-synthesis system for Rocq that approaches theorem proving from a coding-agent perspective. Rather than generating tactics within a fixed loop, ProofCoder reasons continuously throughout proof search and uses proof-assistant feedback to decide when to gather additional information, inspect proof states, revise previously generated proof fragments, or backtrack to an earlier point in the proof. This allows it to iteratively construct, repair, and refine proofs, at either tactic-level or whole-proof granularity. We evaluate ProofCoder on 280 challenging verification tasks from the AutoRocq Benchmark. On the best-performing configurations, ProofCoder increases proof success from 47% to 60% over the state-of-theart AutoRocq system, corresponding to a 27.7% relative improvement at approximately half the cost. Our ablations identify continuous reasoning as a key design choice: without it, the agent solves fewer lemmas at substantially higher cost, backtracks four to six times more often, and more frequently discards its own revisions. Whole-proof and tactic-level generation achieve similar success rates but follow distinct search and repair strategies. These results suggest that effective automated software verification requires more than improved tactic selection: ",
+        "authors": [
+          "Martim Afonso",
+          "Inês Lynce",
+          "Maurizio Morisio",
+          "João F. Ferreira"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.SE"
+        ],
+        "submittedAt": "2026-11-10T13:59:49.000Z",
+        "updatedAt": "2026-11-10T13:59:49.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.14100",
+      "url": "https://arxiv.org/abs/2611.14100",
+      "collectedAt": "2026-11-11T06:08:09.794Z",
+      "data": {
+        "title": "Sckwoky at SHROOM-Visions: Character-Level Hallucination-Span Detection in Image-Conditioned VLMs via Dual-Prompted LoRA Decoders",
+        "summary": "We present our system for the SHROOM-visions 2026 shared task on character-level hallucination span detection in image-conditioned vision-language model (VLM) responses, evaluated across English, French, Italian, and Chinese. The detector is built on a frozen Gemma-4-12B-it backbone with trainable LoRA adapters (approximately 10.7M parameters). Because the backbone is a causal decoder, hidden states read from a single copy of an answer cannot attend to subsequent tokens; we therefore repeat the candidate answer within one prompt and extract features from its second occurrence, giving every position approximate bidirectional context in a single non-autoregressive pass. A character-level locator combines intermediate hidden states to predict hallucination probabilities, BIO boundaries, and a response-level abstention score, while separate language-specific classifiers assign one of five hallucination types to each predicted span. On the closed test set, our system reaches a macro-averaged character IoU of 0.4404, more than doubling the official baseline (0.1854), and ranks 5th-6th on IoU across the four languages. On the English tuning split, controlled ablations attribute a gain to the repeated answer that is comparable to that of LoRA adaptation (its held-out gain is smaller and concentrated on hallucinated answers), and they show that the detector relies on the image-answer pairing: shuffling images across examples drives IoU down to the level of the predict-nothing floor or below it in every language. In deployments where the same Gemma-4-12B-it model also generates answers, its base weights can be reused, making the approach practical for local question-answering systems that cannot run a separate verifier.",
+        "authors": [
+          "Mikhail Kulakov",
+          "Ruslan Solikhov",
+          "Ivan Bondarenko"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "submittedAt": "2026-11-10T13:55:52.000Z",
+        "updatedAt": "2026-11-10T13:55:52.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.14093",
+      "url": "https://arxiv.org/abs/2611.14093",
+      "collectedAt": "2026-11-11T06:08:09.794Z",
+      "data": {
+        "title": "BODYinTRANSIT-Lab: A Multimodal Dataset for Investigating Sensory-Driven Transformations in Body Perception and Affective Experiences",
+        "summary": "Multimodal datasets that combine synchronised behavioural and physiological signals with subjective affective and body perception measures are still rare. This limits both the understanding of embodied experience and the development of computational models that infer subjective states from sensor data. We introduce BODYinTRANSIT-Lab, a multimodal dataset that addresses this gap by capturing affective, perceptual, and behavioural responses to the Footsteps Illusion. In this closed-loop paradigm, participants perform walking tasks while receiving real-time manipulated auditory feedback of their own footsteps intended to alter perceived body weight. The dataset comprises synchronised recordings from 101 participants recruited through systematic stratification by eating-disorder symptomatology and physical activity level. BODYinTRANSIT-Lab combines full-body kinematics with electromyography, electrocardiography, respiration, and electrodermal activity. Its annotations capture both immediate and post-trial experience, including within-trial perceived-weight ratings, post-trial assessments of body feelings and affective experience, 3D avatar body visualisations, and quantitative body maps. Psychological, behavioural, demographic, and social measures provide further information about factors that may influence individual responses. We provide a deep learning benchmark that uses walking kinematics to classify relative affective valence and perceived weight within subjects. On within-session, segment-level splits, the baseline model achieved mean balanced accuracies of 45.9% for affective valence and 44.5% for perceived weight. The BODYinTRANSIT-Lab dataset provides an experimentally controlled resource for cognitive neuroscience and affective computing research, with potential ",
+        "authors": [
+          "Mohammad Mahdi Dehshibi",
+          "Tomás Martínez Cortés",
+          "Amar D'Adamo",
+          "Daniel de la Prida",
+          "Luis-Antonio Azpicueta-Ruíz",
+          "Laia Turmo Vidal",
+          "Marte Roel Lesur",
+          "Joaquín R. Díaz-Durán",
+          "Alexander Väljamäe",
+          "Angel Sánchez",
+          "Temitayo Olugbade",
+          "Nadia Bianchi-Berthouze",
+          "Fernando Díaz-de-María",
+          "Ana Tajadura-Jiménez"
+        ],
+        "categories": [
+          "cs.HC",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-10T13:53:02.000Z",
+        "updatedAt": "2026-11-10T13:53:02.000Z"
+      }
+    }
+  ]
+}
