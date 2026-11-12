@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-11",
+  "source": "anthropic-jobs",
+  "items": [
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5427938008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5427938008",
+      "collectedAt": "2026-11-12T07:06:46.389Z",
+      "data": {
+        "title": "GTM Strategy & Operations, FDE",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-11-10T22:25:46.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5394887008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5394887008",
+      "collectedAt": "2026-11-12T07:06:46.389Z",
+      "data": {
+        "title": "Product Manager, Claude Science",
+        "location": "San Francisco, CA | New York City, NY | Seattle, WA",
+        "updatedAt": "2026-11-10T23:26:37.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5477601008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5477601008",
+      "collectedAt": "2026-11-12T07:06:46.389Z",
+      "data": {
+        "title": "Product Manager, Seller Experience ",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-11-10T21:04:21.000Z"
+      }
+    }
+  ]
+}
