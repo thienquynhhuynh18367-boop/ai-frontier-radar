@@ -1,0 +1,2947 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-15",
+  "source": "hacker-news",
+  "items": [
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50498130",
+      "url": "https://news.ycombinator.com/item?id=50498130",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Anthropic: Mythos got Claude running on AMD chips in 3 days instead of months",
+        "originalUrl": "https://madrobot.blog/2026/11/11/anthropic-mythos-claude-amd-chips-three-days/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50498130",
+        "publishedAt": "2026-11-14T16:08:23.000Z",
+        "points": 3,
+        "comments": 0,
+        "author": "_Microft",
+        "matchedQueryIds": [
+          "anthropic",
+          "claude"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50498150",
+      "url": "https://news.ycombinator.com/item?id=50498150",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Mapboard – Excalidraw, but on a Map",
+        "originalUrl": "https://mapboard.bruceroettgers.eu/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50498150",
+        "publishedAt": "2026-11-14T16:10:43.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "bcye",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50498201",
+      "url": "https://news.ycombinator.com/item?id=50498201",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: What HN community recommended learning in 2026",
+        "originalUrl": "https://school-of-hn.pages.dev/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50498201",
+        "publishedAt": "2026-11-14T16:16:37.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "matyyyy",
+        "matchedQueryIds": [
+          "claude",
+          "llm"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50498282",
+      "url": "https://news.ycombinator.com/item?id=50498282",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Cowork – Self-hosted task queue and dashboard for Claude, Codex, and AI agents",
+        "originalUrl": "https://github.com/slashman413/cowork",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50498282",
+        "publishedAt": "2026-11-14T16:27:00.000Z",
+        "points": 4,
+        "comments": 0,
+        "author": "ckw19810413",
+        "matchedQueryIds": [
+          "claude"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50498314",
+      "url": "https://news.ycombinator.com/item?id=50498314",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Llama.cpp v1.0 on an RTX 3090: up to 55% faster with speculative decoding",
+        "originalUrl": "https://homebrewserver.club/llama-cpp-v1.html",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50498314",
+        "publishedAt": "2026-11-14T16:30:57.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "aidotguru",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50498487",
+      "url": "https://news.ycombinator.com/item?id=50498487",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: A browser RTS where you play alongside your local agents",
+        "originalUrl": "https://agentcommand.gg/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50498487",
+        "publishedAt": "2026-11-14T16:51:53.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "fraywing",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50498730",
+      "url": "https://news.ycombinator.com/item?id=50498730",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Turbo Vision-style UI for Claude Code",
+        "originalUrl": "https://github.com/runvnc/tvclaude",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50498730",
+        "publishedAt": "2026-11-14T17:18:14.000Z",
+        "points": 3,
+        "comments": 1,
+        "author": "ilaksh",
+        "matchedQueryIds": [
+          "claude"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50498741",
+      "url": "https://news.ycombinator.com/item?id=50498741",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Kevin Bass: The coverage of the Huang affair, who acted, and documented ties",
+        "originalUrl": "https://github.com/kevinnbass/huang-fifteen-days-mapped",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50498741",
+        "publishedAt": "2026-11-14T17:19:22.000Z",
+        "points": 4,
+        "comments": 7,
+        "author": "extraextra",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50498921",
+      "url": "https://news.ycombinator.com/item?id=50498921",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Themes for Claude Code",
+        "originalUrl": "https://tessera.shiptiffin.app/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50498921",
+        "publishedAt": "2026-11-14T17:33:25.000Z",
+        "points": 1,
+        "comments": 1,
+        "author": "bilater",
+        "matchedQueryIds": [
+          "claude"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50498988",
+      "url": "https://news.ycombinator.com/item?id=50498988",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "A swimmable underwater world in one 97 KB HTML file with Fable 5.2",
+        "originalUrl": "https://www.reddit.com/r/ClaudeAI/comments/1xw376f/i_built_a_swimmable_underwater_world_in_one_97_kb/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50498988",
+        "publishedAt": "2026-11-14T17:40:17.000Z",
+        "points": 4,
+        "comments": 0,
+        "author": "jjbinx007",
+        "matchedQueryIds": [
+          "claude"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50499095",
+      "url": "https://news.ycombinator.com/item?id=50499095",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "FAA blames ground stop on equipment issue during telecoms network upgrade",
+        "originalUrl": "https://www.npr.org/2026/11/14/nx-s1-6040952/faa-ground-stop-airplane-travel",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50499095",
+        "publishedAt": "2026-11-14T17:49:24.000Z",
+        "points": 6,
+        "comments": 3,
+        "author": "cpncrunch",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50499114",
+      "url": "https://news.ycombinator.com/item?id=50499114",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Claude asked to renumber pages deletes professor's syllabus, year of notes",
+        "originalUrl": "https://www.tomshardware.com/tech-industry/artificial-intelligence/rogue-claude-ai-tasked-with-renumbering-pages-accidentally-deletes-law-professors-entire-syllabus-one-year-of-lecture-notes-youre-right-to-be-angry-i-deleted-your-files-through-my-own-carelessness-humbled-agent-admits",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50499114",
+        "publishedAt": "2026-11-14T17:51:13.000Z",
+        "points": 50,
+        "comments": 75,
+        "author": "gnabgib",
+        "matchedQueryIds": [
+          "claude"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50499150",
+      "url": "https://news.ycombinator.com/item?id=50499150",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Use LLM for direct robot control",
+        "originalUrl": "https://arxiv.org/abs/2610.28259",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50499150",
+        "publishedAt": "2026-11-14T17:55:04.000Z",
+        "points": 1,
+        "comments": 1,
+        "author": "kevinlu",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50499172",
+      "url": "https://news.ycombinator.com/item?id=50499172",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "LLMs as Consensus Machines",
+        "originalUrl": "https://hollisrobbinsanecdotal.substack.com/p/thinking-inside-the-box",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50499172",
+        "publishedAt": "2026-11-14T17:57:27.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "HR01",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50499250",
+      "url": "https://news.ycombinator.com/item?id=50499250",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Model-share – see which Claude models used your weekly limit",
+        "originalUrl": "https://github.com/shubhamverma8991/claude-model-share",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50499250",
+        "publishedAt": "2026-11-14T18:07:39.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "shubhverma8991",
+        "matchedQueryIds": [
+          "claude",
+          "llm"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50499368",
+      "url": "https://news.ycombinator.com/item?id=50499368",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Taboos and Self-Censorship Among U.S. Psychology Professors (2025)",
+        "originalUrl": "https://journals.sagepub.com/doi/10.1177/17456916241252085",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50499368",
+        "publishedAt": "2026-11-14T18:19:37.000Z",
+        "points": 5,
+        "comments": 0,
+        "author": "mpweiher",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50499446",
+      "url": "https://news.ycombinator.com/item?id=50499446",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "A 27-byte telemetry response nobody reads freezes Claude Desktop every two days",
+        "originalUrl": "https://blog.dfb.sh/blog/claude-desktop-freeze/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50499446",
+        "publishedAt": "2026-11-14T18:27:55.000Z",
+        "points": 9,
+        "comments": 1,
+        "author": "lladnar",
+        "matchedQueryIds": [
+          "claude",
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50499487",
+      "url": "https://news.ycombinator.com/item?id=50499487",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: AI Time Estimator – how long Claude Code will take, from your own logs",
+        "originalUrl": "https://github.com/noambrand/ai-time-estimator",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50499487",
+        "publishedAt": "2026-11-14T18:32:30.000Z",
+        "points": 4,
+        "comments": 0,
+        "author": "Noambbb",
+        "matchedQueryIds": [
+          "claude"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50499588",
+      "url": "https://news.ycombinator.com/item?id=50499588",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "I Tried Every LLM Architecture Change Since 2020",
+        "originalUrl": "https://www.nikita-pavlichenko.com/blog/every-llm-architecture-change",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50499588",
+        "publishedAt": "2026-11-14T18:41:54.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "scoresmoke",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50499602",
+      "url": "https://news.ycombinator.com/item?id=50499602",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Uber's Rate Limiting System",
+        "originalUrl": "https://www.uber.com/in/en/blog/ubers-rate-limiting-system/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50499602",
+        "publishedAt": "2026-11-14T18:43:08.000Z",
+        "points": 3,
+        "comments": 0,
+        "author": "birdculture",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50499605",
+      "url": "https://news.ycombinator.com/item?id=50499605",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: DownForReal – Kuma Hosted from 3 regions",
+        "originalUrl": "https://downforreal.com/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50499605",
+        "publishedAt": "2026-11-14T18:43:21.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "hodder",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50499898",
+      "url": "https://news.ycombinator.com/item?id=50499898",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Smart Node, a self-hosted crew of AI agents for a small business",
+        "originalUrl": "https://github.com/dklymentiev/smart-node",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50499898",
+        "publishedAt": "2026-11-14T19:17:50.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "klmdev",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50499977",
+      "url": "https://news.ycombinator.com/item?id=50499977",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "MergeAtlas: Turn PRs into a Map of Cards",
+        "originalUrl": "https://github.com/ismayilkarimli/MergeAtlas",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50499977",
+        "publishedAt": "2026-11-14T19:27:46.000Z",
+        "points": 1,
+        "comments": 1,
+        "author": "ismayilkarimli",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50500089",
+      "url": "https://news.ycombinator.com/item?id=50500089",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Loft – offline Q&A over your local files, with citations (llama.cpp)",
+        "originalUrl": "https://github.com/nwaoga/loft",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50500089",
+        "publishedAt": "2026-11-14T19:42:17.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "nwaoga",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50500105",
+      "url": "https://news.ycombinator.com/item?id=50500105",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "San Francisco weighs limits on self-checkout stations",
+        "originalUrl": "https://abc7news.com/post/san-francisco-weighs-limits-checkout-stations/19990668/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50500105",
+        "publishedAt": "2026-11-14T19:43:50.000Z",
+        "points": 3,
+        "comments": 1,
+        "author": "mikhael",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50500231",
+      "url": "https://news.ycombinator.com/item?id=50500231",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Building an Agentic Loop in Temporal",
+        "originalUrl": "https://cadenya.com/handwritten/agentic-loop-in-temporal",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50500231",
+        "publishedAt": "2026-11-14T19:59:07.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "btables",
+        "matchedQueryIds": [
+          "agent"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50500291",
+      "url": "https://news.ycombinator.com/item?id=50500291",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: RedHands – MCP for multi-stage offensive security tools",
+        "originalUrl": "https://github.com/yasindce1998/redhands",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50500291",
+        "publishedAt": "2026-11-14T20:05:10.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "yasindce1998",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50500326",
+      "url": "https://news.ycombinator.com/item?id=50500326",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "ChatGPT Wallet",
+        "originalUrl": "https://openai.com/fr-FR/index/introducing-chatgpt-wallet/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50500326",
+        "publishedAt": "2026-11-14T20:09:13.000Z",
+        "points": 3,
+        "comments": 1,
+        "author": "alFReD-NSH",
+        "matchedQueryIds": [
+          "openai"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50500787",
+      "url": "https://news.ycombinator.com/item?id=50500787",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "The Home Repo: The effortless multi-repo agent setup (9 min video)",
+        "originalUrl": null,
+        "discussionUrl": "https://news.ycombinator.com/item?id=50500787",
+        "publishedAt": "2026-11-14T21:03:38.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "rmason",
+        "matchedQueryIds": [
+          "agent"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50500950",
+      "url": "https://news.ycombinator.com/item?id=50500950",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "ChatGPT Wallet",
+        "originalUrl": "https://openai.com/pt-BR/index/introducing-chatgpt-wallet/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50500950",
+        "publishedAt": "2026-11-14T21:21:11.000Z",
+        "points": 5,
+        "comments": 0,
+        "author": "smokeeaasd",
+        "matchedQueryIds": [
+          "openai"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50500953",
+      "url": "https://news.ycombinator.com/item?id=50500953",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: HN's Most Recommended Fonts",
+        "originalUrl": "https://hacker.living/fonts",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50500953",
+        "publishedAt": "2026-11-14T21:21:21.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "grandimam",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50501075",
+      "url": "https://news.ycombinator.com/item?id=50501075",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "My lunch-break response to ARTEX: a host intrusion sentinel",
+        "originalUrl": "https://github.com/gary23w/agent-garrett-sentinel-service",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50501075",
+        "publishedAt": "2026-11-14T21:30:57.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "gary23w",
+        "matchedQueryIds": [
+          "agent"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50501098",
+      "url": "https://news.ycombinator.com/item?id=50501098",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "A new UMAP release brings major performance, quality, and scaling improvements",
+        "originalUrl": "https://umap-learn.readthedocs.io/en/latest/whats_new_0_6.html",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50501098",
+        "publishedAt": "2026-11-14T21:33:03.000Z",
+        "points": 4,
+        "comments": 0,
+        "author": "lmcinnes",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50501121",
+      "url": "https://news.ycombinator.com/item?id=50501121",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "See and revoke what your AI coding agents can access",
+        "originalUrl": "https://github.com/dirmedmr-alt/ai-access-auditor",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50501121",
+        "publishedAt": "2026-11-14T21:35:05.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "dirmed",
+        "matchedQueryIds": [
+          "agent"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50501171",
+      "url": "https://news.ycombinator.com/item?id=50501171",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Domino Rally – design in 2D, watch in 3D",
+        "originalUrl": "https://www.orgiggly.com/dominoes",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50501171",
+        "publishedAt": "2026-11-14T21:38:51.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "orgiggly-dave",
+        "matchedQueryIds": [
+          "claude"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50501248",
+      "url": "https://news.ycombinator.com/item?id=50501248",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "A 3D office where real Claude Code sessions work as employees",
+        "originalUrl": "https://github.com/brstic/orchestrator",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50501248",
+        "publishedAt": "2026-11-14T21:46:31.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "bstefanovic",
+        "matchedQueryIds": [
+          "claude"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50501335",
+      "url": "https://news.ycombinator.com/item?id=50501335",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Scaling Laws in Practice: MuP, WSD and Muon Explained – DeepSeek Did Use IT [video]",
+        "originalUrl": null,
+        "discussionUrl": "https://news.ycombinator.com/item?id=50501335",
+        "publishedAt": "2026-11-14T21:54:48.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "ryansakhala",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50501354",
+      "url": "https://news.ycombinator.com/item?id=50501354",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Paintpot – Kid-friendly MSPaint clone for Linux",
+        "originalUrl": "https://github.com/marktbaldridge/paintpot/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50501354",
+        "publishedAt": "2026-11-14T21:56:40.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "deposittag",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50501406",
+      "url": "https://news.ycombinator.com/item?id=50501406",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "EnvOpt: Automated Optimization for Agent Environments",
+        "originalUrl": "https://bespokelabs.ai/blog/envopt",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50501406",
+        "publishedAt": "2026-11-14T22:01:58.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "matt_d",
+        "matchedQueryIds": [
+          "agent"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50501596",
+      "url": "https://news.ycombinator.com/item?id=50501596",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Are we building multi-agent systems without a proper trust layer?",
+        "originalUrl": "https://www.sinapsdata.com.br/en",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50501596",
+        "publishedAt": "2026-11-14T22:23:12.000Z",
+        "points": 4,
+        "comments": 0,
+        "author": "sadrk",
+        "matchedQueryIds": [
+          "agent"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50501697",
+      "url": "https://news.ycombinator.com/item?id=50501697",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "The Chinese spy allegation that toppled Nvidia's CEO is starting to look shaky",
+        "originalUrl": "https://www.businessinsider.com/intelligence-jensen-huang-downfall-shaky-nvidia-china-spy-gpus-2026-11",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50501697",
+        "publishedAt": "2026-11-14T22:33:58.000Z",
+        "points": 14,
+        "comments": 2,
+        "author": "cpncrunch",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50501701",
+      "url": "https://news.ycombinator.com/item?id=50501701",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "AI Quest – Interactive sandboxes for agentic web apps",
+        "originalUrl": "https://ai-quest.dev/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50501701",
+        "publishedAt": "2026-11-14T22:34:26.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "quentinmerle",
+        "matchedQueryIds": [
+          "agent"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50501728",
+      "url": "https://news.ycombinator.com/item?id=50501728",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "A look inside OpenAI's recent Proof of Yang-Mills Existence [video]",
+        "originalUrl": null,
+        "discussionUrl": "https://news.ycombinator.com/item?id=50501728",
+        "publishedAt": "2026-11-14T22:37:55.000Z",
+        "points": 2,
+        "comments": 1,
+        "author": "HotHotLava",
+        "matchedQueryIds": [
+          "openai"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50502059",
+      "url": "https://news.ycombinator.com/item?id=50502059",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Sword Coast Map 3D (Rust to WebGL, Mobile Friendly)",
+        "originalUrl": null,
+        "discussionUrl": "https://news.ycombinator.com/item?id=50502059",
+        "publishedAt": "2026-11-14T23:14:03.000Z",
+        "points": 5,
+        "comments": 0,
+        "author": "elliotbnvl",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50502109",
+      "url": "https://news.ycombinator.com/item?id=50502109",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Mapping the FAA ground stop with open flight-tracking data",
+        "originalUrl": null,
+        "discussionUrl": "https://news.ycombinator.com/item?id=50502109",
+        "publishedAt": "2026-11-14T23:19:54.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "joshfischer1108",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50502144",
+      "url": "https://news.ycombinator.com/item?id=50502144",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN:LetThemBuild:Claude, Codex, Gemini, Grok & OpenRouter models in Parallel",
+        "originalUrl": "https://letthembuild.com/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50502144",
+        "publishedAt": "2026-11-14T23:24:50.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "gpulogy45",
+        "matchedQueryIds": [
+          "claude"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50502172",
+      "url": "https://news.ycombinator.com/item?id=50502172",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Granite 4.2 LLMs: How They're Built",
+        "originalUrl": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50502172",
+        "publishedAt": "2026-11-14T23:27:36.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "gmays",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50502246",
+      "url": "https://news.ycombinator.com/item?id=50502246",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "The end of credential sprawl for agents",
+        "originalUrl": "https://vercel.com/blog/the-end-of-credential-sprawl-for-agents",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50502246",
+        "publishedAt": "2026-11-14T23:38:08.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "gmays",
+        "matchedQueryIds": [
+          "agent"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50502249",
+      "url": "https://news.ycombinator.com/item?id=50502249",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Proof of effort: When LLMs destroyed the time for execution",
+        "originalUrl": "https://shawnsomething.com/thoughts/proof-of-effort/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50502249",
+        "publishedAt": "2026-11-14T23:38:35.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "Shawn_Something",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50502344",
+      "url": "https://news.ycombinator.com/item?id=50502344",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Ask HN: Is post-training make AI models dumber?",
+        "originalUrl": null,
+        "discussionUrl": "https://news.ycombinator.com/item?id=50502344",
+        "publishedAt": "2026-11-14T23:53:20.000Z",
+        "points": 3,
+        "comments": 5,
+        "author": "CleverLikeAnOx",
+        "matchedQueryIds": [
+          "agent",
+          "claude"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50502453",
+      "url": "https://news.ycombinator.com/item?id=50502453",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "DeepSeek's New LLM Engine Just Made GPUs 3x More Valuable [video]",
+        "originalUrl": null,
+        "discussionUrl": "https://news.ycombinator.com/item?id=50502453",
+        "publishedAt": "2026-11-15T00:07:46.000Z",
+        "points": 2,
+        "comments": 3,
+        "author": "yogthos",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50502457",
+      "url": "https://news.ycombinator.com/item?id=50502457",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Lazarus: Backdooring LLMs by editing ten neurons",
+        "originalUrl": "https://twitter.com/DimitrisPapail/status/2120245027804705121",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50502457",
+        "publishedAt": "2026-11-15T00:08:32.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "stavros",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50502869",
+      "url": "https://news.ycombinator.com/item?id=50502869",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "What nobody tells you about writing agent skills",
+        "originalUrl": "https://newsletter.posthog.com/p/what-nobody-tells-you-about-writing",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50502869",
+        "publishedAt": "2026-11-15T01:01:19.000Z",
+        "points": 3,
+        "comments": 0,
+        "author": "fagnerbrack",
+        "matchedQueryIds": [
+          "agent"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50503017",
+      "url": "https://news.ycombinator.com/item?id=50503017",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Ask HN: What AI agent infrastructure are you using in 2026?",
+        "originalUrl": null,
+        "discussionUrl": "https://news.ycombinator.com/item?id=50503017",
+        "publishedAt": "2026-11-15T01:22:43.000Z",
+        "points": 4,
+        "comments": 2,
+        "author": "aurumagent",
+        "matchedQueryIds": [
+          "agent"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50503241",
+      "url": "https://news.ycombinator.com/item?id=50503241",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "What a task costs on Opus 5.5",
+        "originalUrl": "https://claude.dev/blog/what-a-task-costs-on-opus-5-5/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50503241",
+        "publishedAt": "2026-11-15T01:57:36.000Z",
+        "points": 24,
+        "comments": 22,
+        "author": "gmays",
+        "matchedQueryIds": [
+          "claude"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50503435",
+      "url": "https://news.ycombinator.com/item?id=50503435",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Multi-agent AI (LangGraph) to audit AI papers for reproducibility",
+        "originalUrl": "https://github.com/owenpatience2010-cmyk/paperpulse",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50503435",
+        "publishedAt": "2026-11-15T02:35:18.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "OwiiiP",
+        "matchedQueryIds": [
+          "agent"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50503451",
+      "url": "https://news.ycombinator.com/item?id=50503451",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Macula For?",
+        "originalUrl": "https://claude.ai/artifact/2KGKuuJZsMfCu1pjq744qz",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50503451",
+        "publishedAt": "2026-11-15T02:38:42.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "beamologist",
+        "matchedQueryIds": [
+          "claude"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50503492",
+      "url": "https://news.ycombinator.com/item?id=50503492",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Fun with Constrained Programming",
+        "originalUrl": "https://blog.cmpxchg8b.com/2012/09/fun-with-constrained-programming.html",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50503492",
+        "publishedAt": "2026-11-15T02:45:57.000Z",
+        "points": 5,
+        "comments": 0,
+        "author": "colejohnson66",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50503511",
+      "url": "https://news.ycombinator.com/item?id=50503511",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "ChatMate: Remote Prompt Execution on AI Assistants Through Sandbox Escaping [video]",
+        "originalUrl": null,
+        "discussionUrl": "https://news.ycombinator.com/item?id=50503511",
+        "publishedAt": "2026-11-15T02:49:18.000Z",
+        "points": 5,
+        "comments": 1,
+        "author": "vbCrLf",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50503588",
+      "url": "https://news.ycombinator.com/item?id=50503588",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "The Single Router in Southern Arkansas That Ground Air Travel to a Halt",
+        "originalUrl": "https://www.wsj.com/business/airlines/the-single-router-in-southern-arkansas-that-ground-air-travel-to-a-halt-eedc326c",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50503588",
+        "publishedAt": "2026-11-15T03:05:54.000Z",
+        "points": 87,
+        "comments": 60,
+        "author": "lxm",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50503887",
+      "url": "https://news.ycombinator.com/item?id=50503887",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "A/B test whether pre-gathered context helps coding agents complete tasks",
+        "originalUrl": "https://github.com/unblocked/context-engine-simulator",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50503887",
+        "publishedAt": "2026-11-15T04:01:11.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "fagnerbrack",
+        "matchedQueryIds": [
+          "agent"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50503888",
+      "url": "https://news.ycombinator.com/item?id=50503888",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Anthropic bought a one-person, AI-powered biotech",
+        "originalUrl": "https://www.nature.com/articles/d41586-026-03640-9",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50503888",
+        "publishedAt": "2026-11-15T04:01:16.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "nate",
+        "matchedQueryIds": [
+          "anthropic"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50503920",
+      "url": "https://news.ycombinator.com/item?id=50503920",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "A Plan of the Cities of London and Westminster, and Borough of Southwark",
+        "originalUrl": "https://en.wikipedia.org/wiki/John_Rocque%27s_maps_of_London",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50503920",
+        "publishedAt": "2026-11-15T04:07:26.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "arbuge",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50503930",
+      "url": "https://news.ycombinator.com/item?id=50503930",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Turbo-Browser-MCP – Batch forms, DOM deltas and submit guards for MCP",
+        "originalUrl": "https://github.com/Tthanh2k6/turbo-browser-mcp",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50503930",
+        "publishedAt": "2026-11-15T04:09:11.000Z",
+        "points": 47,
+        "comments": 9,
+        "author": "tthanh2k6",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50504027",
+      "url": "https://news.ycombinator.com/item?id=50504027",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Discovery Feed for Agents",
+        "originalUrl": "https://twitter.com/cadenbuild/status/2121372002313503003",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50504027",
+        "publishedAt": "2026-11-15T04:29:26.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "cadenli2025",
+        "matchedQueryIds": [
+          "agent"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50504061",
+      "url": "https://news.ycombinator.com/item?id=50504061",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Anthropic, can you please make up your mind with your models?",
+        "originalUrl": null,
+        "discussionUrl": "https://news.ycombinator.com/item?id=50504061",
+        "publishedAt": "2026-11-15T04:36:59.000Z",
+        "points": 5,
+        "comments": 7,
+        "author": "xlayn",
+        "matchedQueryIds": [
+          "anthropic"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50504063",
+      "url": "https://news.ycombinator.com/item?id=50504063",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Agent Substrate: The Core System",
+        "originalUrl": "https://github.com/agent-substrate/substrate",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50504063",
+        "publishedAt": "2026-11-15T04:37:17.000Z",
+        "points": 3,
+        "comments": 0,
+        "author": "thunderbong",
+        "matchedQueryIds": [
+          "agent"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50504103",
+      "url": "https://news.ycombinator.com/item?id=50504103",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Anthropic CVP (Mythos) Defense Access Requirements Reduced to KYC",
+        "originalUrl": null,
+        "discussionUrl": "https://news.ycombinator.com/item?id=50504103",
+        "publishedAt": "2026-11-15T04:49:04.000Z",
+        "points": 1,
+        "comments": 1,
+        "author": "jcomp",
+        "matchedQueryIds": [
+          "anthropic"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50504217",
+      "url": "https://news.ycombinator.com/item?id=50504217",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Turing Complete: Learn CPU architecture with puzzles",
+        "originalUrl": "https://store.steampowered.com/app/1444480/Turing_Complete/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50504217",
+        "publishedAt": "2026-11-15T05:17:04.000Z",
+        "points": 2,
+        "comments": 1,
+        "author": "totallymike",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50504343",
+      "url": "https://news.ycombinator.com/item?id=50504343",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "BrowserDo·Embiody – a browser built for AI agents",
+        "originalUrl": "https://embiody.com/blog/embiody-0-9-preview/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50504343",
+        "publishedAt": "2026-11-15T05:47:36.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "junlongzhai",
+        "matchedQueryIds": [
+          "agent"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50504346",
+      "url": "https://news.ycombinator.com/item?id=50504346",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "I borrowed the query planner from databases to fix a multi-index RAG agent",
+        "originalUrl": "https://medium.com/@sankeerthan.kasilingam/i-borrowed-the-query-planner-from-databases-to-fix-a-multi-index-rag-agent-110350f14a5d",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50504346",
+        "publishedAt": "2026-11-15T05:47:58.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "sankeerthan",
+        "matchedQueryIds": [
+          "agent"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50504822",
+      "url": "https://news.ycombinator.com/item?id=50504822",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Cshoal – A school of fish, hunted by predators, in your terminal",
+        "originalUrl": "https://github.com/mcthomas/cshoal",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50504822",
+        "publishedAt": "2026-11-15T07:28:50.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "Bondi_Blue",
+        "matchedQueryIds": [
+          "claude",
+          "mcp"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50504857",
+      "url": "https://news.ycombinator.com/item?id=50504857",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Reading JSON at 277 GB/s in Python",
+        "originalUrl": "https://lemire.me/blog/2026/11/14/reading-json-at-277-gb-s-in-python/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50504857",
+        "publishedAt": "2026-11-15T07:36:44.000Z",
+        "points": 1,
+        "comments": 1,
+        "author": "chmaynard",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50504919",
+      "url": "https://news.ycombinator.com/item?id=50504919",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Cloudflare: Spending Limits and Alerts",
+        "originalUrl": "https://developers.cloudflare.com/billing/manage/spend-management/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50504919",
+        "publishedAt": "2026-11-15T07:48:05.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "taran_narat",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50504932",
+      "url": "https://news.ycombinator.com/item?id=50504932",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Saylark – Open-source voice dictation for Mac, like Wispr Flow",
+        "originalUrl": "https://github.com/btahir/saylark",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50504932",
+        "publishedAt": "2026-11-15T07:50:07.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "bilater",
+        "matchedQueryIds": [
+          "claude"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50504995",
+      "url": "https://news.ycombinator.com/item?id=50504995",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "How to Setup Gentlemail",
+        "originalUrl": "https://gentlemail.dev/deploy",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50504995",
+        "publishedAt": "2026-11-15T08:02:25.000Z",
+        "points": 2,
+        "comments": 1,
+        "author": "themx05",
+        "matchedQueryIds": [
+          "agent"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50505055",
+      "url": "https://news.ycombinator.com/item?id=50505055",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Testing with Agents in Apple platform development [video]",
+        "originalUrl": "https://vimeo.com/1246961072",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50505055",
+        "publishedAt": "2026-11-15T08:14:40.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "Austin_Conlon",
+        "matchedQueryIds": [
+          "agent"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50505492",
+      "url": "https://news.ycombinator.com/item?id=50505492",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Can a VPN be decentralised.. I think it's the best for homelabs",
+        "originalUrl": "https://github.com/CLoaKY233/kith",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50505492",
+        "publishedAt": "2026-11-15T09:46:11.000Z",
+        "points": 6,
+        "comments": 2,
+        "author": "laysheth",
+        "matchedQueryIds": [
+          "claude"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50505586",
+      "url": "https://news.ycombinator.com/item?id=50505586",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "A Pile of MCP Connectors Is Not a Context Engine",
+        "originalUrl": "https://getunblocked.com/blog/mcp-connectors-are-not-a-context-engine/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50505586",
+        "publishedAt": "2026-11-15T10:00:53.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "fagnerbrack",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50505734",
+      "url": "https://news.ycombinator.com/item?id=50505734",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Codex is deprecating plan mode",
+        "originalUrl": "https://github.com/openai/codex/issues/18490",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50505734",
+        "publishedAt": "2026-11-15T10:25:00.000Z",
+        "points": 2,
+        "comments": 1,
+        "author": "EnnioEvo",
+        "matchedQueryIds": [
+          "openai"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50505744",
+      "url": "https://news.ycombinator.com/item?id=50505744",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Thoughts on memory layers like mem0",
+        "originalUrl": null,
+        "discussionUrl": "https://news.ycombinator.com/item?id=50505744",
+        "publishedAt": "2026-11-15T10:26:46.000Z",
+        "points": 2,
+        "comments": 4,
+        "author": "anshmalik2002",
+        "matchedQueryIds": [
+          "agent",
+          "claude"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506080",
+      "url": "https://news.ycombinator.com/item?id=50506080",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN : Multilingual Minimal Local (MCP only) alternative to Granola",
+        "originalUrl": "https://github.com/IndianTinker/quills",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506080",
+        "publishedAt": "2026-11-15T11:23:20.000Z",
+        "points": 2,
+        "comments": 1,
+        "author": "indiantinker",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506111",
+      "url": "https://news.ycombinator.com/item?id=50506111",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Can LLMs redesign themselves as they train?",
+        "originalUrl": "https://www.doubleai.com/research/can-llms-redesign-themselves-as-they-train",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506111",
+        "publishedAt": "2026-11-15T11:28:28.000Z",
+        "points": 3,
+        "comments": 0,
+        "author": "NeuralOracle",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506130",
+      "url": "https://news.ycombinator.com/item?id=50506130",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "US Airspace on a Toothbrush CPU",
+        "originalUrl": "https://faa.caseyhandmer.com/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506130",
+        "publishedAt": "2026-11-15T11:32:55.000Z",
+        "points": 3,
+        "comments": 3,
+        "author": "ronfriedhaber",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506235",
+      "url": "https://news.ycombinator.com/item?id=50506235",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: a Rust implementation of the Reticulum mesh networking stack",
+        "originalUrl": "https://github.com/aljazceru/Reticulum-rs",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506235",
+        "publishedAt": "2026-11-15T11:50:39.000Z",
+        "points": 5,
+        "comments": 1,
+        "author": "aaaljaz",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506314",
+      "url": "https://news.ycombinator.com/item?id=50506314",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Fireface UCX on Linux: reverse engineered and built with Claude Code",
+        "originalUrl": "https://johanyngman.com/fireface-ucx-on-linux-reverse-engineered-and-built-with-claude-code.html",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506314",
+        "publishedAt": "2026-11-15T12:05:02.000Z",
+        "points": 1,
+        "comments": 1,
+        "author": "realbogart",
+        "matchedQueryIds": [
+          "claude"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506332",
+      "url": "https://news.ycombinator.com/item?id=50506332",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Aurora GeoXAI – Sovereign geospatial AI built out of frustration",
+        "originalUrl": "https://github.com/felipetjmg1-bit/aurora-geointelligence-xai",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506332",
+        "publishedAt": "2026-11-15T12:07:53.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "Impulso_Digital",
+        "matchedQueryIds": [
+          "ai"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506338",
+      "url": "https://news.ycombinator.com/item?id=50506338",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Codemode in Claude Code",
+        "originalUrl": "https://code.claude.com/docs/en/code-mode",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506338",
+        "publishedAt": "2026-11-15T12:08:39.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "vindex10",
+        "matchedQueryIds": [
+          "claude"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506342",
+      "url": "https://news.ycombinator.com/item?id=50506342",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Misaligned AI behaviors that indicate loss-of-control risk",
+        "originalUrl": "https://guidelight.ai/blog/categories-of-misaligned-ai-behaviors",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506342",
+        "publishedAt": "2026-11-15T12:09:05.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "iLuddite",
+        "matchedQueryIds": [
+          "ai"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506376",
+      "url": "https://news.ycombinator.com/item?id=50506376",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Understanding Positional Embeddings in Modern LLMs",
+        "originalUrl": "https://magazine.sebastianraschka.com/p/understanding-positional-embeddings",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506376",
+        "publishedAt": "2026-11-15T12:14:06.000Z",
+        "points": 226,
+        "comments": 27,
+        "author": "vismit2000",
+        "matchedQueryIds": [
+          "llm",
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506404",
+      "url": "https://news.ycombinator.com/item?id=50506404",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "What Apple's \"The Dreamer\" ad gets right about selling computers",
+        "originalUrl": "https://carette.xyz/posts/the-dreamer/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506404",
+        "publishedAt": "2026-11-15T12:20:34.000Z",
+        "points": 3,
+        "comments": 1,
+        "author": "LucidLynx",
+        "matchedQueryIds": [
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506416",
+      "url": "https://news.ycombinator.com/item?id=50506416",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Sandlock: Confining AI Agent Code with Unprivileged Linux Primitives",
+        "originalUrl": "https://arxiv.org/abs/2605.26298",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506416",
+        "publishedAt": "2026-11-15T12:23:24.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "equinumerous",
+        "matchedQueryIds": [
+          "agent",
+          "ai",
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506430",
+      "url": "https://news.ycombinator.com/item?id=50506430",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "What is the randomart image for? (2023)",
+        "originalUrl": "https://bytes.zone/posts/what-is-the-randomart-image-for/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506430",
+        "publishedAt": "2026-11-15T12:27:07.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "TuringTux",
+        "matchedQueryIds": [
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506491",
+      "url": "https://news.ycombinator.com/item?id=50506491",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Microphone Selector – Find the right mic for your recording needs",
+        "originalUrl": "https://soundsystemcalc.com/microphone-finder/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506491",
+        "publishedAt": "2026-11-15T12:36:32.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "karaniph",
+        "matchedQueryIds": [
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506495",
+      "url": "https://news.ycombinator.com/item?id=50506495",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "McDonald's Admits to International Incident",
+        "originalUrl": "https://twitter.com/McDonalds/status/78133240472403968",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506495",
+        "publishedAt": "2026-11-15T12:36:57.000Z",
+        "points": 2,
+        "comments": 2,
+        "author": "MelonArmiger",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506529",
+      "url": "https://news.ycombinator.com/item?id=50506529",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Skills for Real Scientists – Steer Away AI Slop",
+        "originalUrl": "https://github.com/HiteSit/real-scientist-skills",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506529",
+        "publishedAt": "2026-11-15T12:42:08.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "hitesit",
+        "matchedQueryIds": [
+          "ai"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506559",
+      "url": "https://news.ycombinator.com/item?id=50506559",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "AWS STS/IAM identity center 503 (us-east-1)",
+        "originalUrl": null,
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506559",
+        "publishedAt": "2026-11-15T12:46:39.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "gojkoa",
+        "matchedQueryIds": [
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506584",
+      "url": "https://news.ycombinator.com/item?id=50506584",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "The Backdoor Route That Keeps Beijing in the AI Race",
+        "originalUrl": "https://www.wsj.com/tech/jensen-huang-backdoor-ai-data-centers-a5e4499d",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506584",
+        "publishedAt": "2026-11-15T12:50:53.000Z",
+        "points": 3,
+        "comments": 0,
+        "author": "heresie-dabord",
+        "matchedQueryIds": [
+          "ai",
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506586",
+      "url": "https://news.ycombinator.com/item?id=50506586",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Five Layers of the AI Cake [pdf]",
+        "originalUrl": "https://futurumgroup.com/wp-content/uploads/2026/05/Five-Layers-of-the-AI-Cake.pdf",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506586",
+        "publishedAt": "2026-11-15T12:51:33.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "teleforce",
+        "matchedQueryIds": [
+          "ai"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506625",
+      "url": "https://news.ycombinator.com/item?id=50506625",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "AI Adoption Failures: Why Your Successful AI Pilot Is No Reason to Scale",
+        "originalUrl": "https://age-of-product.com/ai-adoption-failures/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506625",
+        "publishedAt": "2026-11-15T12:59:22.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "swolpers",
+        "matchedQueryIds": [
+          "ai",
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506628",
+      "url": "https://news.ycombinator.com/item?id=50506628",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Migrating a Large Flow Monorepo to TypeScript",
+        "originalUrl": "https://engineeringblog.yelp.com/2026/08/migrating-a-large-flow-monorepo-to-typescript.html",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506628",
+        "publishedAt": "2026-11-15T13:00:39.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "fagnerbrack",
+        "matchedQueryIds": [
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506703",
+      "url": "https://news.ycombinator.com/item?id=50506703",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Claude Code Helped Me Save 130€ on an iPad Battery Repair",
+        "originalUrl": "https://thinkingground.net/writing/claude-code-helped-me-save-130-on-an-ipad-battery-repair",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506703",
+        "publishedAt": "2026-11-15T13:12:28.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "zc4242",
+        "matchedQueryIds": [
+          "claude"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506710",
+      "url": "https://news.ycombinator.com/item?id=50506710",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Scaling Citus without limits: announcing Query Routers",
+        "originalUrl": "https://stackgres.io/blog/scaling-citus-beyond-one-coordinator-announcing-query-routers-stackgres/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506710",
+        "publishedAt": "2026-11-15T13:13:51.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "ahachete",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506724",
+      "url": "https://news.ycombinator.com/item?id=50506724",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Stop building new AI agent orchestrators – there are 636",
+        "originalUrl": "https://github.com/erson/awesome-agent-orchestrators/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506724",
+        "publishedAt": "2026-11-15T13:16:16.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "pulkas",
+        "matchedQueryIds": [
+          "agent",
+          "ai",
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506746",
+      "url": "https://news.ycombinator.com/item?id=50506746",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: K8 Cruft – a Windows dev-junk cleaner with a 30-day undo",
+        "originalUrl": "https://lilbuba.ai/k8-cruft.html",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506746",
+        "publishedAt": "2026-11-15T13:21:38.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "infinity_jo",
+        "matchedQueryIds": [
+          "ai"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506796",
+      "url": "https://news.ycombinator.com/item?id=50506796",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Europa, the EU's open AI model, is aiming for nearly 1T parameters",
+        "originalUrl": "https://maccus.fr/en/eu-open-ai-model-europa/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506796",
+        "publishedAt": "2026-11-15T13:29:48.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "mstkllah",
+        "matchedQueryIds": [
+          "ai",
+          "openai"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506800",
+      "url": "https://news.ycombinator.com/item?id=50506800",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "The original Xbox was released 25 years ago today",
+        "originalUrl": "https://www.tomshardware.com/video-games/xbox/the-original-xbox-was-released-25-years-ago-today-microsofts-pentium-iii-and-nvidia-gpu-powered-console-did-surprisingly-well-in-a-ps2-dominated-era",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506800",
+        "publishedAt": "2026-11-15T13:30:49.000Z",
+        "points": 4,
+        "comments": 0,
+        "author": "Brajeshwar",
+        "matchedQueryIds": [
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506807",
+      "url": "https://news.ycombinator.com/item?id=50506807",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Every Satellite in Orbit Since 1957",
+        "originalUrl": "https://berryde.com/projects/satellites/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506807",
+        "publishedAt": "2026-11-15T13:31:44.000Z",
+        "points": 1,
+        "comments": 1,
+        "author": "daedbe",
+        "matchedQueryIds": [
+          "rag"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506861",
+      "url": "https://news.ycombinator.com/item?id=50506861",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "The Not-So-Crazy Legal Strategy to Free Nicolás Maduro",
+        "originalUrl": "https://www.politico.com/news/magazine/2026/11/15/nicolas-maduro-trial-legal-strategy-01149709",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506861",
+        "publishedAt": "2026-11-15T13:40:08.000Z",
+        "points": 2,
+        "comments": 1,
+        "author": "ibn_khaldun",
+        "matchedQueryIds": [
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506919",
+      "url": "https://news.ycombinator.com/item?id=50506919",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Let your AI agent call you, over MCP",
+        "originalUrl": "https://agline.in/mcp",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506919",
+        "publishedAt": "2026-11-15T13:47:29.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "franze",
+        "matchedQueryIds": [
+          "agent",
+          "ai",
+          "mcp",
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506934",
+      "url": "https://news.ycombinator.com/item?id=50506934",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Beware the New AI-Fueled Ransomware Boom",
+        "originalUrl": "https://www.wired.com/story/beware-the-new-ai-fueled-ransomware-boom/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506934",
+        "publishedAt": "2026-11-15T13:49:46.000Z",
+        "points": 3,
+        "comments": 0,
+        "author": "saikatsg",
+        "matchedQueryIds": [
+          "ai",
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506940",
+      "url": "https://news.ycombinator.com/item?id=50506940",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: db-branch – database branches in seconds for AI agents and CI, via ZFS",
+        "originalUrl": "https://github.com/db-branch/db-branch",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506940",
+        "publishedAt": "2026-11-15T13:50:51.000Z",
+        "points": 40,
+        "comments": 10,
+        "author": "nu_nu11",
+        "matchedQueryIds": [
+          "agent",
+          "ai",
+          "rag"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506957",
+      "url": "https://news.ycombinator.com/item?id=50506957",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "In a Sloppified A.I. World, Only Humans Can Build 'Ecosystems'",
+        "originalUrl": "https://www.nytimes.com/2026/11/15/business/tech-jobs-ai-ecosystem.html",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506957",
+        "publishedAt": "2026-11-15T13:54:04.000Z",
+        "points": 6,
+        "comments": 2,
+        "author": "saikatsg",
+        "matchedQueryIds": [
+          "ai"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50506993",
+      "url": "https://news.ycombinator.com/item?id=50506993",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "I run multiple Claude Code accounts on one Mac",
+        "originalUrl": "https://twitter.com/viborc/status/2121941174374039788",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50506993",
+        "publishedAt": "2026-11-15T14:00:20.000Z",
+        "points": 8,
+        "comments": 2,
+        "author": "taubek",
+        "matchedQueryIds": [
+          "claude"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507084",
+      "url": "https://news.ycombinator.com/item?id=50507084",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "LeCun: If you're interested in human-level AI, don't work on LLMs",
+        "originalUrl": "https://www.reddit.com/r/TheMachineLearning/comments/1xwp0kp/dont_work_on_llms_ylecun_at_corl/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507084",
+        "publishedAt": "2026-11-15T14:14:23.000Z",
+        "points": 6,
+        "comments": 2,
+        "author": "theanonymousone",
+        "matchedQueryIds": [
+          "ai",
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507138",
+      "url": "https://news.ycombinator.com/item?id=50507138",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "OpsJarvis: A self-hosted AI ops desk where humans approve every write",
+        "originalUrl": "https://caelaralabs.com/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507138",
+        "publishedAt": "2026-11-15T14:22:03.000Z",
+        "points": 3,
+        "comments": 0,
+        "author": "opsjarvisai",
+        "matchedQueryIds": [
+          "ai"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507198",
+      "url": "https://news.ycombinator.com/item?id=50507198",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Anatomy of a trojan: backdooring an LLM by editing few dormant neurons",
+        "originalUrl": "https://int8.io/implanting-ai-with-lazarus/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507198",
+        "publishedAt": "2026-11-15T14:31:02.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "int8blog",
+        "matchedQueryIds": [
+          "ai",
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507199",
+      "url": "https://news.ycombinator.com/item?id=50507199",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Amazon Threat Intelligence observes threat actor campaigns with ARTEX AI agents",
+        "originalUrl": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-observes-threat-actors-running-cybercrime-campaigns-with-artex-ai-agents/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507199",
+        "publishedAt": "2026-11-15T14:31:07.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "882542F3884314B",
+        "matchedQueryIds": [
+          "agent",
+          "ai",
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507205",
+      "url": "https://news.ycombinator.com/item?id=50507205",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: SecureVibe – Find and trace vulnerabilities before shipping",
+        "originalUrl": "https://securevibe-dev.vercel.app/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507205",
+        "publishedAt": "2026-11-15T14:31:46.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "Abdo2026",
+        "matchedQueryIds": [
+          "ai",
+          "mcp",
+          "rag"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507227",
+      "url": "https://news.ycombinator.com/item?id=50507227",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Asgard archaea: have we found our microbial ancestors?",
+        "originalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12993045/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507227",
+        "publishedAt": "2026-11-15T14:35:45.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "georgecmu",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507228",
+      "url": "https://news.ycombinator.com/item?id=50507228",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "\"Don't argue with me. $100k is fair, and you know it.\" (2010)",
+        "originalUrl": null,
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507228",
+        "publishedAt": "2026-11-15T14:35:51.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "zenincognito",
+        "matchedQueryIds": [
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507285",
+      "url": "https://news.ycombinator.com/item?id=50507285",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Althar – an open-source IDE where agents review each other's work",
+        "originalUrl": "https://github.com/AltharIDE/althar",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507285",
+        "publishedAt": "2026-11-15T14:44:43.000Z",
+        "points": 3,
+        "comments": 1,
+        "author": "itsbalazs",
+        "matchedQueryIds": [
+          "agent",
+          "claude",
+          "rag"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507303",
+      "url": "https://news.ycombinator.com/item?id=50507303",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "All AI-generated code should be Open Source",
+        "originalUrl": "https://jakub.jankiewicz.org/blog/ai-code-open-source/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507303",
+        "publishedAt": "2026-11-15T14:46:58.000Z",
+        "points": 1129,
+        "comments": 609,
+        "author": "jcubic",
+        "matchedQueryIds": [
+          "ai"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507305",
+      "url": "https://news.ycombinator.com/item?id=50507305",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "The single router in southern Arkansas that ground air travel to a halt",
+        "originalUrl": "https://www.msn.com/en-us/news/other/the-single-router-in-southern-arkansas-that-ground-air-travel-to-a-halt/ar-AA2hs7wV",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507305",
+        "publishedAt": "2026-11-15T14:47:00.000Z",
+        "points": 6,
+        "comments": 1,
+        "author": "jordanpg",
+        "matchedQueryIds": [
+          "ai"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507323",
+      "url": "https://news.ycombinator.com/item?id=50507323",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Mapping climate-resilient connectivity across the San Francisco Bay Area",
+        "originalUrl": "https://sf-bay-area-connectivity.wn.r.appspot.com/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507323",
+        "publishedAt": "2026-11-15T14:49:57.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "bryanrasmussen",
+        "matchedQueryIds": [
+          "mcp"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507331",
+      "url": "https://news.ycombinator.com/item?id=50507331",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Top scorer on South Korean tax exam confesses to cheating with AI",
+        "originalUrl": "https://www.reuters.com/world/asia-pacific/top-scorer-south-korean-tax-exam-confesses-cheating-with-ai-2026-11-15/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507331",
+        "publishedAt": "2026-11-15T14:51:10.000Z",
+        "points": 9,
+        "comments": 5,
+        "author": "bookofjoe",
+        "matchedQueryIds": [
+          "ai"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507341",
+      "url": "https://news.ycombinator.com/item?id=50507341",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: A local-first AI agent for the desktop, no Electron, any LLM endpoint",
+        "originalUrl": "https://github.com/Scronkfinkle/byob",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507341",
+        "publishedAt": "2026-11-15T14:52:06.000Z",
+        "points": 3,
+        "comments": 0,
+        "author": "scronkfinkle",
+        "matchedQueryIds": [
+          "agent",
+          "ai",
+          "llm",
+          "rag"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507392",
+      "url": "https://news.ycombinator.com/item?id=50507392",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "PyPI code that breaks on Python 3.12 and 3.13",
+        "originalUrl": "https://py-code.org/blog/removed-stdlib-modules-pypi/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507392",
+        "publishedAt": "2026-11-15T14:59:38.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "aidotguru",
+        "matchedQueryIds": [
+          "ai"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507414",
+      "url": "https://news.ycombinator.com/item?id=50507414",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "A Straight Line Predicts How Fast My Laptop Generates LLM Tokens",
+        "originalUrl": "https://bryananthonio.com/blog/straight-line-predicts-how-fast-my-laptop-generates-llm-tokens/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507414",
+        "publishedAt": "2026-11-15T15:03:31.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "photon_collider",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507442",
+      "url": "https://news.ycombinator.com/item?id=50507442",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Pytml – Run Python in HTML with a single tag (no back end)",
+        "originalUrl": "https://pytml.js.org/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507442",
+        "publishedAt": "2026-11-15T15:07:50.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "nodex-ar",
+        "matchedQueryIds": [
+          "rag"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507449",
+      "url": "https://news.ycombinator.com/item?id=50507449",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "FlashVMM – jail your AI agent in a MicroVM that boots in 18 ms",
+        "originalUrl": "https://flashvmm.com/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507449",
+        "publishedAt": "2026-11-15T15:09:19.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "wovoro",
+        "matchedQueryIds": [
+          "agent",
+          "ai",
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507461",
+      "url": "https://news.ycombinator.com/item?id=50507461",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "China's COMAC completes first piloted flight of CE-25A electric aircraft",
+        "originalUrl": "https://www.aerotime.aero/articles/chinas-comac-completes-first-piloted-flight-of-ce-25a-electric-aircraft",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507461",
+        "publishedAt": "2026-11-15T15:11:01.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "Noaidi",
+        "matchedQueryIds": [
+          "ai"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507517",
+      "url": "https://news.ycombinator.com/item?id=50507517",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "A Human Reads the Anthropic IPO Filing",
+        "originalUrl": "https://www.nytimes.com/2026/11/15/business/anthropic-ipo-filing-prospectus.html",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507517",
+        "publishedAt": "2026-11-15T15:18:06.000Z",
+        "points": 21,
+        "comments": 10,
+        "author": "saikatsg",
+        "matchedQueryIds": [
+          "anthropic"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507534",
+      "url": "https://news.ycombinator.com/item?id=50507534",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Rex-teams – harness agnostic subagents and alarms for Rex terminal",
+        "originalUrl": "https://github.com/campfireshuffle/rex-teams",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507534",
+        "publishedAt": "2026-11-15T15:19:42.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "campfireshuffle",
+        "matchedQueryIds": [
+          "rag"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507543",
+      "url": "https://news.ycombinator.com/item?id=50507543",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Poker Diary, a tool to help organise your home games and track stats",
+        "originalUrl": "https://pokerdiary.app/g/demo",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507543",
+        "publishedAt": "2026-11-15T15:20:30.000Z",
+        "points": 1,
+        "comments": 0,
+        "author": "eugene1712",
+        "matchedQueryIds": [
+          "rag"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507629",
+      "url": "https://news.ycombinator.com/item?id=50507629",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Uranus has a weird magnetic field that's stumped scientists for 40 years",
+        "originalUrl": "https://www.space.com/astronomy/uranus/scientists-may-finally-understand-the-weird-magnetic-fields-of-uranus-and-neptune",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507629",
+        "publishedAt": "2026-11-15T15:27:28.000Z",
+        "points": 4,
+        "comments": 1,
+        "author": "stablepixel",
+        "matchedQueryIds": [
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507702",
+      "url": "https://news.ycombinator.com/item?id=50507702",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "I let LLMs play a 1988 detective gamebook 646 times",
+        "originalUrl": "https://blog.mastykarz.nl/llms-play-detective-gamebook/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507702",
+        "publishedAt": "2026-11-15T15:36:13.000Z",
+        "points": 4,
+        "comments": 0,
+        "author": "waldekm",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507721",
+      "url": "https://news.ycombinator.com/item?id=50507721",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Selfhost pi agents API with Linux desktop sandbox",
+        "originalUrl": "https://github.com/taherchhabra/pi-managed-agents-api",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507721",
+        "publishedAt": "2026-11-15T15:37:50.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "taherchhabra",
+        "matchedQueryIds": [
+          "agent",
+          "claude",
+          "openai",
+          "rag"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507726",
+      "url": "https://news.ycombinator.com/item?id=50507726",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Kotlin 2026: Layoffs, AI, Google – Is the Golden Age Over? Jake Wharton Explains",
+        "originalUrl": null,
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507726",
+        "publishedAt": "2026-11-15T15:38:23.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "pjmlp",
+        "matchedQueryIds": [
+          "ai",
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507825",
+      "url": "https://news.ycombinator.com/item?id=50507825",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Roll back a bad release from chat: rollbacks, restored variables and deploys",
+        "originalUrl": "https://railyard.run/blog/rollback-release-from-chat/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507825",
+        "publishedAt": "2026-11-15T15:49:42.000Z",
+        "points": 3,
+        "comments": 0,
+        "author": "RailyardRun",
+        "matchedQueryIds": [
+          "rag"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507835",
+      "url": "https://news.ycombinator.com/item?id=50507835",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Apfel-LLM: Drop",
+        "originalUrl": "https://github.com/NixOS/nixpkgs/pull/588623",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507835",
+        "publishedAt": "2026-11-15T15:51:01.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "franze",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507857",
+      "url": "https://news.ycombinator.com/item?id=50507857",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "HN: Teach a bot a secret rule and watch it learn from your answers",
+        "originalUrl": "https://demo.glyphh.ai/bot/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507857",
+        "publishedAt": "2026-11-15T15:54:09.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "glyphhai",
+        "matchedQueryIds": [
+          "ai"
+        ],
+        "showHn": false
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507874",
+      "url": "https://news.ycombinator.com/item?id=50507874",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: Folate – Local DOM selector model that beats 7B VLMs at 1/60th the size",
+        "originalUrl": "https://github.com/figranium/folate",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507874",
+        "publishedAt": "2026-11-15T15:55:36.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "asernasr",
+        "matchedQueryIds": [
+          "llm"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507883",
+      "url": "https://news.ycombinator.com/item?id=50507883",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "Show HN: FlAIent – Learn interactive AI coding with real agents",
+        "originalUrl": "https://flaient.com/",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507883",
+        "publishedAt": "2026-11-15T15:56:25.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "ProdRatSuperior",
+        "matchedQueryIds": [
+          "agent",
+          "ai",
+          "rag"
+        ],
+        "showHn": true
+      }
+    },
+    {
+      "source": "hacker-news",
+      "sourceType": "api",
+      "externalId": "50507918",
+      "url": "https://news.ycombinator.com/item?id=50507918",
+      "collectedAt": "2026-11-16T06:21:47.062Z",
+      "data": {
+        "title": "When AI Knows More Than It Can Offer",
+        "originalUrl": "https://medium.com/@smoking2man/when-ai-knows-more-than-it-can-offer-how-training-turns-an-intelligent-assistant-into-a-generator-7e700f05163e",
+        "discussionUrl": "https://news.ycombinator.com/item?id=50507918",
+        "publishedAt": "2026-11-15T15:59:23.000Z",
+        "points": 2,
+        "comments": 0,
+        "author": "Aldus551",
+        "matchedQueryIds": [
+          "ai"
+        ],
+        "showHn": false
+      }
+    }
+  ]
+}
