@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-19",
+  "source": "anthropic-jobs",
+  "items": [
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5471361008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5471361008",
+      "collectedAt": "2026-11-20T07:07:39.630Z",
+      "data": {
+        "title": "Applied AI Architect, Beneficial Deployments (Global & Public Health)",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-11-18T18:18:03.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5483945008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5483945008",
+      "collectedAt": "2026-11-20T07:07:39.630Z",
+      "data": {
+        "title": "Applied AI Engineer, Commercial",
+        "location": "San Francisco, CA",
+        "updatedAt": "2026-11-18T16:26:55.000Z"
+      }
+    }
+  ]
+}
