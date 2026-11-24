@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-23",
+  "source": "arxiv",
+  "items": [
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.30881",
+      "url": "https://arxiv.org/abs/2611.30881",
+      "collectedAt": "2026-11-24T09:49:16.561Z",
+      "data": {
+        "title": "AnchorCredit: Output-Anchored Credit Assignment for Structured Generation with Multiple Verifiable Rewards",
+        "summary": "In Reinforcement Learning with Verifiable Rewards (RLVR), Group Relative Policy Optimization (GRPO) and related methods typically compute group-relative advantages from response rewards and broadcast the same advantage to every generated token in a response to guide policy updates. However, we identify a systematic problem of cross-component credit misassignment in tasks with multiple verifiable results, such as joint multi-attribute prediction: low rewards for some components can penalize a well-performing component and its associated reasoning. To address this problem, we propose AnchorCredit. The method uses the policy model's attention from output anchors to preceding reasoning sentences to estimate sentence-component associations and assign component-specific advantages to the relevant reasoning, without additional relevance annotations or a separate relevance discriminator. To support the study of credit assignment with multiple verifiable rewards, we construct ProductAttr, a benchmark of 7,200 real product image-text samples. Experiments show that AnchorCredit outperforms existing baselines on this benchmark. Experiments on the public Nutrition5k dataset further support the method's effectiveness in this setting.",
+        "authors": [
+          "Gen Li",
+          "Pengyang Xie",
+          "Xiao Xiao",
+          "Chuanzhi Tong",
+          "Ziyang Ji",
+          "Zhigang Xu",
+          "Huiwen Bai",
+          "Zihao Xing",
+          "Yanxiang Zhou",
+          "Yifei Yuan",
+          "Xiaoqing Wang"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-23T15:48:19.000Z",
+        "updatedAt": "2026-11-23T15:48:19.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.30874",
+      "url": "https://arxiv.org/abs/2611.30874",
+      "collectedAt": "2026-11-24T09:49:16.561Z",
+      "data": {
+        "title": "Bridging Continuous-Time MAPF and Industrial AGV Fleet Coordination with Lazy Priority-Based Search",
+        "summary": "Continuous-time multi-agent path finding on roadmaps (MAPF$_R$) offers a principled way to coordinate robot fleets with geometric collision avoidance, yet its deployment on industrial automated guided vehicle (AGV) infrastructures remains challenging, as highly connected and redundant roadmaps amplify both safe-interval reasoning and multi-agent interaction handling. To bridge this gap, we formalize AGV-MAPF$_R$-CTC, a configuration-space variant of MAPF$_R$ with precomputed continuous-time conflicts that enables the reuse of MAPF$_R$ solvers for AGV fleet coordination with minimal changes. We then revisit continuous-time priority-based search (CPBS), identifying the boundary conditions required by its safe interval path planning (SIPP) low-level planner under priority-induced constraints and enabling earlier solution detection. As a central contribution, we analyze the structure of the priority search space, clarifying which agents are affected by each priority refinement and when replanning can be avoided. Building on this analysis, we introduce a novel algorithm, Lazy-CPBS, which materializes high-level nodes lazily: a child's plans are computed only when it is expanded, so siblings that are never expanded cost no low-level search. Experiments on standard MAPF benchmarks and on industrial AGV roadmaps imported from a proprietary digital-twin simulator show that CPBS-based solvers remain effective well beyond the agent counts reachable by optimal MAPF$_R$ solvers, while Lazy-CPBS substantially reduces CPBS overhead and offers the most consistent robustness/runtime trade-off across industrial layouts.",
+        "authors": [
+          "Federico Signorile",
+          "Raffaele Carli",
+          "Alessandro Bertogli",
+          "Roberto Olmi",
+          "Sven Koenig",
+          "Mariagrazia Dotoli"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.MA",
+          "cs.RO"
+        ],
+        "submittedAt": "2026-11-23T15:43:31.000Z",
+        "updatedAt": "2026-11-23T15:43:31.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.30873",
+      "url": "https://arxiv.org/abs/2611.30873",
+      "collectedAt": "2026-11-24T09:49:16.561Z",
+      "data": {
+        "title": "Semantic-aware Decoding for Diverse Text-to-SQL under Schema Ambiguity",
+        "summary": "Real-world text-to-SQL systems often face schema ambiguity, where a question can map to multiple plausible schema elements. To support downstream disambiguation, SQL generation systems should include diverse interpretations among their top-k predictions. However, large language models (LLMs) typically favor a single interpretation, producing highly skewed outputs. We propose Semantic-aware Logit Adjustment (SLA), a training-free decoding method that promotes diverse SQL generation by adjusting token logits based on semantic similarity between schema elements. Unlike prior approaches that rely on reasoning-intensive prompting or task-specific fine-tuning, SLA is efficient, model-agnostic, and easy to deploy. Experiments show that SLA consistently improves interpretation coverage over standard decoding and remains competitive with existing diversity-oriented methods at substantially lower inference cost.",
+        "authors": [
+          "Yuxuan Jiang",
+          "Anna Mitsopoulou",
+          "Apostolos Koukouvinis",
+          "Yannis Velegrakis",
+          "Georgia Koutrika"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL"
+        ],
+        "submittedAt": "2026-11-23T15:43:16.000Z",
+        "updatedAt": "2026-11-23T15:43:16.000Z"
+      }
+    }
+  ]
+}
