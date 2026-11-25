@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-24",
+  "source": "anthropic",
+  "items": [
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/team/interpretability",
+      "url": "https://www.anthropic.com/research/team/interpretability",
+      "collectedAt": "2026-11-25T08:25:40.280Z",
+      "data": {
+        "lastmod": "2026-11-24T06:56:52.923Z"
+      }
+    },
+    {
+      "source": "anthropic",
+      "sourceType": "sitemap",
+      "externalId": "https://www.anthropic.com/research/working-with-ai",
+      "url": "https://www.anthropic.com/research/working-with-ai",
+      "collectedAt": "2026-11-25T08:25:40.280Z",
+      "data": {
+        "lastmod": "2026-11-23T22:13:27.525Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-24",
+  "source": "anthropic-jobs",
+  "items": [
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5486776008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5486776008",
+      "collectedAt": "2026-11-25T08:25:40.280Z",
+      "data": {
+        "title": "Applied AI Architect, Beneficial Deployment",
+        "location": "Bangalore, India",
+        "updatedAt": "2026-11-24T15:22:33.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5466640008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5466640008",
+      "collectedAt": "2026-11-25T08:25:40.280Z",
+      "data": {
+        "title": "Applied AI Architect, Industries",
+        "location": "Zürich, CH",
+        "updatedAt": "2026-11-24T13:12:53.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5455618008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5455618008",
+      "collectedAt": "2026-11-25T08:25:40.280Z",
+      "data": {
+        "title": "Applied AI Architect, Public Sector (State & Local Government)",
+        "location": "New York City, NY; San Francisco, CA; Washington, DC",
+        "updatedAt": "2026-11-23T20:07:18.000Z"
+      }
+    },
+    {
+      "source": "anthropic-jobs",
+      "sourceType": "api",
+      "externalId": "5491480008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5491480008",
+      "collectedAt": "2026-11-25T08:25:40.280Z",
+      "data": {
+        "title": "Applied AI Architect, Technology Partnerships",
+        "location": "San Francisco, CA | New York City, NY",
+        "updatedAt": "2026-11-23T20:50:45.000Z"
+      }
+    }
+  ]
+}

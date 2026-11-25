@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-24",
+  "source": "arxiv",
+  "items": [
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.32848",
+      "url": "https://arxiv.org/abs/2611.32848",
+      "collectedAt": "2026-11-25T08:25:40.280Z",
+      "data": {
+        "title": "Measurement Artifacts in Trustworthiness Evaluations of Quantized Small Language Models",
+        "summary": "Evaluations of quantized language models attribute the change in a benchmark score to quantization. We write the measured change as the true change plus a term contributed by the instrument. Instrument error that is the same at every precision can shrink a paired comparison but cannot create or reverse an effect. Error that interacts with quantization can do both, and it is reported as an effect of quantization. We estimate this interaction for four measurement choices in 8 instruction-tuned models below two billion parameters, at float16, LLM.int8() and NF4, on identical items. Measured against labels from two human annotators, the 4-bit rise in harmful compliance is about half to two-thirds of the rise in non-refusal that a corrected key word detector records. Cloze and lettered multiple-choice scoring disagree about the effect of quantization far more than their noise allows: their estimates correlate at \\r{ho} = 0.10, against a ceiling of about 0.77. LLM.int8() answers and generations depend on which items share a batch, and padding alone changes its answers. Rounding activations to 8 bits is enough to produce this dependence. NF4 is batch-invariant. The two largest reported calibration losses are response-bias shifts. We release item-level predictions, option scores and human annotations, and give recommendations for evaluating compressed small models.",
+        "authors": [
+          "Tanzeel Abbas",
+          "Tehseen Zia",
+          "David Windridge"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "submittedAt": "2026-11-24T15:54:46.000Z",
+        "updatedAt": "2026-11-24T15:54:46.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.32830",
+      "url": "https://arxiv.org/abs/2611.32830",
+      "collectedAt": "2026-11-25T08:25:40.280Z",
+      "data": {
+        "title": "PtychoFM: A Foundation Model for Ptychographic Imaging",
+        "summary": "Ptychography provides high-resolution lensless imaging across X-ray, electron, and optical microscopy, but reconstructing images from diffraction measurements generally requires computationally intensity iterative phase retrieval. These methods often require experiment-specific analysis, limiting real-time feedback as data acquisition rates increase. Here, we demonstrate PtychoFM, a physics-aware foundation model for ptychographic imaging that combines large-scale pre-training with experiment-specific fine-tuning to reconstruct complex object images directly from individual diffraction patterns. Trained using a differentiable forward model without object-space labels, PtychoFM transfers from step-scan training data on one sample to fly-scan measurements of other samples with different feature sizes, morphologies, and refraction indices. At a synchrotron beamline, diffraction frames were streamed from the detector to a single GPU for inference at up to 200 frames per second and returned for real-time visualization. PtychoFM provides a practical route to rapid, transferable ptychographic reconstruction and live experimental feedback under nonideal conditions.",
+        "authors": [
+          "Aileen Luo",
+          "Emon Dey",
+          "Ming Du",
+          "Tao Zhou",
+          "Peco Myint",
+          "Himanshu Goel",
+          "Shashank Subramanian",
+          "Xiangyu Yin",
+          "Tekin Bicer",
+          "Siniša Veseli",
+          "Cheng-Chu Chung",
+          "Jeffrey A. Klug",
+          "Aldo Peña Pérez",
+          "Llorenç Fanals-i-Batllori",
+          "Christopher Kenney",
+          "Henry Shi",
+          "Lorenzo Rota",
+          "Angelo Dragone",
+          "Zirui Gao",
+          "Douglas A. Bennett",
+          "John A. B. Mates",
+          "Leila R. Vale",
+          "Michael R. Vissers",
+          "Yi Jiang",
+          "Junjing Deng",
+          "Tejas Guruswamy",
+          "Varuni K. Sastry",
+          "Bowen Zheng",
+          "Takenori Shimamura",
+          "Oliver Hoidn"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-24T15:46:16.000Z",
+        "updatedAt": "2026-11-24T15:46:16.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.32812",
+      "url": "https://arxiv.org/abs/2611.32812",
+      "collectedAt": "2026-11-25T08:25:40.280Z",
+      "data": {
+        "title": "Breaking the Joint Action Space Dependence in Distributionally Robust Multi-Agent Reinforcement Learning",
+        "summary": "We study the sample complexity of learning robust coarse correlated equilibria (CCE) in finite-horizon, general-sum, distributionally robust Markov games with known rewards and a generative model of the nominal transitions. Each player evaluates a policy by its worst-case return over total-variation (TV) balls centered at the nominal transition distribution of every stage, state, and joint action; this is the standard $(s,a)$-rectangular uncertainty set. Existing generative-model guarantees for this model scale with the number $\\prod_iA_i$ of joint actions, where $A_i$ is the number of actions of player~$i$. Since this number grows exponentially with the number of players, these guarantees suffer from the curse of multiagency. We design an algorithm whose sample complexity depends on the action sets only through the largest individual action-set size $A_*:=\\max_iA_i$. The algorithm uses $\\widetilde O(SA_*H^5D^4/\\varepsilon^4)$ transition samples and, with probability at least $1-δ$, returns a Markov policy that is an $\\varepsilon$-robust CCE from every initial state. Here $S$ is the number of states, $H$ is the horizon, and $D:=\\max_i\\min\\{H,1/ρ_i\\}$, where $ρ_i$ is the TV radius of player~$i$. Two ingredients make this possible: a plug-in estimate of the robust backup whose mean error does not depend on the number of states, and a single batch of samples per round that serves as bandit feedback for all players at once. The result shows that the dependence on $\\prod_iA_i$ can be avoided without modifying the $(s,a)$-rectangular uncertainty set.",
+        "authors": [
+          "Yue Wang"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-24T15:32:04.000Z",
+        "updatedAt": "2026-11-24T15:32:04.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.32811",
+      "url": "https://arxiv.org/abs/2611.32811",
+      "collectedAt": "2026-11-25T08:25:40.280Z",
+      "data": {
+        "title": "Interactive Neural Computers",
+        "summary": "Computers and their interfaces are usually treated as fixed, so a person, or increasingly an AI agent, must adapt to whatever the operating system presents. This is limiting when someone needs a different workflow, or an interface suited to hands-free use or a disability. We explore an overlooked alternative. Rather than training an agent to operate an existing computer, we train a generative model to be the computer, predicting each next screen from past screens and the user's mouse and keyboard actions. Treating a desktop as an interactive world model raises problems that natural-video world models largely avoid. Without a camera pose to index memory, the model must remember content that has left the screen without any geometric cues. Arithmetic in a terminal has to be exactly right, not merely plausible. Small interface text must also stay legible at interactive frame rates. Our Interactive Neural Computer is structured like a Neural Turing Machine and starts to address these problems with three modules trained end to end from pixels and actions. A surprise-gated slot memory, supervised by latent next-frame prediction (MEMORY-JEPA), stores what is off screen. An exploratory query bridge brings in the reasoning of a pretrained VLM, and a residual renderer predicts only the latent changes between frames. In long closed-loop rollouts, our model recalls occluded files in 64.2% of trials (chance is 33.3%), compared with at most 56.0% for recurrent and sliding-window baselines. It also raises terminal-text OCR accuracy from 1.3% to 50.1%. Finally, because the memory is explicit, it can be transplanted at test time to causally change what the model renders.",
+        "authors": [
+          "Ross Murphy",
+          "Marcel Hedman",
+          "Gabriel Brostow"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.NE",
+          "cs.SC"
+        ],
+        "submittedAt": "2026-11-24T15:30:05.000Z",
+        "updatedAt": "2026-11-24T15:30:05.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.32810",
+      "url": "https://arxiv.org/abs/2611.32810",
+      "collectedAt": "2026-11-25T08:25:40.280Z",
+      "data": {
+        "title": "EPRO: Robust Policy Optimization Through an Imperfect Execution-Policy Predictor",
+        "summary": "RL for LLMs often separates rollout generation from policy training. Although the two numerical engines share model parameters, they can induce different policies. This creates a challenge beyond correcting a known training-inference mismatch: during learner updates, the execution policy corresponding to the current parameters cannot be directly observed. We view this as optimizing an unobserved execution policy through an imperfect predictor of its evolution. This perspective raises two fundamental questions: how can we estimate the execution policy's response to learner updates, and how much should we trust that estimate when optimizing the actual execution policy? We introduce Execution-Policy Robust Optimization (EPRO) to address these challenges. Starting from the observed rollout-time execution policy, we use training-policy changes to construct a differentiable predictor of the current execution policy, whose score yields Transported Score Centering (TSC). Our robust-improvement analysis reveals how prediction error limits the magnitude of reliably justified updates. For practical implementation, we introduce Policy Shift as an observable proxy for prediction risk and use Shift-Aware Soft Clipping (SSC) to attenuate risky updates. Across four Qwen3 model settings, EPRO achieves the highest average held-out accuracy among the compared methods on seven mathematical reasoning benchmarks.",
+        "authors": [
+          "Yibo Wang",
+          "Changyi Yang",
+          "Yuanxin Liu",
+          "Zhaoran Wang"
+        ],
+        "categories": [
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-24T15:29:28.000Z",
+        "updatedAt": "2026-11-24T15:29:28.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.32803",
+      "url": "https://arxiv.org/abs/2611.32803",
+      "collectedAt": "2026-11-25T08:25:40.280Z",
+      "data": {
+        "title": "MRBench: Benchmarking Physical Necessity Reasoning in Heterogeneous Multi-Robot Manipulation",
+        "summary": "Recent advances in multi-robot manipulation have shown how robots can collaborate to accomplish complex tasks. However, successful coordination does not reveal which robots are actually needed. The same task may require different teams as robot capabilities change, resources become unavailable, or objects replace robotic support. We argue that reliable multi-robot manipulation requires physical necessity reasoning: understanding what a task demands, which resources can fulfill those demands, and which are truly necessary. We introduce MRBench, a benchmark for physical necessity reasoning in heterogeneous multi-robot manipulation. It comprises eight tasks with distinct concurrency and reach constraints, each evaluated under five configurations that change the required resources while preserving the task goal. Our evaluation reveals that existing coordination agents perform well with reference teams but struggle when robot embodiments change or passive objects can replace robotic support. To address this gap, we propose MRScissors, which separates task requirements from measured physical capabilities and identifies minimal feasible teams through constrained search. Across two model backbones, MRScissors achieves 85.4% and 91.2% team-selection accuracy, outperforming the strongest baselines by 10.4 and 9.5 points, respectively. Together, these findings expose a critical gap between coordinating robots and understanding their physical necessity.",
+        "authors": [
+          "Yanzhe Chen",
+          "Zhijun Cao",
+          "Ruihe An",
+          "Chang Gong",
+          "Mike Zheng Shou"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.MA",
+          "cs.RO"
+        ],
+        "submittedAt": "2026-11-24T15:25:53.000Z",
+        "updatedAt": "2026-11-24T15:25:53.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.32802",
+      "url": "https://arxiv.org/abs/2611.32802",
+      "collectedAt": "2026-11-25T08:25:40.280Z",
+      "data": {
+        "title": "Sample-Efficient In-Context Adaptation via Sleep",
+        "summary": "The ability to learn and generalize from limited experience, or sample efficiency, is a cornerstone of intelligence. How can we build language models that turn a few user interactions, a few snippets of unfamiliar code, or a handful of experimental results provided in context into knowledge that generalizes? Prior work has found that sleep, a process where the model performs $N$ recurrent forward passes to refine its representations of a chunk of context, can improve long-context reasoning (specifically, within SSM-attention hybrid models). We study whether this method also improves in-context adaptation on general, non-synthetic tasks for transformer language models. To this end, we pre-train language models up to 1.2B-parameters on up to 100B tokens with sleep mechanisms. Notably, longer sleep (i.e., using a larger number of recurrent forward passes $N$) enables the model to learn faster in-context on multiple few-shot algorithmic, question-answering tasks, while also achieving lower next-token prediction loss on out-of-distribution evaluations. On held-out code, models with $N=2$ and $N=4$ match the no-sleep baseline's loss using $2.10\\times$ and $2.39\\times$ fewer tokens in-context, respectively. More broadly, we view our work as a step toward building models that have better tradeoffs between in-context adaptation and decoding latency.",
+        "authors": [
+          "Sangyun Lee",
+          "Zhang Enyan",
+          "Michael Xu",
+          "Hao Tang",
+          "Zinan Lin",
+          "Weijia Xu",
+          "Chris Quirk",
+          "Jianfeng Gao",
+          "Giulia Fanti",
+          "Xiaodong Liu"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-24T15:24:19.000Z",
+        "updatedAt": "2026-11-24T15:24:19.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.32801",
+      "url": "https://arxiv.org/abs/2611.32801",
+      "collectedAt": "2026-11-25T08:25:40.280Z",
+      "data": {
+        "title": "Scaling Laws of Ensemble Uncertainty in Language Models",
+        "summary": "Many use cases for large language models (LLMs)---from AI safety to exploration and human interaction---can benefit from epistemic uncertainty estimates. We argue that existing Bayesian Deep Learning solutions, which are often restricted to a fixed model family, fail to capture the full epistemic uncertainty at practical LLM scales. This is because the error due to the bounded capacity of the model family remains invisible to disagreement among models supported by the prior. We relate this error to the well-known power-law scaling of LLM loss with model size. We then show that a second power law quantifies the shrinking disagreement within ensembles as model size increases. Its slower decay relative to the capacity law above suggests that ensembles capture a growing share of epistemic uncertainty and become more competitive as an axis for scaling, compared to a single larger model. Finally, a third power law quantifies the loss of ensemble diversity as members share a larger fraction of training before branching, and therefore identifies a further limitation, beyond the capacity error, for LoRA ensembles and optimization-based or second-order methods that approximate uncertainty around a single training solution. At a high level, these findings suggest diverse ensembles can be a promising axis, both for scaling and uncertainty quantification at larger scales.",
+        "authors": [
+          "Siamak Ravanbakhsh",
+          "David Nitchi",
+          "Khang Ngo"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG",
+          "cs.NE"
+        ],
+        "submittedAt": "2026-11-24T15:23:55.000Z",
+        "updatedAt": "2026-11-24T15:23:55.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.32795",
+      "url": "https://arxiv.org/abs/2611.32795",
+      "collectedAt": "2026-11-25T08:25:40.280Z",
+      "data": {
+        "title": "Is Prosody Encoded in the Neural Audio Codec Mimi?",
+        "summary": "Neural audio codecs (NACs) have become a fundamental infrastructure for modern speech-language models, discretizing continuous speech signals into token sequences that enable large language models to process and generate audio. Most research evaluates codec quality at the decoding phase, assessing the naturalness of reconstructed speech. However, little research investigates what phonetic information is captured during encoding. In this paper, we investigated the potential correlates of prosody in the NAC Mimi, a codec used by conversational speech agents such as Moshi and Sesame and used in downstream tasks such as speech-to-speech translation (Hibiki).",
+        "authors": [
+          "Nicolas Ballier",
+          "Artem Saloev",
+          "Erin Pacquetet",
+          "Taylor Arnold"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "submittedAt": "2026-11-24T15:21:18.000Z",
+        "updatedAt": "2026-11-24T15:21:18.000Z"
+      }
+    }
+  ]
+}
