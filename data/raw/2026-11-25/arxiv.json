@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-25",
+  "source": "arxiv",
+  "items": [
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.34603",
+      "url": "https://arxiv.org/abs/2611.34603",
+      "collectedAt": "2026-11-26T08:09:46.086Z",
+      "data": {
+        "title": "VisualMontage: Manipulating the Beliefs of Vision-Language Agents with Authentic Image Sequences",
+        "summary": "As agents based on vision-language models (VLMs) increasingly interpret social-media content, errors in their analysis may lend credibility to rumors and amplify their spread. In this paper, we study the problem of visual cognitive collusion, in which coordinated posts combine authentic images and locally faithful captions to induce VLM agents to infer and accept attacker-chosen target claims through their own reasoning. To enable systematic evaluation of this cognitive threat, we introduce a new benchmark comprising 544 target cases and 33.2K candidate images across eight application domains. We further propose VisualMontage, a multi-agent framework for simulating such attacks through narrative planning, image selection and ordering, and caption assignment under iterative review. We evaluate this threat through extensive experiments across 12 vision-language models, examining modality effects, production-team components, and downstream defenses. Using identical attack feeds across models without victim-specific optimization, we demonstrate cross-model transferability, achieving mean attack success rates of 61.93% for proprietary models and 68.71% for open-weight models. Moreover, 92.65% of generated feeds pass independent model-based validity auditing. Even after downstream review, residual attack success rates range from 35.3% to 76.7% across the evaluated configurations. Our additional controlled comparisons further reveal that captions can improve model-rated posting naturalness while reducing attack success. Together, these findings reveal a novel cognitive threat in social-media interpretation and motivate safeguards that assess how authentic posts jointly shape agents' reasoning and conclusions.",
+        "authors": [
+          "Jinwei Hu",
+          "Lai Wei",
+          "Zhuoyun Li",
+          "Youcheng Sun",
+          "Yi Dong",
+          "Xiaowei Huang"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CV",
+          "cs.MA",
+          "cs.SI"
+        ],
+        "submittedAt": "2026-11-25T15:57:55.000Z",
+        "updatedAt": "2026-11-25T15:57:55.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.34579",
+      "url": "https://arxiv.org/abs/2611.34579",
+      "collectedAt": "2026-11-26T08:09:46.086Z",
+      "data": {
+        "title": "Tune for Retention, Not Just Gain: SFT Forgets Far Less than You Think",
+        "summary": "Catastrophic forgetting, the drastic loss of previously acquired capabilities when learning new ones, is a central challenge in language model fine-tuning. Supervised fine-tuning (SFT) is widely believed to be prone to such forgetting. Recent works have attributed this to the off-policy nature of SFT, arguing that on-policy learning is key to continual learning. In this paper, we challenge this premise. We show that while maximizing new-task performance can induce catastrophic forgetting, alternative hyperparameter choices (lower learning rate and batch size) can yield similar gains with little to no forgetting. With hyperparameters selected jointly for gain and retention, vanilla SFT retains prior capabilities far better than previously suggested and can be competitive with Self-Distillation Fine-Tuning (SDFT), an on-policy approach designed to mitigate forgetting. While SDFT can be more robust to hyperparameter choices, it also requires a retention-aware criterion to identify hyperparameter configurations that avoid catastrophic forgetting. Our results challenge the view that on-policy training is what enables learning with retention and raise broader questions about what drives catastrophic forgetting during fine-tuning.",
+        "authors": [
+          "Nirmit Joshi",
+          "Nathan Srebro",
+          "Eran Malach"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ],
+        "submittedAt": "2026-11-25T15:43:38.000Z",
+        "updatedAt": "2026-11-25T15:43:38.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.34576",
+      "url": "https://arxiv.org/abs/2611.34576",
+      "collectedAt": "2026-11-26T08:09:46.086Z",
+      "data": {
+        "title": "Procedure Inference as Memory: Learning Recruiter Decision Procedures from OKF-Structured Episodes in Multi-Session Hiring Assistants",
+        "summary": "Multi-session hiring assistants must infer evolving recruiter preferences and decision patterns across projects and time. We introduce Open Knowledge Format (OKF)-indexed episodic memory to organize interactions and retrieve related events through their lineage. We also introduce Procedure Memory, which learns reusable decision procedures from these episodes through prompted reflection or reinforcement learning. We compare these approaches with no memory, full-history context, and conversation search, and evaluate Jev-class models for index navigation and GPT-5.6 Luna as a lower-cost alternative to GPT-5.4. In our evaluation, OKF-indexed retrieval achieves low-priority preference F1 scores of 0.93-0.95 at medium and high preference overlap between hiring projects. It significantly outperforms full-history context and conversation search in both settings, and no memory at high overlap, while using 69% fewer context tokens than full history. Procedure Memory reduces conversational turns by up to 39% relative to no memory. Qualitative and long-horizon evaluations provide evidence of temporal reasoning, with RL-learned procedures achieving 60% on both correct abstention and exact-field identification. Jev-class models improve conversational efficiency but more frequently miss temporally relevant evidence, highlighting the importance of evidence selection. On PersonaMem-v2, Procedure Memory with OKF retrieval achieves 50.2% accuracy versus 48.6% for full-history context and 29.0% for no memory, using 90.5% fewer reader input tokens than full history. GPT-5.6 Luna performs comparably to GPT-5.4 at lower cost. These findings highlight the value of structured episodic memory and learned decision procedures for efficient personalization and temporal reasoning.",
+        "authors": [
+          "Praveen Kumar Bodigutla",
+          "Yizhi Zhang",
+          "Sai Vivek Kanaparthy",
+          "Arup De"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.HC",
+          "cs.IR"
+        ],
+        "submittedAt": "2026-11-25T15:41:52.000Z",
+        "updatedAt": "2026-11-25T15:41:52.000Z"
+      }
+    },
+    {
+      "source": "arxiv",
+      "sourceType": "api",
+      "externalId": "2611.34575",
+      "url": "https://arxiv.org/abs/2611.34575",
+      "collectedAt": "2026-11-26T08:09:46.086Z",
+      "data": {
+        "title": "Sage-Med: Scaling Medical Multimodal Intelligence",
+        "summary": "Establishing effective scaling laws for medical multimodal large language models (MLLMs) remains a persistent and fundamental challenge. Our systematic evaluation shows that existing medical MLLMs tend to underperform frontier general-purpose MLLMs across a range of medical tasks, while scaling model size primarily improves text capabilities rather than multimodal perception, and enabling reasoning modes fails to close this visual gap. To investigate how medical multimodal intelligence scales in practice, we introduce Sage-Med-Preview, a 35B-parameter medical multimodal model with 3B activated parameters, built by combining stage-specific curation over 322.7 million candidate records with a progressive training curriculum spanning medical pretraining, staged supervised fine-tuning, and adaptive reinforcement learning. Across this curriculum, progressive supervised refinement and adaptive reinforcement learning yield consistent stage-wise gains, substantially advancing both specialized visual understanding and medical language capabilities. Evaluated against 77 competing models across 238 clinical tasks spanning 61 public and 13 private multi-center benchmarks in more than 40 modalities, Sage-Med-Preview achieves an average score of 58.26% on the 31 public multimodal benchmarks. It outperforms the state-of-the-art open-source medical model Hulu-Med-235B-A22B at 50.99% and the general scientific model Intern-S2-Preview at 52.24%, and approaches the advanced proprietary model GPT-6.2-Sol across multiple tasks such as comprehensive multimodal understanding, report generation, and visual grounding. Although substantial challenges remain in complex medical reasoning and multi-step clinical workflows, this report provides empirical evidence, actionable data and training recipe",
+        "authors": [
+          "Sage-Med Team",
+          ":",
+          "Ming Hu",
+          "Cheng Tang",
+          "Wei Li",
+          "Rongbin Li",
+          "Feilong Tang",
+          "Junru Hu",
+          "Hongze Zhu",
+          "Qiujuan Yan",
+          "Huanze Tang",
+          "Shaocong Wei",
+          "Siyuan Yan",
+          "Min Cen",
+          "Zhongxing Xu",
+          "Zhonghua Wang",
+          "Lie Ju",
+          "Zhen Yu",
+          "Wenjie Li",
+          "Shiyan Su",
+          "Jing Hao",
+          "Jingyong Liang",
+          "Diping Song",
+          "Fang Yan",
+          "Chenglong Ma",
+          "Junzhi Ning",
+          "Haochen Xue",
+          "Zanting Ye",
+          "Chenrun Wang",
+          "Jinjie Wei"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CV"
+        ],
+        "submittedAt": "2026-11-25T15:39:45.000Z",
+        "updatedAt": "2026-11-25T15:39:45.000Z"
+      }
+    }
+  ]
+}
